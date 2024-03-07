@@ -49,10 +49,16 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CabSharingComponent">
+      <HintPath>..\..\..\CabSharingComponent\obj\Debug\CabSharingComponent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -72,6 +78,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Globals.vb" />
     <Compile Include="TransportationDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +101,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TransportAddSecys.Designer.vb">
+      <DependentUpon>TransportAddSecys.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAddSecys.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TransportationDashboard.resx">
@@ -104,6 +117,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAddSecys.resx">
+      <DependentUpon>TransportAddSecys.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -118,28 +134,46 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home-icons.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-bus-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-carpool-30.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-go-back-30.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home-final.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\gradient.png" />
+    <None Include="Resources\icons8-admin-50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\download.jpeg" />
+    <None Include="Resources\icons8-bus-50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\download1.jpeg" />
+    <None Include="Resources\icons8-carpool-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-driver-license-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tollbooth-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vehicle-insurance-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-secretary-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SMART CITY - GUWAHATI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-arrow-251.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
