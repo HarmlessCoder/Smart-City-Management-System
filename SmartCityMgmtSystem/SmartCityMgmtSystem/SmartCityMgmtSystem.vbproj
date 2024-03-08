@@ -79,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Globals.vb" />
+    <Compile Include="TransportationAdminHome.Designer.vb">
+      <DependentUpon>TransportationAdminHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportationAdminHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportationDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="TransportationAdminHome.resx">
+      <DependentUpon>TransportationAdminHome.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransportationDashboard.resx">
       <DependentUpon>TransportationDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +183,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-back-arrow-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-shield-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-driving-license-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-driving-license-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-driving-license-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vehicles-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tollbooth-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-approval-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-employee-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-public-transport-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bus-stop-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movie-ticket-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-push-notifications-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
