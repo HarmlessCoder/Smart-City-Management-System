@@ -3,7 +3,7 @@
 Use it for making inner screen of every module like this example:
 ![alt text](image.png)
 
-# DashboardTemplate
+# Dashboard-New
 
 Use it for making main dashboard of each module like this example:
 ![alt text](image-1.png)
