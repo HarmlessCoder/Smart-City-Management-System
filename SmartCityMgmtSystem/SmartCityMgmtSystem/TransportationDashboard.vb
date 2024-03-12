@@ -8,4 +8,9 @@
         'View the TransportationAdminHome screen by default - first argument, name of the panel in the parent panel, second - name of the child form
         Globals.viewChildForm(childformPanel, TransportationAdminHome)
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'View the Cab Sharing Screen
+        Globals.viewChildForm(childformPanel, RideSharingMain)
+    End Sub
 End Class
