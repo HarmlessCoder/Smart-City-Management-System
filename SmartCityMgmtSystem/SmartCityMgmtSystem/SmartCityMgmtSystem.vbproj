@@ -124,12 +124,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Globals.vb" />
-    <Compile Include="InnerScreenTemplate1.Designer.vb">
-      <DependentUpon>InnerScreenTemplate1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="InnerScreenTemplate1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="RideSharingMain.Designer.vb">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
     </Compile>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_TeacherDashboard.resx">
       <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InnerScreenTemplate1.resx">
-      <DependentUpon>InnerScreenTemplate1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RideSharingMain.resx">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
