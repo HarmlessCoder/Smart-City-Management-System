@@ -93,19 +93,37 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ed_AdminDashboard.Designer.vb">
+      <DependentUpon>Ed_AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_AdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_GlobalDashboard.Designer.vb">
+      <DependentUpon>Ed_GlobalDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_GlobalDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_RoleSelect.Designer.vb">
+      <DependentUpon>Ed_RoleSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_RoleSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_StudentDashboard.Designer.vb">
+      <DependentUpon>Ed_StudentDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_StudentDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_TeacherDashboard.Designer.vb">
+      <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_TeacherDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Globals.vb" />
-    <Compile Include="ModelDB1.Designer.vb">
-      <DependentUpon>ModelDB1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ModelDB1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModelDB2.Designer.vb">
-      <DependentUpon>ModelDB2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ModelDB2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TransportationAdminHome.Designer.vb">
       <DependentUpon>TransportationAdminHome.vb</DependentUpon>
     </Compile>
@@ -142,11 +160,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ModelDB1.resx">
-      <DependentUpon>ModelDB1.vb</DependentUpon>
+    <EmbeddedResource Include="Ed_AdminDashboard.resx">
+      <DependentUpon>Ed_AdminDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModelDB2.resx">
-      <DependentUpon>ModelDB2.vb</DependentUpon>
+    <EmbeddedResource Include="Ed_GlobalDashboard.resx">
+      <DependentUpon>Ed_GlobalDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_RoleSelect.resx">
+      <DependentUpon>Ed_RoleSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_StudentDashboard.resx">
+      <DependentUpon>Ed_StudentDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_TeacherDashboard.resx">
+      <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationAdminHome.resx">
       <DependentUpon>TransportationAdminHome.vb</DependentUpon>
@@ -280,6 +307,15 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
