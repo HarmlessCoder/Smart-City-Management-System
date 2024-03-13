@@ -93,6 +93,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TransportationBusSchedulesAdmin.Designer.vb">
+      <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportationBusSchedulesAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Coursera_AdminDashboard.Designer.vb">
       <DependentUpon>Ed_Coursera_AdminDashboard.vb</DependentUpon>
     </Compile>
@@ -255,8 +261,17 @@
     <Compile Include="TransportAddSecys.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportBusSchedule.Designer.vb">
+      <DependentUpon>TransportBusSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportBusSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="TransportationBusSchedulesAdmin.resx">
+      <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_AdminDashboard.resx">
       <DependentUpon>Ed_Coursera_AdminDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportAddSecys.resx">
       <DependentUpon>TransportAddSecys.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportBusSchedule.resx">
+      <DependentUpon>TransportBusSchedule.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
