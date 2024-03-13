@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ed_Stud_Moodle
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Ed_Stud_EntranceExam
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,29 +20,26 @@ Partial Class Ed_Stud_Moodle
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
+        Me.PictureButtonvb4 = New SmartCityMgmtSystem.pictureButtonvb()
+        Me.PictureButtonvb3 = New SmartCityMgmtSystem.pictureButtonvb()
+        Me.PictureButtonvb2 = New SmartCityMgmtSystem.pictureButtonvb()
+        Me.PictureButtonvb1 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.childformPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Font = New System.Drawing.Font("Tahoma", 11.8209!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -80,12 +77,56 @@ Partial Class Ed_Stud_Moodle
         'childformPanel
         '
         Me.childformPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb4)
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb3)
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb2)
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb1)
         Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.childformPanel.Location = New System.Drawing.Point(278, 45)
         Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.childformPanel.Name = "childformPanel"
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 1
+        '
+        'PictureButtonvb4
+        '
+        Me.PictureButtonvb4.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb4.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.MedicalExam
+        Me.PictureButtonvb4.Location = New System.Drawing.Point(708, 55)
+        Me.PictureButtonvb4.Name = "PictureButtonvb4"
+        Me.PictureButtonvb4.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb4.TabIndex = 7
+        Me.PictureButtonvb4.Title = "Medical"
+        '
+        'PictureButtonvb3
+        '
+        Me.PictureButtonvb3.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb3.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.ArtsExam
+        Me.PictureButtonvb3.Location = New System.Drawing.Point(312, 395)
+        Me.PictureButtonvb3.Name = "PictureButtonvb3"
+        Me.PictureButtonvb3.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb3.TabIndex = 6
+        Me.PictureButtonvb3.Title = "Arts"
+        '
+        'PictureButtonvb2
+        '
+        Me.PictureButtonvb2.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb2.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.CommerceExam
+        Me.PictureButtonvb2.Location = New System.Drawing.Point(708, 395)
+        Me.PictureButtonvb2.Name = "PictureButtonvb2"
+        Me.PictureButtonvb2.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb2.TabIndex = 5
+        Me.PictureButtonvb2.Title = "Commerce"
+        '
+        'PictureButtonvb1
+        '
+        Me.PictureButtonvb1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb1.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.EngineeringExam
+        Me.PictureButtonvb1.Location = New System.Drawing.Point(312, 55)
+        Me.PictureButtonvb1.Name = "PictureButtonvb1"
+        Me.PictureButtonvb1.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb1.TabIndex = 4
+        Me.PictureButtonvb1.Title = "Engineering"
         '
         'Label2
         '
@@ -118,55 +159,7 @@ Partial Class Ed_Stud_Moodle
         Me.Button6.Text = "      Home Page"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(0, 531)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(282, 60)
-        Me.Button4.TabIndex = 17
-        Me.Button4.Text = "Past Courses"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(0, 470)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(282, 60)
-        Me.Button3.TabIndex = 16
-        Me.Button3.Text = "Join Course"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 409)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(282, 60)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Assignments"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 348)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(282, 60)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Current Courses"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Ed_Stud_Moodle
+        'Ed_Stud_EntranceExam
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -179,10 +172,11 @@ Partial Class Ed_Stud_Moodle
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
-        Me.Name = "Ed_Stud_Moodle"
+        Me.Name = "Ed_Stud_EntranceExam"
         Me.Text = "Education"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.childformPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -193,8 +187,8 @@ Partial Class Ed_Stud_Moodle
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureButtonvb4 As pictureButtonvb
+    Friend WithEvents PictureButtonvb3 As pictureButtonvb
+    Friend WithEvents PictureButtonvb2 As pictureButtonvb
+    Friend WithEvents PictureButtonvb1 As pictureButtonvb
 End Class

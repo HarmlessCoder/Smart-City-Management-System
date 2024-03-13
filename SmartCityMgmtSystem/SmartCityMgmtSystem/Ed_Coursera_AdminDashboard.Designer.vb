@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ed_TeacherDashboard
+Partial Class Ed_Coursera_AdminDashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -228,7 +228,7 @@ Partial Class Ed_TeacherDashboard
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(0, 525)
+        Me.Button4.Location = New System.Drawing.Point(0, 523)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(282, 60)
         Me.Button4.TabIndex = 21
@@ -240,7 +240,7 @@ Partial Class Ed_TeacherDashboard
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(0, 464)
+        Me.Button5.Location = New System.Drawing.Point(0, 462)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(282, 60)
         Me.Button5.TabIndex = 20
@@ -252,7 +252,7 @@ Partial Class Ed_TeacherDashboard
         Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(0, 403)
+        Me.Button7.Location = New System.Drawing.Point(0, 401)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(282, 60)
         Me.Button7.TabIndex = 19
@@ -264,14 +264,14 @@ Partial Class Ed_TeacherDashboard
         Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(0, 342)
+        Me.Button8.Location = New System.Drawing.Point(0, 340)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(282, 60)
         Me.Button8.TabIndex = 18
         Me.Button8.Text = "Current Courses"
         Me.Button8.UseVisualStyleBackColor = False
         '
-        'Ed_TeacherDashboard
+        'Ed_Coursera_AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -284,7 +284,7 @@ Partial Class Ed_TeacherDashboard
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
-        Me.Name = "Ed_TeacherDashboard"
+        Me.Name = "Ed_Coursera_AdminDashboard"
         Me.Text = "Education"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

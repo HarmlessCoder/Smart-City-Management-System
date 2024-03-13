@@ -1,4 +1,4 @@
-﻿Public Class Ed_Stud_Institution
+﻿Public Class ElectionDashboard
 
     Private Sub TransportationDashboard_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
