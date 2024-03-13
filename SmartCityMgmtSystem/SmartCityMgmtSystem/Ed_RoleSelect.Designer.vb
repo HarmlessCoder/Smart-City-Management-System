@@ -55,7 +55,7 @@ Partial Class Ed_RoleSelect
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final1
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.PictureBox1.Name = "PictureBox1"
@@ -67,7 +67,7 @@ Partial Class Ed_RoleSelect
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("AgencyFB", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 159)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -98,12 +98,12 @@ Partial Class Ed_RoleSelect
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.Label5.Font = New System.Drawing.Font("AgencyFB", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(936, 495)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(109, 49)
+        Me.Label5.Size = New System.Drawing.Size(112, 49)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Admin"
         '
@@ -124,12 +124,12 @@ Partial Class Ed_RoleSelect
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.Label4.Font = New System.Drawing.Font("AgencyFB", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(582, 495)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(139, 49)
+        Me.Label4.Size = New System.Drawing.Size(134, 49)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Teacher"
         '
@@ -137,12 +137,12 @@ Partial Class Ed_RoleSelect
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("AgencyFB", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(230, 495)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(133, 49)
+        Me.Label3.Size = New System.Drawing.Size(129, 49)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Student"
         '
@@ -175,12 +175,12 @@ Partial Class Ed_RoleSelect
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("AgencyFB", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(502, 132)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(260, 49)
+        Me.Label6.Size = New System.Drawing.Size(254, 49)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Select Your Role"
         '
@@ -188,12 +188,12 @@ Partial Class Ed_RoleSelect
         '
         Me.Label2.AutoSize = True
         Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("AgencyFB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Ivory
         Me.Label2.Location = New System.Drawing.Point(293, 9)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 27)
+        Me.Label2.Size = New System.Drawing.Size(72, 28)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "{Name}"
         '
@@ -202,7 +202,7 @@ Partial Class Ed_RoleSelect
         Me.Button6.CausesValidation = False
         Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("AgencyFB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.Ivory
         Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
