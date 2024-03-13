@@ -23,15 +23,15 @@ Partial Class Ed_TeacherDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.childformPanel = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,71 +52,6 @@ Partial Class Ed_TeacherDashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(282, 783)
         Me.Panel1.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(0, 159)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(282, 141)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "SmartGhy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Education" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'childformPanel
-        '
-        Me.childformPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.childformPanel.Location = New System.Drawing.Point(278, 45)
-        Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.childformPanel.Name = "childformPanel"
-        Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
-        Me.childformPanel.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Ivory
-        Me.Label2.Location = New System.Drawing.Point(293, 9)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 28)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "{Name}"
-        '
-        'Button6
-        '
-        Me.Button6.CausesValidation = False
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.Ivory
-        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(1388, 0)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(163, 39)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "      Home Page"
-        Me.Button6.UseVisualStyleBackColor = False
         '
         'Button4
         '
@@ -181,6 +116,71 @@ Partial Class Ed_TeacherDashboard
         Me.Button8.TabIndex = 22
         Me.Button8.Text = "Add E-Course"
         Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(0, 159)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(282, 141)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "SmartGhy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Education" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'childformPanel
+        '
+        Me.childformPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.childformPanel.Location = New System.Drawing.Point(278, 45)
+        Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.childformPanel.Name = "childformPanel"
+        Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
+        Me.childformPanel.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Ivory
+        Me.Label2.Location = New System.Drawing.Point(293, 9)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 28)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "{Name}"
+        '
+        'Button6
+        '
+        Me.Button6.CausesValidation = False
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Ivory
+        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(1388, 0)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.Button6.Size = New System.Drawing.Size(163, 39)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "      Home Page"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'Ed_TeacherDashboard
         '
