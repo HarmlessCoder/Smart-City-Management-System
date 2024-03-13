@@ -13,4 +13,9 @@
         'View the Cab Sharing Screen
         Globals.viewChildForm(childformPanel, RideSharingMain)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        'View the Bus Schedule Screen
+        Globals.viewChildForm(childformPanel, TransportBusSchedule)
+    End Sub
 End Class

@@ -12,4 +12,8 @@ Public Class TransportationAdminHome
         'View the TransportAddSecys screen by default - first argument, name of the panel in the parent panel, second - name of the child form
         Globals.viewChildForm(TransportationDashboard.childformPanel, TransportAddSecys)
     End Sub
+
+    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
+        Globals.viewChildForm(TransportationDashboard.childformPanel, TransportationBusSchedulesAdmin)
+    End Sub
 End Class
