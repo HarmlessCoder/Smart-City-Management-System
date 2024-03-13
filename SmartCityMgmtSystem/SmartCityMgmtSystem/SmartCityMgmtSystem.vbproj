@@ -93,28 +93,34 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ed_Coursera_AdminDashboard.Designer.vb">
+      <DependentUpon>Ed_Coursera_AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Coursera_AdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Coursera_Course_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ed_Stud_Coursera.Designer.vb">
-      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_Stud_Coursera.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ed_AdminDashboard.Designer.vb">
-      <DependentUpon>Ed_AdminDashboard.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_AdminDashboard.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Ed_GlobalDashboard.Designer.vb">
       <DependentUpon>Ed_GlobalDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_GlobalDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Institute_AdminDashboard.Designer.vb">
+      <DependentUpon>Ed_Institute_AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_AdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_MinisterDashboard.Designer.vb">
+      <DependentUpon>Ed_MinisterDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_MinisterDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_RoleSelect.Designer.vb">
@@ -129,22 +135,28 @@
     <Compile Include="Ed_StudentDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Stud_Coursera.Designer.vb">
+      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Stud_Coursera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Stud_Coursera_Home.Designer.vb">
       <DependentUpon>Ed_Stud_Coursera_Home.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Stud_Coursera_Home.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ed_Stud_EntranceExams.Designer.vb">
-      <DependentUpon>Ed_Stud_EntranceExams.vb</DependentUpon>
+    <Compile Include="Ed_Stud_EntranceExam.Designer.vb">
+      <DependentUpon>Ed_Stud_EntranceExam.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ed_Stud_EntranceExams.vb">
+    <Compile Include="Ed_Stud_EntranceExam.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ed_Stud_Institution.Designer.vb">
-      <DependentUpon>Ed_Stud_Institution.vb</DependentUpon>
+    <Compile Include="Ed_Stud_Institute.Designer.vb">
+      <DependentUpon>Ed_Stud_Institute.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ed_Stud_Institution.vb">
+    <Compile Include="Ed_Stud_Institute.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_Stud_Moodle.Designer.vb">
@@ -215,17 +227,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ed_Coursera_AdminDashboard.resx">
+      <DependentUpon>Ed_Coursera_AdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_Course_ListItem.resx">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Stud_Coursera.resx">
-      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ed_AdminDashboard.resx">
-      <DependentUpon>Ed_AdminDashboard.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ed_GlobalDashboard.resx">
       <DependentUpon>Ed_GlobalDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Institute_AdminDashboard.resx">
+      <DependentUpon>Ed_Institute_AdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_MinisterDashboard.resx">
+      <DependentUpon>Ed_MinisterDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_RoleSelect.resx">
       <DependentUpon>Ed_RoleSelect.vb</DependentUpon>
@@ -233,14 +248,17 @@
     <EmbeddedResource Include="Ed_StudentDashboard.resx">
       <DependentUpon>Ed_StudentDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Stud_Coursera.resx">
+      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Coursera_Home.resx">
       <DependentUpon>Ed_Stud_Coursera_Home.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Stud_EntranceExams.resx">
-      <DependentUpon>Ed_Stud_EntranceExams.vb</DependentUpon>
+    <EmbeddedResource Include="Ed_Stud_EntranceExam.resx">
+      <DependentUpon>Ed_Stud_EntranceExam.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Stud_Institution.resx">
-      <DependentUpon>Ed_Stud_Institution.vb</DependentUpon>
+    <EmbeddedResource Include="Ed_Stud_Institute.resx">
+      <DependentUpon>Ed_Stud_Institute.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Moodle.resx">
       <DependentUpon>Ed_Stud_Moodle.vb</DependentUpon>
