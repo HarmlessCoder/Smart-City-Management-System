@@ -426,7 +426,7 @@ Partial Class RideSharingMain
         Me.PostsPanel.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.PostsPanel.Location = New System.Drawing.Point(640, 12)
         Me.PostsPanel.Name = "PostsPanel"
-        Me.PostsPanel.Size = New System.Drawing.Size(622, 712)
+        Me.PostsPanel.Size = New System.Drawing.Size(622, 717)
         Me.PostsPanel.TabIndex = 6
         Me.PostsPanel.WrapContents = False
         '

@@ -93,6 +93,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatBubbleItem.Designer.vb">
+      <DependentUpon>ChatBubbleItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChatBubbleItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </Compile>
@@ -215,6 +221,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ChatBubbleItem.resx">
+      <DependentUpon>ChatBubbleItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_Course_ListItem.resx">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </EmbeddedResource>
@@ -437,6 +446,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
