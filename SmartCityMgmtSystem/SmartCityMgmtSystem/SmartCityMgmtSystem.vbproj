@@ -465,6 +465,18 @@
   <ItemGroup>
     <None Include="Resources\final.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EntrExam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Moodle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elearning.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
