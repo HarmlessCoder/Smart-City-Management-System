@@ -35,7 +35,6 @@ Partial Class Ed_Stud_Coursera_Home
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -45,8 +44,6 @@ Partial Class Ed_Stud_Coursera_Home
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -113,10 +110,10 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Coral
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Cascadia Mono", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Maroon
+        Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(1009, 33)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(138, 36)
@@ -139,7 +136,6 @@ Partial Class Ed_Stud_Coursera_Home
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Label17)
@@ -149,8 +145,6 @@ Partial Class Ed_Stud_Coursera_Home
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(1, -1)
         Me.Panel1.Name = "Panel1"
@@ -159,9 +153,11 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label12
         '
+        Me.Label12.BackColor = System.Drawing.Color.White
         Me.Label12.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(45, 654)
+        Me.Label12.Location = New System.Drawing.Point(43, 669)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(221, 40)
         Me.Label12.TabIndex = 14
@@ -169,39 +165,35 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label13
         '
+        Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(45, 614)
+        Me.Label13.Location = New System.Drawing.Point(43, 611)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(221, 40)
         Me.Label13.TabIndex = 13
         Me.Label13.Text = "Finance"
         '
-        'Label14
-        '
-        Me.Label14.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label14.Location = New System.Drawing.Point(45, 574)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(221, 40)
-        Me.Label14.TabIndex = 12
-        Me.Label14.Text = "Vocational"
-        '
         'Label15
         '
+        Me.Label15.BackColor = System.Drawing.Color.White
         Me.Label15.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label15.Location = New System.Drawing.Point(45, 534)
+        Me.Label15.Location = New System.Drawing.Point(43, 553)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(221, 40)
         Me.Label15.TabIndex = 11
-        Me.Label15.Text = "Painting"
+        Me.Label15.Text = "Arts"
         '
         'Label16
         '
+        Me.Label16.BackColor = System.Drawing.Color.White
         Me.Label16.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label16.Location = New System.Drawing.Point(45, 494)
+        Me.Label16.Location = New System.Drawing.Point(43, 499)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(221, 40)
         Me.Label16.TabIndex = 10
@@ -209,9 +201,11 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label17
         '
+        Me.Label17.BackColor = System.Drawing.Color.White
         Me.Label17.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label17.Location = New System.Drawing.Point(45, 454)
+        Me.Label17.Location = New System.Drawing.Point(43, 447)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(221, 40)
         Me.Label17.TabIndex = 9
@@ -219,9 +213,11 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label6
         '
+        Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(45, 414)
+        Me.Label6.Location = New System.Drawing.Point(43, 394)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(221, 40)
         Me.Label6.TabIndex = 8
@@ -229,9 +225,11 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label7
         '
+        Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(45, 374)
+        Me.Label7.Location = New System.Drawing.Point(43, 340)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(221, 40)
         Me.Label7.TabIndex = 7
@@ -239,9 +237,11 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label8
         '
+        Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(45, 334)
+        Me.Label8.Location = New System.Drawing.Point(43, 284)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(221, 40)
         Me.Label8.TabIndex = 6
@@ -249,9 +249,11 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label9
         '
+        Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(45, 294)
+        Me.Label9.Location = New System.Drawing.Point(43, 227)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(221, 40)
         Me.Label9.TabIndex = 5
@@ -259,9 +261,11 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label4
         '
+        Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(45, 254)
+        Me.Label4.Location = New System.Drawing.Point(43, 172)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(221, 40)
         Me.Label4.TabIndex = 4
@@ -269,42 +273,20 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label5
         '
+        Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(45, 214)
+        Me.Label5.Location = New System.Drawing.Point(43, 114)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(221, 40)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Physics"
         '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label3.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(45, 174)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(221, 40)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Dance"
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(45, 134)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(221, 40)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Music"
-        '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Cascadia Mono", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Maroon
+        Me.Label1.Font = New System.Drawing.Font("Cambria", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(27, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(268, 71)
@@ -339,11 +321,8 @@ Partial Class Ed_Stud_Coursera_Home
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label

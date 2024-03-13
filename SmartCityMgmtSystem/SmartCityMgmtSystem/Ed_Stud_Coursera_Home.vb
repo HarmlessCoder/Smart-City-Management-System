@@ -30,4 +30,8 @@ Public Class Ed_Stud_Coursera_Home
     Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
 
     End Sub
+
+    Private Sub Label6_Click_1(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
 End Class
