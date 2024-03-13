@@ -160,6 +160,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Globals.vb" />
+    <Compile Include="RideSharingChats.Designer.vb">
+      <DependentUpon>RideSharingChats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RideSharingChats.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RideSharingMain.Designer.vb">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_TeacherDashboard.resx">
       <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RideSharingChats.resx">
+      <DependentUpon>RideSharingChats.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RideSharingMain.resx">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
