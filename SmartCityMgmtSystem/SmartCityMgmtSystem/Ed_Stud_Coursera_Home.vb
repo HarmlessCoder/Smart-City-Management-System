@@ -1,10 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Public Class Ed_Stud_Coursera_Home
     Private Sub Ed_Stud_Coursera_Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim labels As Ed_Coursera_Course_ListItem() = New Ed_Coursera_Course_ListItem(3) {}
+        Dim labels As Ed_Coursera_Course_ListItem() = New Ed_Coursera_Course_ListItem(21) {}
 
         ' Create labels and set properties
-        For i As Integer = 0 To 3
+        For i As Integer = 0 To 20
             labels(i) = New Ed_Coursera_Course_ListItem()
         Next
 
