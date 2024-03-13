@@ -195,6 +195,18 @@
     <Compile Include="ElectionInnerScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenAdmin.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTI.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenRTI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTI.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Globals.vb" />
     <Compile Include="pictureButtonvb.Designer.vb">
       <DependentUpon>pictureButtonvb.vb</DependentUpon>
@@ -307,6 +319,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreen1.resx">
       <DependentUpon>ElectionInnerScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdmin.resx">
+      <DependentUpon>ElectionInnerScreenAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenRTI.resx">
+      <DependentUpon>ElectionInnerScreenCitizenRTI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pictureButtonvb.resx">
       <DependentUpon>pictureButtonvb.vb</DependentUpon>
@@ -575,6 +593,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CommerceExam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-approval-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-timeline-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ballot-box-with-ballot-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-results-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-100 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
