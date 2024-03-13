@@ -26,14 +26,15 @@ Partial Class Ed_Stud_EntranceExam
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.PictureButtonvb4 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.PictureButtonvb3 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.PictureButtonvb2 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.PictureButtonvb1 = New SmartCityMgmtSystem.pictureButtonvb()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.childformPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -87,6 +88,46 @@ Partial Class Ed_Stud_EntranceExam
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 1
         '
+        'PictureButtonvb4
+        '
+        Me.PictureButtonvb4.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb4.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.MedicalExam
+        Me.PictureButtonvb4.Location = New System.Drawing.Point(708, 55)
+        Me.PictureButtonvb4.Name = "PictureButtonvb4"
+        Me.PictureButtonvb4.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb4.TabIndex = 7
+        Me.PictureButtonvb4.Title = "Medical"
+        '
+        'PictureButtonvb3
+        '
+        Me.PictureButtonvb3.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb3.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.ArtsExam
+        Me.PictureButtonvb3.Location = New System.Drawing.Point(312, 395)
+        Me.PictureButtonvb3.Name = "PictureButtonvb3"
+        Me.PictureButtonvb3.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb3.TabIndex = 6
+        Me.PictureButtonvb3.Title = "Arts"
+        '
+        'PictureButtonvb2
+        '
+        Me.PictureButtonvb2.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb2.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.CommerceExam
+        Me.PictureButtonvb2.Location = New System.Drawing.Point(708, 395)
+        Me.PictureButtonvb2.Name = "PictureButtonvb2"
+        Me.PictureButtonvb2.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb2.TabIndex = 5
+        Me.PictureButtonvb2.Title = "Commerce"
+        '
+        'PictureButtonvb1
+        '
+        Me.PictureButtonvb1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb1.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.EngineeringExam
+        Me.PictureButtonvb1.Location = New System.Drawing.Point(312, 55)
+        Me.PictureButtonvb1.Name = "PictureButtonvb1"
+        Me.PictureButtonvb1.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb1.TabIndex = 4
+        Me.PictureButtonvb1.Title = "Engineering"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -117,46 +158,6 @@ Partial Class Ed_Stud_EntranceExam
         Me.Button6.TabIndex = 7
         Me.Button6.Text = "      Home Page"
         Me.Button6.UseVisualStyleBackColor = False
-        '
-        'PictureButtonvb4
-        '
-        Me.PictureButtonvb4.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.PictureButtonvb4.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.EntrExam
-        Me.PictureButtonvb4.Location = New System.Drawing.Point(708, 55)
-        Me.PictureButtonvb4.Name = "PictureButtonvb4"
-        Me.PictureButtonvb4.Size = New System.Drawing.Size(257, 286)
-        Me.PictureButtonvb4.TabIndex = 7
-        Me.PictureButtonvb4.Title = "Medical"
-        '
-        'PictureButtonvb3
-        '
-        Me.PictureButtonvb3.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.PictureButtonvb3.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.Institute
-        Me.PictureButtonvb3.Location = New System.Drawing.Point(312, 395)
-        Me.PictureButtonvb3.Name = "PictureButtonvb3"
-        Me.PictureButtonvb3.Size = New System.Drawing.Size(257, 286)
-        Me.PictureButtonvb3.TabIndex = 6
-        Me.PictureButtonvb3.Title = "Arts"
-        '
-        'PictureButtonvb2
-        '
-        Me.PictureButtonvb2.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.PictureButtonvb2.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.Moodle
-        Me.PictureButtonvb2.Location = New System.Drawing.Point(708, 395)
-        Me.PictureButtonvb2.Name = "PictureButtonvb2"
-        Me.PictureButtonvb2.Size = New System.Drawing.Size(257, 286)
-        Me.PictureButtonvb2.TabIndex = 5
-        Me.PictureButtonvb2.Title = "Commerce"
-        '
-        'PictureButtonvb1
-        '
-        Me.PictureButtonvb1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.PictureButtonvb1.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.Elearning
-        Me.PictureButtonvb1.Location = New System.Drawing.Point(312, 55)
-        Me.PictureButtonvb1.Name = "PictureButtonvb1"
-        Me.PictureButtonvb1.Size = New System.Drawing.Size(257, 286)
-        Me.PictureButtonvb1.TabIndex = 4
-        Me.PictureButtonvb1.Title = "Engineering"
         '
         'Ed_Stud_EntranceExam
         '
