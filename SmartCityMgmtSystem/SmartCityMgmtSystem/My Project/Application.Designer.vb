@@ -32,11 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateMainForm()
-<<<<<<< Updated upstream
-            Me.MainForm = Global.SmartCityMgmtSystem.ElectionDashboard
-=======
             Me.MainForm = Global.SmartCityMgmtSystem.TransportationDashboard
->>>>>>> Stashed changes
         End Sub
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
