@@ -1,11 +1,5 @@
-﻿Public Class Dashboard_New1
+﻿Public Class Ed_Stud_Coursera
+    Private Sub childformPanel_Paint(sender As Object, e As PaintEventArgs) Handles childformPanel.Paint
 
-    Private Sub TransportationDashboard_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs)
-        'View the TransportationAdminHome screen by default - first argument, name of the panel in the parent panel, second - name of the child form
-        Globals.viewChildForm(childformPanel, TransportationAdminHome)
     End Sub
 End Class

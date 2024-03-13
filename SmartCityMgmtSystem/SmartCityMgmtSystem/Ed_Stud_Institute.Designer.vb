@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ed_Stud_Coursera
+Partial Class Ed_Stud_Institute
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -215,7 +215,7 @@ Partial Class Ed_Stud_Coursera
         Me.Button6.Text = "      Home Page"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Ed_Stud_Coursera
+        'Ed_Stud_Institute
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -228,7 +228,7 @@ Partial Class Ed_Stud_Coursera
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
-        Me.Name = "Ed_Stud_Coursera"
+        Me.Name = "Ed_Stud_Institute"
         Me.Text = "Education"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
