@@ -33,12 +33,15 @@ Partial Class pictureButtonvb
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(73, 201)
+        Me.Label3.Location = New System.Drawing.Point(31, 223)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.MaximumSize = New System.Drawing.Size(200, 49)
+        Me.Label3.MinimumSize = New System.Drawing.Size(200, 49)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 49)
+        Me.Label3.Size = New System.Drawing.Size(200, 49)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Admin"
+        Me.Label3.Text = "Institute"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox1
         '
@@ -58,7 +61,7 @@ Partial Class pictureButtonvb
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Name = "pictureButtonvb"
-        Me.Size = New System.Drawing.Size(257, 250)
+        Me.Size = New System.Drawing.Size(257, 286)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

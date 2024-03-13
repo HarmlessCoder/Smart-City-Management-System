@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Printing
 Public Class RideSharingChats
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
@@ -15,6 +16,23 @@ Public Class RideSharingChats
         End If
     End Sub
 
+    Private Sub AddChat(name As String,
+                        postNum As Integer,
+                           Optional datetime As String = "",
+                          Optional comment As String = "",
+                          Optional image As Image = Nothing,
+                          Optional isRider As Boolean = True)
+        Dim ChatBubble As ChatBubbleItem
+        ChatBubble = New ChatBubbleItem()
+        With ChatBubble
+            .Name = "chat_" & postNum
+            If Not isRider Then
+                .Margin = New Padding(PostsPanel.Width - ChatBubble.Width - 25, 12, 0, 3)
+            End If
+        End With
+        ChatBubble.SetDetails(name, datetime, comment, image, isRider)
+        PostsPanel.Controls.Add(ChatBubble)
+    End Sub
     Private Sub LoadandBindDataGridView()
         'Get connection String from globals
         Dim conString = Globals.getdbConnectionString()
@@ -44,7 +62,7 @@ Public Class RideSharingChats
 
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Dummy Data, Change it to LoadandBindDataGridView() 
-        DataGridView1.Columns("Approve").Visible = False
+        'DataGridView1.Columns("Approve").Visible = False
         For i As Integer = 1 To 8
             ' Add an empty row to the DataGridView
             Dim row As New DataGridViewRow()
@@ -54,6 +72,14 @@ Public Class RideSharingChats
             DataGridView1.Rows(i - 1).Cells("Column1").Value = "DummyVal"
             DataGridView1.Rows(i - 1).Cells("Column2").Value = "DummyVal"
         Next
+        AddChat("Dhanesh", 1, "13th March, 9:30PM", "Hey guys, pay the fee and then I will approve your requests", Nothing, False)
+        AddChat("Shivam", 2, "13th March, 9:35PM", "Okay, But the fare is bit more, can you like reduce it please?", Nothing, True)
+        AddChat("Adarsh", 3, "13th March, 9:36PM", "Yes,same concern", Nothing, True)
+        AddChat("Dhanesh", 4, "13th March, 9:40PM", "No, I can't do that, I have to pay the petrol fare", Nothing, False)
+        AddChat("Shivam", 5, "13th March, 9:45PM", "Okay, I will pay the fare", Nothing, True)
+        AddChat("Dhanesh", 6, "13th March, 9:46PM", "Okay, I will approve your request", Nothing, False)
+        AddChat("Adarsh", 7, "13th March, 9:50PM", "Fine,But I have no more choice.", Nothing, True)
+        AddChat("Dhanesh", 8, "13th March, 9:55PM", "Okay, I will approve your request", Nothing, False)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
