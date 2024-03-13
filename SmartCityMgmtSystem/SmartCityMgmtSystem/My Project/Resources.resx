@@ -322,9 +322,10 @@
   <data name="icons8-bus-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-bus-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="admin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-push-notifications-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+	<data name="admin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	  <data name="icons8-push-notifications-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-push-notifications-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ArtsExam" type="System.Resources.ResXFileRef, System.Windows.Forms">
