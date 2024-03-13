@@ -171,6 +171,24 @@
     <Compile Include="Ed_TeacherDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionDashboard.Designer.vb">
+      <DependentUpon>ElectionDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionHomePage.Designer.vb">
+      <DependentUpon>ElectionHomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionHomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreen1.Designer.vb">
+      <DependentUpon>ElectionInnerScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Globals.vb" />
     <Compile Include="pictureButtonvb.Designer.vb">
       <DependentUpon>pictureButtonvb.vb</DependentUpon>
@@ -271,6 +289,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_TeacherDashboard.resx">
       <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionDashboard.resx">
+      <DependentUpon>ElectionDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionHomePage.resx">
+      <DependentUpon>ElectionHomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreen1.resx">
+      <DependentUpon>ElectionInnerScreen1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pictureButtonvb.resx">
       <DependentUpon>pictureButtonvb.vb</DependentUpon>
@@ -464,6 +491,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-about-us1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hierarchy-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-election-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-city-hall-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-elections-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-government-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-helping-hand-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-organization-chart-people-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-politician-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-voter-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-nominate-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-who-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-elections-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-card-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-improvement-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-timeline-week-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-database-administrator-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
