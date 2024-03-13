@@ -27,4 +27,6 @@ Public Class RideSharingMain
         AddPost("Shivam Gupta", "1st April, 8:30AM", "Pan Bazaar", "Kamakhya", 25, 7, 3, Nothing)
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    End Sub
 End Class
