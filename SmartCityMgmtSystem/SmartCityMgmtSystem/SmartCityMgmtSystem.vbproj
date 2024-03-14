@@ -309,6 +309,12 @@
     <Compile Include="TransportBusSchedule.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportFRAdmin.Designer.vb">
+      <DependentUpon>TransportFRAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportFRAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportTollPlaza.Designer.vb">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
     </Compile>
@@ -421,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportBusSchedule.resx">
       <DependentUpon>TransportBusSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportFRAdmin.resx">
+      <DependentUpon>TransportFRAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportTollPlaza.resx">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
