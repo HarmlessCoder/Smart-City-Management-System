@@ -138,6 +138,12 @@
     <Compile Include="ElectionInnerScreenRTICitizen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenVoter.Designer.vb">
+      <DependentUpon>ElectionInnerScreenVoter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenVoter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Election_Home_Page.Designer.vb">
       <DependentUpon>Election_Home_Page.vb</DependentUpon>
     </Compile>
@@ -394,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenRTICitizen.resx">
       <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenVoter.resx">
+      <DependentUpon>ElectionInnerScreenVoter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Election_Home_Page.resx">
       <DependentUpon>Election_Home_Page.vb</DependentUpon>
