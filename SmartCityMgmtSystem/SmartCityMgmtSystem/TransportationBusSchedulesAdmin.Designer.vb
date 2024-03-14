@@ -77,8 +77,8 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DeleteBut = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.EditBut = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
         Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -130,7 +130,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke
@@ -141,7 +141,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.DeleteBut, Me.EditBut})
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkGoldenrod
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkGoldenrod
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke
@@ -670,6 +670,7 @@ Partial Class TransportationBusSchedulesAdmin
         'DeleteBut
         '
         Me.DeleteBut.HeaderText = ""
+        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
         Me.DeleteBut.MinimumWidth = 6
         Me.DeleteBut.Name = "DeleteBut"
         Me.DeleteBut.ReadOnly = True
@@ -679,6 +680,7 @@ Partial Class TransportationBusSchedulesAdmin
         'EditBut
         '
         Me.EditBut.HeaderText = ""
+        Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
         Me.EditBut.MinimumWidth = 6
         Me.EditBut.Name = "EditBut"
         Me.EditBut.ReadOnly = True
@@ -763,6 +765,6 @@ Partial Class TransportationBusSchedulesAdmin
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents DeleteBut As DataGridViewButtonColumn
-    Friend WithEvents EditBut As DataGridViewButtonColumn
+    Friend WithEvents DeleteBut As DataGridViewImageColumn
+    Friend WithEvents EditBut As DataGridViewImageColumn
 End Class

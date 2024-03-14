@@ -117,6 +117,12 @@
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="TransportationManageFastagAdmin.Designer.vb">
+      <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportationManageFastagAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportationBusSchedulesAdmin.Designer.vb">
       <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
     </Compile>
@@ -303,6 +309,12 @@
     <Compile Include="TransportBusSchedule.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportTollPlaza.Designer.vb">
+      <DependentUpon>TransportTollPlaza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTollPlaza.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
@@ -316,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
+      <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationBusSchedulesAdmin.resx">
       <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
@@ -406,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportBusSchedule.resx">
       <DependentUpon>TransportBusSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportTollPlaza.resx">
+      <DependentUpon>TransportTollPlaza.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

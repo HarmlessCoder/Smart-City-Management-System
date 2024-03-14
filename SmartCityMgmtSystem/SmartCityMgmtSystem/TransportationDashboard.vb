@@ -18,4 +18,9 @@
         'View the Bus Schedule Screen
         Globals.viewChildForm(childformPanel, TransportBusSchedule)
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        'View the Toll Plaza Screen
+        Globals.viewChildForm(childformPanel, TransportTollPlaza)
+    End Sub
 End Class
