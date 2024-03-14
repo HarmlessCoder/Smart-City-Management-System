@@ -108,7 +108,7 @@ Partial Class HealthcareAdminHome
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.DLReq)
-        Me.Panel1.Location = New System.Drawing.Point(126, 181)
+        Me.Panel1.Location = New System.Drawing.Point(106, 159)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(326, 249)
@@ -205,7 +205,7 @@ Partial Class HealthcareAdminHome
         Me.DataGridViewImageColumn1.ReadOnly = True
         Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn1.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn1.Width = 125
+        Me.DataGridViewImageColumn1.Width = 123
         '
         'DataGridViewImageColumn2
         '
@@ -224,7 +224,7 @@ Partial Class HealthcareAdminHome
         Me.DataGridViewImageColumn2.ReadOnly = True
         Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn2.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn2.Width = 125
+        Me.DataGridViewImageColumn2.Width = 123
         '
         'Panel8
         '
@@ -232,7 +232,7 @@ Partial Class HealthcareAdminHome
         Me.Panel8.Controls.Add(Me.Panel9)
         Me.Panel8.Controls.Add(Me.Label11)
         Me.Panel8.Controls.Add(Me.Panel10)
-        Me.Panel8.Location = New System.Drawing.Point(492, 181)
+        Me.Panel8.Location = New System.Drawing.Point(472, 159)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(336, 249)
@@ -355,7 +355,7 @@ Partial Class HealthcareAdminHome
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Panel5)
-        Me.Panel3.Location = New System.Drawing.Point(126, 452)
+        Me.Panel3.Location = New System.Drawing.Point(106, 430)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(326, 249)
@@ -444,7 +444,7 @@ Partial Class HealthcareAdminHome
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Label9)
         Me.Panel6.Controls.Add(Me.Panel11)
-        Me.Panel6.Location = New System.Drawing.Point(492, 452)
+        Me.Panel6.Location = New System.Drawing.Point(472, 430)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(336, 249)
@@ -500,7 +500,7 @@ Partial Class HealthcareAdminHome
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel12.Controls.Add(Me.Label15)
         Me.Panel12.Controls.Add(Me.Panel14)
-        Me.Panel12.Location = New System.Drawing.Point(864, 181)
+        Me.Panel12.Location = New System.Drawing.Point(844, 159)
         Me.Panel12.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(336, 249)
@@ -558,7 +558,7 @@ Partial Class HealthcareAdminHome
         Me.Panel16.Controls.Add(Me.Panel17)
         Me.Panel16.Controls.Add(Me.Label19)
         Me.Panel16.Controls.Add(Me.Panel18)
-        Me.Panel16.Location = New System.Drawing.Point(864, 452)
+        Me.Panel16.Location = New System.Drawing.Point(844, 430)
         Me.Panel16.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(336, 249)
