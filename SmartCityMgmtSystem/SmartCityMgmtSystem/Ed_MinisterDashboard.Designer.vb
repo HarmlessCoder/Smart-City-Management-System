@@ -179,7 +179,7 @@ Partial Class Ed_MinisterDashboard
         Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
         Me.Button6.Size = New System.Drawing.Size(163, 39)
         Me.Button6.TabIndex = 7
-        Me.Button6.Text = "      Home Page"
+        Me.Button6.Text = "     Back"
         Me.Button6.UseVisualStyleBackColor = False
         '
         'Ed_MinisterDashboard
