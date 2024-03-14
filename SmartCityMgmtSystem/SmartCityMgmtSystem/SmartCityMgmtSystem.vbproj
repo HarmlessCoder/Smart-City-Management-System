@@ -368,7 +368,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialog1.resx" />
     <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
     </EmbeddedResource>
