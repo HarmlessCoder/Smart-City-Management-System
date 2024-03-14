@@ -93,6 +93,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ed_InstAdmin_AdmitList.Designer.vb">
+      <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_InstAdmin_AdmitList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Institute_List.Designer.vb">
       <DependentUpon>Ed_Institute_List.vb</DependentUpon>
     </Compile>
@@ -103,6 +109,12 @@
       <DependentUpon>Ed_Institute_ListItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Institute_ListItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ed_Stud_ListItem.Designer.vb">
+      <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TransportationBusSchedulesAdmin.Designer.vb">
@@ -293,11 +305,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
+      <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Institute_List.resx">
       <DependentUpon>Ed_Institute_List.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Institute_ListItem.resx">
       <DependentUpon>Ed_Institute_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Stud_ListItem.resx">
+      <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationBusSchedulesAdmin.resx">
       <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
@@ -659,6 +677,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Institute clipart image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
