@@ -126,6 +126,42 @@
     <Compile Include="Ed_Stud_Moodle_JoinCourse.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Temp1.Designer.vb">
+      <DependentUpon>Ed_Temp1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Temp1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenRTICitizen.Designer.vb">
+      <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenRTICitizen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Election_Home_Page.Designer.vb">
+      <DependentUpon>Election_Home_Page.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Election_Home_Page.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Election_HP.Designer.vb">
+      <DependentUpon>Election_HP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Election_HP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Election_Inner_Screen.Designer.vb">
+      <DependentUpon>Election_Inner_Screen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Election_Inner_Screen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events_vendorRegistrationScreen.Designer.vb">
+      <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Events_vendorRegistrationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareAdminHome.Designer.vb">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </Compile>
@@ -332,6 +368,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialog1.resx" />
     <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +383,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Moodle_JoinCourse.resx">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Temp1.resx">
+      <DependentUpon>Ed_Temp1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenRTICitizen.resx">
+      <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Election_Home_Page.resx">
+      <DependentUpon>Election_Home_Page.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Election_HP.resx">
+      <DependentUpon>Election_HP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Election_Inner_Screen.resx">
+      <DependentUpon>Election_Inner_Screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events_vendorRegistrationScreen.resx">
+      <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAdminHome.resx">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
