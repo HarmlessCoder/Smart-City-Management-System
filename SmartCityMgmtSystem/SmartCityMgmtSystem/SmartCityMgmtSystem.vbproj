@@ -228,12 +228,6 @@
     <Compile Include="ElectionDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ElectionHomePage.Designer.vb">
-      <DependentUpon>ElectionHomePage.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ElectionHomePage.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ElectionInnerScreen1.Designer.vb">
       <DependentUpon>ElectionInnerScreen1.vb</DependentUpon>
     </Compile>
@@ -397,9 +391,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionDashboard.resx">
       <DependentUpon>ElectionDashboard.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ElectionHomePage.resx">
-      <DependentUpon>ElectionHomePage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreen1.resx">
       <DependentUpon>ElectionInnerScreen1.vb</DependentUpon>
