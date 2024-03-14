@@ -26,422 +26,422 @@ Partial Class vendorRegistrationScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Button2 = New Button()
-        DataGridViewImageColumn1 = New DataGridViewImageColumn()
-        DataGridViewImageColumn2 = New DataGridViewImageColumn()
-        Panel2 = New Panel()
-        TextBox1 = New TextBox()
-        Label6 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        TextBox5 = New TextBox()
-        Label1 = New Label()
-        TextBox4 = New TextBox()
-        Label5 = New Label()
-        Label9 = New Label()
-        Label7 = New Label()
-        ComboBox1 = New ComboBox()
-        Label8 = New Label()
-        DateTimePicker2 = New DateTimePicker()
-        TextBox2 = New TextBox()
-        DateTimePicker1 = New DateTimePicker()
-        TextBox3 = New TextBox()
-        Panel3 = New Panel()
-        Label16 = New Label()
-        Label15 = New Label()
-        Label10 = New Label()
-        Label14 = New Label()
-        Label13 = New Label()
-        DataGridViewImageColumn3 = New DataGridViewImageColumn()
-        DataGridViewImageColumn4 = New DataGridViewImageColumn()
-        Label4 = New Label()
-        Panel2.SuspendLayout()
-        Panel3.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.Maroon
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Verdana", 13.76271F, FontStyle.Bold)
-        Button2.ForeColor = Color.Linen
-        Button2.Location = New Point(142, 480)
-        Button2.Margin = New Padding(4, 3, 4, 3)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(218, 44)
-        Button2.TabIndex = 24
-        Button2.Text = "Register"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' DataGridViewImageColumn1
-        ' 
-        DataGridViewImageColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Maroon
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Verdana", 13.76271!, System.Drawing.FontStyle.Bold)
+        Me.Button2.ForeColor = System.Drawing.Color.Linen
+        Me.Button2.Location = New System.Drawing.Point(142, 480)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(218, 44)
+        Me.Button2.TabIndex = 24
+        Me.Button2.Text = "Register"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.NullValue = "System.Drawing.Bitmap"
-        DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewImageColumn1.HeaderText = "  "
-        DataGridViewImageColumn1.ImageLayout = DataGridViewImageCellLayout.Zoom
-        DataGridViewImageColumn1.MinimumWidth = 6
-        DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        DataGridViewImageColumn1.ReadOnly = True
-        DataGridViewImageColumn1.Resizable = DataGridViewTriState.False
-        DataGridViewImageColumn1.ToolTipText = "Delete"
-        DataGridViewImageColumn1.Width = 125
-        ' 
-        ' DataGridViewImageColumn2
-        ' 
-        DataGridViewImageColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = Color.PaleGreen
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewImageColumn1.HeaderText = "  "
+        Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn1.MinimumWidth = 6
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn1.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn1.Width = 123
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle2.NullValue = Nothing
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        DataGridViewCellStyle2.SelectionForeColor = Color.Maroon
-        DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle2
-        DataGridViewImageColumn2.HeaderText = ""
-        DataGridViewImageColumn2.ImageLayout = DataGridViewImageCellLayout.Zoom
-        DataGridViewImageColumn2.MinimumWidth = 6
-        DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        DataGridViewImageColumn2.ReadOnly = True
-        DataGridViewImageColumn2.Resizable = DataGridViewTriState.False
-        DataGridViewImageColumn2.ToolTipText = "Delete"
-        DataGridViewImageColumn2.Width = 125
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.DarkGoldenrod
-        Panel2.BorderStyle = BorderStyle.Fixed3D
-        Panel2.Controls.Add(Button2)
-        Panel2.Controls.Add(TextBox1)
-        Panel2.Controls.Add(Label6)
-        Panel2.Controls.Add(Label2)
-        Panel2.Controls.Add(Label3)
-        Panel2.Controls.Add(TextBox5)
-        Panel2.Controls.Add(Label1)
-        Panel2.Controls.Add(TextBox4)
-        Panel2.Controls.Add(Label5)
-        Panel2.Controls.Add(Label9)
-        Panel2.Controls.Add(Label7)
-        Panel2.Controls.Add(ComboBox1)
-        Panel2.Controls.Add(Label8)
-        Panel2.Controls.Add(DateTimePicker2)
-        Panel2.Controls.Add(TextBox2)
-        Panel2.Controls.Add(DateTimePicker1)
-        Panel2.Controls.Add(TextBox3)
-        Panel2.Location = New Point(369, 105)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(517, 574)
-        Panel2.TabIndex = 25
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.BackColor = Color.BlanchedAlmond
-        TextBox1.Location = New Point(263, 60)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(179, 30)
-        TextBox1.TabIndex = 23
-        ' 
-        ' Label6
-        ' 
-        Label6.Anchor = AnchorStyles.None
-        Label6.AutoSize = True
-        Label6.BackColor = Color.DarkGoldenrod
-        Label6.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label6.ForeColor = Color.BlanchedAlmond
-        Label6.Location = New Point(68, 253)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(145, 26)
-        Label6.TabIndex = 5
-        Label6.Text = "Availability To"
-        ' 
-        ' Label2
-        ' 
-        Label2.Anchor = AnchorStyles.None
-        Label2.AutoSize = True
-        Label2.BackColor = Color.DarkGoldenrod
-        Label2.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label2.ForeColor = Color.BlanchedAlmond
-        Label2.Location = New Point(78, 58)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(65, 26)
-        Label2.TabIndex = 0
-        Label2.Text = "Name"
-        ' 
-        ' Label3
-        ' 
-        Label3.Anchor = AnchorStyles.None
-        Label3.AutoSize = True
-        Label3.BackColor = Color.DarkGoldenrod
-        Label3.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label3.ForeColor = Color.BlanchedAlmond
-        Label3.Location = New Point(68, 107)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(172, 26)
-        Label3.TabIndex = 2
-        Label3.Text = "Aadhaar Number"
-        ' 
-        ' TextBox5
-        ' 
-        TextBox5.BackColor = Color.BlanchedAlmond
-        TextBox5.Location = New Point(263, 411)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(179, 30)
-        TextBox5.TabIndex = 19
-        ' 
-        ' Label1
-        ' 
-        Label1.Anchor = AnchorStyles.None
-        Label1.AutoSize = True
-        Label1.BackColor = Color.DarkGoldenrod
-        Label1.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label1.ForeColor = Color.BlanchedAlmond
-        Label1.Location = New Point(68, 155)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(121, 26)
-        Label1.TabIndex = 3
-        Label1.Text = "Contact No."
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.BackColor = Color.BlanchedAlmond
-        TextBox4.Location = New Point(263, 357)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(179, 30)
-        TextBox4.TabIndex = 18
-        ' 
-        ' Label5
-        ' 
-        Label5.Anchor = AnchorStyles.None
-        Label5.AutoSize = True
-        Label5.BackColor = Color.DarkGoldenrod
-        Label5.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label5.ForeColor = Color.BlanchedAlmond
-        Label5.Location = New Point(68, 205)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(180, 26)
-        Label5.TabIndex = 4
-        Label5.Text = "Availaibility From"
-        ' 
-        ' Label9
-        ' 
-        Label9.Anchor = AnchorStyles.None
-        Label9.AutoSize = True
-        Label9.BackColor = Color.DarkGoldenrod
-        Label9.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label9.ForeColor = Color.BlanchedAlmond
-        Label9.Location = New Point(66, 355)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(108, 26)
-        Label9.TabIndex = 17
-        Label9.Text = "Username"
-        ' 
-        ' Label7
-        ' 
-        Label7.Anchor = AnchorStyles.None
-        Label7.AutoSize = True
-        Label7.BackColor = Color.DarkGoldenrod
-        Label7.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label7.ForeColor = Color.BlanchedAlmond
-        Label7.Location = New Point(68, 300)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(142, 26)
-        Label7.TabIndex = 6
-        Label7.Text = "Specialisation"
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.BackColor = Color.BlanchedAlmond
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(263, 300)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(179, 30)
-        ComboBox1.TabIndex = 16
-        ' 
-        ' Label8
-        ' 
-        Label8.Anchor = AnchorStyles.None
-        Label8.AutoSize = True
-        Label8.BackColor = Color.DarkGoldenrod
-        Label8.Font = New Font("Trebuchet MS", 12.0F, FontStyle.Bold)
-        Label8.ForeColor = Color.BlanchedAlmond
-        Label8.Location = New Point(72, 409)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(100, 26)
-        Label8.TabIndex = 7
-        Label8.Text = "Password"
-        ' 
-        ' DateTimePicker2
-        ' 
-        DateTimePicker2.CalendarMonthBackground = Color.BlanchedAlmond
-        DateTimePicker2.Location = New Point(263, 255)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(179, 30)
-        DateTimePicker2.TabIndex = 15
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.BackColor = Color.BlanchedAlmond
-        TextBox2.Location = New Point(263, 109)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(179, 30)
-        TextBox2.TabIndex = 8
-        ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.CalendarMonthBackground = Color.BlanchedAlmond
-        DateTimePicker1.Location = New Point(263, 207)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(179, 30)
-        DateTimePicker1.TabIndex = 14
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.BackColor = Color.BlanchedAlmond
-        TextBox3.Location = New Point(263, 157)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(179, 30)
-        TextBox3.TabIndex = 9
-        ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = Color.PapayaWhip
-        Panel3.BorderStyle = BorderStyle.Fixed3D
-        Panel3.Controls.Add(Label16)
-        Panel3.Controls.Add(Label15)
-        Panel3.Controls.Add(Label10)
-        Panel3.Controls.Add(Label14)
-        Panel3.Controls.Add(Label13)
-        Panel3.Location = New Point(984, 506)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(240, 162)
-        Panel3.TabIndex = 29
-        ' 
-        ' Label16
-        ' 
-        Label16.AutoSize = True
-        Label16.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Bold)
-        Label16.Location = New Point(154, 27)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(72, 27)
-        Label16.TabIndex = 33
-        Label16.Text = "₹0.00"
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Bold)
-        Label15.Location = New Point(154, 133)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(72, 27)
-        Label15.TabIndex = 32
-        Label15.Text = "₹0.00"
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Bold)
-        Label10.Location = New Point(-2, -2)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(110, 27)
-        Label10.TabIndex = 29
-        Label10.Text = "Payment:"
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Bold)
-        Label14.Location = New Point(3, 133)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(69, 27)
-        Label14.TabIndex = 31
-        Label14.Text = "Total:"
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Bold)
-        Label13.Location = New Point(3, 27)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(100, 27)
-        Label13.TabIndex = 30
-        Label13.Text = "Amount:"
-        ' 
-        ' DataGridViewImageColumn3
-        ' 
-        DataGridViewImageColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = Color.PaleGreen
-        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewImageColumn2.HeaderText = ""
+        Me.DataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn2.MinimumWidth = 6
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.ReadOnly = True
+        Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn2.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn2.Width = 123
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.TextBox5)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.TextBox4)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.DateTimePicker2)
+        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.DateTimePicker1)
+        Me.Panel2.Controls.Add(Me.TextBox3)
+        Me.Panel2.Location = New System.Drawing.Point(369, 105)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(517, 574)
+        Me.Panel2.TabIndex = 25
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.TextBox1.Location = New System.Drawing.Point(263, 60)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(179, 29)
+        Me.TextBox1.TabIndex = 23
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label6.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label6.Location = New System.Drawing.Point(68, 253)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(145, 26)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Availability To"
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label2.Location = New System.Drawing.Point(78, 58)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(65, 26)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Name"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label3.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label3.Location = New System.Drawing.Point(68, 107)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(172, 26)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Aadhaar Number"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.TextBox5.Location = New System.Drawing.Point(263, 411)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(179, 29)
+        Me.TextBox5.TabIndex = 19
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label1.Location = New System.Drawing.Point(68, 155)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(121, 26)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Contact No."
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.TextBox4.Location = New System.Drawing.Point(263, 357)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(179, 29)
+        Me.TextBox4.TabIndex = 18
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label5.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label5.Location = New System.Drawing.Point(68, 205)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(180, 26)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Availaibility From"
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label9.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label9.Location = New System.Drawing.Point(66, 355)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(108, 26)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "Username"
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label7.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label7.Location = New System.Drawing.Point(68, 300)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(142, 26)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Specialisation"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(263, 300)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(179, 30)
+        Me.ComboBox1.TabIndex = 16
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label8.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label8.Location = New System.Drawing.Point(72, 409)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(100, 26)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Password"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.CalendarMonthBackground = System.Drawing.Color.BlanchedAlmond
+        Me.DateTimePicker2.Location = New System.Drawing.Point(263, 255)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(179, 29)
+        Me.DateTimePicker2.TabIndex = 15
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.TextBox2.Location = New System.Drawing.Point(263, 109)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(179, 29)
+        Me.TextBox2.TabIndex = 8
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.BlanchedAlmond
+        Me.DateTimePicker1.Location = New System.Drawing.Point(263, 207)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(179, 29)
+        Me.DateTimePicker1.TabIndex = 14
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.TextBox3.Location = New System.Drawing.Point(263, 157)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(179, 29)
+        Me.TextBox3.TabIndex = 9
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.PapayaWhip
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.Label16)
+        Me.Panel3.Controls.Add(Me.Label15)
+        Me.Panel3.Controls.Add(Me.Label10)
+        Me.Panel3.Controls.Add(Me.Label14)
+        Me.Panel3.Controls.Add(Me.Label13)
+        Me.Panel3.Location = New System.Drawing.Point(984, 506)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(240, 162)
+        Me.Panel3.TabIndex = 29
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Trebuchet MS", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.Location = New System.Drawing.Point(154, 27)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(72, 27)
+        Me.Label16.TabIndex = 33
+        Me.Label16.Text = "₹0.00"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Trebuchet MS", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.Location = New System.Drawing.Point(154, 133)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(72, 27)
+        Me.Label15.TabIndex = 32
+        Me.Label15.Text = "₹0.00"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Trebuchet MS", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Label10.Location = New System.Drawing.Point(-2, -2)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(110, 27)
+        Me.Label10.TabIndex = 29
+        Me.Label10.Text = "Payment:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Trebuchet MS", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Label14.Location = New System.Drawing.Point(3, 133)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(69, 27)
+        Me.Label14.TabIndex = 31
+        Me.Label14.Text = "Total:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Trebuchet MS", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.Location = New System.Drawing.Point(3, 27)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(100, 27)
+        Me.Label13.TabIndex = 30
+        Me.Label13.Text = "Amount:"
+        '
+        'DataGridViewImageColumn3
+        '
+        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle3.NullValue = Nothing
-        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        DataGridViewCellStyle3.SelectionForeColor = Color.Maroon
-        DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle3
-        DataGridViewImageColumn3.HeaderText = ""
-        DataGridViewImageColumn3.ImageLayout = DataGridViewImageCellLayout.Zoom
-        DataGridViewImageColumn3.MinimumWidth = 6
-        DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
-        DataGridViewImageColumn3.ReadOnly = True
-        DataGridViewImageColumn3.Resizable = DataGridViewTriState.False
-        DataGridViewImageColumn3.ToolTipText = "Delete"
-        DataGridViewImageColumn3.Width = 125
-        ' 
-        ' DataGridViewImageColumn4
-        ' 
-        DataGridViewImageColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = Color.PaleGreen
-        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewImageColumn3.HeaderText = ""
+        Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn3.MinimumWidth = 6
+        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.ReadOnly = True
+        Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn3.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn3.Width = 123
+        '
+        'DataGridViewImageColumn4
+        '
+        Me.DataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle4.NullValue = Nothing
-        DataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        DataGridViewCellStyle4.SelectionForeColor = Color.Maroon
-        DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle4
-        DataGridViewImageColumn4.HeaderText = ""
-        DataGridViewImageColumn4.ImageLayout = DataGridViewImageCellLayout.Zoom
-        DataGridViewImageColumn4.MinimumWidth = 6
-        DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
-        DataGridViewImageColumn4.ReadOnly = True
-        DataGridViewImageColumn4.Resizable = DataGridViewTriState.False
-        DataGridViewImageColumn4.ToolTipText = "Delete"
-        DataGridViewImageColumn4.Width = 125
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.BackColor = Color.BlanchedAlmond
-        Label4.Font = New Font("Microsoft Sans Serif", 23.79661F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.DarkGoldenrod
-        Label4.ImageAlign = ContentAlignment.MiddleLeft
-        Label4.Location = New Point(352, 9)
-        Label4.Margin = New Padding(4, 0, 4, 0)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(464, 46)
-        Label4.TabIndex = 4
-        Label4.Text = "      Vendor Registration"
-        ' 
-        ' vendorRegistrationScreen
-        ' 
-        AutoScaleDimensions = New SizeF(13.0F, 22.0F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.BlanchedAlmond
-        ClientSize = New Size(1270, 736)
-        Controls.Add(Panel3)
-        Controls.Add(Panel2)
-        Controls.Add(Label4)
-        Font = New Font("Verdana", 10.98305F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(4)
-        Name = "vendorRegistrationScreen"
-        Text = "Home Page"
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
-        Panel3.ResumeLayout(False)
-        Panel3.PerformLayout()
-        ResumeLayout(False)
-        PerformLayout()
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridViewImageColumn4.HeaderText = ""
+        Me.DataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn4.MinimumWidth = 6
+        Me.DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
+        Me.DataGridViewImageColumn4.ReadOnly = True
+        Me.DataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn4.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn4.Width = 123
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label4.Font = New System.Drawing.Font("Agency FB", 26.23729!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Maroon
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label4.Location = New System.Drawing.Point(13, 9)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(366, 53)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "      Vendor Registration"
+        '
+        'vendorRegistrationScreen
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.ClientSize = New System.Drawing.Size(1270, 736)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Label4)
+        Me.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "vendorRegistrationScreen"
+        Me.Text = "Home Page"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridViewImageColumn1 As System.Windows.Forms.DataGridViewImageColumn
