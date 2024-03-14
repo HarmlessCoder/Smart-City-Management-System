@@ -120,6 +120,12 @@
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="lib_borrowed.Designer.vb">
+      <DependentUpon>lib_borrowed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_borrowed.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lib_dash.Designer.vb">
       <DependentUpon>lib_dash.vb</DependentUpon>
     </Compile>
