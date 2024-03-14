@@ -213,6 +213,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property icons8_active_directory_100() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8-active-directory-100", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property icons8_activity_history_80() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8-activity-history-80", resourceCulture)
@@ -976,6 +986,16 @@ Namespace My.Resources
         Friend ReadOnly Property SMART_CITY___GUWAHATI_removebg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("SMART_CITY_-_GUWAHATI-removebg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property SmartCity_Administrative_Hierarchy() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("SmartCity_Administrative_Hierarchy", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
