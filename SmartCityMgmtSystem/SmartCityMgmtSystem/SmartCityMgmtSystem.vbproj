@@ -93,6 +93,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ed_Institute_List.Designer.vb">
+      <DependentUpon>Ed_Institute_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Institute_ListItem.Designer.vb">
+      <DependentUpon>Ed_Institute_ListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_ListItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TransportationBusSchedulesAdmin.Designer.vb">
       <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
     </Compile>
@@ -281,6 +293,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ed_Institute_List.resx">
+      <DependentUpon>Ed_Institute_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Institute_ListItem.resx">
+      <DependentUpon>Ed_Institute_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransportationBusSchedulesAdmin.resx">
       <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -632,6 +650,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-information-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute clipart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute clipart1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute clipart image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
