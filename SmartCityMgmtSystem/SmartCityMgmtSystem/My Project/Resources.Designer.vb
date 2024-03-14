@@ -93,9 +93,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property ArtsExamS() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ArtsExamS", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property CommerceExam() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("CommerceExam", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property CommerceExamS() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CommerceExamS", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -126,6 +146,16 @@ Namespace My.Resources
         Friend ReadOnly Property EngineeringExam() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("EngineeringExam", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property EngineeringExamS() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("EngineeringExamS", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -816,6 +846,16 @@ Namespace My.Resources
         Friend ReadOnly Property MedicalExam() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("MedicalExam", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property MedicalExamS() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("MedicalExamS", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
