@@ -20,4 +20,8 @@ Public Class TransportationAdminHome
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Globals.viewChildForm(TransportationDashboard.childformPanel, TransportationManageFastagAdmin)
     End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        Globals.viewChildForm(TransportationDashboard.childformPanel, TransportFinancialRecordsAdmin)
+    End Sub
 End Class
