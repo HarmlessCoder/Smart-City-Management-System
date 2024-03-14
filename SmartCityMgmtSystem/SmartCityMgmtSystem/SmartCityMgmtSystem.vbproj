@@ -120,6 +120,12 @@
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ed_Stud_Moodle_JoinCourse.Designer.vb">
+      <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Stud_Moodle_JoinCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareAdminHome.Designer.vb">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </Compile>
@@ -337,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Stud_Moodle_JoinCourse.resx">
+      <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAdminHome.resx">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>

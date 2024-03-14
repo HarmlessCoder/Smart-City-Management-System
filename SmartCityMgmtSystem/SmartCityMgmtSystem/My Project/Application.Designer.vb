@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.SmartCityMgmtSystem.Ed_Institute_AdminDashboard
+            Me.MainForm = Global.SmartCityMgmtSystem.Ed_Stud_Moodle
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
