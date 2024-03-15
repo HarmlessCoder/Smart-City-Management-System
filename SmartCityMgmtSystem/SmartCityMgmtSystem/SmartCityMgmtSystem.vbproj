@@ -174,6 +174,12 @@
     <Compile Include="ElectionInnerScreen2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FastagPlanItem.Designer.vb">
+      <DependentUpon>FastagPlanItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastagPlanItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="HealthcareAdminHome.Designer.vb">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </Compile>
@@ -454,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreen2.resx">
       <DependentUpon>ElectionInnerScreen2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastagPlanItem.resx">
+      <DependentUpon>FastagPlanItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAdminHome.resx">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
@@ -906,13 +915,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-login-30.png" />
-   
     <None Include="Resources\SmartCity_Administrative_Hierarchy.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Fatstag.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <Content Include="Resources\icons8-health-100.png" />
