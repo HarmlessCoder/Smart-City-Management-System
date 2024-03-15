@@ -126,6 +126,12 @@
     <Compile Include="HealthcareAdminHome.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HomePage.Designer.vb">
+      <DependentUpon>HomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportationManageFastagAdmin.Designer.vb">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
     </Compile>
@@ -330,6 +336,36 @@
     <Compile Include="TransportTollPlaza.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserDetails.Designer.vb">
+      <DependentUpon>UserDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserGetOtp.Designer.vb">
+      <DependentUpon>UserGetOtp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserGetOtp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.vb">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Designer.vb">
+      <DependentUpon>UserProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSignUp.Designer.vb">
+      <DependentUpon>UserSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserSignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
@@ -346,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAdminHome.resx">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
@@ -445,6 +484,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportTollPlaza.resx">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDetails.resx">
+      <DependentUpon>UserDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserGetOtp.resx">
+      <DependentUpon>UserGetOtp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfile.resx">
+      <DependentUpon>UserProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSignUp.resx">
+      <DependentUpon>UserSignUp.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -750,6 +804,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-activity-history-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-services-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-graduation-cap-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-heart-with-pulse-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-confetti-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-strike-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-admin-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-books-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rupee-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
