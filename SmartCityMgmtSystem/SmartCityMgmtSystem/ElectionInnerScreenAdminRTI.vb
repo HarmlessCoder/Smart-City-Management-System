@@ -1,10 +1,10 @@
 ﻿Imports System.Data.SqlClient
-Public Class ElectionInnerScreenCitizenRTI
+Public Class ElectionInnerScreenAdminRTI
     Private Sub ElectionInnerScreen1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -20,7 +20,7 @@ Public Class ElectionInnerScreenCitizenRTI
 
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -76,27 +76,11 @@ Public Class ElectionInnerScreenCitizenRTI
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenAdmin)
     End Sub
 
-    Private Sub Label2_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
-    Private Sub Panel3_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenCitizenRTIPA)
-    End Sub
-
-    Private Sub Label4_Click_1(sender As Object, e As EventArgs)
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 End Class

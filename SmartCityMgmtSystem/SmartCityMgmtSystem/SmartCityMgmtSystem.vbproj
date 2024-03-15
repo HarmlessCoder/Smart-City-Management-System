@@ -141,10 +141,40 @@
     <Compile Include="ElectionInnerScreenAdminNomination.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenAdminResults.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminRTI.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminRTI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminRTI.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionInnerScreenAdminTimeline.Designer.vb">
       <DependentUpon>ElectionInnerScreenAdminTimeline.vb</DependentUpon>
     </Compile>
     <Compile Include="ElectionInnerScreenAdminTimeline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotes.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminVotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotesTurnout.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminVotesTurnout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotesTurnout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTIPA.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenRTIPA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTIPA.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionInnerScreenRTICitizen.Designer.vb">
@@ -488,8 +518,23 @@
     <EmbeddedResource Include="ElectionInnerScreenAdminNomination.resx">
       <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminResults.resx">
+      <DependentUpon>ElectionInnerScreenAdminResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminRTI.resx">
+      <DependentUpon>ElectionInnerScreenAdminRTI.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenAdminTimeline.resx">
       <DependentUpon>ElectionInnerScreenAdminTimeline.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminVotes.resx">
+      <DependentUpon>ElectionInnerScreenAdminVotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminVotesTurnout.resx">
+      <DependentUpon>ElectionInnerScreenAdminVotesTurnout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenRTIPA.resx">
+      <DependentUpon>ElectionInnerScreenCitizenRTIPA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenRTICitizen.resx">
       <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
