@@ -61,7 +61,6 @@ Partial Class FastagPlanItem
         'lblname
         '
         Me.lblname.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblname.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_steering_wheel_30
         Me.lblname.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblname.Location = New System.Drawing.Point(161, 43)
         Me.lblname.Name = "lblname"
