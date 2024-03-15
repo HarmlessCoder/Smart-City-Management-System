@@ -141,6 +141,12 @@
     <Compile Include="ElectionInnerScreenAdminNomination.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenAdminTimeline.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminTimeline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminTimeline.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionInnerScreenRTICitizen.Designer.vb">
       <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
     </Compile>
@@ -475,6 +481,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenAdminNomination.resx">
       <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminTimeline.resx">
+      <DependentUpon>ElectionInnerScreenAdminTimeline.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenRTICitizen.resx">
       <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
