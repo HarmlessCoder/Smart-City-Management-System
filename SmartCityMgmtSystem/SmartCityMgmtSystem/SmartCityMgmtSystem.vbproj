@@ -66,6 +66,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CabSharingComponent">
       <HintPath>..\..\..\CabSharingComponent\obj\Debug\CabSharingComponent.dll</HintPath>
@@ -130,6 +133,12 @@
       <DependentUpon>Ed_Temp1.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Temp1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminNomination.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminNomination.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionInnerScreenRTICitizen.Designer.vb">
@@ -288,6 +297,18 @@
     <Compile Include="Ed_TeacherDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EventCustomerScreen.Designer.vb">
+      <DependentUpon>EventCustomerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventCustomerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventRegistrationScreen.Designer.vb">
+      <DependentUpon>EventRegistrationScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventRegistrationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionDashboard.Designer.vb">
       <DependentUpon>ElectionDashboard.vb</DependentUpon>
     </Compile>
@@ -313,6 +334,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Globals.vb" />
+    <Compile Include="EventPayment_Interface.Designer.vb">
+      <DependentUpon>EventPayment_Interface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventPayment_Interface.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="pictureButtonvb.Designer.vb">
       <DependentUpon>pictureButtonvb.vb</DependentUpon>
     </Compile>
@@ -440,6 +467,9 @@
     <EmbeddedResource Include="Ed_Temp1.resx">
       <DependentUpon>Ed_Temp1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminNomination.resx">
+      <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenRTICitizen.resx">
       <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
     </EmbeddedResource>
@@ -517,6 +547,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_TeacherDashboard.resx">
       <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventCustomerScreen.resx">
+      <DependentUpon>EventCustomerScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventRegistrationScreen.resx">
+      <DependentUpon>EventRegistrationScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventPayment_Interface.resx">
+      <DependentUpon>EventPayment_Interface.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionDashboard.resx">
       <DependentUpon>ElectionDashboard.vb</DependentUpon>
@@ -737,6 +776,84 @@
     <None Include="Resources\icons8-driver-48.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\indian_wedding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-online-payment-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upi-logo-png-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6963703.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-credit-card-debit-card-plastic-product-credit-card-internet-debit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0610.png_860.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12-Reach-NetBanking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\206-2061111_credit-card-illustration-credit-and-debit-card-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_6701567.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_67015671.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_6701567 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_6701567 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_67015672.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identity-card-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identity-card-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hall-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vendor-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-svg-event-registration-registration-icon-115631876750lom6ofawp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-svg-event-registration-registration-icon-115631876750lom6ofawp1.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\rating_star.png" />
   </ItemGroup>
   <ItemGroup>
@@ -921,12 +1038,14 @@
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-accept-64.png" />
     <None Include="Resources\Fatstag.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
+    <None Include="Resources\icons8-reject-64.png" />
     <Content Include="Resources\icons8-student-center-100.png" />
     <Content Include="Resources\icons8-system-information-100.png" />
     <Content Include="Resources\icons8-taj-mahal-100.png" />
