@@ -45,9 +45,10 @@ Public Class TransportBusSchedule
             DataGridView1.Rows.Add(row)
 
             ' Set values for the first three columns in the current row
-            DataGridView1.Rows(i - 1).Cells("Column1").Value = "DummyVal"
-            DataGridView1.Rows(i - 1).Cells("Column2").Value = "DummyVal"
-            DataGridView1.Rows(i - 1).Cells("Column3").Value = "DummyVal"
+            DataGridView1.Rows(i - 1).Cells("Column1").Value = "57A"
+            DataGridView1.Rows(i - 1).Cells("Column2").Value = "Adabari"
+            DataGridView1.Rows(i - 1).Cells("Column3").Value = "Maligaon"
+            DataGridView1.Rows(i - 1).Cells("Column4").Value = "42"
         Next
     End Sub
 
