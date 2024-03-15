@@ -111,6 +111,7 @@ Partial Class RideSharingPost
         'lblname
         '
         Me.lblname.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblname.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_steering_wheel_301
         Me.lblname.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblname.Location = New System.Drawing.Point(117, 8)
         Me.lblname.Name = "lblname"
