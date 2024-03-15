@@ -162,6 +162,12 @@
     <Compile Include="Election_Inner_Screen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Employment_portal.Designer.vb">
+      <DependentUpon>Employment_portal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Events_vendorRegistrationScreen.Designer.vb">
       <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
     </Compile>
@@ -184,6 +190,12 @@
       <DependentUpon>HomePage.vb</DependentUpon>
     </Compile>
     <Compile Include="HomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service_Portal.Designer.vb">
+      <DependentUpon>Service_Portal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Portal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TransportationManageFastagAdmin.Designer.vb">
@@ -449,6 +461,9 @@
     <EmbeddedResource Include="Election_Inner_Screen.resx">
       <DependentUpon>Election_Inner_Screen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employment_portal.resx">
+      <DependentUpon>Employment_portal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Events_vendorRegistrationScreen.resx">
       <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
     </EmbeddedResource>
@@ -460,6 +475,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_Portal.resx">
+      <DependentUpon>Service_Portal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
@@ -906,13 +924,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-login-30.png" />
-   
     <None Include="Resources\SmartCity_Administrative_Hierarchy.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\product.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\back-button.png" />
+    <None Include="Resources\back-button1.png" />
+    <None Include="Resources\booking1.png" />
+    <None Include="Resources\booking %281%29.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <Content Include="Resources\icons8-health-100.png" />
@@ -922,6 +946,9 @@
     <Content Include="Resources\icons8-system-information-100.png" />
     <Content Include="Resources\icons8-taj-mahal-100.png" />
     <Content Include="Resources\icons8-transportation-100.png" />
+    <None Include="Resources\loupe.png" />
+    <None Include="Resources\user-gear %281%29.png" />
+    <None Include="Resources\user-gear.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
