@@ -189,6 +189,12 @@
     <Compile Include="FastagPlanItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="FastagPurchase.Designer.vb">
+      <DependentUpon>FastagPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastagPurchase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="HealthcareAdminHome.Designer.vb">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </Compile>
@@ -493,6 +499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FastagPlanItem.resx">
       <DependentUpon>FastagPlanItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastagPurchase.resx">
+      <DependentUpon>FastagPurchase.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAdminHome.resx">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
@@ -1042,13 +1051,17 @@
     <None Include="Resources\Fatstag.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
+    <None Include="Resources\icons8-driver-license-20.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
+    <None Include="Resources\icons8-pay-30.png" />
+    <None Include="Resources\icons8-pay-301.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
     <None Include="Resources\icons8-reject-64.png" />
     <Content Include="Resources\icons8-student-center-100.png" />
     <Content Include="Resources\icons8-system-information-100.png" />
     <Content Include="Resources\icons8-taj-mahal-100.png" />
+    <None Include="Resources\icons8-topup-payment-50.png" />
     <Content Include="Resources\icons8-transportation-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
