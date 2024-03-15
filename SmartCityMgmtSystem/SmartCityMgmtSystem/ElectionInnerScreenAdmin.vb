@@ -5,4 +5,7 @@ Public Class ElectionInnerScreenAdmin
         Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenAdminNomination)
     End Sub
 
+    Private Sub Panel2_Click(sender As Object, e As EventArgs) Handles Panel2.Click
+        Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenAdminTimeline)
+    End Sub
 End Class
