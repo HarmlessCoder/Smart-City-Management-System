@@ -66,6 +66,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CabSharingComponent">
       <HintPath>..\..\..\CabSharingComponent\obj\Debug\CabSharingComponent.dll</HintPath>
@@ -130,6 +133,12 @@
       <DependentUpon>Ed_Temp1.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Temp1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminNomination.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminNomination.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionInnerScreenRTICitizen.Designer.vb">
@@ -433,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Temp1.resx">
       <DependentUpon>Ed_Temp1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminNomination.resx">
+      <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenRTICitizen.resx">
       <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
@@ -906,18 +918,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-login-30.png" />
-   
     <None Include="Resources\SmartCity_Administrative_Hierarchy.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-accept-64.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
+    <None Include="Resources\icons8-reject-64.png" />
     <Content Include="Resources\icons8-student-center-100.png" />
     <Content Include="Resources\icons8-system-information-100.png" />
     <Content Include="Resources\icons8-taj-mahal-100.png" />
