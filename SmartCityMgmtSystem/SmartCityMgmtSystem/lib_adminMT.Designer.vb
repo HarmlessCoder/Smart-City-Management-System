@@ -722,9 +722,9 @@ Partial Class lib_adminMT
         Me.Label2.Location = New System.Drawing.Point(294, 10)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 28)
+        Me.Label2.Size = New System.Drawing.Size(58, 28)
         Me.Label2.TabIndex = 10
-        Me.Label2.Text = "{Name}"
+        Me.Label2.Text = "Admin"
         '
         'Button6
         '

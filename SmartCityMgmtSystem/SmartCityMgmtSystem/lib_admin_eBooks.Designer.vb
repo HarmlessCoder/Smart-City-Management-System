@@ -1,6 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class lib_search
-
+Partial Class lib_admin_eBooks
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,6 +23,7 @@ Partial Class lib_search
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -31,6 +31,7 @@ Partial Class lib_search
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.searchBar = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearch = New System.Windows.Forms.Button()
@@ -38,10 +39,6 @@ Partial Class lib_search
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.srchSelect = New System.Windows.Forms.ComboBox()
         Me.overdueBooksTitleTable = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -51,7 +48,6 @@ Partial Class lib_search
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.overdueBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -59,8 +55,6 @@ Partial Class lib_search
         Me.searchBar.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.overdueBooksTitleTable.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel7.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -71,6 +65,7 @@ Partial Class lib_search
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
@@ -86,6 +81,22 @@ Partial Class lib_search
         Me.Panel1.Size = New System.Drawing.Size(282, 783)
         Me.Panel1.TabIndex = 8
         '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Button7.ForeColor = System.Drawing.Color.White
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(0, 610)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(282, 61)
+        Me.Button7.TabIndex = 23
+        Me.Button7.Text = "Requested Books"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
@@ -99,7 +110,7 @@ Partial Class lib_search
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(282, 61)
         Me.Button4.TabIndex = 22
-        Me.Button4.Text = "Request Book"
+        Me.Button4.Text = "Manual Transactions"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
@@ -115,7 +126,7 @@ Partial Class lib_search
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(282, 61)
         Me.Button3.TabIndex = 21
-        Me.Button3.Text = "Borrowed Books"
+        Me.Button3.Text = "Book Management"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
@@ -124,7 +135,7 @@ Partial Class lib_search
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(0, 400)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -140,7 +151,7 @@ Partial Class lib_search
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(0, 330)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -198,17 +209,30 @@ Partial Class lib_search
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 9
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Ivory
+        Me.Label2.Location = New System.Drawing.Point(294, 10)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 28)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Admin"
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Agency FB", 40.0!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(461, 0)
+        Me.Label11.Location = New System.Drawing.Point(485, 15)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(352, 80)
-        Me.Label11.TabIndex = 50
-        Me.Label11.Text = "Search Books"
+        Me.Label11.Size = New System.Drawing.Size(221, 80)
+        Me.Label11.TabIndex = 55
+        Me.Label11.Text = "e-Books"
         '
         'searchBar
         '
@@ -222,13 +246,13 @@ Partial Class lib_search
         Me.searchBar.Controls.Add(Me.btnSearch, 2, 0)
         Me.searchBar.Controls.Add(Me.queryBook, 1, 0)
         Me.searchBar.Controls.Add(Me.Panel2, 0, 0)
-        Me.searchBar.Location = New System.Drawing.Point(19, 94)
+        Me.searchBar.Location = New System.Drawing.Point(77, 96)
         Me.searchBar.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.searchBar.Name = "searchBar"
         Me.searchBar.RowCount = 1
         Me.searchBar.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.searchBar.Size = New System.Drawing.Size(1226, 43)
-        Me.searchBar.TabIndex = 49
+        Me.searchBar.Size = New System.Drawing.Size(1122, 43)
+        Me.searchBar.TabIndex = 54
         '
         'btnSearch
         '
@@ -236,10 +260,10 @@ Partial Class lib_search
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSearch.Font = New System.Drawing.Font("Agency FB", 16.0!)
         Me.btnSearch.ForeColor = System.Drawing.Color.White
-        Me.btnSearch.Location = New System.Drawing.Point(980, 1)
+        Me.btnSearch.Location = New System.Drawing.Point(896, 1)
         Me.btnSearch.Margin = New System.Windows.Forms.Padding(0)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(245, 41)
+        Me.btnSearch.Size = New System.Drawing.Size(225, 41)
         Me.btnSearch.TabIndex = 8
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = False
@@ -251,22 +275,22 @@ Partial Class lib_search
         Me.queryBook.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.queryBook.Font = New System.Drawing.Font("Agency FB", 16.0!)
         Me.queryBook.ForeColor = System.Drawing.Color.White
-        Me.queryBook.Location = New System.Drawing.Point(262, 5)
+        Me.queryBook.Location = New System.Drawing.Point(237, 5)
         Me.queryBook.Margin = New System.Windows.Forms.Padding(0)
         Me.queryBook.Name = "queryBook"
-        Me.queryBook.Size = New System.Drawing.Size(700, 32)
+        Me.queryBook.Size = New System.Drawing.Size(646, 32)
         Me.queryBook.TabIndex = 8
         Me.queryBook.Text = "Enter Title/Author/Book ID"
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.srchSelect)
         Me.Panel2.Location = New System.Drawing.Point(1, 1)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(244, 40)
+        Me.Panel2.Size = New System.Drawing.Size(223, 40)
         Me.Panel2.TabIndex = 9
         '
         'srchSelect
@@ -281,7 +305,7 @@ Partial Class lib_search
         Me.srchSelect.Location = New System.Drawing.Point(0, 1)
         Me.srchSelect.Margin = New System.Windows.Forms.Padding(0)
         Me.srchSelect.Name = "srchSelect"
-        Me.srchSelect.Size = New System.Drawing.Size(243, 40)
+        Me.srchSelect.Size = New System.Drawing.Size(221, 40)
         Me.srchSelect.TabIndex = 9
         Me.srchSelect.Text = "Select"
         '
@@ -290,82 +314,32 @@ Partial Class lib_search
         Me.overdueBooksTitleTable.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.overdueBooksTitleTable.BackColor = System.Drawing.Color.Transparent
         Me.overdueBooksTitleTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.overdueBooksTitleTable.ColumnCount = 6
-        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.overdueBooksTitleTable.Controls.Add(Me.Panel6, 4, 0)
-        Me.overdueBooksTitleTable.Controls.Add(Me.Panel7, 5, 0)
+        Me.overdueBooksTitleTable.ColumnCount = 4
+        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.overdueBooksTitleTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.overdueBooksTitleTable.Controls.Add(Me.Panel3, 3, 0)
         Me.overdueBooksTitleTable.Controls.Add(Me.Panel4, 2, 0)
         Me.overdueBooksTitleTable.Controls.Add(Me.Panel5, 1, 0)
         Me.overdueBooksTitleTable.Controls.Add(Me.Panel10, 0, 0)
-        Me.overdueBooksTitleTable.Location = New System.Drawing.Point(18, 170)
+        Me.overdueBooksTitleTable.Location = New System.Drawing.Point(76, 172)
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
         Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
-        Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1228, 68)
-        Me.overdueBooksTitleTable.TabIndex = 48
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Label7)
-        Me.Panel6.Location = New System.Drawing.Point(920, 2)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(182, 72)
-        Me.Panel6.TabIndex = 16
-        '
-        'Label7
-        '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Agency FB", 20.0!)
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(46, 14)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(86, 42)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Status"
-        '
-        'Panel7
-        '
-        Me.Panel7.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel7.Controls.Add(Me.Label8)
-        Me.Panel7.Location = New System.Drawing.Point(1104, 2)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(123, 72)
-        Me.Panel7.TabIndex = 16
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Agency FB", 20.0!)
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(16, 14)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(82, 42)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "Select"
+        Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1124, 68)
+        Me.overdueBooksTitleTable.TabIndex = 53
         '
         'Panel3
         '
         Me.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Location = New System.Drawing.Point(797, 2)
+        Me.Panel3.Location = New System.Drawing.Point(897, 2)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(122, 72)
+        Me.Panel3.Size = New System.Drawing.Size(226, 73)
         Me.Panel3.TabIndex = 15
         '
         'Label3
@@ -374,7 +348,7 @@ Partial Class lib_search
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(16, 14)
+        Me.Label3.Location = New System.Drawing.Point(68, 14)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 42)
         Me.Label3.TabIndex = 17
@@ -385,10 +359,10 @@ Partial Class lib_search
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Location = New System.Drawing.Point(492, 2)
+        Me.Panel4.Location = New System.Drawing.Point(561, 2)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(303, 72)
+        Me.Panel4.Size = New System.Drawing.Size(335, 73)
         Me.Panel4.TabIndex = 14
         '
         'Label4
@@ -397,7 +371,7 @@ Partial Class lib_search
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(125, 14)
+        Me.Label4.Location = New System.Drawing.Point(141, 14)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 42)
         Me.Label4.TabIndex = 1
@@ -408,10 +382,10 @@ Partial Class lib_search
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Location = New System.Drawing.Point(186, 2)
+        Me.Panel5.Location = New System.Drawing.Point(225, 2)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(303, 72)
+        Me.Panel5.Size = New System.Drawing.Size(335, 73)
         Me.Panel5.TabIndex = 13
         '
         'Label5
@@ -420,7 +394,7 @@ Partial Class lib_search
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(117, 14)
+        Me.Label5.Location = New System.Drawing.Point(133, 14)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(85, 42)
         Me.Label5.TabIndex = 1
@@ -434,7 +408,7 @@ Partial Class lib_search
         Me.Panel10.Location = New System.Drawing.Point(1, 2)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(182, 72)
+        Me.Panel10.Size = New System.Drawing.Size(223, 73)
         Me.Panel10.TabIndex = 0
         '
         'Label6
@@ -443,7 +417,7 @@ Partial Class lib_search
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(36, 14)
+        Me.Label6.Location = New System.Drawing.Point(56, 14)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(94, 42)
         Me.Label6.TabIndex = 0
@@ -455,33 +429,19 @@ Partial Class lib_search
         Me.overdueBooksTablePanel.AutoScroll = True
         Me.overdueBooksTablePanel.BackColor = System.Drawing.Color.Transparent
         Me.overdueBooksTablePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.overdueBooksTablePanel.ColumnCount = 6
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.overdueBooksTablePanel.Location = New System.Drawing.Point(18, 238)
+        Me.overdueBooksTablePanel.ColumnCount = 4
+        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.overdueBooksTablePanel.Location = New System.Drawing.Point(76, 240)
         Me.overdueBooksTablePanel.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTablePanel.Name = "overdueBooksTablePanel"
         Me.overdueBooksTablePanel.RowCount = 1
         Me.overdueBooksTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.overdueBooksTablePanel.Size = New System.Drawing.Size(1228, 479)
-        Me.overdueBooksTablePanel.TabIndex = 47
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Ivory
-        Me.Label2.Location = New System.Drawing.Point(294, 10)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 28)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "{Name}"
+        Me.overdueBooksTablePanel.Size = New System.Drawing.Size(1124, 479)
+        Me.overdueBooksTablePanel.TabIndex = 52
         '
         'PictureBox1
         '
@@ -512,7 +472,7 @@ Partial Class lib_search
         Me.Button6.Text = "     Back"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'lib_search
+        'lib_admin_eBooks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -522,8 +482,8 @@ Partial Class lib_search
         Me.Controls.Add(Me.childformPanel)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label2)
-        Me.Name = "lib_search"
-        Me.Text = "lib_search" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "        "
+        Me.Name = "lib_admin_eBooks"
+        Me.Text = "lib_admin_eBooks" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    "
         Me.Panel1.ResumeLayout(False)
         Me.childformPanel.ResumeLayout(False)
         Me.childformPanel.PerformLayout()
@@ -531,10 +491,6 @@ Partial Class lib_search
         Me.searchBar.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.overdueBooksTitleTable.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -558,7 +514,14 @@ Partial Class lib_search
     Friend WithEvents Label2 As Label
     Friend WithEvents Button4 As Button
     Public WithEvents childformPanel As Panel
+    Friend WithEvents Button7 As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents searchBar As TableLayoutPanel
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents queryBook As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents srchSelect As ComboBox
     Friend WithEvents overdueBooksTitleTable As TableLayoutPanel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label3 As Label
@@ -569,14 +532,4 @@ Partial Class lib_search
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents overdueBooksTablePanel As TableLayoutPanel
-    Friend WithEvents searchBar As TableLayoutPanel
-    Friend WithEvents btnSearch As Button
-    Friend WithEvents queryBook As TextBox
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents srchSelect As ComboBox
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label11 As Label
 End Class

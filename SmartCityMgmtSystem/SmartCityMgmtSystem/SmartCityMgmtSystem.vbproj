@@ -144,6 +144,18 @@
     <Compile Include="lib_adminReq.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="lib_adminSearch.Designer.vb">
+      <DependentUpon>lib_adminSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_admin_eBooks.Designer.vb">
+      <DependentUpon>lib_admin_eBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_admin_eBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lib_borrowed.Designer.vb">
       <DependentUpon>lib_borrowed.vb</DependentUpon>
     </Compile>
@@ -154,6 +166,12 @@
       <DependentUpon>lib_dash.vb</DependentUpon>
     </Compile>
     <Compile Include="lib_dash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_ebooks.Designer.vb">
+      <DependentUpon>lib_ebooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_ebooks.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="lib_request.Designer.vb">
@@ -371,14 +389,26 @@
     <EmbeddedResource Include="lib_adminBM.resx">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminDash.resx">
+      <DependentUpon>lib_adminDash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib_adminMT.resx">
       <DependentUpon>lib_adminMT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_adminReq.resx">
       <DependentUpon>lib_adminReq.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminSearch.resx">
+      <DependentUpon>lib_adminSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_admin_eBooks.resx">
+      <DependentUpon>lib_admin_eBooks.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib_dash.resx">
       <DependentUpon>lib_dash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_ebooks.resx">
+      <DependentUpon>lib_ebooks.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_search.resx">
       <DependentUpon>lib_search.vb</DependentUpon>
