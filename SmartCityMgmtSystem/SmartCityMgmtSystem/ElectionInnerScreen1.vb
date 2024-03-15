@@ -4,7 +4,7 @@ Public Class ElectionInnerScreen1
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
 
     End Sub
 
@@ -73,6 +73,10 @@ Public Class ElectionInnerScreen1
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub Panel3_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
 
     End Sub
 End Class
