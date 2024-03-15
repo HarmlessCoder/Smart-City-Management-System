@@ -189,6 +189,12 @@
     <Compile Include="ElectionInnerScreen2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FastagPlanItem.Designer.vb">
+      <DependentUpon>FastagPlanItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastagPlanItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="HealthcareAdminHome.Designer.vb">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </Compile>
@@ -200,6 +206,11 @@
     </Compile>
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TransportationManageFastagAdmin.Designer.vb">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
@@ -297,6 +308,18 @@
     <Compile Include="Ed_TeacherDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EventCustomerScreen.Designer.vb">
+      <DependentUpon>EventCustomerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventCustomerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventRegistrationScreen.Designer.vb">
+      <DependentUpon>EventRegistrationScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventRegistrationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionDashboard.Designer.vb">
       <DependentUpon>ElectionDashboard.vb</DependentUpon>
     </Compile>
@@ -322,6 +345,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Globals.vb" />
+    <Compile Include="EventPayment_Interface.Designer.vb">
+      <DependentUpon>EventPayment_Interface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventPayment_Interface.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="pictureButtonvb.Designer.vb">
       <DependentUpon>pictureButtonvb.vb</DependentUpon>
     </Compile>
@@ -364,11 +393,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -476,6 +500,9 @@
     <EmbeddedResource Include="ElectionInnerScreen2.resx">
       <DependentUpon>ElectionInnerScreen2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FastagPlanItem.resx">
+      <DependentUpon>FastagPlanItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAdminHome.resx">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </EmbeddedResource>
@@ -530,6 +557,15 @@
     <EmbeddedResource Include="Ed_TeacherDashboard.resx">
       <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventCustomerScreen.resx">
+      <DependentUpon>EventCustomerScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventRegistrationScreen.resx">
+      <DependentUpon>EventRegistrationScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventPayment_Interface.resx">
+      <DependentUpon>EventPayment_Interface.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionDashboard.resx">
       <DependentUpon>ElectionDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -562,9 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportAddSecys.resx">
       <DependentUpon>TransportAddSecys.vb</DependentUpon>
@@ -747,6 +783,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-driver-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indian_wedding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-online-payment-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upi-logo-png-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6963703.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-credit-card-debit-card-plastic-product-credit-card-internet-debit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0610.png_860.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12-Reach-NetBanking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\206-2061111_credit-card-illustration-credit-and-debit-card-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_6701567.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_67015671.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_6701567 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_6701567 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vendor-line-icon-vector-png-image_67015672.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identity-card-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identity-card-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hall-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vendor-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-svg-event-registration-registration-icon-115631876750lom6ofawp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-svg-event-registration-registration-icon-115631876750lom6ofawp1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rating_star.png" />
@@ -934,6 +1048,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-accept-64.png" />
+    <None Include="Resources\Fatstag.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <Content Include="Resources\icons8-health-100.png" />
