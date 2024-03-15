@@ -32,8 +32,6 @@ Partial Class lib_adminReq
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.btnAddBalance = New System.Windows.Forms.Button()
         Me.overdueBooksTitleTable = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -46,6 +44,8 @@ Partial Class lib_adminReq
         Me.Label6 = New System.Windows.Forms.Label()
         Me.overdueBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
@@ -214,37 +214,6 @@ Partial Class lib_adminReq
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 9
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Ivory
-        Me.Label2.Location = New System.Drawing.Point(294, 10)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 28)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "{Name}"
-        '
-        'Button6
-        '
-        Me.Button6.CausesValidation = False
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.Ivory
-        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(1389, 1)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(163, 39)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "     Back"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
         'btnAddBalance
         '
         Me.btnAddBalance.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
@@ -278,7 +247,7 @@ Partial Class lib_adminReq
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1115, 68)
         Me.overdueBooksTitleTable.TabIndex = 54
         '
@@ -404,6 +373,37 @@ Partial Class lib_adminReq
         Me.Label11.Size = New System.Drawing.Size(424, 80)
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "Requested Books"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Ivory
+        Me.Label2.Location = New System.Drawing.Point(294, 10)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 28)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "{Name}"
+        '
+        'Button6
+        '
+        Me.Button6.CausesValidation = False
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Ivory
+        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(1389, 1)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.Button6.Size = New System.Drawing.Size(163, 39)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "     Back"
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'lib_adminReq
         '
