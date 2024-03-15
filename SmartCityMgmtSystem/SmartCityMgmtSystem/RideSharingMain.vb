@@ -1,19 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class RideSharingMain
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        ' Check if the clicked cell is in the "EditBut" column and not a header cell
-        If e.ColumnIndex = DataGridView1.Columns("EditBut").Index AndAlso e.RowIndex >= 0 Then
-            ' Change this to DB logic later
-            MessageBox.Show("Edit button clicked for row " & e.RowIndex.ToString(), "Edit Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            ' Check if the clicked cell is in the "DeleteBut" column and not a header cell
-        ElseIf e.ColumnIndex = DataGridView1.Columns("DeleteBut").Index AndAlso e.RowIndex >= 0 Then
-            ' Perform the action for the "DeleteButton" column
-            MessageBox.Show("Delete button clicked for row " & e.RowIndex.ToString(), "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        End If
-    End Sub
 
     Private Sub LoadandBindDataGridView()
         'Get connection String from globals
@@ -35,16 +22,40 @@ Public Class RideSharingMain
 
         'IMP: Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
-        DataGridView1.Columns(0).DataPropertyName = "Column Name in SQL table"
+        DataGridView1.Columns(0).DataPropertyName = "Column in SQL table"
         DataGridView1.Columns(1).DataPropertyName = "Column Name in SQL table"
 
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
     End Sub
 
+    Private Sub AddPost(name As String,
+                        Optional datetime As String = "",
+                        Optional fromPlace As String = "",
+                        Optional toPlace As String = "",
+                        Optional fare As Integer = 0,
+                        Optional capacity As Integer = 0,
+                        Optional postNum As Integer = 0,
+                        Optional image As Image = Nothing)
+        Dim RidePost As RideSharingPost
+        RidePost = New RideSharingPost()
+        With RidePost
+            .Name = "post_" & postNum
+            .Width = 595
+            .Height = 120
+        End With
+        RidePost.SetDetails(name, datetime, fromPlace, toPlace, fare, capacity, image)
+        PostsPanel.Controls.Add(RidePost)
+    End Sub
+
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+        AddPost("Dhanesh", "21st March, 6:30PM", "IIT", "Airport", 50, 3, 1, Nothing)
+        AddPost("Sanjana", "22st March, 6:30PM", "Airport", "Brahmaputra", 50, 3, 2, Nothing)
+        AddPost("Shivam Gupta", "1st April, 8:30AM", "Pan Bazaar", "Kamakhya", 25, 7, 3, Nothing)
+
         ' Dummy Data, Change it to LoadandBindDataGridView() 
-        For i As Integer = 1 To 8
+        For i As Integer = 1 To 4
             ' Add an empty row to the DataGridView
             Dim row As New DataGridViewRow()
             DataGridView1.Rows.Add(row)
@@ -53,7 +64,11 @@ Public Class RideSharingMain
             DataGridView1.Rows(i - 1).Cells("Column1").Value = "DummyVal"
             DataGridView1.Rows(i - 1).Cells("Column2").Value = "DummyVal"
             DataGridView1.Rows(i - 1).Cells("Column3").Value = "DummyVal"
+            DataGridView1.Rows(i - 1).Cells("Column4").Value = "Approved"
         Next
+
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    End Sub
 End Class
