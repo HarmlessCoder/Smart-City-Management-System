@@ -9,10 +9,10 @@
         ' Set the labels
         lblname.Text = "       " & name
         lbldt.Text = "       " & datetime
-        lblfrom.Text = "      " & fromPlace
-        lblto.Text = "      " & toPlace
+        'lblfrom.Text = "      " & fromPlace
+        'lblto.Text = "      " & toPlace
         lblfare.Text = "       ₹" & fare
-        lblcapacity.Text = "       " & capacity
+        'lblcapacity.Text = "       " & capacity
 
         ' Set the picture box
         If image IsNot Nothing Then
