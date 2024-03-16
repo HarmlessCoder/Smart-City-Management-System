@@ -26,8 +26,6 @@ Partial Class Ed_AdminDashboard
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -35,6 +33,8 @@ Partial Class Ed_AdminDashboard
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
@@ -94,6 +94,93 @@ Partial Class Ed_AdminDashboard
         Me.childformPanel.Size = New System.Drawing.Size(1276, 740)
         Me.childformPanel.TabIndex = 1
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Maroon
+        Me.Label7.Location = New System.Drawing.Point(877, 519)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(239, 49)
+        Me.Label7.TabIndex = 34
+        Me.Label7.Text = "Entrance Exams"
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button4.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.admin
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Button4.Location = New System.Drawing.Point(862, 301)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(247, 200)
+        Me.Button4.TabIndex = 33
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Maroon
+        Me.Label5.Location = New System.Drawing.Point(583, 519)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(117, 49)
+        Me.Label5.TabIndex = 32
+        Me.Label5.Text = "School"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button3.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.admin
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Button3.Location = New System.Drawing.Point(519, 301)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(247, 200)
+        Me.Button3.TabIndex = 31
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Maroon
+        Me.Label3.Location = New System.Drawing.Point(221, 519)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(145, 49)
+        Me.Label3.TabIndex = 29
+        Me.Label3.Text = "Coursera"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button1.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.student
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.BlanchedAlmond
+        Me.Button1.Location = New System.Drawing.Point(163, 301)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(247, 200)
+        Me.Button1.TabIndex = 27
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Maroon
+        Me.Label6.Location = New System.Drawing.Point(493, 156)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(277, 49)
+        Me.Label6.TabIndex = 26
+        Me.Label6.Text = "Select Department"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -125,99 +212,12 @@ Partial Class Ed_AdminDashboard
         Me.Button6.Text = "      Back"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Maroon
-        Me.Label7.Location = New System.Drawing.Point(877, 519)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(219, 49)
-        Me.Label7.TabIndex = 34
-        Me.Label7.Text = "Entrance Exams"
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.NavajoWhite
-        Me.Button4.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.admin
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.BlanchedAlmond
-        Me.Button4.Location = New System.Drawing.Point(862, 301)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(247, 200)
-        Me.Button4.TabIndex = 33
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Maroon
-        Me.Label5.Location = New System.Drawing.Point(583, 519)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 49)
-        Me.Label5.TabIndex = 32
-        Me.Label5.Text = "School"
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.NavajoWhite
-        Me.Button3.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.admin
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.BlanchedAlmond
-        Me.Button3.Location = New System.Drawing.Point(519, 301)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(247, 200)
-        Me.Button3.TabIndex = 31
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Maroon
-        Me.Label3.Location = New System.Drawing.Point(221, 519)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(130, 49)
-        Me.Label3.TabIndex = 29
-        Me.Label3.Text = "Coursera"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.NavajoWhite
-        Me.Button1.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.student
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.BlanchedAlmond
-        Me.Button1.Location = New System.Drawing.Point(163, 301)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(247, 200)
-        Me.Button1.TabIndex = 27
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Bodoni MT Condensed", 25.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Maroon
-        Me.Label6.Location = New System.Drawing.Point(493, 156)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(251, 49)
-        Me.Label6.TabIndex = 26
-        Me.Label6.Text = "Select Department"
-        '
         'Ed_AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.ClientSize = New System.Drawing.Size(1552, 779)
+        Me.ClientSize = New System.Drawing.Size(1543, 779)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
