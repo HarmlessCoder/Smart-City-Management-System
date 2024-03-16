@@ -9,4 +9,5 @@
         ' Optionally, hide Form1 if you want to navigate away from it
         Me.Hide()
     End Sub
+
 End Class

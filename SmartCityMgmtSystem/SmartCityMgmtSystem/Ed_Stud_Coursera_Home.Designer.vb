@@ -22,10 +22,10 @@ Partial Class Ed_Stud_Coursera_Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ed_Stud_Coursera_Home))
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
@@ -33,30 +33,27 @@ Partial Class Ed_Stud_Coursera_Home
         Me.Button1 = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridViewImageColumn1
         '
         Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle19.NullValue = "System.Drawing.Bitmap"
-        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.NullValue = "System.Drawing.Bitmap"
+        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewImageColumn1.HeaderText = "  "
         Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.DataGridViewImageColumn1.MinimumWidth = 6
@@ -69,13 +66,13 @@ Partial Class Ed_Stud_Coursera_Home
         'DataGridViewImageColumn2
         '
         Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle20.NullValue = CType(resources.GetObject("DataGridViewCellStyle20.NullValue"), Object)
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle5.NullValue = CType(resources.GetObject("DataGridViewCellStyle5.NullValue"), Object)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewImageColumn2.HeaderText = ""
         Me.DataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.DataGridViewImageColumn2.MinimumWidth = 6
@@ -88,13 +85,13 @@ Partial Class Ed_Stud_Coursera_Home
         'DataGridViewImageColumn3
         '
         Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle21.NullValue = CType(resources.GetObject("DataGridViewCellStyle21.NullValue"), Object)
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle6.NullValue = CType(resources.GetObject("DataGridViewCellStyle6.NullValue"), Object)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewImageColumn3.HeaderText = ""
         Me.DataGridViewImageColumn3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
         Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
@@ -113,10 +110,10 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Coral
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Cascadia Mono", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Maroon
+        Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(1009, 33)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(138, 36)
@@ -135,10 +132,10 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Label17)
@@ -148,109 +145,19 @@ Partial Class Ed_Stud_Coursera_Home
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(1, -1)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(300, 736)
         Me.Panel1.TabIndex = 8
         '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Cascadia Mono", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(27, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(268, 71)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Categories"
-        '
-        'Label2
-        '
-        Me.Label2.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(45, 134)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(221, 40)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Music"
-        '
-        'Label3
-        '
-        Me.Label3.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(45, 174)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(221, 40)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Dance"
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(45, 254)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(221, 40)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Chemistry"
-        '
-        'Label5
-        '
-        Me.Label5.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(45, 214)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(221, 40)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Physics"
-        '
-        'Label6
-        '
-        Me.Label6.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(45, 414)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(221, 40)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Management"
-        '
-        'Label7
-        '
-        Me.Label7.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(45, 374)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(221, 40)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "Computer Science"
-        '
-        'Label8
-        '
-        Me.Label8.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(45, 334)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(221, 40)
-        Me.Label8.TabIndex = 6
-        Me.Label8.Text = "Biology"
-        '
-        'Label9
-        '
-        Me.Label9.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(45, 294)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(221, 40)
-        Me.Label9.TabIndex = 5
-        Me.Label9.Text = "Mathematics"
-        '
         'Label12
         '
+        Me.Label12.BackColor = System.Drawing.Color.White
         Me.Label12.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(45, 654)
+        Me.Label12.Location = New System.Drawing.Point(43, 669)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(221, 40)
         Me.Label12.TabIndex = 14
@@ -258,39 +165,35 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label13
         '
+        Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(45, 614)
+        Me.Label13.Location = New System.Drawing.Point(43, 611)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(221, 40)
         Me.Label13.TabIndex = 13
         Me.Label13.Text = "Finance"
         '
-        'Label14
-        '
-        Me.Label14.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label14.Location = New System.Drawing.Point(45, 574)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(221, 40)
-        Me.Label14.TabIndex = 12
-        Me.Label14.Text = "Vocational"
-        '
         'Label15
         '
+        Me.Label15.BackColor = System.Drawing.Color.White
         Me.Label15.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label15.Location = New System.Drawing.Point(45, 534)
+        Me.Label15.Location = New System.Drawing.Point(43, 553)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(221, 40)
         Me.Label15.TabIndex = 11
-        Me.Label15.Text = "Painting"
+        Me.Label15.Text = "Arts"
         '
         'Label16
         '
+        Me.Label16.BackColor = System.Drawing.Color.White
         Me.Label16.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label16.Location = New System.Drawing.Point(45, 494)
+        Me.Label16.Location = New System.Drawing.Point(43, 499)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(221, 40)
         Me.Label16.TabIndex = 10
@@ -298,19 +201,103 @@ Partial Class Ed_Stud_Coursera_Home
         '
         'Label17
         '
+        Me.Label17.BackColor = System.Drawing.Color.White
         Me.Label17.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label17.Location = New System.Drawing.Point(45, 454)
+        Me.Label17.Location = New System.Drawing.Point(43, 447)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(221, 40)
         Me.Label17.TabIndex = 9
         Me.Label17.Text = "Humanities"
         '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label6.Location = New System.Drawing.Point(43, 394)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(221, 40)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Management"
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.White
+        Me.Label7.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label7.Location = New System.Drawing.Point(43, 340)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(221, 40)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "Computer Science"
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.White
+        Me.Label8.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label8.Location = New System.Drawing.Point(43, 284)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(221, 40)
+        Me.Label8.TabIndex = 6
+        Me.Label8.Text = "Biology"
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.White
+        Me.Label9.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label9.Location = New System.Drawing.Point(43, 227)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(221, 40)
+        Me.Label9.TabIndex = 5
+        Me.Label9.Text = "Mathematics"
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label4.Location = New System.Drawing.Point(43, 172)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(221, 40)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Chemistry"
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.Font = New System.Drawing.Font("Cascadia Mono", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.Location = New System.Drawing.Point(43, 114)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(221, 40)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Physics"
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Cambria", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(27, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(268, 71)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Categories"
+        '
         'Ed_Stud_Coursera_Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1270, 736)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -334,11 +321,8 @@ Partial Class Ed_Stud_Coursera_Home
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label

@@ -93,6 +93,8 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ed_InstAdmin_AdmitList.Designer.vb">
+      <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
     <Compile Include="BankingDashboard.Designer.vb">
       <DependentUpon>BankingDashboard.vb</DependentUpon>
     </Compile>
@@ -120,25 +122,73 @@
     <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ed_Coursera_Course_ListItem.vb">
+    <Compile Include="Ed_InstAdmin_AdmitList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Institute_List.Designer.vb">
+      <DependentUpon>Ed_Institute_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Institute_ListItem.Designer.vb">
+      <DependentUpon>Ed_Institute_ListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ed_Stud_Coursera.Designer.vb">
-      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
+    <Compile Include="Ed_Stud_ListItem.Designer.vb">
+      <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ed_Stud_Coursera.vb">
+    <Compile Include="Ed_Stud_ListItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransportationManageFastagAdmin.Designer.vb">
+      <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportationManageFastagAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ed_AdminDashboard.Designer.vb">
-      <DependentUpon>Ed_AdminDashboard.vb</DependentUpon>
+    <Compile Include="TransportationBusSchedulesAdmin.Designer.vb">
+      <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ed_AdminDashboard.vb">
+    <Compile Include="TransportationBusSchedulesAdmin.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Coursera_AdminDashboard.Designer.vb">
+      <DependentUpon>Ed_Coursera_AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Coursera_AdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatBubbleItem.Designer.vb">
+      <DependentUpon>ChatBubbleItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChatBubbleItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
+      <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_ListItem.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ed_GlobalDashboard.Designer.vb">
       <DependentUpon>Ed_GlobalDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_GlobalDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Institute_AdminDashboard.Designer.vb">
+      <DependentUpon>Ed_Institute_AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_AdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_MinisterDashboard.Designer.vb">
+      <DependentUpon>Ed_MinisterDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_MinisterDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_RoleSelect.Designer.vb">
@@ -153,22 +203,28 @@
     <Compile Include="Ed_StudentDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Stud_Coursera.Designer.vb">
+      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Stud_Coursera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Stud_Coursera_Home.Designer.vb">
       <DependentUpon>Ed_Stud_Coursera_Home.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Stud_Coursera_Home.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ed_Stud_EntranceExams.Designer.vb">
-      <DependentUpon>Ed_Stud_EntranceExams.vb</DependentUpon>
+    <Compile Include="Ed_Stud_EntranceExam.Designer.vb">
+      <DependentUpon>Ed_Stud_EntranceExam.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ed_Stud_EntranceExams.vb">
+    <Compile Include="Ed_Stud_EntranceExam.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ed_Stud_Institution.Designer.vb">
-      <DependentUpon>Ed_Stud_Institution.vb</DependentUpon>
+    <Compile Include="Ed_Stud_Institute.Designer.vb">
+      <DependentUpon>Ed_Stud_Institute.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ed_Stud_Institution.vb">
+    <Compile Include="Ed_Stud_Institute.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_Stud_Moodle.Designer.vb">
@@ -183,7 +239,49 @@
     <Compile Include="Ed_TeacherDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionDashboard.Designer.vb">
+      <DependentUpon>ElectionDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionHomePage.Designer.vb">
+      <DependentUpon>ElectionHomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionHomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreen1.Designer.vb">
+      <DependentUpon>ElectionInnerScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdmin.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTI.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenRTI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTI.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Globals.vb" />
+    <Compile Include="pictureButtonvb.Designer.vb">
+      <DependentUpon>pictureButtonvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pictureButtonvb.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RideSharingChats.Designer.vb">
+      <DependentUpon>RideSharingChats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RideSharingChats.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -243,6 +341,24 @@
     <Compile Include="TransportAddSecys.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportBusSchedule.Designer.vb">
+      <DependentUpon>TransportBusSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportBusSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportFRAdmin.Designer.vb">
+      <DependentUpon>TransportFRAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportFRAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportTollPlaza.Designer.vb">
+      <DependentUpon>TransportTollPlaza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTollPlaza.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserBankAcountDetails.Designer.vb">
       <DependentUpon>UserBankAcountDetails.vb</DependentUpon>
     </Compile>
@@ -257,6 +373,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
+      <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Institute_List.resx">
+      <DependentUpon>Ed_Institute_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Institute_ListItem.resx">
+      <DependentUpon>Ed_Institute_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Stud_ListItem.resx">
+      <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
+      <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportationBusSchedulesAdmin.resx">
+      <DependentUpon>TransportationBusSchedulesAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Coursera_AdminDashboard.resx">
+      <DependentUpon>Ed_Coursera_AdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatBubbleItem.resx">
+      <DependentUpon>ChatBubbleItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BankingDashboard.resx">
       <DependentUpon>BankingDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -272,14 +412,14 @@
     <EmbeddedResource Include="Ed_Coursera_Course_ListItem.resx">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Stud_Coursera.resx">
-      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ed_AdminDashboard.resx">
-      <DependentUpon>Ed_AdminDashboard.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ed_GlobalDashboard.resx">
       <DependentUpon>Ed_GlobalDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Institute_AdminDashboard.resx">
+      <DependentUpon>Ed_Institute_AdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_MinisterDashboard.resx">
+      <DependentUpon>Ed_MinisterDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_RoleSelect.resx">
       <DependentUpon>Ed_RoleSelect.vb</DependentUpon>
@@ -287,20 +427,44 @@
     <EmbeddedResource Include="Ed_StudentDashboard.resx">
       <DependentUpon>Ed_StudentDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Stud_Coursera.resx">
+      <DependentUpon>Ed_Stud_Coursera.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Coursera_Home.resx">
       <DependentUpon>Ed_Stud_Coursera_Home.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Stud_EntranceExams.resx">
-      <DependentUpon>Ed_Stud_EntranceExams.vb</DependentUpon>
+    <EmbeddedResource Include="Ed_Stud_EntranceExam.resx">
+      <DependentUpon>Ed_Stud_EntranceExam.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Stud_Institution.resx">
-      <DependentUpon>Ed_Stud_Institution.vb</DependentUpon>
+    <EmbeddedResource Include="Ed_Stud_Institute.resx">
+      <DependentUpon>Ed_Stud_Institute.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Moodle.resx">
       <DependentUpon>Ed_Stud_Moodle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_TeacherDashboard.resx">
       <DependentUpon>Ed_TeacherDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionDashboard.resx">
+      <DependentUpon>ElectionDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionHomePage.resx">
+      <DependentUpon>ElectionHomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreen1.resx">
+      <DependentUpon>ElectionInnerScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdmin.resx">
+      <DependentUpon>ElectionInnerScreenAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenRTI.resx">
+      <DependentUpon>ElectionInnerScreenCitizenRTI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pictureButtonvb.resx">
+      <DependentUpon>pictureButtonvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RideSharingChats.resx">
+      <DependentUpon>RideSharingChats.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayBills.resx">
       <DependentUpon>PayBills.vb</DependentUpon>
@@ -328,6 +492,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportAddSecys.resx">
       <DependentUpon>TransportAddSecys.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportBusSchedule.resx">
+      <DependentUpon>TransportBusSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportFRAdmin.resx">
+      <DependentUpon>TransportFRAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportTollPlaza.resx">
+      <DependentUpon>TransportTollPlaza.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserBankAcountDetails.resx">
       <DependentUpon>UserBankAcountDetails.vb</DependentUpon>
@@ -494,6 +667,120 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\course_dummy_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SMART_CITY_-_GUWAHATI-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-about-us1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hierarchy-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-election-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-city-hall-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-elections-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-government-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-helping-hand-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-organization-chart-people-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-politician-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-voter-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-nominate-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-who-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-elections-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-card-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-improvement-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-timeline-week-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-database-administrator-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EntrExam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Moodle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elearning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CommerceExam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-approval-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-timeline-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ballot-box-with-ballot-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-results-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute clipart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute clipart1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Institute clipart image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_default.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\banking_logo.png" />

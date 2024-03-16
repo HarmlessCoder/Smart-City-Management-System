@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ed_Stud_Institution
+Partial Class Election_Home_Page
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -41,7 +41,7 @@ Partial Class Ed_Stud_Institution
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.PictureBox1)
@@ -60,45 +60,46 @@ Partial Class Ed_Stud_Institution
         '
         'Button7
         '
-        Me.Button7.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button7.FlatAppearance.BorderSize = 0
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Tahoma", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.Black
-        Me.Button7.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_vehicle_insurance_50
+        'Me.Button7.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_vehicle_insurance_50
         Me.Button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button7.Location = New System.Drawing.Point(0, 562)
+        Me.Button7.Location = New System.Drawing.Point(0, 633)
         Me.Button7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button7.Name = "Button7"
         Me.Button7.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
         Me.Button7.Size = New System.Drawing.Size(294, 61)
         Me.Button7.TabIndex = 9
-        Me.Button7.Text = "     Vehicle " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "     Registration"
+        Me.Button7.Text = "       Right to    " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    Information"
         Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button7.UseVisualStyleBackColor = False
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_tollbooth_50
+        'Me'.Button5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_tollbooth_50
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button5.Location = New System.Drawing.Point(4, 483)
+        Me.Button5.Location = New System.Drawing.Point(4, 554)
         Me.Button5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button5.Name = "Button5"
         Me.Button5.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button5.Size = New System.Drawing.Size(292, 61)
+        Me.Button5.Size = New System.Drawing.Size(292, 73)
         Me.Button5.TabIndex = 8
-        Me.Button5.Text = "Toll Plaza"
+        Me.Button5.Text = "Know your " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ministers"
         Me.Button5.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.SMART_CITY___GUWAHATI
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        'Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.SMART_CITY___GUWAHATI
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.PictureBox1.Name = "PictureBox1"
@@ -109,68 +110,68 @@ Partial Class Ed_Stud_Institution
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_carpool_50
+        'Me.Button4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_carpool_50
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button4.Location = New System.Drawing.Point(0, 406)
+        Me.Button4.Location = New System.Drawing.Point(0, 477)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button4.Name = "Button4"
         Me.Button4.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
         Me.Button4.Size = New System.Drawing.Size(304, 61)
         Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Car Pooling"
+        Me.Button4.Text = "Election"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_bus_50
+        'Me.Button3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_bus_50
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 333)
+        Me.Button3.Location = New System.Drawing.Point(0, 404)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button3.Size = New System.Drawing.Size(292, 61)
+        Me.Button3.Size = New System.Drawing.Size(292, 67)
         Me.Button3.TabIndex = 3
-        Me.Button3.Text = "    Bus Schedule"
+        Me.Button3.Text = "     Organizational Structure"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_driver_license_50
+        'Me.Button2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_driver_license_50
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(0, 263)
+        Me.Button2.Location = New System.Drawing.Point(0, 334)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
         Me.Button2.Size = New System.Drawing.Size(312, 61)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "    Driving License"
+        Me.Button2.Text = "About Us"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_50
+        'Me.Button1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_50
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(0, 640)
+        Me.Button1.Location = New System.Drawing.Point(0, 711)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
@@ -181,20 +182,20 @@ Partial Class Ed_Stud_Institution
         '
         'Label1
         '
-        Me.Label1.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Agency FB", 20.13559!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.MistyRose
-        Me.Label1.Location = New System.Drawing.Point(10, 159)
+        Me.Label1.Location = New System.Drawing.Point(0, 159)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(260, 97)
+        Me.Label1.Size = New System.Drawing.Size(282, 165)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "SmartGhy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "{Name} Department"
+        Me.Label1.Text = "SmartGhy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Administrative Hierarchy"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'childformPanel
         '
-        Me.childformPanel.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.childformPanel.BackColor = System.Drawing.Color.Lavender
         Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.childformPanel.Location = New System.Drawing.Point(278, 42)
         Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -235,7 +236,7 @@ Partial Class Ed_Stud_Institution
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Agency FB", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.Ivory
-        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
+        'Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button6.Location = New System.Drawing.Point(1388, 0)
         Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -246,11 +247,11 @@ Partial Class Ed_Stud_Institution
         Me.Button6.Text = "      Home Page"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Ed_Stud_Institution
+        'Election_Home_Page
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1552, 779)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label3)
@@ -260,7 +261,7 @@ Partial Class Ed_Stud_Institution
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
-        Me.Name = "Ed_Stud_Institution"
+        Me.Name = "Election_Home_Page"
         Me.Text = "Transportation"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
