@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Invoice
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
 
@@ -16,7 +16,7 @@
 
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Invoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim row As New DataGridViewRow()
         DataGridView1.Rows.Add(row)
 

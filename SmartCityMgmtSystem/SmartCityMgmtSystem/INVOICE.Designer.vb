@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Invoice
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -61,7 +61,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Agency FB", 14F)
+        Label2.Font = New Font("Agency FB", 14.0F)
         Label2.Location = New Point(66, 86)
         Label2.Name = "Label2"
         Label2.Size = New Size(74, 28)
@@ -115,7 +115,7 @@ Partial Class Form1
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {TRANSACTIONID, RATE, DAYS, AMOUNT})
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
         DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.ButtonHighlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -181,7 +181,7 @@ Partial Class Form1
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Agency FB", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Agency FB", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.Location = New Point(384, 481)
         Label10.Name = "Label10"
         Label10.Size = New Size(76, 36)
@@ -191,7 +191,7 @@ Partial Class Form1
         ' eventID
         ' 
         eventID.AutoSize = True
-        eventID.Font = New Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventID.Font = New Font("Agency FB", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         eventID.Location = New Point(202, 90)
         eventID.Name = "eventID"
         eventID.Size = New Size(126, 24)
@@ -201,7 +201,7 @@ Partial Class Form1
         ' vendorID
         ' 
         vendorID.AutoSize = True
-        vendorID.Font = New Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        vendorID.Font = New Font("Agency FB", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         vendorID.Location = New Point(202, 138)
         vendorID.Name = "vendorID"
         vendorID.Size = New Size(115, 72)
@@ -211,7 +211,7 @@ Partial Class Form1
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Agency FB", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(202, 187)
         Label12.Name = "Label12"
         Label12.Size = New Size(0, 24)
@@ -220,7 +220,7 @@ Partial Class Form1
         ' bank
         ' 
         bank.AutoSize = True
-        bank.Font = New Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        bank.Font = New Font("Agency FB", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         bank.Location = New Point(202, 265)
         bank.Name = "bank"
         bank.Size = New Size(73, 24)
@@ -230,7 +230,7 @@ Partial Class Form1
         ' account
         ' 
         account.AutoSize = True
-        account.Font = New Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        account.Font = New Font("Agency FB", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         account.Location = New Point(202, 305)
         account.Name = "account"
         account.Size = New Size(82, 24)
@@ -240,7 +240,7 @@ Partial Class Form1
         ' subtotal
         ' 
         subtotal.AutoSize = True
-        subtotal.Font = New Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        subtotal.Font = New Font("Agency FB", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         subtotal.Location = New Point(150, 493)
         subtotal.Name = "subtotal"
         subtotal.Size = New Size(52, 24)
@@ -250,7 +250,7 @@ Partial Class Form1
         ' tax
         ' 
         tax.AutoSize = True
-        tax.Font = New Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        tax.Font = New Font("Agency FB", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         tax.Location = New Point(273, 493)
         tax.Name = "tax"
         tax.Size = New Size(29, 24)
@@ -260,16 +260,16 @@ Partial Class Form1
         ' total
         ' 
         total.AutoSize = True
-        total.Font = New Font("Agency FB", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        total.Font = New Font("Agency FB", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         total.Location = New Point(470, 481)
         total.Name = "total"
         total.Size = New Size(81, 36)
         total.TabIndex = 19
         total.Text = "₹4234"
         ' 
-        ' Form1
+        ' Invoice
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(582, 553)
@@ -291,8 +291,8 @@ Partial Class Form1
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Name = "Form1"
-        Text = "Form1"
+        Name = "Invoice"
+        Text = "Invoice"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
