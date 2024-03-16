@@ -254,6 +254,7 @@
     </Compile>
     <Compile Include="HomePageDashboard.vb">
       <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
