@@ -22,11 +22,12 @@ Partial Class TransportTollPlaza
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransportTollPlaza))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim Button1 As System.Windows.Forms.Button
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,19 +39,23 @@ Partial Class TransportTollPlaza
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel2.Controls.Add(Button1)
         Me.Panel2.Controls.Add(Me.ComboBox1)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(142, 78)
+        Me.Panel2.Location = New System.Drawing.Point(9, 78)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(369, 51)
+        Me.Panel2.Size = New System.Drawing.Size(622, 51)
         Me.Panel2.TabIndex = 2
         '
         'ComboBox1
@@ -58,7 +63,7 @@ Partial Class TransportTollPlaza
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(169, 12)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(176, 26)
+        Me.ComboBox1.Size = New System.Drawing.Size(234, 26)
         Me.ComboBox1.TabIndex = 1
         '
         'Label1
@@ -74,9 +79,9 @@ Partial Class TransportTollPlaza
         'DataGridViewImageColumn1
         '
         Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.NullValue = "System.Drawing.Bitmap"
-        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle37.NullValue = "System.Drawing.Bitmap"
+        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle37
         Me.DataGridViewImageColumn1.HeaderText = "  "
         Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.DataGridViewImageColumn1.MinimumWidth = 6
@@ -89,13 +94,13 @@ Partial Class TransportTollPlaza
         'DataGridViewImageColumn2
         '
         Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle6.NullValue = CType(resources.GetObject("DataGridViewCellStyle6.NullValue"), Object)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle38.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle38.NullValue = CType(resources.GetObject("DataGridViewCellStyle38.NullValue"), Object)
+        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle38
         Me.DataGridViewImageColumn2.HeaderText = ""
         Me.DataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.DataGridViewImageColumn2.MinimumWidth = 6
@@ -125,26 +130,24 @@ Partial Class TransportTollPlaza
         Me.PostsPanel2.AutoScroll = True
         Me.PostsPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.PostsPanel2.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.PostsPanel2.Location = New System.Drawing.Point(656, 70)
+        Me.PostsPanel2.Location = New System.Drawing.Point(656, 143)
         Me.PostsPanel2.Name = "PostsPanel2"
-        Me.PostsPanel2.Size = New System.Drawing.Size(599, 654)
+        Me.PostsPanel2.Size = New System.Drawing.Size(599, 581)
         Me.PostsPanel2.TabIndex = 8
         Me.PostsPanel2.WrapContents = False
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Agency FB", 23.79661!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_secretary_48
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(762, 9)
+        Me.Label2.Location = New System.Drawing.Point(656, 78)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(368, 46)
+        Me.Label2.Size = New System.Drawing.Size(599, 46)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "     View Purchased Fastags"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
         '
@@ -154,7 +157,7 @@ Partial Class TransportTollPlaza
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_secretary_48
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(21, 7)
+        Me.Label4.Location = New System.Drawing.Point(13, 19)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(216, 46)
@@ -164,13 +167,13 @@ Partial Class TransportTollPlaza
         'DataGridViewImageColumn3
         '
         Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle7.NullValue = CType(resources.GetObject("DataGridViewCellStyle7.NullValue"), Object)
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle39.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle39.NullValue = CType(resources.GetObject("DataGridViewCellStyle39.NullValue"), Object)
+        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle39
         Me.DataGridViewImageColumn3.HeaderText = ""
         Me.DataGridViewImageColumn3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
         Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
@@ -183,13 +186,13 @@ Partial Class TransportTollPlaza
         'DataGridViewImageColumn4
         '
         Me.DataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle8.NullValue = CType(resources.GetObject("DataGridViewCellStyle8.NullValue"), Object)
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle40.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle40.NullValue = CType(resources.GetObject("DataGridViewCellStyle40.NullValue"), Object)
+        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle40
         Me.DataGridViewImageColumn4.HeaderText = ""
         Me.DataGridViewImageColumn4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
         Me.DataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
@@ -199,14 +202,39 @@ Partial Class TransportTollPlaza
         Me.DataGridViewImageColumn4.ToolTipText = "Delete"
         Me.DataGridViewImageColumn4.Width = 123
         '
+        'Button1
+        '
+        Button1.BackColor = System.Drawing.Color.Maroon
+        Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Button1.Font = New System.Drawing.Font("Verdana", 9.152543!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Button1.ForeColor = System.Drawing.Color.Linen
+        Button1.Location = New System.Drawing.Point(483, 8)
+        Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Button1.Name = "Button1"
+        Button1.Size = New System.Drawing.Size(122, 36)
+        Button1.TabIndex = 2
+        Button1.Text = "Filter"
+        Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_movie_ticket_48
+        Me.PictureBox1.Location = New System.Drawing.Point(756, 78)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(54, 46)
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
         'TransportTollPlaza
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.ClientSize = New System.Drawing.Size(1270, 736)
-        Me.Controls.Add(Me.PostsPanel2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.PostsPanel2)
         Me.Controls.Add(Me.PostsPanel)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel2)
@@ -216,6 +244,7 @@ Partial Class TransportTollPlaza
         Me.Name = "TransportTollPlaza"
         Me.Text = "Home Page"
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -231,4 +260,5 @@ Partial Class TransportTollPlaza
     Friend WithEvents PostsPanel As FlowLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents PostsPanel2 As FlowLayoutPanel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
