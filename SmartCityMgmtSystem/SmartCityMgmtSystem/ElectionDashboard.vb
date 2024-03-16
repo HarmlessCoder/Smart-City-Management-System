@@ -14,4 +14,8 @@
     Private Sub rti_Click(sender As Object, e As EventArgs) Handles rti.Click
         Globals.viewChildForm(childformPanel, ElectionInnerScreenCitizenRTI)
     End Sub
+
+    Private Sub organizational_structure_Click(sender As Object, e As EventArgs) Handles organizational_structure.Click
+        Globals.viewChildForm(childformPanel, ElectionInnerScreen2)
+    End Sub
 End Class
