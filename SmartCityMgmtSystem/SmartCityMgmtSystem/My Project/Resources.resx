@@ -187,9 +187,10 @@
   <data name="Elearning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Elearning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-politician-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-politician-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-services-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+	<data name="icons8-politician-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\icons8-politician-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	  <data name="icons8-services-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-services-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-push-notifications-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -666,9 +667,10 @@
   <data name="final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-secretary-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-secretary-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-driver-license-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+	<data name="icons8-secretary-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\icons8-secretary-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	  <data name="icons8-driver-license-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-driver-license-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="resize_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
