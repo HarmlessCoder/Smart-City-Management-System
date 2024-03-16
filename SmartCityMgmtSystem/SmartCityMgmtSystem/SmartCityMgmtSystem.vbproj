@@ -101,6 +101,32 @@
   <ItemGroup>
     <Compile Include="Ed_InstAdmin_AdmitList.Designer.vb">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
+    <Compile Include="BankingDashboard.Designer.vb">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingLogin.Designer.vb">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingCreateAccount.Designer.vb">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingCreateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBankBalance.Designer.vb">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBankBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
+      <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_InstAdmin_AdmitList.vb">
       <SubType>Form</SubType>
@@ -525,6 +551,23 @@
     <Compile Include="RideSharingChats.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PayBills.Designer.vb">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PayBills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReachargeFasttag.Designer.vb">
+      <DependentUpon>ReachargeFasttag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReachargeFasttag.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RideSharingMain.Designer.vb">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
     </Compile>
@@ -591,6 +634,18 @@
     <Compile Include="TransportTollPlaza.vb">
       <SubType>Form</SubType>
     </Compile>
+
+    <Compile Include="UserBankAcountDetails.Designer.vb">
+      <DependentUpon>UserBankAcountDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserBankAcountDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBankTransactions.Designer.vb">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBankTransactions.vb">
+
     <Compile Include="UserDetails.Designer.vb">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </Compile>
@@ -625,6 +680,7 @@
       <DependentUpon>UserSignUp.vb</DependentUpon>
     </Compile>
     <Compile Include="UserSignUp.vb">
+
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -768,6 +824,18 @@
     <EmbeddedResource Include="ChatBubbleItem.resx">
       <DependentUpon>ChatBubbleItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BankingDashboard.resx">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingLogin.resx">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingCreateAccount.resx">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBankBalance.resx">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_Course_ListItem.resx">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </EmbeddedResource>
@@ -831,6 +899,12 @@
     <EmbeddedResource Include="RideSharingChats.resx">
       <DependentUpon>RideSharingChats.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayBills.resx">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReachargeFasttag.resx">
+      <DependentUpon>ReachargeFasttag.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RideSharingMain.resx">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -864,6 +938,13 @@
     <EmbeddedResource Include="TransportTollPlaza.resx">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="UserBankAcountDetails.resx">
+      <DependentUpon>UserBankAcountDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBankTransactions.resx">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
+
     <EmbeddedResource Include="UserDetails.resx">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </EmbeddedResource>
@@ -881,6 +962,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -1236,6 +1318,39 @@
     <None Include="Resources\student_default.png" />
   </ItemGroup>
   <ItemGroup>
+
+    <None Include="Resources\banking_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paBills.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paybill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fasttag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon checkbalance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_view_transactions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-paybills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBankAccountProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomePageBank.png" />
+
     <None Include="Resources\icons8-doctor-giving-advice-96.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1343,6 +1458,7 @@
     <None Include="Resources\icons8-vehicle-48.png" />
     <Content Include="Resources\icons8-vehicle-registration-certificate-64.png" />
     <None Include="Resources\icons8-vehicle-registration-certificate-641.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
