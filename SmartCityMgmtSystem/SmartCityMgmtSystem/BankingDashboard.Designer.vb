@@ -537,5 +537,4 @@ Partial Class BankingDashboard
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents PictureBox2 As PictureBox
 End Class
