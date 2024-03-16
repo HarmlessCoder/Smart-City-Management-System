@@ -187,6 +187,8 @@
       <DependentUpon>lib_search.vb</DependentUpon>
     </Compile>
     <Compile Include="lib_search.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Stud_Moodle_JoinCourse.Designer.vb">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </Compile>
@@ -611,6 +613,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="lib_search.resx">
       <DependentUpon>lib_search.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Moodle_JoinCourse.resx">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </EmbeddedResource>
