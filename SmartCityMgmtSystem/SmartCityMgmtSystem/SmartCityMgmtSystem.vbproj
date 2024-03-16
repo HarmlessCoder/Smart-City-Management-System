@@ -123,6 +123,70 @@
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="lib_adminBM.Designer.vb">
+      <DependentUpon>lib_adminBM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminBM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminDash.Designer.vb">
+      <DependentUpon>lib_adminDash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminDash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminMT.Designer.vb">
+      <DependentUpon>lib_adminMT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminMT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminReq.Designer.vb">
+      <DependentUpon>lib_adminReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminSearch.Designer.vb">
+      <DependentUpon>lib_adminSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_admin_eBooks.Designer.vb">
+      <DependentUpon>lib_admin_eBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_admin_eBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_borrowed.Designer.vb">
+      <DependentUpon>lib_borrowed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_borrowed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_dash.Designer.vb">
+      <DependentUpon>lib_dash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_dash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_ebooks.Designer.vb">
+      <DependentUpon>lib_ebooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_ebooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_request.Designer.vb">
+      <DependentUpon>lib_request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_request.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_search.Designer.vb">
+      <DependentUpon>lib_search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_search.vb">
     <Compile Include="Ed_Stud_Moodle_JoinCourse.Designer.vb">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </Compile>
@@ -521,6 +585,32 @@
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminBM.resx">
+      <DependentUpon>lib_adminBM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminDash.resx">
+      <DependentUpon>lib_adminDash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminMT.resx">
+      <DependentUpon>lib_adminMT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminReq.resx">
+      <DependentUpon>lib_adminReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminSearch.resx">
+      <DependentUpon>lib_adminSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_admin_eBooks.resx">
+      <DependentUpon>lib_admin_eBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_dash.resx">
+      <DependentUpon>lib_dash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_ebooks.resx">
+      <DependentUpon>lib_ebooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_search.resx">
+      <DependentUpon>lib_search.vb</DependentUpon>
     <EmbeddedResource Include="Ed_Stud_Moodle_JoinCourse.resx">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </EmbeddedResource>
