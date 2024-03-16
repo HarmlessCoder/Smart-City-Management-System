@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class HomePage
+Public Class UserProfilePage
 
 
 End Class

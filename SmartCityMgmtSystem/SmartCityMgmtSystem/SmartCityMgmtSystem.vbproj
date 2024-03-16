@@ -249,6 +249,11 @@
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HomePageDashboard.Designer.vb">
+      <DependentUpon>HomePageDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageDashboard.vb">
+      <SubType>Form</SubType>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -489,6 +494,12 @@
     <Compile Include="UserProfile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserProfilePage.Designer.vb">
+      <DependentUpon>UserProfilePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfilePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserSignUp.Designer.vb">
       <DependentUpon>UserSignUp.vb</DependentUpon>
     </Compile>
@@ -571,6 +582,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePageDashboard.resx">
+      <DependentUpon>HomePageDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
@@ -688,6 +702,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfilePage.resx">
+      <DependentUpon>UserProfilePage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>
