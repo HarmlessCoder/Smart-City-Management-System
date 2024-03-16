@@ -1,4 +1,5 @@
-﻿
+﻿Imports System.ComponentModel.DataAnnotations
+
 Public Class Events_vendorLoginInnerScreen
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
