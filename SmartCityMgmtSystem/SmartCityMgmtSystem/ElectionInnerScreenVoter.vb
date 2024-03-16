@@ -87,4 +87,28 @@ Public Class ElectionInnerScreenVoter
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
+
+    Private Sub Label2_Click_1(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Panel2_Paint_2(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Label4_Click_1(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub Label7_Click_1(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreen1)
+    End Sub
 End Class
