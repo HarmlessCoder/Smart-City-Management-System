@@ -101,6 +101,32 @@
   <ItemGroup>
     <Compile Include="Ed_InstAdmin_AdmitList.Designer.vb">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
+    <Compile Include="BankingDashboard.Designer.vb">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingLogin.Designer.vb">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingCreateAccount.Designer.vb">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingCreateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBankBalance.Designer.vb">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBankBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
+      <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_InstAdmin_AdmitList.vb">
       <SubType>Form</SubType>
@@ -123,6 +149,108 @@
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenCitizenCastVote.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenCastVote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenCastVote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenResults.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenTimeline.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenTimeline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenTimeline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitzenKYC.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitzenKYC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitzenKYC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenVoterNominate.Designer.vb">
+      <DependentUpon>ElectionInnerScreenVoterNominate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenVoterNominate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice.Designer.vb">
+      <DependentUpon>Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminBM.Designer.vb">
+      <DependentUpon>lib_adminBM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminBM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminDash.Designer.vb">
+      <DependentUpon>lib_adminDash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminDash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminMT.Designer.vb">
+      <DependentUpon>lib_adminMT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminMT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminReq.Designer.vb">
+      <DependentUpon>lib_adminReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_adminSearch.Designer.vb">
+      <DependentUpon>lib_adminSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_admin_eBooks.Designer.vb">
+      <DependentUpon>lib_admin_eBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_admin_eBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_borrowed.Designer.vb">
+      <DependentUpon>lib_borrowed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_borrowed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_dash.Designer.vb">
+      <DependentUpon>lib_dash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_dash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_ebooks.Designer.vb">
+      <DependentUpon>lib_ebooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_ebooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_request.Designer.vb">
+      <DependentUpon>lib_request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_request.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib_search.Designer.vb">
+      <DependentUpon>lib_search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_search.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Stud_Moodle_JoinCourse.Designer.vb">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </Compile>
@@ -141,10 +269,40 @@
     <Compile Include="ElectionInnerScreenAdminNomination.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenAdminResults.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminRTI.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminRTI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminRTI.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionInnerScreenAdminTimeline.Designer.vb">
       <DependentUpon>ElectionInnerScreenAdminTimeline.vb</DependentUpon>
     </Compile>
     <Compile Include="ElectionInnerScreenAdminTimeline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotes.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminVotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotesTurnout.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminVotesTurnout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminVotesTurnout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTIPA.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenRTIPA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenRTIPA.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionInnerScreenRTICitizen.Designer.vb">
@@ -183,6 +341,12 @@
     <Compile Include="EventDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Events_vendorLoginInnerScreen.Designer.vb">
+      <DependentUpon>Events_vendorLoginInnerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Events_vendorLoginInnerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Events_vendorRegistrationScreen.Designer.vb">
       <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
     </Compile>
@@ -201,6 +365,12 @@
     <Compile Include="FastagPlanItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="FastagPurchase.Designer.vb">
+      <DependentUpon>FastagPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastagPurchase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="HealthcareAdminHome.Designer.vb">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </Compile>
@@ -211,6 +381,54 @@
       <DependentUpon>HomePage.vb</DependentUpon>
     </Compile>
     <Compile Include="HomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportRSReqPost.Designer.vb">
+      <DependentUpon>TransportRSReqPost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportRSReqPost.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransportAdminVRReq.Designer.vb">
+      <DependentUpon>TransportAdminVRReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminVRReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportAdminTGLog.Designer.vb">
+      <DependentUpon>TransportAdminTGLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminTGLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportAdminDLReq.Designer.vb">
+      <DependentUpon>TransportAdminDLReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminDLReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportAdminRSReq.Designer.vb">
+      <DependentUpon>TransportAdminRSReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminRSReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportTGEnter.Designer.vb">
+      <DependentUpon>TransportTGEnter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTGEnter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportVehicleRegReq.Designer.vb">
+      <DependentUpon>TransportVehicleRegReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportVehicleRegReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePageDashboard.Designer.vb">
+      <DependentUpon>HomePageDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -369,6 +587,23 @@
     <Compile Include="RideSharingChats.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PayBills.Designer.vb">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PayBills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReachargeFasttag.Designer.vb">
+      <DependentUpon>ReachargeFasttag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReachargeFasttag.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RideSharingMain.Designer.vb">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
     </Compile>
@@ -417,6 +652,12 @@
     <Compile Include="TransportBusSchedule.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportDrivingLicenseReq.Designer.vb">
+      <DependentUpon>TransportDrivingLicenseReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportDrivingLicenseReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportFRAdmin.Designer.vb">
       <DependentUpon>TransportFRAdmin.vb</DependentUpon>
     </Compile>
@@ -429,6 +670,18 @@
     <Compile Include="TransportTollPlaza.vb">
       <SubType>Form</SubType>
     </Compile>
+
+    <Compile Include="UserBankAcountDetails.Designer.vb">
+      <DependentUpon>UserBankAcountDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserBankAcountDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBankTransactions.Designer.vb">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBankTransactions.vb">
+
     <Compile Include="UserDetails.Designer.vb">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </Compile>
@@ -453,10 +706,17 @@
     <Compile Include="UserProfile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserProfilePage.Designer.vb">
+      <DependentUpon>UserProfilePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfilePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserSignUp.Designer.vb">
       <DependentUpon>UserSignUp.vb</DependentUpon>
     </Compile>
     <Compile Include="UserSignUp.vb">
+
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -473,6 +733,49 @@
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenCastVote.resx">
+      <DependentUpon>ElectionInnerScreenCitizenCastVote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenResults.resx">
+      <DependentUpon>ElectionInnerScreenCitizenResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenTimeline.resx">
+      <DependentUpon>ElectionInnerScreenCitizenTimeline.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitzenKYC.resx">
+      <DependentUpon>ElectionInnerScreenCitzenKYC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenVoterNominate.resx">
+      <DependentUpon>ElectionInnerScreenVoterNominate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice.resx" />
+    <EmbeddedResource Include="lib_adminBM.resx">
+      <DependentUpon>lib_adminBM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminDash.resx">
+      <DependentUpon>lib_adminDash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminMT.resx">
+      <DependentUpon>lib_adminMT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminReq.resx">
+      <DependentUpon>lib_adminReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminSearch.resx">
+      <DependentUpon>lib_adminSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_admin_eBooks.resx">
+      <DependentUpon>lib_admin_eBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_dash.resx">
+      <DependentUpon>lib_dash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_ebooks.resx">
+      <DependentUpon>lib_ebooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_search.resx">
+      <DependentUpon>lib_search.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Moodle_JoinCourse.resx">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </EmbeddedResource>
@@ -482,8 +785,23 @@
     <EmbeddedResource Include="ElectionInnerScreenAdminNomination.resx">
       <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminResults.resx">
+      <DependentUpon>ElectionInnerScreenAdminResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminRTI.resx">
+      <DependentUpon>ElectionInnerScreenAdminRTI.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenAdminTimeline.resx">
       <DependentUpon>ElectionInnerScreenAdminTimeline.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminVotes.resx">
+      <DependentUpon>ElectionInnerScreenAdminVotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminVotesTurnout.resx">
+      <DependentUpon>ElectionInnerScreenAdminVotesTurnout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenRTIPA.resx">
+      <DependentUpon>ElectionInnerScreenCitizenRTIPA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenRTICitizen.resx">
       <DependentUpon>ElectionInnerScreenRTICitizen.vb</DependentUpon>
@@ -503,6 +821,9 @@
     <EmbeddedResource Include="EventDashboard.resx">
       <DependentUpon>EventDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Events_vendorLoginInnerScreen.resx">
+      <DependentUpon>Events_vendorLoginInnerScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Events_vendorRegistrationScreen.resx">
       <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
     </EmbeddedResource>
@@ -512,11 +833,38 @@
     <EmbeddedResource Include="FastagPlanItem.resx">
       <DependentUpon>FastagPlanItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FastagPurchase.resx">
+      <DependentUpon>FastagPurchase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAdminHome.resx">
       <DependentUpon>HealthcareAdminHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportRSReqPost.resx">
+      <DependentUpon>TransportRSReqPost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminVRReq.resx">
+      <DependentUpon>TransportAdminVRReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminTGLog.resx">
+      <DependentUpon>TransportAdminTGLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminDLReq.resx">
+      <DependentUpon>TransportAdminDLReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminRSReq.resx">
+      <DependentUpon>TransportAdminRSReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportTGEnter.resx">
+      <DependentUpon>TransportTGEnter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportVehicleRegReq.resx">
+      <DependentUpon>TransportVehicleRegReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePageDashboard.resx">
+      <DependentUpon>HomePageDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
@@ -529,6 +877,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChatBubbleItem.resx">
       <DependentUpon>ChatBubbleItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingDashboard.resx">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingLogin.resx">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingCreateAccount.resx">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBankBalance.resx">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_Course_ListItem.resx">
       <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
@@ -593,6 +953,12 @@
     <EmbeddedResource Include="RideSharingChats.resx">
       <DependentUpon>RideSharingChats.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayBills.resx">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReachargeFasttag.resx">
+      <DependentUpon>ReachargeFasttag.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RideSharingMain.resx">
       <DependentUpon>RideSharingMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -617,12 +983,22 @@
     <EmbeddedResource Include="TransportBusSchedule.resx">
       <DependentUpon>TransportBusSchedule.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransportDrivingLicenseReq.resx">
+      <DependentUpon>TransportDrivingLicenseReq.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransportFRAdmin.resx">
       <DependentUpon>TransportFRAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportTollPlaza.resx">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="UserBankAcountDetails.resx">
+      <DependentUpon>UserBankAcountDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBankTransactions.resx">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
+
     <EmbeddedResource Include="UserDetails.resx">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </EmbeddedResource>
@@ -635,8 +1011,12 @@
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserProfilePage.resx">
+      <DependentUpon>UserProfilePage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -992,6 +1372,39 @@
     <None Include="Resources\student_default.png" />
   </ItemGroup>
   <ItemGroup>
+
+    <None Include="Resources\banking_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paBills.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paybill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fasttag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon checkbalance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_view_transactions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-paybills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBankAccountProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomePageBank.png" />
+
     <None Include="Resources\icons8-doctor-giving-advice-96.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1058,20 +1471,52 @@
   <ItemGroup>
     <Content Include="Resources\icons8-licence-48.png" />
     <Content Include="Resources\icons8-vendor-48.png" />
+    <Content Include="Resources\icons8-car-100.png" />
+    <None Include="Resources\icons8-car-1001.png" />
+    <None Include="Resources\icons8-car-1002.png" />
+    <Content Include="Resources\icons8-commodity-100.png" />
+    <Content Include="Resources\icons8-complain-100.png" />
+    <None Include="Resources\icons8-driver-license-501.png" />
+    <None Include="Resources\icons8-driving-license-501.png" />
+    <None Include="Resources\icons8-cross-30.png" />
+    <Content Include="Resources\icons8-eye-48.png" />
+    <None Include="Resources\icons8-eye-481.png" />
+    <Content Include="Resources\icons8-health-100.png" />
+    <Content Include="Resources\icons8-live-video-on-100.png" />
+    <None Include="Resources\icons8-people-in-car-1001.png" />
+    <None Include="Resources\icons8-people-in-car-50.png" />
+    <None Include="Resources\icons8-passenger-48.png" />
+    <Content Include="Resources\icons8-permanent-job-100.png" />
+    <Content Include="Resources\icons8-person-80.png" />
+    <None Include="Resources\icons8-person-801.png" />
+    <Content Include="Resources\icons8-student-center-100.png" />
+    <Content Include="Resources\icons8-system-information-100.png" />
+    <Content Include="Resources\icons8-taj-mahal-100.png" />
+    <None Include="Resources\icons8-tollbooth-501.png" />
+    <None Include="Resources\icons8-tick-30.png" />
     <None Include="Resources\icons8-accept-64.png" />
     <None Include="Resources\Fatstag.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <None Include="Resources\icons8-event-accepted-tentatively-64.png" />
     <None Include="Resources\icons8-event-accepted-64.png" />
+    <None Include="Resources\icons8-driver-license-20.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
+    <None Include="Resources\icons8-pay-30.png" />
+    <None Include="Resources\icons8-pay-301.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
     <None Include="Resources\icons8-reject-64.png" />
     <Content Include="Resources\icons8-student-center-100.png" />
     <Content Include="Resources\icons8-system-information-100.png" />
     <Content Include="Resources\icons8-taj-mahal-100.png" />
+    <None Include="Resources\icons8-topup-payment-50.png" />
     <Content Include="Resources\icons8-transportation-100.png" />
+    <None Include="Resources\icons8-vehicle-50.png" />
+    <None Include="Resources\icons8-vehicle-48.png" />
+    <Content Include="Resources\icons8-vehicle-registration-certificate-64.png" />
+    <None Include="Resources\icons8-vehicle-registration-certificate-641.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

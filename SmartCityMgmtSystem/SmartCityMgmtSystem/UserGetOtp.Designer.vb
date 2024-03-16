@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UserGetOtp
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,50 +20,20 @@ Partial Class UserGetOtp
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Panel1.SuspendLayout()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.childformPanel.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.NavajoWhite
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Font = New System.Drawing.Font("Tahoma", 11.8209!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.Panel1.Location = New System.Drawing.Point(0, -1)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(538, 783)
-        Me.Panel1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Agency FB", 20.13559!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.MistyRose
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(538, 783)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = " " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Welcome to the Smart City Guwahati Portal"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'childformPanel
         '
@@ -71,10 +41,10 @@ Partial Class UserGetOtp
         Me.childformPanel.Controls.Add(Me.PictureBox2)
         Me.childformPanel.Controls.Add(Me.GroupBox1)
         Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.childformPanel.Location = New System.Drawing.Point(538, 62)
+        Me.childformPanel.Location = New System.Drawing.Point(766, -1)
         Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.childformPanel.Name = "childformPanel"
-        Me.childformPanel.Size = New System.Drawing.Size(1016, 720)
+        Me.childformPanel.Size = New System.Drawing.Size(788, 783)
         Me.childformPanel.TabIndex = 1
         '
         'GroupBox1
@@ -82,7 +52,7 @@ Partial Class UserGetOtp
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Button9)
-        Me.GroupBox1.Location = New System.Drawing.Point(258, 167)
+        Me.GroupBox1.Location = New System.Drawing.Point(155, 211)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(501, 382)
         Me.GroupBox1.TabIndex = 14
@@ -108,6 +78,26 @@ Partial Class UserGetOtp
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Enter OTP"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.SMART_CITY___GUWAHATI_removebg
+        Me.PictureBox1.Location = New System.Drawing.Point(46, 47)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(672, 693)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_approval_100
+        Me.PictureBox2.Location = New System.Drawing.Point(349, 157)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(117, 90)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 15
+        Me.PictureBox2.TabStop = False
+        '
         'Button9
         '
         Me.Button9.BackColor = System.Drawing.Color.DarkGoldenrod
@@ -123,41 +113,19 @@ Partial Class UserGetOtp
         Me.Button9.Text = "Proceed"
         Me.Button9.UseVisualStyleBackColor = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.SMART_CITY___GUWAHATI
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 230)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(538, 301)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_approval_100
-        Me.PictureBox2.Location = New System.Drawing.Point(452, 113)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(117, 90)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 15
-        Me.PictureBox2.TabStop = False
-        '
         'UserGetOtp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.BackColor = System.Drawing.Color.NavajoWhite
         Me.ClientSize = New System.Drawing.Size(1552, 779)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.childformPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.Name = "UserGetOtp"
         Me.Text = "Transportation"
-        Me.Panel1.ResumeLayout(False)
         Me.childformPanel.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -166,13 +134,11 @@ Partial Class UserGetOtp
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents childformPanel As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Button9 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

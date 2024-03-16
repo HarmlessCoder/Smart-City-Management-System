@@ -29,32 +29,32 @@ Partial Class ElectionInnerScreenAdmin
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -112,17 +112,6 @@ Partial Class ElectionInnerScreenAdmin
         Me.Panel1.Size = New System.Drawing.Size(284, 225)
         Me.Panel1.TabIndex = 2
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_approval_100
-        Me.PictureBox2.Location = New System.Drawing.Point(65, 62)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(148, 144)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 10
-        Me.PictureBox2.TabStop = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -155,17 +144,6 @@ Partial Class ElectionInnerScreenAdmin
         Me.Panel2.Size = New System.Drawing.Size(284, 225)
         Me.Panel2.TabIndex = 3
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_timeline_100
-        Me.PictureBox3.Location = New System.Drawing.Point(70, 81)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(142, 125)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -187,17 +165,6 @@ Partial Class ElectionInnerScreenAdmin
         Me.Panel3.Size = New System.Drawing.Size(284, 225)
         Me.Panel3.TabIndex = 4
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_ballot_box_with_ballot_100
-        Me.PictureBox4.Location = New System.Drawing.Point(79, 81)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(121, 125)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 10
-        Me.PictureBox4.TabStop = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -218,17 +185,6 @@ Partial Class ElectionInnerScreenAdmin
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(284, 225)
         Me.Panel4.TabIndex = 5
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_results_100
-        Me.PictureBox5.Location = New System.Drawing.Point(65, 62)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(148, 144)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 10
-        Me.PictureBox5.TabStop = False
         '
         'Label6
         '
@@ -261,6 +217,50 @@ Partial Class ElectionInnerScreenAdmin
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 10
         Me.PictureBox6.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_results_100
+        Me.PictureBox5.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(148, 144)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 10
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_ballot_box_with_ballot_100
+        Me.PictureBox4.Location = New System.Drawing.Point(79, 81)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(121, 125)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 10
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_timeline_100
+        Me.PictureBox3.Location = New System.Drawing.Point(70, 81)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(142, 125)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_approval_100
+        Me.PictureBox2.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(148, 144)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 10
+        Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
@@ -311,19 +311,19 @@ Partial Class ElectionInnerScreenAdmin
         Me.Text = "Home Page"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

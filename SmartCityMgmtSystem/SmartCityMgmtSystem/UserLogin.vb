@@ -5,13 +5,14 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim signup = New UserSignUp()
-        signup.Show()
+        'Globals.viewChildForm(childformPanel, UserSignUpPage)
+        Dim sign = New UserSignUp()
+        sign.Show()
         Me.Hide()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim home = New HomePage()
+        Dim home = New HomePageDashboard()
         home.Show()
         Me.Hide()
     End Sub
