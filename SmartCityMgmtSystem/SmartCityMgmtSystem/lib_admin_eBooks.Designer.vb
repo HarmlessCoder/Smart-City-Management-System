@@ -29,9 +29,9 @@ Partial Class lib_admin_eBooks
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.searchBar = New System.Windows.Forms.TableLayoutPanel()
         Me.btnSearch = New System.Windows.Forms.Button()
@@ -48,9 +48,10 @@ Partial Class lib_admin_eBooks
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.overdueBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
         Me.searchBar.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -59,7 +60,6 @@ Partial Class lib_admin_eBooks
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel10.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -177,6 +177,17 @@ Partial Class lib_admin_eBooks
         Me.Button5.Text = "Dashboard"
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'Label1
         '
         Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -209,19 +220,6 @@ Partial Class lib_admin_eBooks
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 9
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Ivory
-        Me.Label2.Location = New System.Drawing.Point(294, 10)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 28)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Admin"
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -230,7 +228,7 @@ Partial Class lib_admin_eBooks
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Label11.Location = New System.Drawing.Point(485, 15)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(221, 80)
+        Me.Label11.Size = New System.Drawing.Size(219, 79)
         Me.Label11.TabIndex = 55
         Me.Label11.Text = "e-Books"
         '
@@ -305,7 +303,7 @@ Partial Class lib_admin_eBooks
         Me.srchSelect.Location = New System.Drawing.Point(0, 1)
         Me.srchSelect.Margin = New System.Windows.Forms.Padding(0)
         Me.srchSelect.Name = "srchSelect"
-        Me.srchSelect.Size = New System.Drawing.Size(221, 40)
+        Me.srchSelect.Size = New System.Drawing.Size(221, 39)
         Me.srchSelect.TabIndex = 9
         Me.srchSelect.Text = "Select"
         '
@@ -327,7 +325,7 @@ Partial Class lib_admin_eBooks
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1124, 68)
         Me.overdueBooksTitleTable.TabIndex = 53
         '
@@ -336,7 +334,7 @@ Partial Class lib_admin_eBooks
         Me.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Location = New System.Drawing.Point(897, 2)
+        Me.Panel3.Location = New System.Drawing.Point(897, 3)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(226, 73)
@@ -350,7 +348,7 @@ Partial Class lib_admin_eBooks
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(68, 14)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 42)
+        Me.Label3.Size = New System.Drawing.Size(81, 40)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Rating"
         '
@@ -359,7 +357,7 @@ Partial Class lib_admin_eBooks
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Location = New System.Drawing.Point(561, 2)
+        Me.Panel4.Location = New System.Drawing.Point(561, 3)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(335, 73)
@@ -373,7 +371,7 @@ Partial Class lib_admin_eBooks
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(141, 14)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 42)
+        Me.Label4.Size = New System.Drawing.Size(58, 40)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Title"
         '
@@ -382,7 +380,7 @@ Partial Class lib_admin_eBooks
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Location = New System.Drawing.Point(225, 2)
+        Me.Panel5.Location = New System.Drawing.Point(225, 3)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(335, 73)
@@ -396,7 +394,7 @@ Partial Class lib_admin_eBooks
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(133, 14)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 42)
+        Me.Label5.Size = New System.Drawing.Size(84, 40)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Author"
         '
@@ -405,7 +403,7 @@ Partial Class lib_admin_eBooks
         Me.Panel10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel10.Controls.Add(Me.Label6)
-        Me.Panel10.Location = New System.Drawing.Point(1, 2)
+        Me.Panel10.Location = New System.Drawing.Point(1, 3)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(223, 73)
@@ -419,7 +417,7 @@ Partial Class lib_admin_eBooks
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(56, 14)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 42)
+        Me.Label6.Size = New System.Drawing.Size(92, 40)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Book ID"
         '
@@ -443,16 +441,18 @@ Partial Class lib_admin_eBooks
         Me.overdueBooksTablePanel.Size = New System.Drawing.Size(1124, 479)
         Me.overdueBooksTablePanel.TabIndex = 52
         '
-        'PictureBox1
+        'Label2
         '
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Ivory
+        Me.Label2.Location = New System.Drawing.Point(294, 10)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 28)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Admin"
         '
         'Button6
         '
@@ -485,6 +485,7 @@ Partial Class lib_admin_eBooks
         Me.Name = "lib_admin_eBooks"
         Me.Text = "lib_admin_eBooks" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    "
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.childformPanel.ResumeLayout(False)
         Me.childformPanel.PerformLayout()
         Me.searchBar.ResumeLayout(False)
@@ -499,7 +500,6 @@ Partial Class lib_admin_eBooks
         Me.Panel5.PerformLayout()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
