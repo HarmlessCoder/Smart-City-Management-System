@@ -177,6 +177,12 @@
     <Compile Include="Election_Inner_Screen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EventDashboard.Designer.vb">
+      <DependentUpon>EventDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Events_vendorRegistrationScreen.Designer.vb">
       <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
     </Compile>
@@ -493,6 +499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Election_Inner_Screen.resx">
       <DependentUpon>Election_Inner_Screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventDashboard.resx">
+      <DependentUpon>EventDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events_vendorRegistrationScreen.resx">
       <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
@@ -1047,10 +1056,14 @@
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\icons8-licence-48.png" />
+    <Content Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-accept-64.png" />
     <None Include="Resources\Fatstag.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
+    <None Include="Resources\icons8-event-accepted-tentatively-64.png" />
+    <None Include="Resources\icons8-event-accepted-64.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
