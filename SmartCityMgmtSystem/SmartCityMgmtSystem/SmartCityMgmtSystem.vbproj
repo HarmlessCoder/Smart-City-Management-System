@@ -123,6 +123,36 @@
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenCitizenCastVote.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenCastVote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenCastVote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenResults.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenTimeline.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitizenTimeline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitizenTimeline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitzenKYC.Designer.vb">
+      <DependentUpon>ElectionInnerScreenCitzenKYC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenCitzenKYC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenVoterNominate.Designer.vb">
+      <DependentUpon>ElectionInnerScreenVoterNominate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenVoterNominate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lib_adminBM.Designer.vb">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
     </Compile>
@@ -635,6 +665,21 @@
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenCastVote.resx">
+      <DependentUpon>ElectionInnerScreenCitizenCastVote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenResults.resx">
+      <DependentUpon>ElectionInnerScreenCitizenResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitizenTimeline.resx">
+      <DependentUpon>ElectionInnerScreenCitizenTimeline.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenCitzenKYC.resx">
+      <DependentUpon>ElectionInnerScreenCitzenKYC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenVoterNominate.resx">
+      <DependentUpon>ElectionInnerScreenVoterNominate.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib_adminBM.resx">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
     </EmbeddedResource>
@@ -745,7 +790,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportVehicleRegReq.resx">
       <DependentUpon>TransportVehicleRegReq.vb</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePageDashboard.resx">
       <DependentUpon>HomePageDashboard.vb</DependentUpon>
     </EmbeddedResource>
