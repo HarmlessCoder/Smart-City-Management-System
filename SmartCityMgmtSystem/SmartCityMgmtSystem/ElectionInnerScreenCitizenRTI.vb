@@ -93,7 +93,7 @@ Public Class ElectionInnerScreenCitizenRTI
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenCitizenRTIPA)
     End Sub
 
     Private Sub Label4_Click_1(sender As Object, e As EventArgs)
