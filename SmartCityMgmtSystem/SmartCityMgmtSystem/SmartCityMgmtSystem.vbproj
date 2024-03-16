@@ -186,6 +186,48 @@
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportRSReqPost.Designer.vb">
+      <DependentUpon>TransportRSReqPost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportRSReqPost.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransportAdminVRReq.Designer.vb">
+      <DependentUpon>TransportAdminVRReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminVRReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportAdminTGLog.Designer.vb">
+      <DependentUpon>TransportAdminTGLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminTGLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportAdminDLReq.Designer.vb">
+      <DependentUpon>TransportAdminDLReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminDLReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportAdminRSReq.Designer.vb">
+      <DependentUpon>TransportAdminRSReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportAdminRSReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportTGEnter.Designer.vb">
+      <DependentUpon>TransportTGEnter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTGEnter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportVehicleRegReq.Designer.vb">
+      <DependentUpon>TransportVehicleRegReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportVehicleRegReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportationManageFastagAdmin.Designer.vb">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
     </Compile>
@@ -372,6 +414,12 @@
     <Compile Include="TransportBusSchedule.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportDrivingLicenseReq.Designer.vb">
+      <DependentUpon>TransportDrivingLicenseReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportDrivingLicenseReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportFRAdmin.Designer.vb">
       <DependentUpon>TransportFRAdmin.vb</DependentUpon>
     </Compile>
@@ -460,6 +508,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportRSReqPost.resx">
+      <DependentUpon>TransportRSReqPost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminVRReq.resx">
+      <DependentUpon>TransportAdminVRReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminTGLog.resx">
+      <DependentUpon>TransportAdminTGLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminDLReq.resx">
+      <DependentUpon>TransportAdminDLReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportAdminRSReq.resx">
+      <DependentUpon>TransportAdminRSReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportTGEnter.resx">
+      <DependentUpon>TransportTGEnter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportVehicleRegReq.resx">
+      <DependentUpon>TransportVehicleRegReq.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
@@ -550,6 +619,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportBusSchedule.resx">
       <DependentUpon>TransportBusSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportDrivingLicenseReq.resx">
+      <DependentUpon>TransportDrivingLicenseReq.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportFRAdmin.resx">
       <DependentUpon>TransportFRAdmin.vb</DependentUpon>
@@ -906,22 +978,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-login-30.png" />
-   
     <None Include="Resources\SmartCity_Administrative_Hierarchy.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\icons8-car-100.png" />
+    <None Include="Resources\icons8-car-1001.png" />
+    <None Include="Resources\icons8-car-1002.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
+    <None Include="Resources\icons8-driver-license-501.png" />
+    <None Include="Resources\icons8-driving-license-501.png" />
+    <None Include="Resources\icons8-cross-30.png" />
+    <Content Include="Resources\icons8-eye-48.png" />
+    <None Include="Resources\icons8-eye-481.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
+    <None Include="Resources\icons8-people-in-car-1001.png" />
+    <None Include="Resources\icons8-people-in-car-50.png" />
+    <None Include="Resources\icons8-passenger-48.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
+    <Content Include="Resources\icons8-person-80.png" />
+    <None Include="Resources\icons8-person-801.png" />
     <Content Include="Resources\icons8-student-center-100.png" />
     <Content Include="Resources\icons8-system-information-100.png" />
     <Content Include="Resources\icons8-taj-mahal-100.png" />
+    <None Include="Resources\icons8-tollbooth-501.png" />
+    <None Include="Resources\icons8-tick-30.png" />
     <Content Include="Resources\icons8-transportation-100.png" />
+    <None Include="Resources\icons8-vehicle-50.png" />
+    <None Include="Resources\icons8-vehicle-48.png" />
+    <Content Include="Resources\icons8-vehicle-registration-certificate-64.png" />
+    <None Include="Resources\icons8-vehicle-registration-certificate-641.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
