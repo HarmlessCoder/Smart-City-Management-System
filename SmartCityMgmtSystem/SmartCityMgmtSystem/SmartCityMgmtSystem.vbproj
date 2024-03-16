@@ -99,14 +99,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb" />
+    <Compile Include="Ed_Coursera_Course_ListItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_InstAdmin_AdmitList.Designer.vb">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BankingDashboard.Designer.vb">
-      <DependentUpon>BankingDashboard.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BankingDashboard.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="BankingLogin.Designer.vb">
       <DependentUpon>BankingLogin.vb</DependentUpon>
@@ -125,9 +123,6 @@
     </Compile>
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
-      <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_InstAdmin_AdmitList.vb">
       <SubType>Form</SubType>
@@ -256,12 +251,6 @@
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Stud_Moodle_JoinCourse.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ed_Temp1.Designer.vb">
-      <DependentUpon>Ed_Temp1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_Temp1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionInnerScreenAdminNomination.Designer.vb">
@@ -448,12 +437,6 @@
       <DependentUpon>ChatBubbleItem.vb</DependentUpon>
     </Compile>
     <Compile Include="ChatBubbleItem.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Ed_Coursera_Course_ListItem.Designer.vb">
-      <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_Coursera_Course_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ed_GlobalDashboard.Designer.vb">
@@ -710,6 +693,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ed_Coursera_Course_ListItem.resx" />
     <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
     </EmbeddedResource>
@@ -767,9 +751,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_Moodle_JoinCourse.resx">
       <DependentUpon>Ed_Stud_Moodle_JoinCourse.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Temp1.resx">
-      <DependentUpon>Ed_Temp1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenAdminNomination.resx">
       <DependentUpon>ElectionInnerScreenAdminNomination.vb</DependentUpon>
@@ -864,9 +845,6 @@
     <EmbeddedResource Include="ChatBubbleItem.resx">
       <DependentUpon>ChatBubbleItem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BankingDashboard.resx">
-      <DependentUpon>BankingDashboard.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BankingLogin.resx">
       <DependentUpon>BankingLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -875,9 +853,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Coursera_Course_ListItem.resx">
-      <DependentUpon>Ed_Coursera_Course_ListItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_GlobalDashboard.resx">
       <DependentUpon>Ed_GlobalDashboard.vb</DependentUpon>
