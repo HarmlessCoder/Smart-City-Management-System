@@ -198,6 +198,12 @@
     <Compile Include="Service_Portal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Service_Provider.Designer.vb">
+      <DependentUpon>Service_Provider.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Provider.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportationManageFastagAdmin.Designer.vb">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
     </Compile>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Service_Portal.resx">
       <DependentUpon>Service_Portal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_Provider.resx">
+      <DependentUpon>Service_Provider.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
