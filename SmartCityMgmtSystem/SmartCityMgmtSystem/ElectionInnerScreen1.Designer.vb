@@ -52,6 +52,12 @@ Partial Class ElectionInnerScreen1
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1.SuspendLayout()
@@ -70,6 +76,10 @@ Partial Class ElectionInnerScreen1
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -122,18 +132,18 @@ Partial Class ElectionInnerScreen1
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(32, 147)
+        Me.Panel1.Location = New System.Drawing.Point(48, 158)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(284, 225)
+        Me.Panel1.Size = New System.Drawing.Size(203, 206)
         Me.Panel1.TabIndex = 2
         '
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_voter_100
-        Me.PictureBox2.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox2.Location = New System.Drawing.Point(33, 81)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(148, 144)
+        Me.PictureBox2.Size = New System.Drawing.Size(131, 127)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
@@ -143,18 +153,18 @@ Partial Class ElectionInnerScreen1
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(30, 16)
+        Me.Label3.Location = New System.Drawing.Point(18, 16)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(229, 30)
+        Me.Label3.Size = New System.Drawing.Size(161, 60)
         Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Register as Voter"
+        Me.Label3.Text = "Register as " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "     Voter"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(78, 16)
+        Me.Label2.Location = New System.Drawing.Point(41, 16)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(135, 30)
         Me.Label2.TabIndex = 9
@@ -165,16 +175,16 @@ Partial Class ElectionInnerScreen1
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel2.Controls.Add(Me.PictureBox3)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(343, 147)
+        Me.Panel2.Location = New System.Drawing.Point(291, 158)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(284, 225)
+        Me.Panel2.Size = New System.Drawing.Size(203, 208)
         Me.Panel2.TabIndex = 3
         '
         'PictureBox3
         '
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_nominate_100
-        Me.PictureBox3.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox3.Location = New System.Drawing.Point(28, 60)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(148, 144)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -186,27 +196,27 @@ Partial Class ElectionInnerScreen1
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(2, 16)
+        Me.Label4.Location = New System.Drawing.Point(23, 14)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(284, 60)
+        Me.Label4.Size = New System.Drawing.Size(156, 60)
         Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Know Your Candidate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                KYC"
+        Me.Label4.Text = "Know Your " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Candidate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel3.Controls.Add(Me.PictureBox4)
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Location = New System.Drawing.Point(654, 147)
+        Me.Panel3.Location = New System.Drawing.Point(531, 160)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(284, 225)
+        Me.Panel3.Size = New System.Drawing.Size(203, 206)
         Me.Panel3.TabIndex = 4
         '
         'PictureBox4
         '
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_who_100
-        Me.PictureBox4.Location = New System.Drawing.Point(79, 81)
+        Me.PictureBox4.Location = New System.Drawing.Point(39, 77)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(121, 125)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -218,7 +228,7 @@ Partial Class ElectionInnerScreen1
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(42, 17)
+        Me.Label5.Location = New System.Drawing.Point(8, 17)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(195, 30)
         Me.Label5.TabIndex = 9
@@ -229,16 +239,16 @@ Partial Class ElectionInnerScreen1
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel4.Controls.Add(Me.PictureBox5)
         Me.Panel4.Controls.Add(Me.Label5)
-        Me.Panel4.Location = New System.Drawing.Point(32, 409)
+        Me.Panel4.Location = New System.Drawing.Point(48, 403)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(284, 225)
+        Me.Panel4.Size = New System.Drawing.Size(203, 206)
         Me.Panel4.TabIndex = 5
         '
         'PictureBox5
         '
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_elections_100__1_
-        Me.PictureBox5.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox5.Location = New System.Drawing.Point(23, 62)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(148, 144)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -250,7 +260,7 @@ Partial Class ElectionInnerScreen1
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(60, 17)
+        Me.Label6.Location = New System.Drawing.Point(19, 17)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(175, 30)
         Me.Label6.TabIndex = 9
@@ -261,16 +271,16 @@ Partial Class ElectionInnerScreen1
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel5.Controls.Add(Me.PictureBox6)
         Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Location = New System.Drawing.Point(343, 409)
+        Me.Panel5.Location = New System.Drawing.Point(291, 403)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(284, 225)
+        Me.Panel5.Size = New System.Drawing.Size(203, 203)
         Me.Panel5.TabIndex = 6
         '
         'PictureBox6
         '
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_report_card_100
-        Me.PictureBox6.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox6.Location = New System.Drawing.Point(28, 59)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(148, 144)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -282,7 +292,7 @@ Partial Class ElectionInnerScreen1
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(42, 17)
+        Me.Label7.Location = New System.Drawing.Point(5, 17)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(198, 30)
         Me.Label7.TabIndex = 9
@@ -293,16 +303,16 @@ Partial Class ElectionInnerScreen1
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel6.Controls.Add(Me.PictureBox7)
         Me.Panel6.Controls.Add(Me.Label7)
-        Me.Panel6.Location = New System.Drawing.Point(656, 409)
+        Me.Panel6.Location = New System.Drawing.Point(531, 403)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(284, 225)
+        Me.Panel6.Size = New System.Drawing.Size(203, 200)
         Me.Panel6.TabIndex = 7
         '
         'PictureBox7
         '
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox7.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_improvement_100
-        Me.PictureBox7.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox7.Location = New System.Drawing.Point(28, 56)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(148, 144)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -314,16 +324,16 @@ Partial Class ElectionInnerScreen1
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel7.Controls.Add(Me.PictureBox8)
         Me.Panel7.Controls.Add(Me.Label8)
-        Me.Panel7.Location = New System.Drawing.Point(966, 409)
+        Me.Panel7.Location = New System.Drawing.Point(766, 403)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(284, 225)
+        Me.Panel7.Size = New System.Drawing.Size(203, 197)
         Me.Panel7.TabIndex = 9
         '
         'PictureBox8
         '
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox8.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_database_administrator_100
-        Me.PictureBox8.Location = New System.Drawing.Point(65, 62)
+        Me.PictureBox8.Location = New System.Drawing.Point(28, 53)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(148, 144)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -335,7 +345,7 @@ Partial Class ElectionInnerScreen1
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(42, 17)
+        Me.Label8.Location = New System.Drawing.Point(13, 17)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(187, 30)
         Me.Label8.TabIndex = 9
@@ -346,16 +356,16 @@ Partial Class ElectionInnerScreen1
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel8.Controls.Add(Me.PictureBox9)
         Me.Panel8.Controls.Add(Me.Label9)
-        Me.Panel8.Location = New System.Drawing.Point(964, 147)
+        Me.Panel8.Location = New System.Drawing.Point(766, 160)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(284, 225)
+        Me.Panel8.Size = New System.Drawing.Size(203, 206)
         Me.Panel8.TabIndex = 8
         '
         'PictureBox9
         '
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox9.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_timeline_week_100
-        Me.PictureBox9.Location = New System.Drawing.Point(79, 81)
+        Me.PictureBox9.Location = New System.Drawing.Point(39, 65)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(121, 125)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -367,11 +377,75 @@ Partial Class ElectionInnerScreen1
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(32, 16)
+        Me.Label9.Location = New System.Drawing.Point(34, 15)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(222, 60)
+        Me.Label9.Size = New System.Drawing.Size(122, 30)
         Me.Label9.TabIndex = 9
-        Me.Label9.Text = "Announcements " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   and Timeline"
+        Me.Label9.Text = "Timeline"
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.PictureBox10)
+        Me.Panel9.Controls.Add(Me.Label10)
+        Me.Panel9.Location = New System.Drawing.Point(1007, 160)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(203, 206)
+        Me.Panel9.TabIndex = 10
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox10.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_code_of_conduct_100
+        Me.PictureBox10.Location = New System.Drawing.Point(39, 77)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(121, 113)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox10.TabIndex = 10
+        Me.PictureBox10.TabStop = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(44, 14)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(116, 60)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "Code of " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Conduct"
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.Panel10.Controls.Add(Me.PictureBox11)
+        Me.Panel10.Controls.Add(Me.Label11)
+        Me.Panel10.Location = New System.Drawing.Point(1007, 403)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(203, 197)
+        Me.Panel10.TabIndex = 11
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox11.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_law_violation_100
+        Me.PictureBox11.Location = New System.Drawing.Point(39, 87)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(121, 103)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox11.TabIndex = 10
+        Me.PictureBox11.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(34, 15)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(138, 60)
+        Me.Label11.TabIndex = 9
+        Me.Label11.Text = "  Report" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Violations" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'PictureBox1
         '
@@ -408,13 +482,15 @@ Partial Class ElectionInnerScreen1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
         Me.ClientSize = New System.Drawing.Size(1270, 736)
+        Me.Controls.Add(Me.Panel10)
+        Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -447,6 +523,12 @@ Partial Class ElectionInnerScreen1
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -481,4 +563,10 @@ Partial Class ElectionInnerScreen1
     Friend WithEvents Panel8 As Panel
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents Label11 As Label
 End Class
