@@ -96,6 +96,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employment_portal_admin.Designer.vb">
+      <DependentUpon>Employment_portal_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_InstAdmin_AdmitList.Designer.vb">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
     </Compile>
@@ -434,6 +440,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Employment_portal_admin.resx">
+      <DependentUpon>Employment_portal_admin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
     </EmbeddedResource>
