@@ -123,6 +123,18 @@
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="EventDashboard.Designer.vb">
+      <DependentUpon>EventDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventInvoice.Designer.vb">
+      <DependentUpon>EventInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lib_adminBM.Designer.vb">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
     </Compile>
@@ -635,6 +647,9 @@
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventDashboard.resx">
+      <DependentUpon>EventDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib_adminBM.resx">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
     </EmbeddedResource>
@@ -745,7 +760,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportVehicleRegReq.resx">
       <DependentUpon>TransportVehicleRegReq.vb</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePageDashboard.resx">
       <DependentUpon>HomePageDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -1294,6 +1309,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icons8-car-100.png" />
+    <None Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-car-1001.png" />
     <None Include="Resources\icons8-car-1002.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
@@ -1301,9 +1317,12 @@
     <None Include="Resources\icons8-driver-license-501.png" />
     <None Include="Resources\icons8-driving-license-501.png" />
     <None Include="Resources\icons8-cross-30.png" />
+    <None Include="Resources\icons8-event-accepted-tentatively-64.png" />
+    <None Include="Resources\icons8-event-accepted-64.png" />
     <Content Include="Resources\icons8-eye-48.png" />
     <None Include="Resources\icons8-eye-481.png" />
     <Content Include="Resources\icons8-health-100.png" />
+    <None Include="Resources\icons8-licence-48.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
     <None Include="Resources\icons8-people-in-car-1001.png" />
     <None Include="Resources\icons8-people-in-car-50.png" />
