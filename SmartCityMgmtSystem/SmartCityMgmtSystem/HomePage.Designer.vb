@@ -24,20 +24,20 @@ Partial Class HomePage
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomePage))
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.lib_dept = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
+        Me.electionDept = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.tranDept = New System.Windows.Forms.Button()
+        Me.ed_dept = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.SuspendLayout()
         '
         'DataGridViewImageColumn1
@@ -61,7 +61,7 @@ Partial Class HomePage
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.PaleGreen
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle5.NullValue = CType(resources.GetObject("DataGridViewCellStyle5.NullValue"), Object)
+        DataGridViewCellStyle5.NullValue = Nothing
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Maroon
         Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle5
@@ -74,41 +74,39 @@ Partial Class HomePage
         Me.DataGridViewImageColumn2.ToolTipText = "Delete"
         Me.DataGridViewImageColumn2.Width = 125
         '
-        'DataGridViewImageColumn3
+        'Button2
         '
-        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle6.NullValue = CType(resources.GetObject("DataGridViewCellStyle6.NullValue"), Object)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridViewImageColumn3.HeaderText = ""
-        Me.DataGridViewImageColumn3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
-        Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DataGridViewImageColumn3.MinimumWidth = 6
-        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
-        Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewImageColumn3.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn3.Width = 125
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.Button2.ForeColor = System.Drawing.Color.Maroon
+        Me.Button2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_job_seeker_64
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button2.Location = New System.Drawing.Point(400, 69)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(197, 165)
+        Me.Button2.TabIndex = 28
+        Me.Button2.Text = "Employment" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Portal"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button11
+        'lib_dept
         '
-        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
-        Me.Button11.ForeColor = System.Drawing.Color.Maroon
-        Me.Button11.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_books_64
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button11.Location = New System.Drawing.Point(541, 503)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(197, 165)
-        Me.Button11.TabIndex = 27
-        Me.Button11.Text = "Library" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " "
-        Me.Button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.lib_dept.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.lib_dept.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.lib_dept.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lib_dept.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.lib_dept.ForeColor = System.Drawing.Color.Maroon
+        Me.lib_dept.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_books_64
+        Me.lib_dept.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lib_dept.Location = New System.Drawing.Point(400, 503)
+        Me.lib_dept.Name = "lib_dept"
+        Me.lib_dept.Size = New System.Drawing.Size(197, 165)
+        Me.lib_dept.TabIndex = 27
+        Me.lib_dept.Text = "Library" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " "
+        Me.lib_dept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.lib_dept.UseVisualStyleBackColor = False
         '
         'Button12
         '
@@ -119,7 +117,7 @@ Partial Class HomePage
         Me.Button12.ForeColor = System.Drawing.Color.Maroon
         Me.Button12.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_rupee_64
         Me.Button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button12.Location = New System.Drawing.Point(823, 503)
+        Me.Button12.Location = New System.Drawing.Point(679, 503)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(197, 165)
         Me.Button12.TabIndex = 26
@@ -127,22 +125,22 @@ Partial Class HomePage
         Me.Button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button12.UseVisualStyleBackColor = False
         '
-        'Button13
+        'electionDept
         '
-        Me.Button13.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
-        Me.Button13.ForeColor = System.Drawing.Color.Maroon
-        Me.Button13.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_64
-        Me.Button13.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button13.Location = New System.Drawing.Point(255, 503)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(197, 165)
-        Me.Button13.TabIndex = 25
-        Me.Button13.Text = "Administrative" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Heirarchy"
-        Me.Button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.electionDept.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.electionDept.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.electionDept.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.electionDept.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.electionDept.ForeColor = System.Drawing.Color.Maroon
+        Me.electionDept.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_64
+        Me.electionDept.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.electionDept.Location = New System.Drawing.Point(958, 286)
+        Me.electionDept.Name = "electionDept"
+        Me.electionDept.Size = New System.Drawing.Size(197, 165)
+        Me.electionDept.TabIndex = 25
+        Me.electionDept.Text = "Administrative" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Heirarchy"
+        Me.electionDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.electionDept.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -153,7 +151,7 @@ Partial Class HomePage
         Me.Button5.ForeColor = System.Drawing.Color.Maroon
         Me.Button5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_confetti_64
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button5.Location = New System.Drawing.Point(541, 286)
+        Me.Button5.Location = New System.Drawing.Point(400, 286)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(197, 165)
         Me.Button5.TabIndex = 24
@@ -170,7 +168,7 @@ Partial Class HomePage
         Me.Button9.ForeColor = System.Drawing.Color.Maroon
         Me.Button9.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_strike_64
         Me.Button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button9.Location = New System.Drawing.Point(823, 286)
+        Me.Button9.Location = New System.Drawing.Point(679, 286)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(197, 165)
         Me.Button9.TabIndex = 23
@@ -178,39 +176,39 @@ Partial Class HomePage
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button9.UseVisualStyleBackColor = False
         '
-        'Button10
+        'tranDept
         '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
-        Me.Button10.ForeColor = System.Drawing.Color.Maroon
-        Me.Button10.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_driving_license_641
-        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button10.Location = New System.Drawing.Point(255, 286)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(197, 165)
-        Me.Button10.TabIndex = 22
-        Me.Button10.Text = "Transportation" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
-        Me.Button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.tranDept.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.tranDept.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.tranDept.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.tranDept.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.tranDept.ForeColor = System.Drawing.Color.Maroon
+        Me.tranDept.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_driving_license_641
+        Me.tranDept.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.tranDept.Location = New System.Drawing.Point(121, 286)
+        Me.tranDept.Name = "tranDept"
+        Me.tranDept.Size = New System.Drawing.Size(197, 165)
+        Me.tranDept.TabIndex = 22
+        Me.tranDept.Text = "Transportation" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
+        Me.tranDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.tranDept.UseVisualStyleBackColor = False
         '
-        'Button8
+        'ed_dept
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
-        Me.Button8.ForeColor = System.Drawing.Color.Maroon
-        Me.Button8.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_graduation_cap_64
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button8.Location = New System.Drawing.Point(537, 69)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(197, 165)
-        Me.Button8.TabIndex = 21
-        Me.Button8.Text = "Education" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.ed_dept.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.ed_dept.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.ed_dept.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ed_dept.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.ed_dept.ForeColor = System.Drawing.Color.Maroon
+        Me.ed_dept.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_graduation_cap_64
+        Me.ed_dept.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ed_dept.Location = New System.Drawing.Point(679, 69)
+        Me.ed_dept.Name = "ed_dept"
+        Me.ed_dept.Size = New System.Drawing.Size(197, 165)
+        Me.ed_dept.TabIndex = 21
+        Me.ed_dept.Text = "Education" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
+        Me.ed_dept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ed_dept.UseVisualStyleBackColor = False
         '
         'Button7
         '
@@ -221,7 +219,7 @@ Partial Class HomePage
         Me.Button7.ForeColor = System.Drawing.Color.Maroon
         Me.Button7.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_heart_with_pulse_64
         Me.Button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button7.Location = New System.Drawing.Point(819, 69)
+        Me.Button7.Location = New System.Drawing.Point(958, 69)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(197, 165)
         Me.Button7.TabIndex = 20
@@ -238,7 +236,7 @@ Partial Class HomePage
         Me.Button1.ForeColor = System.Drawing.Color.Maroon
         Me.Button1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_services_64
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(251, 69)
+        Me.Button1.Location = New System.Drawing.Point(121, 69)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(197, 165)
         Me.Button1.TabIndex = 19
@@ -246,19 +244,39 @@ Partial Class HomePage
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'DataGridViewImageColumn3
+        '
+        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle6.NullValue = Nothing
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridViewImageColumn3.HeaderText = ""
+        Me.DataGridViewImageColumn3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
+        Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn3.MinimumWidth = 6
+        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn3.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn3.Width = 125
+        '
         'HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.ClientSize = New System.Drawing.Size(1270, 736)
-        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.lib_dept)
         Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Button13)
+        Me.Controls.Add(Me.electionDept)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button8)
+        Me.Controls.Add(Me.tranDept)
+        Me.Controls.Add(Me.ed_dept)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button1)
         Me.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -272,13 +290,14 @@ Partial Class HomePage
     Friend WithEvents DataGridViewImageColumn1 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
-    Friend WithEvents Button11 As Button
+    Friend WithEvents lib_dept As Button
     Friend WithEvents Button12 As Button
-    Friend WithEvents Button13 As Button
+    Friend WithEvents electionDept As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button8 As Button
+    Friend WithEvents tranDept As Button
+    Friend WithEvents ed_dept As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
