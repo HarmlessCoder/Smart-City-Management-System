@@ -190,6 +190,12 @@
     <Compile Include="ElectionVoterNominate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EventVendorRegistrationScreen.Designer.vb">
+      <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventVendorRegistrationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lib_adminBM.Designer.vb">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
     </Compile>
@@ -344,12 +350,6 @@
       <DependentUpon>Events_vendorLoginInnerScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="Events_vendorLoginInnerScreen.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events_vendorRegistrationScreen.Designer.vb">
-      <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Events_vendorRegistrationScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionInnerScreen2.Designer.vb">
@@ -732,6 +732,9 @@
     <EmbeddedResource Include="ElectionVoterNominate.resx">
       <DependentUpon>ElectionVoterNominate.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventVendorRegistrationScreen.resx">
+      <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib_adminBM.resx">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
     </EmbeddedResource>
@@ -803,9 +806,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Events_vendorLoginInnerScreen.resx">
       <DependentUpon>Events_vendorLoginInnerScreen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events_vendorRegistrationScreen.resx">
-      <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreen2.resx">
       <DependentUpon>ElectionInnerScreen2.vb</DependentUpon>
