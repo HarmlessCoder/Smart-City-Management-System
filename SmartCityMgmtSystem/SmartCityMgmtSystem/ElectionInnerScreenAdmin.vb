@@ -20,4 +20,8 @@ Public Class ElectionInnerScreenAdmin
     Private Sub Panel5_Click(sender As Object, e As EventArgs) Handles Panel5.Click
         Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenAdminRTI)
     End Sub
+
+    Private Sub ElectionInnerScreenAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

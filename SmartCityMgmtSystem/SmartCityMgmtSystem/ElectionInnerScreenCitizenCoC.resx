@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Election Code of Conduct
+
+Preamble:
+The following code of conduct is established to ensure fairness, transparency, and integrity in all aspects of the electoral process. It aims to uphold democratic principles, protect the rights of voters, candidates, and electoral officials, and foster an environment conducive to free and fair elections.
+
+1. Respect for Democratic Principles:
+   a. All parties, candidates, and stakeholders shall uphold the principles of democracy, including the rule of law, respect for human rights, and adherence to electoral regulations.
+   b. Every effort shall be made to ensure that elections are conducted in a free, fair, and transparent manner, and that the will of the electorate is respected.
+
+2. Non-Discrimination:
+   a. No individual or group shall be discriminated against on the basis of race, ethnicity, religion, gender, disability, sexual orientation, or any other characteristic.
+   b. All candidates and parties shall campaign and conduct themselves in a manner that promotes inclusivity and diversity.
+
+3. Integrity of the Electoral Process:
+   a. Candidates, parties, and their supporters shall refrain from any activities that undermine the integrity of the electoral process, including voter intimidation, bribery, or coercion.
+   b. Electoral officials shall carry out their duties impartially and with the utmost integrity, ensuring that all voters have equal access to the ballot and that votes are counted accurately.
+
+4. Transparency and Accountability:
+   a. All candidates and parties shall disclose their sources of funding and expenditures in accordance with electoral laws and regulations.
+   b. Electoral authorities shall provide regular updates on the electoral process, including voter registration, polling procedures, and vote counting, to ensure transparency and accountability.
+
+5. Respect for Electoral Laws and Regulations:
+   a. All parties, candidates, and stakeholders shall comply with electoral laws and regulations, including deadlines for registration, campaigning, and reporting.
+   b. Any disputes or grievances related to the electoral process shall be resolved through legal channels in a timely and transparent manner.
+
+6. Peaceful Conduct:
+   a. Parties, candidates, and their supporters shall refrain from any form of violence, intimidation, or harassment during the electoral process.
+   b. Any grievances or disputes shall be addressed through peaceful means, such as dialogue, mediation, or legal recourse.
+
+7. Media and Information Integrity:
+   a. Media outlets shall provide fair and balanced coverage of all candidates and parties, avoiding bias or favoritism.
+   b. Dissemination of false or misleading information aimed at manipulating public opinion shall be condemned and countered with accurate and verified information.
+
+8. Cooperation with Electoral Authorities:
+   a. All parties, candidates, and stakeholders shall cooperate fully with electoral authorities and abide by their decisions and directives.
+   b. Electoral authorities shall engage with stakeholders in a transparent and inclusive manner, seeking to build trust and confidence in the electoral process.
+
+9. Education and Civic Engagement:
+   a. Efforts shall be made to educate voters about their rights and responsibilities, as well as the importance of participating in the electoral process.
+   b. Civic engagement and participation shall be encouraged through voter registration drives, public forums, and other outreach activities.
+
+10. Enforcement and Monitoring:
+   a. Electoral authorities shall enforce this code of conduct and take appropriate measures to address any violations or breaches.
+   b. Independent observers and monitoring mechanisms shall be established to ensure compliance with the code of conduct and to report any irregularities or misconduct.
+
+Conclusion:
+This code of conduct serves as a framework for promoting ethical behavior and upholding the principles of democracy throughout the electoral process. It is incumbent upon all parties, candidates, and stakeholders to adhere to these principles and work together to ensure free, fair, and credible elections.</value>
+  </data>
+</root>
