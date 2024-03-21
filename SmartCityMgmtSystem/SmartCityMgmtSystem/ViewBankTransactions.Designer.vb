@@ -27,28 +27,28 @@ Partial Class ViewBankTransactions
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewBankTransactions))
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
         Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -94,7 +94,7 @@ Partial Class ViewBankTransactions
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.GridColor = System.Drawing.Color.DimGray
-        Me.DataGridView1.Location = New System.Drawing.Point(119, 114)
+        Me.DataGridView1.Location = New System.Drawing.Point(73, 134)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(6)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -123,8 +123,95 @@ Partial Class ViewBankTransactions
         Me.DataGridView1.RowTemplate.Height = 40
         Me.DataGridView1.RowTemplate.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1077, 410)
+        Me.DataGridView1.Size = New System.Drawing.Size(1158, 410)
         Me.DataGridView1.TabIndex = 7
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.NullValue = "System.Drawing.Bitmap"
+        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle11
+        Me.DataGridViewImageColumn1.HeaderText = "  "
+        Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn1.MinimumWidth = 6
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn1.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn1.Width = 123
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle12.NullValue = CType(resources.GetObject("DataGridViewCellStyle12.NullValue"), Object)
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle12
+        Me.DataGridViewImageColumn2.HeaderText = ""
+        Me.DataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn2.MinimumWidth = 6
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.ReadOnly = True
+        Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn2.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn2.Width = 123
+        '
+        'DataGridViewImageColumn3
+        '
+        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle13.NullValue = CType(resources.GetObject("DataGridViewCellStyle13.NullValue"), Object)
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle13
+        Me.DataGridViewImageColumn3.HeaderText = ""
+        Me.DataGridViewImageColumn3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
+        Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn3.MinimumWidth = 6
+        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn3.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn3.Width = 123
+        '
+        'DataGridViewImageColumn4
+        '
+        Me.DataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle14.NullValue = CType(resources.GetObject("DataGridViewCellStyle14.NullValue"), Object)
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle14
+        Me.DataGridViewImageColumn4.HeaderText = ""
+        Me.DataGridViewImageColumn4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
+        Me.DataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DataGridViewImageColumn4.MinimumWidth = 6
+        Me.DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
+        Me.DataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewImageColumn4.ToolTipText = "Delete"
+        Me.DataGridViewImageColumn4.Width = 123
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.Label4.Font = New System.Drawing.Font("Agency FB", 23.79661!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icon_view_transactions
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label4.Location = New System.Drawing.Point(65, 42)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(319, 46)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "      Transaction History"
         '
         'Column1
         '
@@ -174,78 +261,6 @@ Partial Class ViewBankTransactions
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.NullValue = "System.Drawing.Bitmap"
-        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle11
-        Me.DataGridViewImageColumn1.HeaderText = "  "
-        Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DataGridViewImageColumn1.MinimumWidth = 6
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.ReadOnly = True
-        Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewImageColumn1.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn1.Width = 125
-        '
-        'DataGridViewImageColumn2
-        '
-        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle12.NullValue = CType(resources.GetObject("DataGridViewCellStyle12.NullValue"), Object)
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle12
-        Me.DataGridViewImageColumn2.HeaderText = ""
-        Me.DataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DataGridViewImageColumn2.MinimumWidth = 6
-        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        Me.DataGridViewImageColumn2.ReadOnly = True
-        Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewImageColumn2.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn2.Width = 125
-        '
-        'DataGridViewImageColumn3
-        '
-        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle13.NullValue = CType(resources.GetObject("DataGridViewCellStyle13.NullValue"), Object)
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle13
-        Me.DataGridViewImageColumn3.HeaderText = ""
-        Me.DataGridViewImageColumn3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
-        Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DataGridViewImageColumn3.MinimumWidth = 6
-        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
-        Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewImageColumn3.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn3.Width = 200
-        '
-        'DataGridViewImageColumn4
-        '
-        Me.DataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle14.NullValue = CType(resources.GetObject("DataGridViewCellStyle14.NullValue"), Object)
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle14
-        Me.DataGridViewImageColumn4.HeaderText = ""
-        Me.DataGridViewImageColumn4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
-        Me.DataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DataGridViewImageColumn4.MinimumWidth = 6
-        Me.DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
-        Me.DataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewImageColumn4.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn4.Width = 6
-        '
         'DeleteBut
         '
         Me.DeleteBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -258,12 +273,12 @@ Partial Class ViewBankTransactions
         Me.DeleteBut.HeaderText = ""
         Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
         Me.DeleteBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DeleteBut.MinimumWidth = 200
+        Me.DeleteBut.MinimumWidth = 10
         Me.DeleteBut.Name = "DeleteBut"
         Me.DeleteBut.ReadOnly = True
         Me.DeleteBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DeleteBut.ToolTipText = "Delete"
-        Me.DeleteBut.Width = 200
+        Me.DeleteBut.Width = 10
         '
         'EditBut
         '
@@ -285,21 +300,6 @@ Partial Class ViewBankTransactions
         Me.EditBut.ToolTipText = "Delete"
         Me.EditBut.Width = 6
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.BlanchedAlmond
-        Me.Label4.Font = New System.Drawing.Font("Agency FB", 23.79661!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icon_view_transactions
-        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(65, 42)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(335, 50)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "      Transaction History"
-        '
         'ViewBankTransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
@@ -320,15 +320,15 @@ Partial Class ViewBankTransactions
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn4 As DataGridViewImageColumn
+    Friend WithEvents Label4 As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents DeleteBut As DataGridViewImageColumn
     Friend WithEvents EditBut As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn4 As DataGridViewImageColumn
-    Friend WithEvents Label4 As Label
 End Class
