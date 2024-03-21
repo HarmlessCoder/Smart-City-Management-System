@@ -18,4 +18,8 @@
     Private Sub organizational_structure_Click(sender As Object, e As EventArgs) Handles organizational_structure.Click
         Globals.viewChildForm(childformPanel, ElectionInnerScreen2)
     End Sub
+
+    Private Sub about_us_Click(sender As Object, e As EventArgs) Handles about_us.Click
+        Globals.viewChildForm(childformPanel, ElectionInnerScreenWelcomeScreen)
+    End Sub
 End Class
