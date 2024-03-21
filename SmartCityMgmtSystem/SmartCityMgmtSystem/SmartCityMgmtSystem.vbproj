@@ -100,6 +100,30 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankingCreateAccount.Designer.vb">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingCreateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingDashboard.Designer.vb">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingLogin.Designer.vb">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBankBalance.Designer.vb">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBankBalance.vb">
+       <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </Compile>
@@ -382,6 +406,18 @@
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PayBills.Designer.vb">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PayBills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RechargeFastTag.Designer.vb">
+      <DependentUpon>RechargeFastTag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeFastTag.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportRSReqPost.Designer.vb">
       <DependentUpon>TransportRSReqPost.vb</DependentUpon>
     </Compile>
@@ -652,6 +688,12 @@
     <Compile Include="TransportTollPlaza.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserBankDetails.Designer.vb">
+      <DependentUpon>UserBankDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserBankDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserDetails.Designer.vb">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </Compile>
@@ -688,8 +730,26 @@
     <Compile Include="UserSignUp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewBankTransactions.Designer.vb">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBankTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BankingCreateAccount.resx">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingDashboard.resx">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingLogin.resx">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBankBalance.resx">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
+</EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </EmbeddedResource>
@@ -821,6 +881,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayBills.resx">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RechargeFastTag.resx">
+      <DependentUpon>RechargeFastTag.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportRSReqPost.resx">
       <DependentUpon>TransportRSReqPost.vb</DependentUpon>
@@ -954,6 +1020,9 @@
     <EmbeddedResource Include="TransportTollPlaza.resx">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserBankDetails.resx">
+      <DependentUpon>UserBankDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserDetails.resx">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </EmbeddedResource>
@@ -971,6 +1040,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBankTransactions.resx">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -1390,6 +1462,11 @@
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icon_view_transactions.png" />
+    <None Include="Resources\banking_logo.png" />
+    <None Include="Resources\icon checkbalance.png" />
+    <None Include="Resources\iconBankAccountProfile.png" />
+    <None Include="Resources\icon-paybills.png" />
     <Content Include="Resources\icons8-car-100.png" />
     <None Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-car-1001.png" />
