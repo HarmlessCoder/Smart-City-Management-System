@@ -122,7 +122,7 @@
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
     </Compile>
     <Compile Include="CheckBankBalance.vb">
-       <SubType>Form</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
@@ -188,8 +188,8 @@
       <DependentUpon>Healthcare_homepage.vb</DependentUpon>
     </Compile>
     <Compile Include="Healthcare_homepage.vb">
-    <SubType>Form</SubType>
-  </Compile>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EventDashboard.Designer.vb">
       <DependentUpon>EventDashboard.vb</DependentUpon>
     </Compile>
@@ -248,6 +248,12 @@
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="EventVendorRegistrationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportManageTollGatesAdmin.Designer.vb">
+      <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportManageTollGatesAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="lib_adminBM.Designer.vb">
@@ -446,6 +452,12 @@
       <DependentUpon>RechargeFastTag.vb</DependentUpon>
     </Compile>
     <Compile Include="RechargeFastTag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportMangeBusStopAdmin.Designer.vb">
+      <DependentUpon>TransportMangeBusStopAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportMangeBusStopAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TransportRSReqPost.Designer.vb">
@@ -779,7 +791,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
-</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </EmbeddedResource>
@@ -812,7 +824,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Healthcare_homepage.resx">
       <DependentUpon>Healthcare_homepage.vb</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventDashboard.resx">
       <DependentUpon>EventDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -839,6 +851,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventVendorRegistrationScreen.resx">
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportManageTollGatesAdmin.resx">
+      <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_adminBM.resx">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
@@ -932,6 +947,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RechargeFastTag.resx">
       <DependentUpon>RechargeFastTag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportMangeBusStopAdmin.resx">
+      <DependentUpon>TransportMangeBusStopAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportRSReqPost.resx">
       <DependentUpon>TransportRSReqPost.vb</DependentUpon>
