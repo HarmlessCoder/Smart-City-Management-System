@@ -19,24 +19,42 @@ Public Class Globals
         Return conn
     End Function
 
-    'To execute a query like Update, Insert (Don't use for select)
-    Public Shared Function ExecuteNonQuery(query As String) As Integer
-        Dim affectedRows As Integer = 0
+    'To execute a Delete Query - returns True if succesful
+    Public Shared Function ExecuteDeleteQuery(query As String) As Boolean
 
         Using conn As MySqlConnection = GetDBConnection()
             Try
                 conn.Open()
                 Using cmd As MySqlCommand = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
+                    MessageBox.Show("Row deleted successfully.", "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return True
                 End Using
             Catch ex As Exception
                 MessageBox.Show("Error executing query: " & ex.Message, "Query Execution Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
             End Try
         End Using
-
-        Return affectedRows
+        Return False
     End Function
+    'To execute a Update Query returns True if succesful
+    Public Shared Function ExecuteUpdateQuery(query As String) As Boolean
 
+        Using conn As MySqlConnection = GetDBConnection()
+            Try
+                conn.Open()
+                Using cmd As MySqlCommand = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    MessageBox.Show("Row updated successfully.", "Update Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return True
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error executing query: " & ex.Message, "Query Execution Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+        End Using
+        Return False
+    End Function
 
     'To view the child form in the same window inside a parentPanel
     'Eg. to view InnerScreen(childform) in Dashboard Screen

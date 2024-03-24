@@ -1,19 +1,35 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 Public Class TransportMangeBusStopAdmin
+    Private primaryKeyEdit As String ' Define a class-level variable to hold the primary key of the row being edited
+    Private Sub ShowEditOption()
+        Label2.Text = "Update Bus Stop"
+        Button1.Text = "Update"
+    End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Check if the clicked cell is in the "EditBut" column and not a header cell
         If e.ColumnIndex = DataGridView1.Columns("EditBut").Index AndAlso e.RowIndex >= 0 Then
-            ' Change this to DB logic later
-            MessageBox.Show("Edit button clicked for row " & e.RowIndex.ToString(), "Edit Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+            'Show Edit Option
+            ShowEditOption()
             ' Check if the clicked cell is in the "DeleteBut" column and not a header cell
         ElseIf e.ColumnIndex = DataGridView1.Columns("DeleteBut").Index AndAlso e.RowIndex >= 0 Then
             ' Perform the action for the "DeleteButton" column
-            MessageBox.Show("Delete button clicked for row " & e.RowIndex.ToString(), "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ' Confirm deletion with the user
+            Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this entry?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
+            If result = DialogResult.Yes Then
 
+                ' Call a method to delete the row from the database using the primary key
+                Dim success As Boolean = Globals.ExecuteDeleteQuery("DELETE FROM placedb where id = " & DataGridView1.Rows(e.RowIndex).Cells(0).Value)
+
+                If success Then
+                    ' If deletion is successful, remove the row from the DataGridView
+                    DataGridView1.Rows.RemoveAt(e.RowIndex)
+                End If
+
+            End If
         End If
     End Sub
 
@@ -26,10 +42,10 @@ Public Class TransportMangeBusStopAdmin
         Try
             Con.Open()
         Catch ex As Exception
-            MessageBox.Show("Error updating table: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
-        cmd = New MySqlCommand("SELECT place_name FROM placedb", Con)
+        cmd = New MySqlCommand("SELECT * FROM placedb", Con)
         reader = cmd.ExecuteReader
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
@@ -37,10 +53,12 @@ Public Class TransportMangeBusStopAdmin
         'Fill the DataTable with data from the SQL table
         dataTable.Load(reader)
         reader.Close()
+        Con.Close()
 
         'IMP: Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
-        DataGridView1.Columns(0).DataPropertyName = "place_name"
+        DataGridView1.Columns(0).DataPropertyName = "id"
+        DataGridView1.Columns(1).DataPropertyName = "place_name"
 
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
@@ -50,4 +68,27 @@ Public Class TransportMangeBusStopAdmin
         LoadandBindDataGridView()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If String.IsNullOrWhiteSpace(TextBox2.Text) Then
+            MessageBox.Show("Please enter some input in the textbox.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Label2.Text = "Add Bus Stop"
+            Button1.Text = "Add"
+            TextBox2.Clear()
+            Return
+        End If
+
+        If Button1.Text = "Update" Then
+            Dim cmd As String
+            cmd = "UPDATE placedb SET place_name = '" & TextBox2.Text & "' WHERE id =" & primaryKeyEdit
+            Globals.ExecuteUpdateQuery(cmd)
+            Label2.Text = "Add Bus Stop"
+            Button1.Text = "Add"
+            TextBox2.Clear()
+        Else
+            Dim cmd As String
+            cmd = "INSERT into placedb (place_name) VALUES ('" & TextBox2.Text & "')"
+            Globals.ExecuteUpdateQuery(cmd)
+            TextBox2.Clear()
+        End If
+    End Sub
 End Class
