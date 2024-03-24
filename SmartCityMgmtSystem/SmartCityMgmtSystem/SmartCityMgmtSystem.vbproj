@@ -164,6 +164,12 @@
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_ManageECourse.Designer.vb">
+      <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ManageECourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </Compile>
@@ -782,6 +788,12 @@
     <Compile Include="UserBankDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Teacher_CourseraItem.Designer.vb">
+      <DependentUpon>Ed_Teacher_CourseraItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_CourseraItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserDetails.Designer.vb">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </Compile>
@@ -837,6 +849,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ManageECourse.resx">
+      <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
@@ -1134,6 +1149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserBankDetails.resx">
       <DependentUpon>UserBankDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_CourseraItem.resx">
+      <DependentUpon>Ed_Teacher_CourseraItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserDetails.resx">
       <DependentUpon>UserDetails.vb</DependentUpon>
