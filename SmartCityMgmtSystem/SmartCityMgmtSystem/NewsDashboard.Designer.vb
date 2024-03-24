@@ -132,7 +132,7 @@ Partial Class NewsDashboard
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_bus_50
+
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.Location = New System.Drawing.Point(0, 333)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)

@@ -3,16 +3,18 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 Public Class TransportMangeBusStopAdmin
     Private primaryKeyEdit As String ' Define a class-level variable to hold the primary key of the row being edited
-    Private Sub ShowEditOption()
+    Private Sub ShowEditOption(ByVal txt As String)
         Label2.Text = "Update Bus Stop"
         Button1.Text = "Update"
+        TextBox2.Text = txt
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Check if the clicked cell is in the "EditBut" column and not a header cell
         If e.ColumnIndex = DataGridView1.Columns("EditBut").Index AndAlso e.RowIndex >= 0 Then
             'Show Edit Option
-            ShowEditOption()
+            primaryKeyEdit = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+            ShowEditOption(DataGridView1.Rows(e.RowIndex).Cells(1).Value)
             ' Check if the clicked cell is in the "DeleteBut" column and not a header cell
         ElseIf e.ColumnIndex = DataGridView1.Columns("DeleteBut").Index AndAlso e.RowIndex >= 0 Then
             ' Perform the action for the "DeleteButton" column
@@ -25,8 +27,8 @@ Public Class TransportMangeBusStopAdmin
                 Dim success As Boolean = Globals.ExecuteDeleteQuery("DELETE FROM placedb where id = " & DataGridView1.Rows(e.RowIndex).Cells(0).Value)
 
                 If success Then
-                    ' If deletion is successful, remove the row from the DataGridView
-                    DataGridView1.Rows.RemoveAt(e.RowIndex)
+                    ' If deletion is successful, then refresh the datagridview
+                    LoadandBindDataGridView()
                 End If
 
             End If
@@ -80,14 +82,21 @@ Public Class TransportMangeBusStopAdmin
         If Button1.Text = "Update" Then
             Dim cmd As String
             cmd = "UPDATE placedb SET place_name = '" & TextBox2.Text & "' WHERE id =" & primaryKeyEdit
-            Globals.ExecuteUpdateQuery(cmd)
+            Dim success As Boolean = Globals.ExecuteUpdateQuery(cmd)
+            If success Then
+                LoadandBindDataGridView()
+
+            End If
             Label2.Text = "Add Bus Stop"
             Button1.Text = "Add"
             TextBox2.Clear()
         Else
             Dim cmd As String
             cmd = "INSERT into placedb (place_name) VALUES ('" & TextBox2.Text & "')"
-            Globals.ExecuteUpdateQuery(cmd)
+            Dim success As Boolean = Globals.ExecuteUpdateQuery(cmd)
+            If success Then
+                LoadandBindDataGridView()
+            End If
             TextBox2.Clear()
         End If
     End Sub
