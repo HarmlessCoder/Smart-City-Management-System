@@ -29,6 +29,7 @@ Partial Class Ed_Coursera_Course_ListItem
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -74,7 +75,7 @@ Partial Class Ed_Coursera_Course_ListItem
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Cascadia Mono", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(815, 108)
+        Me.Label3.Location = New System.Drawing.Point(779, 19)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(137, 26)
@@ -115,11 +116,25 @@ Partial Class Ed_Coursera_Course_ListItem
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Cascadia Mono", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(770, 90)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(106, 43)
+        Me.Button2.TabIndex = 23
+        Me.Button2.Text = "View"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Ed_Coursera_Course_ListItem
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -142,4 +157,5 @@ Partial Class Ed_Coursera_Course_ListItem
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Button2 As Button
 End Class

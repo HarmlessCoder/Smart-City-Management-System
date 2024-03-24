@@ -36,7 +36,7 @@ Partial Class EventPayment_Interface
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        'Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -154,12 +154,12 @@ Partial Class EventPayment_Interface
         '
         'ShapeContainer1
         '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1338, 715)
-        Me.ShapeContainer1.TabIndex = 15
-        Me.ShapeContainer1.TabStop = False
+        ' Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        'Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        'Me.ShapeContainer1.Name = "ShapeContainer1"
+        'Me.ShapeContainer1.Size = New System.Drawing.Size(1338, 715)
+        'Me.ShapeContainer1.TabIndex = 15
+        'Me.ShapeContainer1.TabStop = False
         '
         'Label3
         '
@@ -341,7 +341,7 @@ Partial Class EventPayment_Interface
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    'Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
