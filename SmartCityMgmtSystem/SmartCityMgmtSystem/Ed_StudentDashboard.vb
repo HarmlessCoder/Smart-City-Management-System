@@ -1,7 +1,7 @@
 ﻿Public Class Ed_StudentDashboard
     Private Sub PictureButtonvb1_Click(sender As Object, e As EventArgs) Handles PictureButtonvb1.Click
         ' Replace with your desired functionality
-        MessageBox.Show("PictureButtonvb1 Clicked")
+        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_Coursera)
     End Sub
 
     Private Sub PictureButtonvb1_Hover(sender As Object, e As EventArgs) Handles PictureButtonvb1.Hover
@@ -16,7 +16,7 @@
 
     Private Sub PictureButtonvb2_Click(sender As Object, e As EventArgs) Handles PictureButtonvb2.Click
         ' Replace with your desired functionality
-        MessageBox.Show("PictureButtonvb2 Clicked")
+        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_Moodle)
     End Sub
 
     Private Sub PictureButtonvb2_Hover(sender As Object, e As EventArgs) Handles PictureButtonvb2.Hover
@@ -31,7 +31,7 @@
 
     Private Sub PictureButtonvb3_Click(sender As Object, e As EventArgs) Handles PictureButtonvb3.Click
         ' Replace with your desired functionality
-        MessageBox.Show("PictureButtonvb3 Clicked")
+        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_Institute)
     End Sub
 
     Private Sub PictureButtonvb3_Hover(sender As Object, e As EventArgs) Handles PictureButtonvb3.Hover
@@ -46,7 +46,7 @@
 
     Private Sub PictureButtonvb4_Click(sender As Object, e As EventArgs) Handles PictureButtonvb4.Click
         ' Replace with your desired functionality
-        MessageBox.Show("PictureButtonvb4 Clicked")
+        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_EntranceExam)
     End Sub
 
     Private Sub PictureButtonvb4_Hover(sender As Object, e As EventArgs) Handles PictureButtonvb4.Hover
