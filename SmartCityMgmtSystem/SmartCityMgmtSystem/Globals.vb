@@ -56,6 +56,25 @@ Public Class Globals
         Return False
     End Function
 
+    'To execute a Insert Query returns True if succesful
+    Public Shared Function ExecuteInsertQuery(query As String) As Boolean
+
+        Using conn As MySqlConnection = GetDBConnection()
+            Try
+                conn.Open()
+                Using cmd As MySqlCommand = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    MessageBox.Show("Row Insert successfully.", "Insert Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return True
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error executing query: " & ex.Message, "Query Execution Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+        End Using
+        Return False
+    End Function
+
     'To view the child form in the same window inside a parentPanel
     'Eg. to view InnerScreen(childform) in Dashboard Screen
     Public Shared Sub viewChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
