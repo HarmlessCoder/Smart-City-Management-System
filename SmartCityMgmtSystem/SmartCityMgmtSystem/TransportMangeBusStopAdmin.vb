@@ -100,4 +100,10 @@ Public Class TransportMangeBusStopAdmin
             TextBox2.Clear()
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Label2.Text = "Add Bus Stop"
+        Button1.Text = "Add"
+        TextBox2.Clear()
+    End Sub
 End Class
