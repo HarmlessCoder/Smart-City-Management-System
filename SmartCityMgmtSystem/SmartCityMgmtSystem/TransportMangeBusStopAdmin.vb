@@ -93,7 +93,7 @@ Public Class TransportMangeBusStopAdmin
         Else
             Dim cmd As String
             cmd = "INSERT into placedb (place_name) VALUES ('" & TextBox2.Text & "')"
-            Dim success As Boolean = Globals.ExecuteUpdateQuery(cmd)
+            Dim success As Boolean = Globals.ExecuteInsertQuery(cmd)
             If success Then
                 LoadandBindDataGridView()
             End If
