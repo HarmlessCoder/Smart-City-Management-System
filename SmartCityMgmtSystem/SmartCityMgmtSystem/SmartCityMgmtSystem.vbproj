@@ -164,6 +164,18 @@
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Coursera_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Coursera_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_CourseResource.Designer.vb">
+      <DependentUpon>Ed_CourseResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CourseResource.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_ManageECourse.Designer.vb">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </Compile>
@@ -849,6 +861,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Coursera_CourseContent.resx">
+      <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_CourseResource.resx">
+      <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ManageECourse.resx">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
