@@ -49,6 +49,9 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
+        Ed_GlobalDashboard.Close()
+        Me.Close()
+        Dim homepage = New HomePageDashboard
+        homepage.Show()
     End Sub
 End Class
