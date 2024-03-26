@@ -200,6 +200,12 @@
     <Compile Include="Ed_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_EntranceInnerScreen.Designer.vb">
+      <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_EntranceInnerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_FeePopup.Designer.vb">
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
     </Compile>
@@ -234,6 +240,12 @@
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Stud_MyCourses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_ViewPaymentPopup.Designer.vb">
+      <DependentUpon>Ed_ViewPaymentPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ViewPaymentPopup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
@@ -940,6 +952,9 @@
     <EmbeddedResource Include="Ed_CourseResource.resx">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_EntranceInnerScreen.resx">
+      <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_FeePopup.resx">
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
     </EmbeddedResource>
@@ -957,6 +972,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ViewPaymentPopup.resx">
+      <DependentUpon>Ed_ViewPaymentPopup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
@@ -1762,6 +1780,25 @@
     <None Include="Resources\icons8-vehicle-48.png" />
     <Content Include="Resources\icons8-vehicle-registration-certificate-64.png" />
     <None Include="Resources\icons8-vehicle-registration-certificate-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
