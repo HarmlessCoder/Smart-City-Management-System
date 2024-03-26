@@ -63,4 +63,9 @@ Public Class Ed_Coursera_Course_Enroll
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Globals.viewChildForm(Ed_GlobalDashboard.innerpanel, New Ed_Stud_Coursera_Home())
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim PayForm As New Ed_FeePopup()
+        PayForm.Show()
+    End Sub
 End Class
