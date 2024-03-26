@@ -164,10 +164,34 @@
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_BusItem.Designer.vb">
+      <DependentUpon>Ed_BusItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_BusItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ed_CopyComponents.Designer.vb">
+      <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CopyComponents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_CourseProgress.Designer.vb">
+      <DependentUpon>Ed_CourseProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CourseProgress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_Coursera_CourseContent.Designer.vb">
       <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Coursera_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_Enroll.Designer.vb">
+      <DependentUpon>Ed_Coursera_Course_Enroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_Enroll.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_CourseResource.Designer.vb">
@@ -176,10 +200,40 @@
     <Compile Include="Ed_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_FeePopup.Designer.vb">
+      <DependentUpon>Ed_FeePopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_FeePopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Institute_BusList.Designer.vb">
+      <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_BusList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Inst_FeeDetails.Designer.vb">
+      <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Inst_FeeDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_ManageECourse.Designer.vb">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_ManageECourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Stud_MyCourses.Designer.vb">
+      <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Stud_MyCourses.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
@@ -830,6 +884,12 @@
     <Compile Include="UserGetOtp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserLandingPage.Designer.vb">
+      <DependentUpon>UserLandingPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserLandingPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
@@ -874,14 +934,41 @@
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_BusItem.resx">
+      <DependentUpon>Ed_BusItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_CopyComponents.resx">
+      <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_CourseProgress.resx">
+      <DependentUpon>Ed_CourseProgress.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_CourseContent.resx">
       <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Coursera_Course_Enroll.resx">
+      <DependentUpon>Ed_Coursera_Course_Enroll.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_CourseResource.resx">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_FeePopup.resx">
+      <DependentUpon>Ed_FeePopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Institute_BusList.resx">
+      <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Inst_FeeDetails.resx">
+      <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_ManageECourse.resx">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Moodle_CourseContent.resx">
+      <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
+      <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
@@ -1194,6 +1281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserGetOtp.resx">
       <DependentUpon>UserGetOtp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLandingPage.resx">
+      <DependentUpon>UserLandingPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>
@@ -1634,6 +1724,7 @@
     <None Include="Resources\icon checkbalance.png" />
     <None Include="Resources\iconBankAccountProfile.png" />
     <None Include="Resources\icon-paybills.png" />
+    <None Include="Resources\bus_default.png" />
     <Content Include="Resources\icons8-car-100.png" />
     <None Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-car-1001.png" />
@@ -1664,12 +1755,18 @@
     <Content Include="Resources\icons8-taj-mahal-100.png" />
     <None Include="Resources\icons8-tollbooth-501.png" />
     <None Include="Resources\icons8-tick-30.png" />
+    <None Include="Resources\landing2.jpg" />
+    <None Include="Resources\landing1.jpg" />
+    <None Include="Resources\landing.jpg" />
     <None Include="Resources\icons8-accept-64.png" />
     <None Include="Resources\Fatstag.png" />
+    <None Include="Resources\banking_logo.png" />
+    <None Include="Resources\iconBankAccountProfile.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <None Include="Resources\icons8-driver-license-20.png" />
     <Content Include="Resources\icons8-health-100.png" />
+    <None Include="Resources\icons8-job-seeker-64.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
     <None Include="Resources\icons8-pay-30.png" />
     <None Include="Resources\icons8-pay-301.png" />

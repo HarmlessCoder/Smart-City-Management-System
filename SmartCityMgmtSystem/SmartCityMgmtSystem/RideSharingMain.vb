@@ -42,35 +42,43 @@ Public Class RideSharingMain
 
         Return places
     End Function
-
+    ' To load the Track posts Datagridview
     Private Sub LoadandBindDataGridView()
-        'Get connection String from globals
-        Dim conString = Globals.getdbConnectionString()
-        Dim Con = New SqlConnection(conString)
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
 
-        'Query for SQL table
-        Dim query = "enter your query"
-        Con.Open()
-
-        Dim cmd As New SqlCommand(query, Con)
-        Dim adapter As New SqlDataAdapter(cmd)
-
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        cmd = New MySqlCommand("SELECT rs.req_id, rs.status,CONCAT(DATE_FORMAT(rs.start_datetime, '%d-%m-%Y'), ', ', DATE_FORMAT(rs.start_datetime, '%h:%i %p')) AS start_datetime, src.place_name AS src, dest.place_name AS dest FROM ride_sharing_entries rs JOIN placedb src ON rs.src_id = src.id JOIN placedb dest ON rs.dest_id = dest.id JOIN users ON users.user_id = rs.uid WHERE rs.uid = " & uid & ";", Con)
+        reader = cmd.ExecuteReader
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
 
         'Fill the DataTable with data from the SQL table
-        adapter.Fill(dataTable)
+        dataTable.Load(reader)
+        reader.Close()
+        Con.Close()
 
         'IMP: Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
-        DataGridView1.Columns(0).DataPropertyName = "Column in SQL table"
-        DataGridView1.Columns(1).DataPropertyName = "Column Name in SQL table"
-
+        DataGridView1.Columns(0).DataPropertyName = "req_id"
+        DataGridView1.Columns(1).DataPropertyName = "src"
+        DataGridView1.Columns(2).DataPropertyName = "dest"
+        DataGridView1.Columns(3).DataPropertyName = "start_datetime"
+        DataGridView1.Columns(4).DataPropertyName = "status"
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
     End Sub
 
     Private Sub AddPost(name As String,
+                        poster_uid As Integer,
+                        vehicleNum As String,
+                        note As String,
                         Optional datetime As String = "",
                         Optional fromPlace As String = "",
                         Optional toPlace As String = "",
@@ -85,6 +93,7 @@ Public Class RideSharingMain
             .Width = 595
         End With
         RidePost.SetDetails(name, datetime, fromPlace, toPlace, fare, capacity, image)
+        RidePost.SetAuxillaryDetails(uid, poster_uid, u_name, postNum, vehicleNum, note)
         PostsPanel.Controls.Add(RidePost)
     End Sub
 
@@ -131,6 +140,9 @@ Public Class RideSharingMain
         'Load the posts
         LoadPosts()
 
+        'Load the datagridview for tracking posts
+        LoadandBindDataGridView()
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -154,7 +166,9 @@ Public Class RideSharingMain
                 Dim insertQuery As String = "INSERT INTO ride_sharing_entries (uid, vehicle_id, src_id, dest_id, start_datetime, fare_per_person, capacity, note) VALUES (" & uid & ", '" & selectedVehicleId & "', " & fromPlace & ", " & toPlace & ", '" & combinedDateTime.ToString("yyyy-MM-dd HH:mm:ss") & "', " & fare & ", " & capacity & ", '" & note & "');"
                 Dim success As Boolean = Globals.ExecuteInsertQuery(insertQuery)
                 If success Then
+                    'Load the new posts and refresh the track posts datagridview
                     LoadPosts()
+                    LoadandBindDataGridView()
                 End If
             End If
         End If
@@ -163,7 +177,7 @@ Public Class RideSharingMain
     Private Sub LoadPosts()
         ' Clear existing posts
         PostsPanel.Controls.Clear()
-        Dim query As String = "SELECT rs.req_id, users.name, rs.vehicle_id, rs.capacity, rs.fare_per_person, CONCAT(DATE_FORMAT(rs.start_datetime, '%d-%m-%Y'), ', ', DATE_FORMAT(rs.start_datetime, '%h:%i %p')) AS start_datetime, src.place_name AS src, dest.place_name AS dest FROM ride_sharing_entries rs JOIN placedb src ON rs.src_id = src.id JOIN placedb dest ON rs.dest_id = dest.id JOIN users ON users.user_id = rs.uid;"
+        Dim query As String = "SELECT rs.req_id, rs.uid, users.name, rs.vehicle_id, rs.capacity, rs.note, rs.fare_per_person, CONCAT(DATE_FORMAT(rs.start_datetime, '%d-%m-%Y'), ', ', DATE_FORMAT(rs.start_datetime, '%h:%i %p')) AS start_datetime, src.place_name AS src, dest.place_name AS dest FROM ride_sharing_entries rs JOIN placedb src ON rs.src_id = src.id JOIN placedb dest ON rs.dest_id = dest.id JOIN users ON users.user_id = rs.uid WHERE rs.status='approved';"
         Using connection As New MySqlConnection(Globals.getdbConnectionString())
             Using command As New MySqlCommand(query, connection)
                 connection.Open()
@@ -174,15 +188,17 @@ Public Class RideSharingMain
                     While reader.Read()
                         ' Access columns by name or index
                         Dim reqId As Integer = Convert.ToInt32(reader("req_id"))
+                        Dim poster_uid As Integer = Convert.ToInt32(reader("uid"))
                         Dim userName As String = reader("name").ToString()
                         Dim vehicleId As String = reader("vehicle_id")
                         Dim capacity As Integer = Convert.ToInt32(reader("capacity"))
                         Dim farePerPerson As Integer = Convert.ToInt32(reader("fare_per_person"))
                         Dim startDatetime As String = reader("start_datetime").ToString()
                         Dim src As String = reader("src").ToString()
+                        Dim note As String = reader("note").ToString()
                         Dim dest As String = reader("dest").ToString()
                         'Add to PostsPanel
-                        AddPost(userName, startDatetime, src, dest, farePerPerson, capacity, reqId, Nothing)
+                        AddPost(userName, poster_uid, vehicleId, note, startDatetime, src, dest, farePerPerson, capacity, reqId, Nothing)
                     End While
 
                 End Using

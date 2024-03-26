@@ -4,6 +4,7 @@
 
     Private Sub pictureButtonvb1_Click(sender As Object, e As EventArgs) Handles PictureButtonvb1.Click
         ' Handle the Click event of the user control
+        Ed_GlobalDashboard.innerpanel = Ed_StudentDashboard.childformPanel
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_StudentDashboard)
     End Sub
 
@@ -18,6 +19,7 @@
     End Sub
     Private Sub pictureButtonvb2_Click(sender As Object, e As EventArgs) Handles PictureButtonvb2.Click
         ' Handle the Click event of the user control
+        Ed_GlobalDashboard.innerpanel = Ed_TeacherDashboard.childformPanel
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_TeacherDashboard)
     End Sub
 
@@ -32,6 +34,7 @@
     End Sub
     Private Sub pictureButtonvb3_Click(sender As Object, e As EventArgs) Handles PictureButtonvb3.Click
         ' Handle the Click event of the user control
+        Ed_GlobalDashboard.innerpanel = Ed_Institute_AdminDashboard.childformPanel
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Institute_AdminDashboard)
     End Sub
 

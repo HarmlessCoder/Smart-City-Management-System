@@ -1,4 +1,5 @@
 ﻿Public Class Ed_GlobalDashboard
+    Public innerpanel As Panel
     Public Sub OpenFormInGlobalEdPanel(ByVal formToShow As Form)
         ' Clear the panel before adding a new form
         Panel1.Controls.Clear()
@@ -15,7 +16,7 @@
         formToShow.Show()
     End Sub
     Private Sub Ed_GlobalDashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        OpenFormInGlobalEdPanel(Ed_RoleSelect)
+        Globals.viewChildForm(Panel1, New Ed_RoleSelect())
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
