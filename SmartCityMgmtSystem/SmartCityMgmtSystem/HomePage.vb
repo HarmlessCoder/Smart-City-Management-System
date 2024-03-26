@@ -26,5 +26,17 @@ Public Class HomePage
         Me.Close()
     End Sub
 
+    Private Sub event_dept_Click(sender As Object, e As EventArgs) Handles event_dept.Click
+        Dim fest = New EventDashboard()
+        fest.Show()
+        mainForm.Close()
+        Me.Close()
+    End Sub
 
+    Private Sub lib_dept_Click(sender As Object, e As EventArgs) Handles lib_dept.Click
+        Dim library = New lib_dash()
+        library.Show()
+        mainForm.Close()
+        Me.Close()
+    End Sub
 End Class

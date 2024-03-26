@@ -428,7 +428,7 @@ Partial Class ElectionInnerScreen1
         'PictureBox11
         '
         Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox11.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_law_violation_100
+
         Me.PictureBox11.Location = New System.Drawing.Point(39, 87)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(121, 103)

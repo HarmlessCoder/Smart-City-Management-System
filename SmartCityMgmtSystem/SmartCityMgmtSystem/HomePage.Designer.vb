@@ -31,7 +31,7 @@ Partial Class HomePage
         Me.lib_dept = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.electionDept = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.event_dept = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.tranDept = New System.Windows.Forms.Button()
         Me.ed_dept = New System.Windows.Forms.Button()
@@ -142,22 +142,22 @@ Partial Class HomePage
         Me.electionDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.electionDept.UseVisualStyleBackColor = False
         '
-        'Button5
+        'event_dept
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
-        Me.Button5.ForeColor = System.Drawing.Color.Maroon
-        Me.Button5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_confetti_64
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button5.Location = New System.Drawing.Point(400, 286)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(197, 165)
-        Me.Button5.TabIndex = 24
-        Me.Button5.Text = "Festival and" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Event Planning"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.event_dept.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.event_dept.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.event_dept.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.event_dept.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.event_dept.ForeColor = System.Drawing.Color.Maroon
+        Me.event_dept.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_confetti_64
+        Me.event_dept.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.event_dept.Location = New System.Drawing.Point(400, 286)
+        Me.event_dept.Name = "event_dept"
+        Me.event_dept.Size = New System.Drawing.Size(197, 165)
+        Me.event_dept.TabIndex = 24
+        Me.event_dept.Text = "Festival and" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Event Planning"
+        Me.event_dept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.event_dept.UseVisualStyleBackColor = False
         '
         'Button9
         '
@@ -273,7 +273,7 @@ Partial Class HomePage
         Me.Controls.Add(Me.lib_dept)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.electionDept)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.event_dept)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.tranDept)
         Me.Controls.Add(Me.ed_dept)
@@ -293,7 +293,7 @@ Partial Class HomePage
     Friend WithEvents lib_dept As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents electionDept As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents event_dept As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents tranDept As Button
     Friend WithEvents ed_dept As Button
