@@ -5,6 +5,7 @@ Public Class Ed_Coursera_CourseContent
     Private callingPanel As Panel
 
 
+
     ' Constructor that accepts a Panel parameter
     Public Sub New(courseID As Integer, panel As Panel)
         InitializeComponent()
@@ -35,6 +36,6 @@ Public Class Ed_Coursera_CourseContent
         Next
     End Sub
     Private Sub Label_Click(sender As Object, e As EventArgs)
-        Globals.viewChildForm(callingPanel, New Ed_CourseResource(callingPanel))
+        Globals.viewChildForm(callingPanel, New Ed_CourseResource(callingPanel, "Coursera"))
     End Sub
 End Class
