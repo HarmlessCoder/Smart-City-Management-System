@@ -1,10 +1,10 @@
 ﻿Public Class RideSharingPost
-    Private VehicleNumber As String
-    Private DriverNote As String
-    Private uid As Integer
-    Private u_name As String
-    Private rs_entry As String
-    Private uid_poster As Integer
+    Private VehicleNumber As String = "AS-01-2022"
+    Private DriverNote As String = ""
+    Private uid As Integer = 1
+    Private u_name As String = "Dhanesh"
+    Private rs_entry As String = 1
+    Private uid_poster As Integer = 1
     Public Sub SetDetails(name As String,
                            Optional datetime As String = "",
                            Optional fromPlace As String = "",
@@ -43,11 +43,12 @@
             modal.Opacity = 0.4D
             modal.TopMost = True
             modal.ShowInTaskbar = False
-            modal.Location = TransportationDashboard.Location
+            modal.Location = TransportationDashboard.DesktopLocation
             modal.FormBorderStyle = FormBorderStyle.None
             modal.BackColor = Color.Black
             modal.Width = TransportationDashboard.Width
             modal.Height = TransportationDashboard.Height
+            modal.WindowState = FormWindowState.Maximized
             modal.Show()
             modal.Owner = chatForm
             'Pass the required details to the RideSharingChats Form
