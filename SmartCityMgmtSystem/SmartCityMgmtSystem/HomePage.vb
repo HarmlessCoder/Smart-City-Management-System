@@ -6,7 +6,7 @@ Public Class HomePage
         mainForm = parentForm
     End Sub
     Private Sub ed_dept_Click(sender As Object, e As EventArgs) Handles ed_dept.Click
-        Dim ed = New Ed_GlobalDashboard()
+        Dim ed = Ed_GlobalDashboard
         ed.Show()
         mainForm.Close()
         Me.Close()
@@ -52,5 +52,9 @@ Public Class HomePage
         health.Show()
         mainForm.Close()
         Me.Close()
+    End Sub
+
+    Private Sub HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
