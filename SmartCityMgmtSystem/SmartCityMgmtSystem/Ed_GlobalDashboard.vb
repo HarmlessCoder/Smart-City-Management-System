@@ -1,4 +1,5 @@
 ﻿Public Class Ed_GlobalDashboard
+    Public innerpanel As Panel
     Public Sub OpenFormInGlobalEdPanel(ByVal formToShow As Form)
         ' Clear the panel before adding a new form
         Panel1.Controls.Clear()

@@ -170,10 +170,22 @@
     <Compile Include="Ed_CopyComponents.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_CourseProgress.Designer.vb">
+      <DependentUpon>Ed_CourseProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CourseProgress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_Coursera_CourseContent.Designer.vb">
       <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Coursera_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_Enroll.Designer.vb">
+      <DependentUpon>Ed_Coursera_Course_Enroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Coursera_Course_Enroll.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_CourseResource.Designer.vb">
@@ -192,6 +204,12 @@
       <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Moodle_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Stud_MyCourses.Designer.vb">
+      <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Stud_MyCourses.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
@@ -883,8 +901,14 @@
     <EmbeddedResource Include="Ed_CopyComponents.resx">
       <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_CourseProgress.resx">
+      <DependentUpon>Ed_CourseProgress.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_CourseContent.resx">
       <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Coursera_Course_Enroll.resx">
+      <DependentUpon>Ed_Coursera_Course_Enroll.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_CourseResource.resx">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
@@ -894,6 +918,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Moodle_CourseContent.resx">
       <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
+      <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
