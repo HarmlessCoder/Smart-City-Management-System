@@ -1,23 +1,14 @@
 ﻿Imports System.Data.SqlClient
-Public Class Ed_Moodle_CourseContent
-    Private RoomID As Integer
-    Private callingPanel As Panel
-
-
-    ' Constructor that accepts a Panel parameter
-    Public Sub New(roomID As Integer, panel As Panel)
-        InitializeComponent()
-        roomID = roomID
-        callingPanel = panel
-    End Sub
-
-    Private Sub Ed_Moodle_CourseContent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+Public Class Ed_Moodle_AssList
+    Public RoomID As Integer
+    Public Seq_no As Integer
+    Private Sub Ed_Stud_Coursera_Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim labels As Label() = New Label(21) {}
 
         ' Create labels and set properties
         For i As Integer = 0 To 20
             labels(i) = New Label()
-            labels(i).Text = "Resource " & (i + 1)
+            labels(i).Text = "Course " & (i + 1) & " Assignment" & (i + 1)
             labels(i).AutoSize = False
             labels(i).Width = FlowLayoutPanel1.Width - 10
             labels(i).Height = 20 ' Adjust the height as needed
@@ -35,12 +26,9 @@ Public Class Ed_Moodle_CourseContent
         Next
     End Sub
     Private Sub Label_Click(sender As Object, e As EventArgs)
-        Dim resourceForm As New Ed_Moodle_CourseResource(callingPanel, "Moodle")
-        resourceForm.Name = "HELLO"
-        Globals.viewChildForm(callingPanel, resourceForm)
+        Globals.viewChildForm(Panel1, New Ed_Moodle_CourseAss(Panel1))
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
-    End Sub
+
 End Class
