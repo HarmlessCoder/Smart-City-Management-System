@@ -164,6 +164,12 @@
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_BusItem.Designer.vb">
+      <DependentUpon>Ed_BusItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_BusItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_CopyComponents.Designer.vb">
       <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
     </Compile>
@@ -192,6 +198,24 @@
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_CourseResource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_FeePopup.Designer.vb">
+      <DependentUpon>Ed_FeePopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_FeePopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Institute_BusList.Designer.vb">
+      <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_BusList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Inst_FeeDetails.Designer.vb">
+      <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Inst_FeeDetails.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_ManageECourse.Designer.vb">
@@ -892,6 +916,9 @@
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_BusItem.resx">
+      <DependentUpon>Ed_BusItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_CopyComponents.resx">
       <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
     </EmbeddedResource>
@@ -906,6 +933,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_CourseResource.resx">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_FeePopup.resx">
+      <DependentUpon>Ed_FeePopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Institute_BusList.resx">
+      <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Inst_FeeDetails.resx">
+      <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ManageECourse.resx">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
@@ -1661,6 +1697,7 @@
     <None Include="Resources\icon checkbalance.png" />
     <None Include="Resources\iconBankAccountProfile.png" />
     <None Include="Resources\icon-paybills.png" />
+    <None Include="Resources\bus_default.png" />
     <Content Include="Resources\icons8-car-100.png" />
     <None Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-car-1001.png" />
