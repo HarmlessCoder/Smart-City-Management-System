@@ -164,6 +164,12 @@
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_CopyComponents.Designer.vb">
+      <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CopyComponents.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Coursera_CourseContent.Designer.vb">
       <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
     </Compile>
@@ -180,6 +186,12 @@
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_ManageECourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseContent.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
@@ -862,6 +874,9 @@
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_CopyComponents.resx">
+      <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Coursera_CourseContent.resx">
       <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
     </EmbeddedResource>
@@ -870,6 +885,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ManageECourse.resx">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Moodle_CourseContent.resx">
+      <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>

@@ -7,11 +7,13 @@ Public Class Ed_CourseResource
     Public Property TextContent As String
 
     Private callingPanel As Panel
+    Private Course_type As String
 
     ' Constructor that accepts a Panel parameter
-    Public Sub New(panel As Panel)
+    Public Sub New(panel As Panel, type As String)
         InitializeComponent()
         callingPanel = panel
+        Course_type = type
     End Sub
     Private Sub Ed_CourseResource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ResourceName = "Testing 123"
@@ -35,7 +37,12 @@ Public Class Ed_CourseResource
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Globals.viewChildForm(callingPanel, New Ed_Coursera_CourseContent(CourseID, callingPanel))
+        If Course_type = "Coursera" Then
+            Globals.viewChildForm(callingPanel, New Ed_Coursera_CourseContent(CourseID, callingPanel))
+        Else
+            Globals.viewChildForm(callingPanel, New Ed_Moodle_CourseContent(CourseID, callingPanel))
+        End If
+
     End Sub
     Private Function ExtractYouTubeVideoId(url As String) As String
         Dim regexPattern As String = "(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})"
