@@ -230,10 +230,34 @@
     <Compile Include="Ed_ManageECourse.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Moodle_AssList.Designer.vb">
+      <DependentUpon>Ed_Moodle_AssList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Moodle_AssList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseAss.Designer.vb">
+      <DependentUpon>Ed_Moodle_CourseAss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseAss.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Moodle_CourseContent.Designer.vb">
       <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Moodle_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseList.Designer.vb">
+      <DependentUpon>Ed_Moodle_CourseList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseResource.Designer.vb">
+      <DependentUpon>Ed_Moodle_CourseResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_Stud_MyCourses.Designer.vb">
@@ -979,8 +1003,20 @@
     <EmbeddedResource Include="Ed_ManageECourse.resx">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Moodle_AssList.resx">
+      <DependentUpon>Ed_Moodle_AssList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Moodle_CourseAss.resx">
+      <DependentUpon>Ed_Moodle_CourseAss.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Moodle_CourseContent.resx">
       <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Moodle_CourseList.resx">
+      <DependentUpon>Ed_Moodle_CourseList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Moodle_CourseResource.resx">
+      <DependentUpon>Ed_Moodle_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
