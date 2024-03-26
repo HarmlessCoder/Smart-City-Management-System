@@ -29,13 +29,13 @@ Partial Class HomePage
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.lib_dept = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.bankDept = New System.Windows.Forms.Button()
         Me.electionDept = New System.Windows.Forms.Button()
         Me.event_dept = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.tranDept = New System.Windows.Forms.Button()
         Me.ed_dept = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.healthDept = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.SuspendLayout()
@@ -108,22 +108,22 @@ Partial Class HomePage
         Me.lib_dept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.lib_dept.UseVisualStyleBackColor = False
         '
-        'Button12
+        'bankDept
         '
-        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
-        Me.Button12.ForeColor = System.Drawing.Color.Maroon
-        Me.Button12.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_rupee_64
-        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button12.Location = New System.Drawing.Point(679, 503)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(197, 165)
-        Me.Button12.TabIndex = 26
-        Me.Button12.Text = "Banking" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " "
-        Me.Button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.bankDept.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.bankDept.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.bankDept.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bankDept.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.bankDept.ForeColor = System.Drawing.Color.Maroon
+        Me.bankDept.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_rupee_64
+        Me.bankDept.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.bankDept.Location = New System.Drawing.Point(679, 503)
+        Me.bankDept.Name = "bankDept"
+        Me.bankDept.Size = New System.Drawing.Size(197, 165)
+        Me.bankDept.TabIndex = 26
+        Me.bankDept.Text = "Banking" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " "
+        Me.bankDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.bankDept.UseVisualStyleBackColor = False
         '
         'electionDept
         '
@@ -210,22 +210,22 @@ Partial Class HomePage
         Me.ed_dept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ed_dept.UseVisualStyleBackColor = False
         '
-        'Button7
+        'healthDept
         '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
-        Me.Button7.ForeColor = System.Drawing.Color.Maroon
-        Me.Button7.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_heart_with_pulse_64
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button7.Location = New System.Drawing.Point(958, 69)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(197, 165)
-        Me.Button7.TabIndex = 20
-        Me.Button7.Text = "Healthcare" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.healthDept.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.healthDept.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.healthDept.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.healthDept.Font = New System.Drawing.Font("Bodoni MT Condensed", 18.30509!, System.Drawing.FontStyle.Bold)
+        Me.healthDept.ForeColor = System.Drawing.Color.Maroon
+        Me.healthDept.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_heart_with_pulse_64
+        Me.healthDept.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.healthDept.Location = New System.Drawing.Point(958, 69)
+        Me.healthDept.Name = "healthDept"
+        Me.healthDept.Size = New System.Drawing.Size(197, 165)
+        Me.healthDept.TabIndex = 20
+        Me.healthDept.Text = "Healthcare" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
+        Me.healthDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.healthDept.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -271,13 +271,13 @@ Partial Class HomePage
         Me.ClientSize = New System.Drawing.Size(1270, 736)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.lib_dept)
-        Me.Controls.Add(Me.Button12)
+        Me.Controls.Add(Me.bankDept)
         Me.Controls.Add(Me.electionDept)
         Me.Controls.Add(Me.event_dept)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.tranDept)
         Me.Controls.Add(Me.ed_dept)
-        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.healthDept)
         Me.Controls.Add(Me.Button1)
         Me.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -291,13 +291,13 @@ Partial Class HomePage
     Friend WithEvents DataGridViewImageColumn2 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
     Friend WithEvents lib_dept As Button
-    Friend WithEvents Button12 As Button
+    Friend WithEvents bankDept As Button
     Friend WithEvents electionDept As Button
     Friend WithEvents event_dept As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents tranDept As Button
     Friend WithEvents ed_dept As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents healthDept As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
 End Class

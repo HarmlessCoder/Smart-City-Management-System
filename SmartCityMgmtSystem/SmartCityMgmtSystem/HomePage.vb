@@ -39,4 +39,18 @@ Public Class HomePage
         mainForm.Close()
         Me.Close()
     End Sub
+
+    Private Sub bankDept_Click(sender As Object, e As EventArgs) Handles bankDept.Click
+        Dim bank = New BankingDashboard()
+        bank.Show()
+        mainForm.Close()
+        Me.Close()
+    End Sub
+
+    Private Sub healthDept_Click(sender As Object, e As EventArgs) Handles healthDept.Click
+        Dim health = New Healthcare_homepage()
+        health.Show()
+        mainForm.Close()
+        Me.Close()
+    End Sub
 End Class
