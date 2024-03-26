@@ -22,25 +22,21 @@ Partial Class RideSharingChats
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim Button1 As System.Windows.Forms.Button
         Dim Button5 As System.Windows.Forms.Button
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RideSharingChats))
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Approve = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
@@ -60,7 +56,13 @@ Partial Class RideSharingChats
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Approve = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
         Button5 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,21 +72,6 @@ Partial Class RideSharingChats
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Button1.BackColor = System.Drawing.Color.Maroon
-        Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Button1.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Button1.ForeColor = System.Drawing.Color.Linen
-        Button1.Location = New System.Drawing.Point(305, 10)
-        Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Button1.Name = "Button1"
-        Button1.Size = New System.Drawing.Size(120, 37)
-        Button1.TabIndex = 0
-        Button1.Text = "Pay|WD"
-        Button1.UseVisualStyleBackColor = False
-        AddHandler Button1.Click, AddressOf Me.Button1_Click
         '
         'Button5
         '
@@ -104,10 +91,10 @@ Partial Class RideSharingChats
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Button1)
         Me.Panel1.Location = New System.Drawing.Point(10, 294)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel1.Name = "Panel1"
@@ -116,12 +103,13 @@ Partial Class RideSharingChats
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowDrop = True
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Trebuchet MS", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -146,7 +134,7 @@ Partial Class RideSharingChats
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeight = 35
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Approve})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Approve, Me.DeleteBut})
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkGoldenrod
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -159,7 +147,6 @@ Partial Class RideSharingChats
         Me.DataGridView1.Location = New System.Drawing.Point(9, 61)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(6)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkGoldenrod
@@ -172,67 +159,20 @@ Partial Class RideSharingChats
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Trebuchet MS", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Empty
         Me.DataGridView1.RowTemplate.DividerHeight = 1
         Me.DataGridView1.RowTemplate.Height = 40
         Me.DataGridView1.RowTemplate.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.DataGridView1.Size = New System.Drawing.Size(418, 394)
         Me.DataGridView1.TabIndex = 5
-        '
-        'Column1
-        '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Goldenrod
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Column1.FillWeight = 285.124!
-        Me.Column1.HeaderText = "Name"
-        Me.Column1.MinimumWidth = 130
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'Column2
-        '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Column2.FillWeight = 14.87604!
-        Me.Column2.HeaderText = "Payment"
-        Me.Column2.MinimumWidth = 125
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Approve
-        '
-        Me.Approve.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle5.NullValue = False
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Approve.DefaultCellStyle = DataGridViewCellStyle5
-        Me.Approve.HeaderText = "Approve"
-        Me.Approve.MinimumWidth = 6
-        Me.Approve.Name = "Approve"
-        Me.Approve.ReadOnly = True
-        Me.Approve.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Approve.ToolTipText = "Delete"
-        Me.Approve.Width = 101
         '
         'Button2
         '
@@ -303,15 +243,16 @@ Partial Class RideSharingChats
         Me.PostsPanel.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.PostsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.PostsPanel.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.PostsPanel.Location = New System.Drawing.Point(450, 1)
+        Me.PostsPanel.Location = New System.Drawing.Point(450, 15)
         Me.PostsPanel.Name = "PostsPanel"
-        Me.PostsPanel.Size = New System.Drawing.Size(820, 710)
+        Me.PostsPanel.Size = New System.Drawing.Size(820, 696)
         Me.PostsPanel.TabIndex = 7
         Me.PostsPanel.WrapContents = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.picbox)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.Panel7)
@@ -327,11 +268,12 @@ Partial Class RideSharingChats
         '
         Me.picbox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.picbox.BackColor = System.Drawing.Color.OldLace
         Me.picbox.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_vehicles_64
-        Me.picbox.Location = New System.Drawing.Point(237, 51)
+        Me.picbox.Location = New System.Drawing.Point(245, 49)
         Me.picbox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.picbox.Name = "picbox"
-        Me.picbox.Size = New System.Drawing.Size(188, 104)
+        Me.picbox.Size = New System.Drawing.Size(180, 106)
         Me.picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picbox.TabIndex = 16
         Me.picbox.TabStop = False
@@ -350,11 +292,11 @@ Partial Class RideSharingChats
         '
         'Label4
         '
-        Me.Label4.BackColor = System.Drawing.SystemColors.Window
+        Me.Label4.BackColor = System.Drawing.Color.OldLace
         Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(94, 7)
+        Me.Label4.Location = New System.Drawing.Point(73, 7)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(109, 34)
+        Me.Label4.Size = New System.Drawing.Size(141, 34)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Lamborghini"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -383,11 +325,11 @@ Partial Class RideSharingChats
         '
         'Label2
         '
-        Me.Label2.BackColor = System.Drawing.SystemColors.Window
+        Me.Label2.BackColor = System.Drawing.Color.OldLace
         Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(94, 7)
+        Me.Label2.Location = New System.Drawing.Point(73, 7)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 34)
+        Me.Label2.Size = New System.Drawing.Size(141, 34)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "AS-10-2022"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -398,9 +340,9 @@ Partial Class RideSharingChats
         Me.Label8.Location = New System.Drawing.Point(4, 5)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 36)
+        Me.Label8.Size = New System.Drawing.Size(81, 36)
         Me.Label8.TabIndex = 3
-        Me.Label8.Text = "Vehicle Number:"
+        Me.Label8.Text = "Vehicle No:"
         '
         'Panel8
         '
@@ -416,10 +358,12 @@ Partial Class RideSharingChats
         '
         'RichTextBox2
         '
+        Me.RichTextBox2.BackColor = System.Drawing.Color.OldLace
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox2.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox2.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox2.Location = New System.Drawing.Point(92, 11)
         Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.Size = New System.Drawing.Size(306, 63)
         Me.RichTextBox2.TabIndex = 4
         Me.RichTextBox2.Text = ""
@@ -448,7 +392,7 @@ Partial Class RideSharingChats
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox1.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(450, 717)
         Me.RichTextBox1.Name = "RichTextBox1"
@@ -475,12 +419,111 @@ Partial Class RideSharingChats
         Me.DataGridViewImageColumn3.ToolTipText = "Delete"
         Me.DataGridViewImageColumn3.Width = 123
         '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Agency FB", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.DimGray
+        Me.Label6.Location = New System.Drawing.Point(452, -2)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(272, 27)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Send a message to request to join the ride..."
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Maroon
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 9.152543!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Linen
+        Me.Button1.Location = New System.Drawing.Point(291, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(134, 37)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Pay|WD"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Maroon
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Verdana", 9.152543!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.Linen
+        Me.Button3.Location = New System.Drawing.Point(291, 6)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(134, 37)
+        Me.Button3.TabIndex = 7
+        Me.Button3.Text = "Change Fare"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Goldenrod
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Column1.FillWeight = 285.124!
+        Me.Column1.Frozen = True
+        Me.Column1.HeaderText = "Name"
+        Me.Column1.MinimumWidth = 130
+        Me.Column1.Name = "Column1"
+        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column1.Width = 160
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Column2.FillWeight = 14.87604!
+        Me.Column2.Frozen = True
+        Me.Column2.HeaderText = "Payment"
+        Me.Column2.MinimumWidth = 100
+        Me.Column2.Name = "Column2"
+        '
+        'Approve
+        '
+        Me.Approve.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle5.NullValue = False
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Approve.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Approve.FalseValue = "not-added"
+        Me.Approve.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Approve.HeaderText = "Approve"
+        Me.Approve.IndeterminateValue = "false"
+        Me.Approve.MinimumWidth = 6
+        Me.Approve.Name = "Approve"
+        Me.Approve.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Approve.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Approve.ToolTipText = "Approve"
+        Me.Approve.TrueValue = "added"
+        Me.Approve.Width = 124
+        '
+        'DeleteBut
+        '
+        Me.DeleteBut.HeaderText = ""
+        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
+        Me.DeleteBut.MinimumWidth = 36
+        Me.DeleteBut.Name = "DeleteBut"
+        Me.DeleteBut.ToolTipText = "Delete"
+        '
         'RideSharingChats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.ClientSize = New System.Drawing.Size(1270, 772)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Button5)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Panel2)
@@ -516,9 +559,6 @@ Partial Class RideSharingChats
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
     Friend WithEvents PostsPanel As FlowLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Approve As DataGridViewCheckBoxColumn
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
@@ -532,4 +572,11 @@ Partial Class RideSharingChats
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents picbox As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Approve As DataGridViewCheckBoxColumn
+    Friend WithEvents DeleteBut As DataGridViewImageColumn
 End Class

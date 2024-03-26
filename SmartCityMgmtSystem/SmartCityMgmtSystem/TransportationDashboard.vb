@@ -23,4 +23,16 @@
         'View the Toll Plaza Screen
         Globals.viewChildForm(childformPanel, TransportTollPlaza)
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'View DL req form
+        Globals.viewChildForm(childformPanel, TransportDrivingLicenseReq
+                              )
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        'View Veh Reg Form
+        Globals.viewChildForm(childformPanel, TransportVehicleRegReq
+                              )
+    End Sub
 End Class

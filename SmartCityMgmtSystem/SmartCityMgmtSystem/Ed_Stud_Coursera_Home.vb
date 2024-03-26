@@ -6,12 +6,15 @@ Public Class Ed_Stud_Coursera_Home
         ' Create labels and set properties
         For i As Integer = 0 To 20
             labels(i) = New Ed_Coursera_Course_ListItem()
+            labels(i).CourseID = i
         Next
 
         ' Add labels to the FlowLayoutPanel
         For Each Ed_Coursera_Course_ListItem As Ed_Coursera_Course_ListItem In labels
             FlowLayoutPanel1.Controls.Add(Ed_Coursera_Course_ListItem)
         Next
+        ' Dim callingPanel As Panel = TryCast(Me.Owner.Parent, Panel)
+        ' Globals.viewChildForm(callingPanel, New Ed_Coursera_CourseContent(1, callingPanel))
     End Sub
 
 

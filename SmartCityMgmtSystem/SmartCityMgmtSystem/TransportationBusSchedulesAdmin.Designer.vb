@@ -377,7 +377,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox7.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox7.Location = New System.Drawing.Point(221, 30)
         Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(50, 21)
+        Me.CheckBox7.Size = New System.Drawing.Size(47, 21)
         Me.CheckBox7.TabIndex = 11
         Me.CheckBox7.Text = "Fri"
         Me.CheckBox7.UseVisualStyleBackColor = True
@@ -388,7 +388,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox6.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox6.Location = New System.Drawing.Point(221, 53)
         Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(55, 21)
+        Me.CheckBox6.Size = New System.Drawing.Size(52, 21)
         Me.CheckBox6.TabIndex = 10
         Me.CheckBox6.Text = "Sat"
         Me.CheckBox6.UseVisualStyleBackColor = True
@@ -399,7 +399,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox5.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox5.Location = New System.Drawing.Point(145, 53)
         Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(65, 21)
+        Me.CheckBox5.Size = New System.Drawing.Size(62, 21)
         Me.CheckBox5.TabIndex = 9
         Me.CheckBox5.Text = "Wed"
         Me.CheckBox5.UseVisualStyleBackColor = True
@@ -410,7 +410,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox4.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox4.Location = New System.Drawing.Point(145, 30)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(59, 21)
+        Me.CheckBox4.Size = New System.Drawing.Size(56, 21)
         Me.CheckBox4.TabIndex = 8
         Me.CheckBox4.Text = "Tue"
         Me.CheckBox4.UseVisualStyleBackColor = True
@@ -421,7 +421,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox3.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox3.Location = New System.Drawing.Point(295, 7)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(60, 21)
+        Me.CheckBox3.Size = New System.Drawing.Size(57, 21)
         Me.CheckBox3.TabIndex = 7
         Me.CheckBox3.Text = "Sun"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -432,7 +432,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox2.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox2.Location = New System.Drawing.Point(221, 6)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(60, 21)
+        Me.CheckBox2.Size = New System.Drawing.Size(57, 21)
         Me.CheckBox2.TabIndex = 6
         Me.CheckBox2.Text = "Thu"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -443,7 +443,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox1.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox1.Location = New System.Drawing.Point(145, 6)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(63, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(60, 21)
         Me.CheckBox1.TabIndex = 5
         Me.CheckBox1.Text = "Mon"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -560,7 +560,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridViewImageColumn1.ReadOnly = True
         Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn1.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn1.Width = 125
+        Me.DataGridViewImageColumn1.Width = 123
         '
         'DataGridViewImageColumn2
         '
@@ -579,7 +579,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridViewImageColumn2.ReadOnly = True
         Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn2.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn2.Width = 125
+        Me.DataGridViewImageColumn2.Width = 123
         '
         'Label4
         '
@@ -592,7 +592,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Label4.Location = New System.Drawing.Point(21, 7)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(381, 50)
+        Me.Label4.Size = New System.Drawing.Size(358, 46)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "      Manage Bus Schedules"
         '
@@ -613,7 +613,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
         Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn3.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn3.Width = 125
+        Me.DataGridViewImageColumn3.Width = 123
         '
         'Column1
         '
@@ -623,24 +623,26 @@ Partial Class TransportationBusSchedulesAdmin
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Column1.FillWeight = 70.0!
+        Me.Column1.FillWeight = 37.6564!
         Me.Column1.HeaderText = "Bus Number"
-        Me.Column1.MinimumWidth = 6
+        Me.Column1.MinimumWidth = 100
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         '
         'Column2
         '
+        Me.Column2.FillWeight = 409.5745!
         Me.Column2.HeaderText = "Days Operating"
-        Me.Column2.MinimumWidth = 6
+        Me.Column2.MinimumWidth = 100
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
         Me.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'Column3
         '
+        Me.Column3.FillWeight = 53.79486!
         Me.Column3.HeaderText = "Pickup Time"
-        Me.Column3.MinimumWidth = 6
+        Me.Column3.MinimumWidth = 150
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
@@ -652,23 +654,25 @@ Partial Class TransportationBusSchedulesAdmin
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         Me.Column4.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Column4.FillWeight = 200.0!
+        Me.Column4.FillWeight = 107.5897!
         Me.Column4.HeaderText = "Source"
-        Me.Column4.MinimumWidth = 6
+        Me.Column4.MinimumWidth = 100
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'Column5
         '
+        Me.Column5.FillWeight = 53.79486!
         Me.Column5.HeaderText = "Destination"
-        Me.Column5.MinimumWidth = 6
+        Me.Column5.MinimumWidth = 120
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'DeleteBut
         '
+        Me.DeleteBut.FillWeight = 53.79486!
         Me.DeleteBut.HeaderText = ""
         Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
         Me.DeleteBut.MinimumWidth = 6
@@ -679,6 +683,7 @@ Partial Class TransportationBusSchedulesAdmin
         '
         'EditBut
         '
+        Me.EditBut.FillWeight = 53.79486!
         Me.EditBut.HeaderText = ""
         Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
         Me.EditBut.MinimumWidth = 6

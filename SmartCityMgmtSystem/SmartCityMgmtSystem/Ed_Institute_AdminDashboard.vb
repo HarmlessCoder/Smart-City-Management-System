@@ -6,4 +6,8 @@
     Private Sub Ed_Institute_AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Globals.viewChildForm(childformPanel, Ed_InstAdmin_AdmitList)
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_RoleSelect)
+    End Sub
 End Class
