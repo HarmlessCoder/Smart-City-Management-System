@@ -140,6 +140,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="Employment_portal_admin.Designer.vb">
+      <DependentUpon>Employment_portal_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal_admin.vb">
+
     <Compile Include="BankingCreateAccount.Designer.vb">
       <DependentUpon>BankingCreateAccount.vb</DependentUpon>
     </Compile>
@@ -222,6 +228,7 @@
       <DependentUpon>ElectionCitizenKYC.vb</DependentUpon>
     </Compile>
     <Compile Include="ElectionCitizenKYC.vb">
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_InstAdmin_AdmitList.Designer.vb">
@@ -500,8 +507,19 @@
     <Compile Include="Election_Inner_Screen.vb">
       <SubType>Form</SubType>
     </Compile>
+
+    <Compile Include="Employment_portal.Designer.vb">
+      <DependentUpon>Employment_portal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events_vendorRegistrationScreen.Designer.vb">
+      <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
+
     <Compile Include="Events_vendorLoginInnerScreen.Designer.vb">
       <DependentUpon>Events_vendorLoginInnerScreen.vb</DependentUpon>
+
     </Compile>
     <Compile Include="Events_vendorLoginInnerScreen.vb">
       <SubType>Form</SubType>
@@ -536,6 +554,20 @@
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
+
+    <Compile Include="Service_Portal.Designer.vb">
+      <DependentUpon>Service_Portal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Portal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service_Provider.Designer.vb">
+      <DependentUpon>Service_Provider.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Provider.vb">
+      <SubType>Form</SubType>
+    </Compile>
+
     <Compile Include="PayBills.Designer.vb">
       <DependentUpon>PayBills.vb</DependentUpon>
     </Compile>
@@ -607,6 +639,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+
     <Compile Include="TransportationManageFastagAdmin.Designer.vb">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
     </Compile>
@@ -886,6 +919,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+
+    <EmbeddedResource Include="Employment_portal_admin.resx">
+      <DependentUpon>Employment_portal_admin.vb</DependentUpon>
+
     <EmbeddedResource Include="BankingCreateAccount.resx">
       <DependentUpon>BankingCreateAccount.vb</DependentUpon>
     </EmbeddedResource>
@@ -927,6 +964,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenKYC.resx">
       <DependentUpon>ElectionCitizenKYC.vb</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_InstAdmin_AdmitList.resx">
       <DependentUpon>Ed_InstAdmin_AdmitList.vb</DependentUpon>
@@ -1057,8 +1095,16 @@
     <EmbeddedResource Include="Election_Inner_Screen.resx">
       <DependentUpon>Election_Inner_Screen.vb</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Employment_portal.resx">
+      <DependentUpon>Employment_portal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events_vendorRegistrationScreen.resx">
+      <DependentUpon>Events_vendorRegistrationScreen.vb</DependentUpon>
+
     <EmbeddedResource Include="Events_vendorLoginInnerScreen.resx">
       <DependentUpon>Events_vendorLoginInnerScreen.vb</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreen2.resx">
       <DependentUpon>ElectionInnerScreen2.vb</DependentUpon>
@@ -1075,6 +1121,13 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Service_Portal.resx">
+      <DependentUpon>Service_Portal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_Provider.resx">
+      <DependentUpon>Service_Provider.vb</DependentUpon>
+
     <EmbeddedResource Include="PayBills.resx">
       <DependentUpon>PayBills.vb</DependentUpon>
     </EmbeddedResource>
@@ -1107,6 +1160,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePageDashboard.resx">
       <DependentUpon>HomePageDashboard.vb</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="TransportationManageFastagAdmin.resx">
       <DependentUpon>TransportationManageFastagAdmin.vb</DependentUpon>
@@ -1665,6 +1719,15 @@
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+
+    <None Include="Resources\product.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\back-button.png" />
+    <None Include="Resources\back-button1.png" />
+    <None Include="Resources\booking1.png" />
+    <None Include="Resources\booking %281%29.png" />
+
     <None Include="Resources\icon_view_transactions.png" />
     <None Include="Resources\banking_logo.png" />
     <None Include="Resources\icon checkbalance.png" />
@@ -1706,6 +1769,7 @@
     <None Include="Resources\Fatstag.png" />
     <None Include="Resources\banking_logo.png" />
     <None Include="Resources\iconBankAccountProfile.png" />
+
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <None Include="Resources\icons8-driver-license-20.png" />
@@ -1721,10 +1785,16 @@
     <Content Include="Resources\icons8-taj-mahal-100.png" />
     <None Include="Resources\icons8-topup-payment-50.png" />
     <Content Include="Resources\icons8-transportation-100.png" />
+
+    <None Include="Resources\loupe.png" />
+    <None Include="Resources\user-gear %281%29.png" />
+    <None Include="Resources\user-gear.png" />
+
     <None Include="Resources\icons8-vehicle-50.png" />
     <None Include="Resources\icons8-vehicle-48.png" />
     <Content Include="Resources\icons8-vehicle-registration-certificate-64.png" />
     <None Include="Resources\icons8-vehicle-registration-certificate-641.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
