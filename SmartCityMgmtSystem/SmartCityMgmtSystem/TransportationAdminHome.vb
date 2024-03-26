@@ -42,6 +42,6 @@ Public Class TransportationAdminHome
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
-
+        Globals.viewChildForm(TransportationDashboard.childformPanel, TransportMangeBusStopAdmin)
     End Sub
 End Class

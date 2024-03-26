@@ -12,6 +12,8 @@ Public Class Ed_Stud_Coursera_Home
         For Each Ed_Coursera_Course_ListItem As Ed_Coursera_Course_ListItem In labels
             FlowLayoutPanel1.Controls.Add(Ed_Coursera_Course_ListItem)
         Next
+        ' Dim callingPanel As Panel = TryCast(Me.Owner.Parent, Panel)
+        ' Globals.viewChildForm(callingPanel, New Ed_Coursera_CourseContent(1, callingPanel))
     End Sub
 
 

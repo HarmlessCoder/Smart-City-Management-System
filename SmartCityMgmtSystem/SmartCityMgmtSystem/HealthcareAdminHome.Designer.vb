@@ -184,7 +184,6 @@ Partial Class HealthcareAdminHome
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.LightBlue
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_doctor_female_skin_type_2_96
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(126, 79)

@@ -70,22 +70,62 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CabSharingComponent">
-      <HintPath>..\..\..\CabSharingComponent\obj\Debug\CabSharingComponent.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net48\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net48\ZstdNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -100,6 +140,60 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankingCreateAccount.Designer.vb">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingCreateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingDashboard.Designer.vb">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankingLogin.Designer.vb">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankingLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBankBalance.Designer.vb">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBankBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_CopyComponents.Designer.vb">
+      <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CopyComponents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Coursera_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Coursera_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_CourseResource.Designer.vb">
+      <DependentUpon>Ed_CourseResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CourseResource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_ManageECourse.Designer.vb">
+      <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ManageECourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Moodle_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </Compile>
@@ -135,6 +229,36 @@
     </Compile>
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="hc_B_Appointment.Designer.vb">
+      <DependentUpon>hc_B_Appointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hc_B_Appointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hc_Donate_Blood.Designer.vb">
+      <DependentUpon>hc_Donate_Blood.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hc_Donate_Blood.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hc_History.Designer.vb">
+      <DependentUpon>hc_History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hc_History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hc_Pharmacy.Designer.vb">
+      <DependentUpon>hc_Pharmacy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hc_Pharmacy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Healthcare_homepage.Designer.vb">
+      <DependentUpon>Healthcare_homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Healthcare_homepage.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="EventDashboard.Designer.vb">
       <DependentUpon>EventDashboard.vb</DependentUpon>
@@ -194,6 +318,18 @@
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="EventVendorRegistrationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsDashboard.Designer.vb">
+      <DependentUpon>NewsDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewsDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportManageTollGatesAdmin.Designer.vb">
+      <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportManageTollGatesAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="lib_adminBM.Designer.vb">
@@ -380,6 +516,24 @@
       <DependentUpon>HomePage.vb</DependentUpon>
     </Compile>
     <Compile Include="HomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayBills.Designer.vb">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PayBills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RechargeFastTag.Designer.vb">
+      <DependentUpon>RechargeFastTag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeFastTag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportMangeBusStopAdmin.Designer.vb">
+      <DependentUpon>TransportMangeBusStopAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransportMangeBusStopAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TransportRSReqPost.Designer.vb">
@@ -652,6 +806,18 @@
     <Compile Include="TransportTollPlaza.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserBankDetails.Designer.vb">
+      <DependentUpon>UserBankDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserBankDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_CourseraItem.Designer.vb">
+      <DependentUpon>Ed_Teacher_CourseraItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_CourseraItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserDetails.Designer.vb">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </Compile>
@@ -694,8 +860,41 @@
     <Compile Include="UserSignUp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewBankTransactions.Designer.vb">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBankTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BankingCreateAccount.resx">
+      <DependentUpon>BankingCreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingDashboard.resx">
+      <DependentUpon>BankingDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingLogin.resx">
+      <DependentUpon>BankingLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBankBalance.resx">
+      <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_CopyComponents.resx">
+      <DependentUpon>Ed_CopyComponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Coursera_CourseContent.resx">
+      <DependentUpon>Ed_Coursera_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_CourseResource.resx">
+      <DependentUpon>Ed_CourseResource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ManageECourse.resx">
+      <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Moodle_CourseContent.resx">
+      <DependentUpon>Ed_Moodle_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </EmbeddedResource>
@@ -713,6 +912,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hc_B_Appointment.resx">
+      <DependentUpon>hc_B_Appointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hc_Donate_Blood.resx">
+      <DependentUpon>hc_Donate_Blood.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hc_History.resx">
+      <DependentUpon>hc_History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hc_Pharmacy.resx">
+      <DependentUpon>hc_Pharmacy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Healthcare_homepage.resx">
+      <DependentUpon>Healthcare_homepage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventDashboard.resx">
       <DependentUpon>EventDashboard.vb</DependentUpon>
@@ -740,6 +954,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventVendorRegistrationScreen.resx">
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsDashboard.resx">
+      <DependentUpon>NewsDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportManageTollGatesAdmin.resx">
+      <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_adminBM.resx">
       <DependentUpon>lib_adminBM.vb</DependentUpon>
@@ -827,6 +1047,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayBills.resx">
+      <DependentUpon>PayBills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RechargeFastTag.resx">
+      <DependentUpon>RechargeFastTag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportMangeBusStopAdmin.resx">
+      <DependentUpon>TransportMangeBusStopAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportRSReqPost.resx">
       <DependentUpon>TransportRSReqPost.vb</DependentUpon>
@@ -960,6 +1189,12 @@
     <EmbeddedResource Include="TransportTollPlaza.resx">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserBankDetails.resx">
+      <DependentUpon>UserBankDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_CourseraItem.resx">
+      <DependentUpon>Ed_Teacher_CourseraItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserDetails.resx">
       <DependentUpon>UserDetails.vb</DependentUpon>
     </EmbeddedResource>
@@ -981,6 +1216,9 @@
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewBankTransactions.resx">
+      <DependentUpon>ViewBankTransactions.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -995,6 +1233,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\icons8-go-back-30.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1399,6 +1638,11 @@
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icon_view_transactions.png" />
+    <None Include="Resources\banking_logo.png" />
+    <None Include="Resources\icon checkbalance.png" />
+    <None Include="Resources\iconBankAccountProfile.png" />
+    <None Include="Resources\icon-paybills.png" />
     <Content Include="Resources\icons8-car-100.png" />
     <None Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-car-1001.png" />
