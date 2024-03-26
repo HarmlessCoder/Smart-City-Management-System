@@ -1,4 +1,6 @@
 ﻿Public Class ElectionDashboard
+
+
     Private Sub election_Click(sender As Object, e As EventArgs) Handles election.Click
         Globals.viewChildForm(childformPanel, ElectionInnerScreen1)
     End Sub

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class HomePage
 
-    Private mainForm As Form
+    Public mainForm As Form
     Public Sub SetMainForm(parentForm As Form)
         mainForm = parentForm
     End Sub

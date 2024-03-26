@@ -200,6 +200,12 @@
     <Compile Include="Ed_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_EntranceInnerScreen.Designer.vb">
+      <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_EntranceInnerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_FeePopup.Designer.vb">
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
     </Compile>
@@ -260,6 +266,12 @@
     <Compile Include="Ed_Stud_MyCourses.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_ViewPaymentPopup.Designer.vb">
+      <DependentUpon>Ed_ViewPaymentPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ViewPaymentPopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionCitizenTimeline.Designer.vb">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </Compile>
@@ -295,6 +307,18 @@
     </Compile>
     <Compile Include="Ed_Stud_ListItem.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminCoC.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminCoC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminCoC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminViolation.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminViolation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminViolation.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="hc_B_Appointment.Designer.vb">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>
@@ -964,6 +988,9 @@
     <EmbeddedResource Include="Ed_CourseResource.resx">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_EntranceInnerScreen.resx">
+      <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_FeePopup.resx">
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
     </EmbeddedResource>
@@ -994,6 +1021,9 @@
     <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ViewPaymentPopup.resx">
+      <DependentUpon>Ed_ViewPaymentPopup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionCitizenTimeline.resx">
       <DependentUpon>ElectionCitizenTimeline.vb</DependentUpon>
     </EmbeddedResource>
@@ -1011,6 +1041,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_ListItem.resx">
       <DependentUpon>Ed_Stud_ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminCoC.resx">
+      <DependentUpon>ElectionInnerScreenAdminCoC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminViolation.resx">
+      <DependentUpon>ElectionInnerScreenAdminViolation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hc_B_Appointment.resx">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>
@@ -1760,6 +1796,7 @@
     <Content Include="Resources\icons8-health-100.png" />
     <None Include="Resources\icons8-licence-48.png" />
     <None Include="Resources\icons8-law-violation-100.png" />
+    <None Include="Resources\icons8-law-violation-1001.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
     <None Include="Resources\icons8-people-in-car-1001.png" />
     <None Include="Resources\icons8-people-in-car-50.png" />
