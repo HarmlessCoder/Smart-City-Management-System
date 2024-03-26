@@ -159,7 +159,8 @@
   </data>
   <data name="6963703" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6963703.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="iconBankAccountProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="iconBankAccountProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconBankAccountProfile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="12-Reach-NetBanking" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -182,7 +183,8 @@
   </data>
   <data name="landing2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\landing2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-code-of-conduct-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="icons8-code-of-conduct-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-code-of-conduct-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-licence-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -493,7 +495,8 @@
   </data>
   <data name="landing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\landing.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-ballot-box-with-ballot-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="icons8-ballot-box-with-ballot-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-ballot-box-with-ballot-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-activity-history-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -504,7 +507,8 @@
   </data>
   <data name="icons8-administrator-male-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-administrator-male-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-identity-card-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="icons8-identity-card-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-identity-card-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EngineeringExamS" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -605,7 +609,8 @@
   </data>
   <data name="icons8-calender-301" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-calender-301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-delete-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="icons8-delete-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-delete-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-driving-license-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -625,7 +630,8 @@
   </data>
   <data name="EngineeringExamS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EngineeringExamS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-organization-chart-people-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="icons8-organization-chart-people-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-organization-chart-people-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-exit-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -645,7 +651,8 @@
   </data>
   <data name="icons8-driving-license-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-driving-license-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons-about-us" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="icons-about-us" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons-about-us1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-accept-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -677,7 +684,8 @@
   </data>
   <data name="icons8-code-of-conduct-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-code-of-conduct-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="icons8-law-violation-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>
+	  <data name="icons8-law-violation-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-law-violation-1001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
