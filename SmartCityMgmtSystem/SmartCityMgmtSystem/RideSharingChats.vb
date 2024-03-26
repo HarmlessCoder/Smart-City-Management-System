@@ -11,14 +11,6 @@ Public Class RideSharingChats
     Public VehicleNumber As String = ""
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-
-        ' Check if the clicked cell is in the "DeleteBut" column and not a header cell
-        If e.ColumnIndex = DataGridView1.Columns("DeleteBut").Index AndAlso e.RowIndex >= 0 Then
-            ' Perform the action for the "DeleteButton" column
-            MessageBox.Show("Delete button clicked for row " & e.RowIndex.ToString(), "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        End If
         ' For checkbox column
         If e.RowIndex >= 0 AndAlso e.ColumnIndex = DataGridView1.Columns("Approve").Index Then
             ' Check if the clicked cell is in the "Approve" column
@@ -139,14 +131,12 @@ Public Class RideSharingChats
         'For requester, show the approve button
         If poster_uid <> uid Then
             DataGridView1.Columns("Approve").Visible = False
-            DataGridView1.Columns("DeleteBut").Visible = False
             Button3.Visible = False
             DataGridView1.ReadOnly = True
             Button1.Visible = True
             ' For the poster of the post
         Else
             DataGridView1.Columns("Approve").Visible = True
-            DataGridView1.Columns("DeleteBut").Visible = True
             Button3.Visible = True
             DataGridView1.ReadOnly = False
             Button1.Visible = False

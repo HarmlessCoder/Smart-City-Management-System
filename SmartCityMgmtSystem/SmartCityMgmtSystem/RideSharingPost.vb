@@ -43,11 +43,12 @@
             modal.Opacity = 0.4D
             modal.TopMost = True
             modal.ShowInTaskbar = False
-            modal.Location = TransportationDashboard.Location
+            modal.Location = TransportationDashboard.DesktopLocation
             modal.FormBorderStyle = FormBorderStyle.None
             modal.BackColor = Color.Black
             modal.Width = TransportationDashboard.Width
             modal.Height = TransportationDashboard.Height
+            modal.WindowState = FormWindowState.Maximized
             modal.Show()
             modal.Owner = chatForm
             'Pass the required details to the RideSharingChats Form
