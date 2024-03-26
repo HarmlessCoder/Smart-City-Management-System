@@ -848,6 +848,12 @@
     <Compile Include="UserGetOtp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserLandingPage.Designer.vb">
+      <DependentUpon>UserLandingPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserLandingPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
@@ -1221,6 +1227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserGetOtp.resx">
       <DependentUpon>UserGetOtp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLandingPage.resx">
+      <DependentUpon>UserLandingPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>
@@ -1690,12 +1699,18 @@
     <Content Include="Resources\icons8-taj-mahal-100.png" />
     <None Include="Resources\icons8-tollbooth-501.png" />
     <None Include="Resources\icons8-tick-30.png" />
+    <None Include="Resources\landing2.jpg" />
+    <None Include="Resources\landing1.jpg" />
+    <None Include="Resources\landing.jpg" />
     <None Include="Resources\icons8-accept-64.png" />
     <None Include="Resources\Fatstag.png" />
+    <None Include="Resources\banking_logo.png" />
+    <None Include="Resources\iconBankAccountProfile.png" />
     <Content Include="Resources\icons8-commodity-100.png" />
     <Content Include="Resources\icons8-complain-100.png" />
     <None Include="Resources\icons8-driver-license-20.png" />
     <Content Include="Resources\icons8-health-100.png" />
+    <None Include="Resources\icons8-job-seeker-64.png" />
     <Content Include="Resources\icons8-live-video-on-100.png" />
     <None Include="Resources\icons8-pay-30.png" />
     <None Include="Resources\icons8-pay-301.png" />
