@@ -30,9 +30,6 @@ Partial Class ElectionInnerScreenAdminTimeline
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -54,7 +51,6 @@ Partial Class ElectionInnerScreenAdminTimeline
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -136,38 +132,11 @@ Partial Class ElectionInnerScreenAdminTimeline
         Me.DataGridViewImageColumn3.ToolTipText = "Delete"
         Me.DataGridViewImageColumn3.Width = 125
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(19, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(289, 28)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Election Announcement"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(711, 133)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(250, 30)
-        Me.DateTimePicker1.TabIndex = 3
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(307, 126)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(328, 49)
-        Me.Panel1.TabIndex = 4
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(307, 326)
+        Me.Panel2.Location = New System.Drawing.Point(303, 282)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(328, 49)
         Me.Panel2.TabIndex = 6
@@ -185,7 +154,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(711, 333)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(707, 158)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(250, 30)
         Me.DateTimePicker2.TabIndex = 5
@@ -194,7 +163,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Location = New System.Drawing.Point(307, 393)
+        Me.Panel3.Location = New System.Drawing.Point(303, 349)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(328, 49)
         Me.Panel3.TabIndex = 8
@@ -212,7 +181,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         'DateTimePicker3
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(711, 400)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(707, 221)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(250, 30)
         Me.DateTimePicker3.TabIndex = 7
@@ -221,7 +190,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label5)
-        Me.Panel4.Location = New System.Drawing.Point(307, 465)
+        Me.Panel4.Location = New System.Drawing.Point(303, 421)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(328, 49)
         Me.Panel4.TabIndex = 10
@@ -239,7 +208,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         'DateTimePicker4
         '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(711, 472)
+        Me.DateTimePicker4.Location = New System.Drawing.Point(707, 290)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(250, 30)
         Me.DateTimePicker4.TabIndex = 9
@@ -248,7 +217,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Location = New System.Drawing.Point(307, 258)
+        Me.Panel5.Location = New System.Drawing.Point(303, 214)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(328, 49)
         Me.Panel5.TabIndex = 12
@@ -266,7 +235,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         'DateTimePicker5
         '
-        Me.DateTimePicker5.Location = New System.Drawing.Point(711, 265)
+        Me.DateTimePicker5.Location = New System.Drawing.Point(707, 358)
         Me.DateTimePicker5.Name = "DateTimePicker5"
         Me.DateTimePicker5.Size = New System.Drawing.Size(250, 30)
         Me.DateTimePicker5.TabIndex = 11
@@ -275,7 +244,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Label7)
-        Me.Panel6.Location = New System.Drawing.Point(307, 192)
+        Me.Panel6.Location = New System.Drawing.Point(303, 148)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(328, 49)
         Me.Panel6.TabIndex = 14
@@ -293,7 +262,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         'DateTimePicker6
         '
-        Me.DateTimePicker6.Location = New System.Drawing.Point(711, 199)
+        Me.DateTimePicker6.Location = New System.Drawing.Point(707, 431)
         Me.DateTimePicker6.Name = "DateTimePicker6"
         Me.DateTimePicker6.Size = New System.Drawing.Size(250, 30)
         Me.DateTimePicker6.TabIndex = 13
@@ -302,7 +271,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.Panel7.Controls.Add(Me.Label8)
-        Me.Panel7.Location = New System.Drawing.Point(307, 537)
+        Me.Panel7.Location = New System.Drawing.Point(303, 493)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(328, 49)
         Me.Panel7.TabIndex = 16
@@ -320,7 +289,7 @@ Partial Class ElectionInnerScreenAdminTimeline
         '
         'DateTimePicker7
         '
-        Me.DateTimePicker7.Location = New System.Drawing.Point(711, 544)
+        Me.DateTimePicker7.Location = New System.Drawing.Point(707, 500)
         Me.DateTimePicker7.Name = "DateTimePicker7"
         Me.DateTimePicker7.Size = New System.Drawing.Size(250, 30)
         Me.DateTimePicker7.TabIndex = 15
@@ -371,8 +340,6 @@ Partial Class ElectionInnerScreenAdminTimeline
         Me.Controls.Add(Me.DateTimePicker3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -381,8 +348,6 @@ Partial Class ElectionInnerScreenAdminTimeline
         Me.Name = "ElectionInnerScreenAdminTimeline"
         Me.Text = "Home Page"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -404,9 +369,6 @@ Partial Class ElectionInnerScreenAdminTimeline
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker

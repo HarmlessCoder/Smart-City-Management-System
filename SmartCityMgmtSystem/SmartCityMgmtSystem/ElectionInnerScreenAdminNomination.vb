@@ -25,20 +25,32 @@ Public Class ElectionInnerScreenAdminNomination
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
+        ' Retrieve the value of the election_id column from the last row of the election_time table
+        Dim lastElectionID As Integer = -1 ' Default value in case there are no rows in election_time
+        cmd = New MySqlCommand("SELECT election_id FROM election_time ORDER BY election_id DESC LIMIT 1;", Con)
+        reader = cmd.ExecuteReader()
+        If reader.Read() Then
+            lastElectionID = Convert.ToInt32(reader("election_id"))
+        End If
+        reader.Close()
+
+        ' Use the last election_id value to filter rows in the candidate_register table
         cmd = New MySqlCommand("SELECT election_id, candidate_uid, name, ministry_name, agenda, status 
-                                FROM candidate_register
-                                JOIN users ON users.user_id = candidate_register.candidate_uid
-                                JOIN ministries ON ministries.ministry_id = candidate_register.ministry_id;", Con)
-        reader = cmd.ExecuteReader
+                        FROM candidate_register
+                        JOIN users ON users.user_id = candidate_register.candidate_uid
+                        JOIN ministries ON ministries.ministry_id = candidate_register.ministry_id
+                        WHERE election_id = @electionID;", Con)
+        cmd.Parameters.AddWithValue("@electionID", lastElectionID)
+        reader = cmd.ExecuteReader()
+
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
-
-        'Fill the DataTable with data from the SQL table
+        ' Fill the DataTable with data from the SQL table
         dataTable.Load(reader)
         reader.Close()
         Con.Close()
 
-        'IMP: Specify the Column Mappings from DataGridView to SQL Table
+        ' Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
         DataGridView1.Columns(0).DataPropertyName = "election_id"
         DataGridView1.Columns(1).DataPropertyName = "candidate_uid"
@@ -49,6 +61,7 @@ Public Class ElectionInnerScreenAdminNomination
 
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
+
     End Sub
 
     Private Sub ElectionInnerScreen1_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,91 +1,53 @@
 ﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
 Public Class ElectionInnerScreenAdminVotesTurnout
     Private Sub ElectionInnerScreen1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadandBindDataGridView()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
+    Private Sub LoadandBindDataGridView()
+        ''Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
 
-    End Sub
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
+        ' Retrieve the value of the election_id column from the last row of the election_time table
+        Dim lastElectionID As Integer = 0 ' Default value in case there are no rows in election_time
+        cmd = New MySqlCommand("SELECT election_id FROM election_time ORDER BY election_id DESC LIMIT 1;", Con)
+        reader = cmd.ExecuteReader()
+        If reader.Read() Then
+            lastElectionID = Convert.ToInt32(reader("election_id"))
+        End If
+        reader.Close()
 
-    End Sub
+        ' Use the last election_id value to filter rows in the candidate_register table
+        cmd = New MySqlCommand("SELECT ministries.ministry_name, votes_received 
+                                FROM turnout
+                                JOIN ministries ON ministries.ministry_id = turnout.ministry_id
+                                WHERE election_id = @electionID;", Con)
+        cmd.Parameters.AddWithValue("@electionID", lastElectionID)
+        reader = cmd.ExecuteReader()
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
+        ' Create a DataTable to store the data
+        Dim dataTable As New DataTable()
+        ' Fill the DataTable with data from the SQL table
+        dataTable.Load(reader)
+        reader.Close()
+        Con.Close()
 
-    End Sub
+        ' Specify the Column Mappings from DataGridView to SQL Table
+        DataGridView1.AutoGenerateColumns = False
+        DataGridView1.Columns(0).DataPropertyName = "ministry_name"
+        DataGridView1.Columns(1).DataPropertyName = "votes_received"
 
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
+        ' Bind the data to DataGridView
+        DataGridView1.DataSource = dataTable
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
