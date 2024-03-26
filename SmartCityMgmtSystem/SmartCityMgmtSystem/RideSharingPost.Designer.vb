@@ -44,7 +44,7 @@ Partial Class RideSharingPost
         Me.lbldt.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbldt.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_calender_301
         Me.lbldt.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.lbldt.Location = New System.Drawing.Point(297, 8)
+        Me.lbldt.Location = New System.Drawing.Point(297, 3)
         Me.lbldt.Name = "lbldt"
         Me.lbldt.Size = New System.Drawing.Size(231, 33)
         Me.lbldt.TabIndex = 7
@@ -57,7 +57,7 @@ Partial Class RideSharingPost
         Me.lblcapacity.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcapacity.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_group_30
         Me.lblcapacity.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.lblcapacity.Location = New System.Drawing.Point(297, 106)
+        Me.lblcapacity.Location = New System.Drawing.Point(302, 85)
         Me.lblcapacity.Name = "lblcapacity"
         Me.lblcapacity.Size = New System.Drawing.Size(158, 33)
         Me.lblcapacity.TabIndex = 6
@@ -69,7 +69,7 @@ Partial Class RideSharingPost
         Me.lblfare.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblfare.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_cash_30
         Me.lblfare.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.lblfare.Location = New System.Drawing.Point(117, 104)
+        Me.lblfare.Location = New System.Drawing.Point(121, 85)
         Me.lblfare.Name = "lblfare"
         Me.lblfare.Size = New System.Drawing.Size(158, 33)
         Me.lblfare.TabIndex = 5
@@ -81,11 +81,11 @@ Partial Class RideSharingPost
         Me.lblto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblto.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblto.Location = New System.Drawing.Point(372, 41)
+        Me.lblto.Location = New System.Drawing.Point(358, 32)
         Me.lblto.Name = "lblto"
-        Me.lblto.Size = New System.Drawing.Size(156, 64)
+        Me.lblto.Size = New System.Drawing.Size(170, 55)
         Me.lblto.TabIndex = 4
-        Me.lblto.Text = "      {To Place} "
+        Me.lblto.Text = "{To Place} "
         Me.lblto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label3
@@ -93,7 +93,7 @@ Partial Class RideSharingPost
         Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_arrow_30
-        Me.Label3.Location = New System.Drawing.Point(297, 54)
+        Me.Label3.Location = New System.Drawing.Point(283, 47)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(37, 33)
         Me.Label3.TabIndex = 3
@@ -103,9 +103,9 @@ Partial Class RideSharingPost
         '
         Me.lblfrom.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblfrom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblfrom.Location = New System.Drawing.Point(149, 44)
+        Me.lblfrom.Location = New System.Drawing.Point(153, 32)
         Me.lblfrom.Name = "lblfrom"
-        Me.lblfrom.Size = New System.Drawing.Size(152, 65)
+        Me.lblfrom.Size = New System.Drawing.Size(138, 59)
         Me.lblfrom.TabIndex = 2
         Me.lblfrom.Text = "{From Place} "
         Me.lblfrom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -115,7 +115,7 @@ Partial Class RideSharingPost
         Me.lblname.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblname.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_steering_wheel_301
         Me.lblname.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblname.Location = New System.Drawing.Point(117, 8)
+        Me.lblname.Location = New System.Drawing.Point(117, 4)
         Me.lblname.Name = "lblname"
         Me.lblname.Size = New System.Drawing.Size(174, 33)
         Me.lblname.TabIndex = 1
@@ -131,7 +131,7 @@ Partial Class RideSharingPost
         Me.picbox.Location = New System.Drawing.Point(9, 8)
         Me.picbox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.picbox.Name = "picbox"
-        Me.picbox.Size = New System.Drawing.Size(102, 124)
+        Me.picbox.Size = New System.Drawing.Size(102, 107)
         Me.picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picbox.TabIndex = 0
         Me.picbox.TabStop = False
@@ -147,14 +147,14 @@ Partial Class RideSharingPost
         Me.btnview.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnview.Location = New System.Drawing.Point(534, 0)
         Me.btnview.Name = "btnview"
-        Me.btnview.Size = New System.Drawing.Size(38, 141)
+        Me.btnview.Size = New System.Drawing.Size(38, 124)
         Me.btnview.TabIndex = 9
         Me.btnview.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_location_30
-        Me.PictureBox1.Location = New System.Drawing.Point(121, 60)
+        Me.PictureBox1.Location = New System.Drawing.Point(121, 47)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(26, 32)
         Me.PictureBox1.TabIndex = 10
@@ -163,7 +163,7 @@ Partial Class RideSharingPost
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_location_30
-        Me.PictureBox2.Location = New System.Drawing.Point(340, 55)
+        Me.PictureBox2.Location = New System.Drawing.Point(326, 47)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(26, 32)
         Me.PictureBox2.TabIndex = 11
@@ -188,7 +188,7 @@ Partial Class RideSharingPost
         Me.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "RideSharingPost"
-        Me.Size = New System.Drawing.Size(572, 141)
+        Me.Size = New System.Drawing.Size(572, 124)
         CType(Me.picbox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
