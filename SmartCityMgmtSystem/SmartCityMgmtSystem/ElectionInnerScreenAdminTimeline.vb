@@ -78,7 +78,7 @@ Public Class ElectionInnerScreenAdminTimeline
                 ' Execute query to count rows in election_time table
                 cmd = New MySqlCommand("SELECT COUNT(*) FROM election_time;", Con)
                 electionTimeRowCount = Convert.ToInt32(cmd.ExecuteScalar())
-                'MessageBox.Show("election time row count " & electionTimeRowCount)
+                MessageBox.Show("election time row count " & electionTimeRowCount)
 
                 If electionTimeRowCount > 0 Then
                     ' Get connection from globals
@@ -107,7 +107,7 @@ Public Class ElectionInnerScreenAdminTimeline
 
                                 ' Increment the electionTimeRowCount by 1 for the new ID
                                 Dim newID As Integer = electionTimeRowCount + 1
-                                Dim insertQuery As String = "INSERT INTO election_time VALUES (@electionID, @nomination_start, @nomination_end, @campaigning_start, @campaigning_end, @election, @results_announcement);"
+                                Dim insertQuery As String = "INSERT INTO election_time VALUES (@electionID, @nomination_start, @nomination_end, @campaigning_start, @campaigning_end, @election, @results_announcement, 0);"
 
                                 ' Create the command and set parameters
                                 cmd = New MySqlCommand(insertQuery, Con)
@@ -147,7 +147,37 @@ Public Class ElectionInnerScreenAdminTimeline
                     End Try
 
                     ' Now, resultsAnnouncement contains the value of the results_announcement column of the last row in the election_time table
+                Else
 
+                    MessageBox.Show("Came till here")
+                    Dim newID As Integer = electionTimeRowCount + 1
+                    Dim insertQuery As String = "INSERT INTO election_time VALUES (@electionID, @nomination_start, @nomination_end, @campaigning_start, @campaigning_end, @election, @results_announcement, 0);"
+
+                    ' Create the command and set parameters
+                    cmd = New MySqlCommand(insertQuery, Con)
+                    cmd.Parameters.AddWithValue("@electionID", newID)
+                    cmd.Parameters.AddWithValue("@nomination_start", nomination_start)
+                    cmd.Parameters.AddWithValue("@nomination_end", nomination_end)
+                    cmd.Parameters.AddWithValue("@campaigning_start", campaigning_start)
+                    cmd.Parameters.AddWithValue("@campaigning_end", campaigning_end)
+                    cmd.Parameters.AddWithValue("@election", election_date)
+                    cmd.Parameters.AddWithValue("@results_announcement", results_announcement)
+
+                    ' Execute the INSERT statement
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+
+
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("New election scheduled with ID: " & newID.ToString())
+                        Dim insertQuery1 As String = "INSERT INTO code_of_conduct VALUES (@electionID, @code_of_conduct_text);"
+                        cmd = New MySqlCommand(insertQuery1, Con)
+                        cmd.Parameters.AddWithValue("@electionID", newID)
+                        cmd.Parameters.AddWithValue("@code_of_conduct_text", "Code of Conduct hasn't been published yet. We are extremely sorry for the delay.")
+                        Dim rowsAffected1 As Integer = cmd.ExecuteNonQuery()
+                    Else
+                        MessageBox.Show("Failed to insert new row.")
+                    End If
                 End If
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

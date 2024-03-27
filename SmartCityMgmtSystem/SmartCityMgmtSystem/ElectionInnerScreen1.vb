@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 Public Class ElectionInnerScreen1
     Private Sub ElectionInnerScreen1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -133,7 +134,7 @@ Public Class ElectionInnerScreen1
         'Dim month As Integer = dt.Month
         'Dim day As Integer = dt.Day
         'Dim current_date As String = year.ToString + "-" + month.ToString + "-" + day.ToString
-        Dim current_date As String = "2024-03-03"
+        Dim current_date As String = "2024-03-02"
 
         Dim nominationStartDate As DateTime = DateTime.MinValue
         Dim nominationEndDate As DateTime = DateTime.MinValue
@@ -260,7 +261,57 @@ Public Class ElectionInnerScreen1
     End Sub
 
     Private Sub Panel10_Click(sender As Object, e As EventArgs) Handles Panel10.Click
-        Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenCitizenViolation)
+
+        ' Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
+        Dim announced As Integer
+
+        Try
+            Con.Open()
+
+
+            ' Retrieve the value of the election_id column from the last row of the election_time table
+            Dim electionID As Integer = 0 ' Default value in case there are no rows in election_time
+            cmd = New MySqlCommand("SELECT COUNT(*) AS count FROM election_time;", Con)
+            reader = cmd.ExecuteReader()
+            If reader.Read() Then
+                electionID = Convert.ToInt32(reader("count"))
+            End If
+            reader.Close()
+
+            If electionID = 0 Then
+                MessageBox.Show("No elections have been conducted yet.")
+                Exit Sub
+            End If
+
+            Dim query As String = "SELECT announced
+                                FROM election_time 
+                                WHERE election_id = @electionId;"
+            cmd = New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@electionId", electionId)
+            reader = cmd.ExecuteReader()
+            If reader.Read() Then
+                announced = Convert.ToInt32(reader("announced"))
+            End If
+            reader.Close()
+
+            If announced = 1 Then
+                MessageBox.Show("There are no active elections currently.")
+            Else
+                Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenCitizenViolation)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            ' Close the database connection
+            If Con.State = ConnectionState.Open Then
+                Con.Close()
+            End If
+        End Try
+
     End Sub
 
 End Class

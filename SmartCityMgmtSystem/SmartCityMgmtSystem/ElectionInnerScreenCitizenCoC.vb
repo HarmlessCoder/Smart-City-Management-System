@@ -17,7 +17,6 @@ Public Class ElectionInnerScreenCitizenCoC
             cmd = New MySqlCommand("SELECT COUNT(*) FROM election_time;", Con)
             electionId = Convert.ToInt32(cmd.ExecuteScalar())
 
-            electionId = 0
 
             If electionId = 0 Then
                 MessageBox.Show("No elections have been scheduled yet.")
