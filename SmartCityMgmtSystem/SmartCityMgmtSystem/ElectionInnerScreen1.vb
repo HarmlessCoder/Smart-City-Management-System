@@ -134,7 +134,7 @@ Public Class ElectionInnerScreen1
         'Dim month As Integer = dt.Month
         'Dim day As Integer = dt.Day
         'Dim current_date As String = year.ToString + "-" + month.ToString + "-" + day.ToString
-        Dim current_date As String = "2024-03-03"
+        Dim current_date As String = "2024-03-02"
 
         Dim nominationStartDate As DateTime = DateTime.MinValue
         Dim nominationEndDate As DateTime = DateTime.MinValue
