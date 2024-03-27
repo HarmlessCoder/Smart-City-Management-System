@@ -902,6 +902,12 @@
     <Compile Include="TransportTollPlaza.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Transport_EnterFee.Designer.vb">
+      <DependentUpon>Transport_EnterFee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transport_EnterFee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserBankDetails.Designer.vb">
       <DependentUpon>UserBankDetails.vb</DependentUpon>
     </Compile>
@@ -1332,6 +1338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransportTollPlaza.resx">
       <DependentUpon>TransportTollPlaza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transport_EnterFee.resx">
+      <DependentUpon>Transport_EnterFee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserBankDetails.resx">
       <DependentUpon>UserBankDetails.vb</DependentUpon>

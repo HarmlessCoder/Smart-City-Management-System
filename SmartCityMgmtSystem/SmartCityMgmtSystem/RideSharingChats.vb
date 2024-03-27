@@ -11,17 +11,19 @@ Public Class RideSharingChats
     Public VehicleNumber As String = ""
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        ' For checkbox column
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = DataGridView1.Columns("Approve").Index Then
-            ' Check if the clicked cell is in the "Approve" column
-            Dim cell As DataGridViewCheckBoxCell = TryCast(DataGridView1.Rows(e.RowIndex).Cells("Approve"), DataGridViewCheckBoxCell)
+        ' For checkbox column - only for poster - allow editing
+        If poster_uid = uid Then
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = DataGridView1.Columns("Approve").Index Then
+                ' Check if the clicked cell is in the "Approve" column
+                Dim cell As DataGridViewCheckBoxCell = TryCast(DataGridView1.Rows(e.RowIndex).Cells("Approve"), DataGridViewCheckBoxCell)
 
-            If cell IsNot Nothing Then
-                ' Manually toggle the checkbox value
-                If cell.Value = "added" Then
-                    cell.Value = "not-added"
-                Else
-                    cell.Value = "added"
+                If cell IsNot Nothing Then
+                    ' Manually toggle the checkbox value
+                    If cell.Value = "added" Then
+                        cell.Value = "not-added"
+                    Else
+                        cell.Value = "added"
+                    End If
                 End If
             End If
         End If
@@ -78,14 +80,13 @@ Public Class RideSharingChats
 
     Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView1.CellFormatting
         ' Check if the current cell belongs to the "fee_paid" column and the value is 0
-        If e.ColumnIndex = DataGridView1.Columns("Column2").Index AndAlso e.Value IsNot Nothing AndAlso e.Value.ToString() = "False" Then
+        If e.ColumnIndex = DataGridView1.Columns("Column2").Index AndAlso e.Value IsNot Nothing AndAlso e.Value.ToString() = "True" Then
             ' Set the cell value to "Paid"
             e.Value = "Yes"
-        ElseIf e.ColumnIndex = DataGridView1.Columns("Column2").Index AndAlso e.Value IsNot Nothing AndAlso e.Value.ToString() <> "False" Then
+        ElseIf e.ColumnIndex = DataGridView1.Columns("Column2").Index AndAlso e.Value IsNot Nothing AndAlso e.Value.ToString() <> "True" Then
             ' Set the cell value to "Not Paid"
             e.Value = "No"
         End If
-
     End Sub
     Private Sub LoadandBindDataGridView()
         'Get connection from globals
@@ -110,13 +111,9 @@ Public Class RideSharingChats
 
         'IMP: Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
-        'DataGridView1.Columns(0).DataPropertyName = "uid"
         DataGridView1.Columns(0).DataPropertyName = "name"
         DataGridView1.Columns(1).DataPropertyName = "fee_paid"
-        'Show this column only for the person who the poster
-        If poster_uid = uid Then
-            DataGridView1.Columns(2).DataPropertyName = "status"
-        End If
+        DataGridView1.Columns(2).DataPropertyName = "status"
 
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
@@ -130,15 +127,11 @@ Public Class RideSharingChats
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'For requester, show the approve button
         If poster_uid <> uid Then
-            DataGridView1.Columns("Approve").Visible = False
             Button3.Visible = False
-            DataGridView1.ReadOnly = True
             Button1.Visible = True
             ' For the poster of the post
         Else
-            DataGridView1.Columns("Approve").Visible = True
             Button3.Visible = True
-            DataGridView1.ReadOnly = False
             Button1.Visible = False
         End If
 
@@ -153,17 +146,30 @@ Public Class RideSharingChats
 
         ' Load Chats
         LoadChats()
-        'AddChat(u_name, 1, "13th March, 9:30PM", "Hey guys, pay the fee and then I will approve your requests", Nothing, False)
-        'AddChat("Shivam", 2, "13th March, 9:35PM", "Okay, But the fare is bit more, can you like reduce it please?", Nothing, True)
-        'AddChat("Adarsh", 3, "13th March, 9:36PM", "Yes,same concern", Nothing, True)
-        'AddChat(u_name, 4, "13th March, 9:40PM", "No, I can't do that, I have to pay the petrol fare", Nothing, False)
-        'AddChat("Shivam", 5, "13th March, 9:45PM", "Okay, I will pay the fare", Nothing, True)
-        'AddChat("Dhanesh", 6, "13th March, 9:46PM", "Okay, I will approve your request", Nothing, False)
-        'AddChat("Adarsh", 7, "13th March, 9:50PM", "Fine,But I have no more choice.", Nothing, True)
-        'AddChat(u_name, 8, "13th March, 9:55PM", "Okay, I will approve your request", Nothing, False)
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim dialogBox As New Transport_EnterFee()
+
+        ' Set the dialog box to be always on top
+        dialogBox.TopMost = True
+
+        ' Show the dialog box
+        Dim result As DialogResult = dialogBox.ShowDialog()
+
+        ' Process the result if needed
+        If result = DialogResult.OK Then
+
+            Dim query As String = "UPDATE ride_sharing_entries SET fare_per_person =" & dialogBox.NumericUpDown1.Value & " WHERE req_id=" & req_id & ";"
+            If Globals.ExecuteUpdateQuery(query) Then
+                MsgBox("Fare per person is updated to ₹" & dialogBox.NumericUpDown1.Value)
+            End If
+        End If
 
     End Sub
 End Class
