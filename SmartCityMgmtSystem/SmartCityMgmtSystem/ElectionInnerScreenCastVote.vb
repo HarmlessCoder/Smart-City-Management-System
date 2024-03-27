@@ -132,7 +132,7 @@ Public Class ElectionInnerScreenCastVote
             Dim parts() As String = selectedItem.Split("-"c) ' Split the selected item by the hyphen
             Dim selectedEntity1 As String = parts(0).Trim() ' Get the first entity
             Dim selectedEntity2 As String = parts(1).Trim() ' Get the second entity
-            'MessageBox.Show("Selected Entity1: " & selectedEntity1 & vbCrLf & "Selected Entity2: " & selectedEntity2
+            'MessageBox.Show("Selected Entity1: " & selectedEntity1 & vbCrLf & "Selected Entity2: " & selectedEntity2)
 
             Dim updateCandidateVotes As String = "UPDATE candidate_register SET votes = votes + 1 WHERE election_id = " & current_election_id & " AND candidate_uid = " & selectedEntity1 & ";"
             Dim updateTurnout As String = "UPDATE turnout SET votes_received = votes_received + 1 WHERE election_id = " & current_election_id & " AND ministry_id = 1;"
