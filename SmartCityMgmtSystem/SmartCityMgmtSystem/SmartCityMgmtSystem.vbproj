@@ -320,6 +320,12 @@
     <Compile Include="ElectionInnerScreenAdminViolation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenNominateNoElection.Designer.vb">
+      <DependentUpon>ElectionInnerScreenNominateNoElection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenNominateNoElection.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="hc_B_Appointment.Designer.vb">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>
     </Compile>
@@ -1047,6 +1053,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenAdminViolation.resx">
       <DependentUpon>ElectionInnerScreenAdminViolation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenNominateNoElection.resx">
+      <DependentUpon>ElectionInnerScreenNominateNoElection.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hc_B_Appointment.resx">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>

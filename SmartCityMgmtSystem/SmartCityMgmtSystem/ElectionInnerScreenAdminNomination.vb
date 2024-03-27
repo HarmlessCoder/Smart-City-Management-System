@@ -4,6 +4,8 @@ Imports MySql.Data.MySqlClient
 Imports System.Collections.Generic
 Imports Google.Protobuf.WellKnownTypes
 Imports System.Text.RegularExpressions
+Imports System.Diagnostics.Eventing
+Imports System.Threading
 
 
 Public Class ElectionInnerScreenAdminNomination
@@ -113,26 +115,105 @@ Public Class ElectionInnerScreenAdminNomination
 
         LoadandBindDataGridView()
 
-
     End Sub
+
+
+    Private Function AreDatesIncreasing(dates() As String) As Boolean
+        ' Iterate through the array starting from the second element
+        For i As Integer = 1 To dates.Length - 1
+            ' Convert the current and previous dates to Date objects for comparison
+            Dim currentDate As Date
+            Dim previousDate As Date
+            If Date.TryParse(dates(i), currentDate) AndAlso Date.TryParse(dates(i - 1), previousDate) Then
+                ' Check if the current date is less than or equal to the previous date
+                If currentDate <= previousDate Then
+                    ' If not, return false
+                    Return False
+                End If
+            Else
+                ' If any date parsing fails, return false
+                Return False
+            End If
+        Next
+
+        ' If all dates are in increasing order, return true
+        Return True
+    End Function
+
+    Private Function isItPastElection()
+
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim cmd As MySqlCommand
+
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+
+        ' You can access the selected date and time like this:
+        'Dim dt As DateTime = DateTime.Now
+        'Dim year As Integer = dt.Year
+        'Dim month As Integer = dt.Month
+        'Dim day As Integer = dt.Day
+        'Dim current_date As String = year.ToString + "-" + month.ToString + "-" + day.ToString
+        Dim current_date As String = "2024-03-04"
+
+        Dim resultAnnouncementDate As DateTime = DateTime.MinValue
+
+        ' Retrieve the value of nomination_start from the last row of the election_time table
+        Dim selectQuery As String = "SELECT campaigning_start FROM election_time ORDER BY election_id DESC LIMIT 1;"
+        cmd = New MySqlCommand(selectQuery, Con)
+        Dim result As Object = cmd.ExecuteScalar()
+
+        ' Check if the result is not null and assign it to nominationStartDate
+        If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+            resultAnnouncementDate = Convert.ToDateTime(result)
+        End If
+
+        Dim dates() As String = {current_date, resultAnnouncementDate}
+
+        Dim canwe As Boolean = AreDatesIncreasing(dates)
+
+        MessageBox.Show(canwe)
+        'If canwe Then
+        'Else
+        '    If DataGridView1.Columns.Contains("Status") Then
+        '        DataGridView1.Columns("Status").ReadOnly = True
+        '    End If
+        'End If
+
+        Return canwe
+    End Function
 
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
         ' Check if the value changed in the ComboBox column and it's not a header row
         If e.ColumnIndex = 5 AndAlso e.RowIndex <> -1 Then
-            Dim selectedValue As String = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value.ToString()
-            ' You can perform any other actions here based on the changed value
-            Dim Con = Globals.GetDBConnection()
-            Dim reader As MySqlDataReader
-            Dim cmd As MySqlCommand
 
-            Try
-                Con.Open()
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+            Dim canwe As Boolean = isItPastElection()
 
-            cmd = New MySqlCommand("UPDATE candidate_register SET status = " + """" + selectedValue + """" + " WHERE election_id = " & DataGridView1.Rows(e.RowIndex).Cells(0).Value & " AND candidate_uid = " & DataGridView1.Rows(e.RowIndex).Cells(1).Value & ";", Con)
-            reader = cmd.ExecuteReader
+            If canwe Then
+                Dim selectedValue As String = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value.ToString()
+                ' You can perform any other actions here based on the changed value
+                Dim Con = Globals.GetDBConnection()
+                Dim reader As MySqlDataReader
+                Dim cmd As MySqlCommand
+
+                Try
+                    Con.Open()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+
+                cmd = New MySqlCommand("UPDATE candidate_register SET status = " + """" + selectedValue + """" + " WHERE election_id = " & DataGridView1.Rows(e.RowIndex).Cells(0).Value & " AND candidate_uid = " & DataGridView1.Rows(e.RowIndex).Cells(1).Value & ";", Con)
+                reader = cmd.ExecuteReader
+
+            Else
+                MessageBox.Show("It's past the nomination time. Any changes will not be saved.")
+            End If
+
 
         End If
     End Sub
@@ -145,24 +226,45 @@ Public Class ElectionInnerScreenAdminNomination
         Dim selectedValue1 As Object = ComboBox1.SelectedItem
         Dim selectedValue2 As Object = ComboBox2.SelectedItem
 
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
+
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        ' Retrieve the value of the election_id column from the last row of the election_time table
+        Dim lastElectionID As Integer = -1 ' Default value in case there are no rows in election_time
+        cmd = New MySqlCommand("SELECT election_id FROM election_time ORDER BY election_id DESC LIMIT 1;", Con)
+        reader = cmd.ExecuteReader()
+        If reader.Read() Then
+            lastElectionID = Convert.ToInt32(reader("election_id"))
+        End If
+        reader.Close()
+
         If selectedValue1 Is Nothing And selectedValue2 IsNot Nothing Then
             Dim status As String = selectedValue2.ToString()
             'Get connection from globals
-            Dim Con = Globals.GetDBConnection()
-            Dim reader As MySqlDataReader
-            Dim cmd As MySqlCommand
+            'Dim Con = Globals.GetDBConnection()
+            'Dim reader As MySqlDataReader
+            'Dim cmd As MySqlCommand
 
-            Try
-                Con.Open()
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+            'Try
+            '    Con.Open()
+            'Catch ex As Exception
+            '    MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'End Try
 
             cmd = New MySqlCommand("SELECT election_id, candidate_uid, name, ministry_name, agenda, status 
                                     FROM candidate_register
                                     JOIN users ON users.user_id = candidate_register.candidate_uid
                                     JOIN ministries ON ministries.ministry_id = candidate_register.ministry_id
-                                    WHERE status = """ + status + """;", Con)
+                                    WHERE status = """ + status + " and election_id = @electionID;"";", Con)
+            cmd.Parameters.AddWithValue("@electionID", lastElectionID)
             reader = cmd.ExecuteReader
             ' Create a DataTable to store the data
             Dim dataTable As New DataTable()
@@ -185,22 +287,23 @@ Public Class ElectionInnerScreenAdminNomination
             DataGridView1.DataSource = dataTable
         ElseIf selectedValue1 IsNot Nothing And selectedValue2 Is Nothing Then
             Dim position As String = selectedValue1.ToString()
-            'Get connection from globals
-            Dim Con = Globals.GetDBConnection()
-            Dim reader As MySqlDataReader
-            Dim cmd As MySqlCommand
+            ''Get connection from globals
+            'Dim Con = Globals.GetDBConnection()
+            'Dim reader As MySqlDataReader
+            'Dim cmd As MySqlCommand
 
-            Try
-                Con.Open()
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+            'Try
+            '    Con.Open()
+            'Catch ex As Exception
+            '    MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'End Try
 
             cmd = New MySqlCommand("SELECT election_id, candidate_uid, name, ministry_name, agenda, status 
                                     FROM candidate_register
                                     JOIN users ON users.user_id = candidate_register.candidate_uid
                                     JOIN ministries ON ministries.ministry_id = candidate_register.ministry_id
-                                    WHERE ministries.ministry_id = " & ministryToId(position) & ";", Con)
+                                    WHERE ministries.ministry_id = " & ministryToId(position) & " AND election_id = @electionID;", Con)
+            cmd.Parameters.AddWithValue("@electionID", lastElectionID)
             reader = cmd.ExecuteReader
             ' Create a DataTable to store the data
             Dim dataTable As New DataTable()
@@ -225,22 +328,23 @@ Public Class ElectionInnerScreenAdminNomination
             Dim status As String = selectedValue2.ToString()
             Dim position As String = selectedValue1.ToString()
 
-            'Get connection from globals
-            Dim Con = Globals.GetDBConnection()
-            Dim reader As MySqlDataReader
-            Dim cmd As MySqlCommand
+            ''Get connection from globals
+            'Dim Con = Globals.GetDBConnection()
+            'Dim reader As MySqlDataReader
+            'Dim cmd As MySqlCommand
 
-            Try
-                Con.Open()
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+            'Try
+            '    Con.Open()
+            'Catch ex As Exception
+            '    MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'End Try
 
             cmd = New MySqlCommand("SELECT election_id, candidate_uid, name, ministry_name, agenda, status 
                                     FROM candidate_register
                                     JOIN users ON users.user_id = candidate_register.candidate_uid
                                     JOIN ministries ON ministries.ministry_id = candidate_register.ministry_id
-                                    WHERE status = """ + status + """ AND " + "ministries.ministry_id = " & ministryToId(position) & ";", Con)
+                                    WHERE status = """ + status + """ AND " + "ministries.ministry_id = " & ministryToId(position) & " AND election_id = @electionID;", Con)
+            cmd.Parameters.AddWithValue("@electionID", lastElectionID)
             reader = cmd.ExecuteReader
             ' Create a DataTable to store the data
             Dim dataTable As New DataTable()
