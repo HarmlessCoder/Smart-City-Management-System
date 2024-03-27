@@ -106,7 +106,7 @@ Public Class RideSharingChats
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-        cmd = New MySqlCommand("SELECT rs.uid,users.name,rs.fee_paid,rs.status FROM ride_sharing_chats rs JOIN users ON users.user_id = rs.uid WHERE rs.role = 1 AND rs.req_id = " & req_id & ";", Con)
+        cmd = New MySqlCommand("SELECT DISTINCT rs.uid,users.name,rs.fee_paid,rs.status FROM ride_sharing_chats rs JOIN users ON users.user_id = rs.uid WHERE rs.role = 1 AND rs.req_id = " & req_id & ";", Con)
         reader = cmd.ExecuteReader
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
@@ -193,5 +193,25 @@ Public Class RideSharingChats
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         LoadChats()
+        LoadandBindDataGridView()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        'Pay or withdraw fees
+        If Button1.Text = "Pay" Then
+            Dim query As String = "UPDATE ride_sharing_chats SET fee_paid = 1 WHERE req_id = " & req_id & " AND uid = " & uid & ";"
+            If Globals.ExecuteUpdateQuery(query) Then
+                MsgBox("Fee Paid Successfully")
+                LoadandBindDataGridView()
+                Button1.Text = "Withdraw"
+            End If
+        Else
+            Dim query As String = "UPDATE ride_sharing_chats SET fee_paid = 0 WHERE req_id = " & req_id & " AND uid = " & uid & ";"
+            If Globals.ExecuteUpdateQuery(query) Then
+                MsgBox("Fee Payment Withdrawn")
+                LoadandBindDataGridView()
+                Button1.Text = "Pay"
+            End If
+        End If
     End Sub
 End Class
