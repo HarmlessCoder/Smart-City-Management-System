@@ -1,5 +1,6 @@
 ﻿Imports System.Configuration
 Imports System.Data.SqlClient
+Imports System.Threading
 Imports MySql.Data.MySqlClient
 Public Class RideSharingChats
     'To pass information from the parent form in form of property
@@ -9,6 +10,7 @@ Public Class RideSharingChats
     Public Property req_id As Integer = 1
     Public DriverNote As String = ""
     Public VehicleNumber As String = ""
+
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' For checkbox column - only for poster - allow editing
@@ -47,13 +49,15 @@ Public Class RideSharingChats
         PostsPanel.Controls.Add(ChatBubble)
     End Sub
 
+
     Private Sub LoadChats()
+
         'Clear all chats
         PostsPanel.Controls.Clear()
         Dim query As String = "SELECT rs.post_id, rs.uid, users.name, rs.time_stamp, rs.msg
-                                FROM ride_sharing_chats rs
-                                JOIN users ON users.user_id = rs.uid
-                                WHERE rs.req_id = " & req_id.ToString() & ";"
+                        FROM ride_sharing_chats rs
+                        JOIN users ON users.user_id = rs.uid
+                        WHERE rs.req_id = " & req_id.ToString() & ";"
         Using connection As New MySqlConnection(Globals.getdbConnectionString())
             Using command As New MySqlCommand(query, connection)
                 connection.Open()
@@ -69,7 +73,8 @@ Public Class RideSharingChats
                         Dim timeStamp As String = Convert.ToDateTime(reader("time_stamp")).ToString("dd MMM yy, hh:mm tt") 'Like 12 March 24,08:45PM
                         Dim message As String = reader("msg").ToString()
                         Dim postNum As Integer = Convert.ToInt32(reader("post_id"))
-                        'Add to PostsPanel
+
+                        'Add Chat
                         AddChat(userName, postNum, timeStamp, message, Nothing, role) 'role = 0 for sender, 1 for receiver
                     End While
 
@@ -77,6 +82,8 @@ Public Class RideSharingChats
             End Using
         End Using
     End Sub
+
+
 
     Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView1.CellFormatting
         ' Check if the current cell belongs to the "fee_paid" column and the value is 0
@@ -148,16 +155,15 @@ Public Class RideSharingChats
         LoadChats()
 
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim dialogBox As New Transport_EnterFee()
-
         ' Set the dialog box to be always on top
-        dialogBox.TopMost = True
+        Dim dialogBox As New Transport_EnterFee With {
+            .TopMost = True
+        }
 
         ' Show the dialog box
         Dim result As DialogResult = dialogBox.ShowDialog()
@@ -171,5 +177,21 @@ Public Class RideSharingChats
             End If
         End If
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
+        Dim comment As String = RichTextBox1.Text
+        RichTextBox1.Clear()
+        Dim role As Boolean = (poster_uid = uid)
+        Dim currentTimestamp As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        Dim query As String = "INSERT INTO ride_sharing_chats (req_id,uid,msg,time_stamp,role) VALUES (" & req_id & "," & uid & ",'" & comment & "','" & currentTimestamp & "'," & If(role, 0, 1) & ");"
+        If Globals.ExecuteInsertQuery(query) Then
+            LoadChats()
+        End If
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        LoadChats()
     End Sub
 End Class

@@ -27,7 +27,7 @@ Public Class Globals
                 conn.Open()
                 Using cmd As MySqlCommand = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("Row deleted successfully.", "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'MessageBox.Show("Deleted successfully.", "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return True
                 End Using
             Catch ex As Exception
@@ -45,7 +45,7 @@ Public Class Globals
                 conn.Open()
                 Using cmd As MySqlCommand = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("Row updated successfully.", "Update Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'MessageBox.Show("Updated successfully.", "Update Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return True
                 End Using
             Catch ex As Exception
@@ -64,7 +64,7 @@ Public Class Globals
                 conn.Open()
                 Using cmd As MySqlCommand = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("Row Insert successfully.", "Insert Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'MessageBox.Show("Inserted successfully.", "Insert Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return True
                 End Using
             Catch ex As Exception
