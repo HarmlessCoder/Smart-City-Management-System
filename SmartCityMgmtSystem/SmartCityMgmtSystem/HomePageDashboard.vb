@@ -29,7 +29,8 @@ Public Class HomePageDashboard
     End Sub
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         'View the TransportationAdminHome screen by default - first argument, name of the panel in the parent panel, second - name of the child form
-        Globals.viewChildFormAndClose(childformPanel, HomePage, Me)
+        Dim HomePageForm As New HomePage()
+        Globals.viewChildForm(childformPanel, HomePageForm)
     End Sub
 
     Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click

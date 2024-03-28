@@ -1,10 +1,11 @@
 ﻿Public Class RideSharingPost
-    Private VehicleNumber As String
-    Private DriverNote As String
-    Private uid As Integer
-    Private u_name As String
-    Private rs_entry As String
-    Private uid_poster As Integer
+    Private VehicleNumber As String = "AS-01-2022"
+    Private DriverNote As String = ""
+    Private uid As Integer = 1
+    Private u_name As String = "Dhanesh"
+    Private rs_entry As String = 1
+    Private uid_poster As Integer = 1
+    Private rs_capacity As Integer = 1
     Public Sub SetDetails(name As String,
                            Optional datetime As String = "",
                            Optional fromPlace As String = "",
@@ -19,6 +20,7 @@
         lblto.Text = toPlace
         lblfare.Text = "       ₹" & fare
         lblcapacity.Text = "       " & capacity
+        rs_capacity = capacity
 
         ' Set the picture box
         If image IsNot Nothing Then
@@ -33,6 +35,7 @@
         uid = _uid
         uid_poster = poster_uid
         u_name = uname
+
     End Sub
     'To open the chats for that
     Private Sub btnview_Click(sender As Object, e As EventArgs) Handles btnview.Click
@@ -48,10 +51,12 @@
             modal.BackColor = Color.Black
             modal.Width = TransportationDashboard.Width
             modal.Height = TransportationDashboard.Height
+            modal.WindowState = FormWindowState.Maximized
             modal.Show()
             modal.Owner = chatForm
             'Pass the required details to the RideSharingChats Form
             RideSharingChats.uid = uid
+            RideSharingChats.capacity = rs_capacity
             RideSharingChats.u_name = u_name
             RideSharingChats.req_id = rs_entry
             RideSharingChats.poster_uid = uid_poster

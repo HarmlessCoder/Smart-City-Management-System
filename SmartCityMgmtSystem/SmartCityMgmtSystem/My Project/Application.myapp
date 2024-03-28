@@ -3,9 +3,10 @@
   <MySubMain>true</MySubMain>
   <MainForm>UserLandingPage</MainForm>
   <SingleInstance>true</SingleInstance>
-  <ShutdownMode>0</ShutdownMode>
+  <ShutdownMode>1</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>
   <AuthenticationMode>0</AuthenticationMode>
+  <MinimumSplashScreenDisplayTime>0</MinimumSplashScreenDisplayTime>
   <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
   <HighDpiMpde>false</HighDpiMpde>
 </MyApplicationData>

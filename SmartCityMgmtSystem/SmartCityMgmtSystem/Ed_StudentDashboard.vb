@@ -1,6 +1,7 @@
 ﻿Public Class Ed_StudentDashboard
     Private Sub PictureButtonvb1_Click(sender As Object, e As EventArgs) Handles PictureButtonvb1.Click
         ' Replace with your desired functionality
+        Ed_GlobalDashboard.innerpanel = Ed_Stud_Coursera.childformPanel
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_Coursera)
     End Sub
 
@@ -16,6 +17,7 @@
 
     Private Sub PictureButtonvb2_Click(sender As Object, e As EventArgs) Handles PictureButtonvb2.Click
         ' Replace with your desired functionality
+        Ed_GlobalDashboard.innerpanel = Ed_Stud_Moodle.childformPanel
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_Moodle)
     End Sub
 
@@ -31,6 +33,7 @@
 
     Private Sub PictureButtonvb3_Click(sender As Object, e As EventArgs) Handles PictureButtonvb3.Click
         ' Replace with your desired functionality
+        Ed_GlobalDashboard.innerpanel = Ed_Stud_Institute.childformPanel
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_Institute)
     End Sub
 
@@ -46,6 +49,7 @@
 
     Private Sub PictureButtonvb4_Click(sender As Object, e As EventArgs) Handles PictureButtonvb4.Click
         ' Replace with your desired functionality
+        Ed_GlobalDashboard.innerpanel = Ed_Stud_EntranceExam.childformPanel
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Stud_EntranceExam)
     End Sub
 
@@ -61,5 +65,9 @@
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_RoleSelect)
+    End Sub
+
+    Private Sub Ed_StudentDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label2.Text = Ed_GlobalDashboard.Ed_Profile.Ed_Name
     End Sub
 End Class

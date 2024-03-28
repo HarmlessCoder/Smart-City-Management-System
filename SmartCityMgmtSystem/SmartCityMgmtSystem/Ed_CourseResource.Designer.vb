@@ -24,27 +24,42 @@ Partial Class Ed_CourseResource
     Private Sub InitializeComponent()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(25, 134)
+        Me.WebBrowser1.Location = New System.Drawing.Point(33, 87)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(620, 570)
+        Me.WebBrowser1.Size = New System.Drawing.Size(1213, 392)
         Me.WebBrowser1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(33, 76)
+        Me.Label1.Location = New System.Drawing.Point(391, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(640, 43)
+        Me.Label1.Size = New System.Drawing.Size(542, 43)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "{ Resource Name }"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Cascadia Mono", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(958, 38)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(288, 43)
+        Me.Button2.TabIndex = 32
+        Me.Button2.Text = "Mark as Completed"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button6
         '
@@ -66,19 +81,26 @@ Partial Class Ed_CourseResource
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(652, 134)
+        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.RichTextBox1.Location = New System.Drawing.Point(33, 517)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(594, 570)
-        Me.RichTextBox1.TabIndex = 9
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(1213, 193)
+        Me.RichTextBox1.TabIndex = 37
         Me.RichTextBox1.Text = ""
         '
         'Ed_CourseResource
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1270, 736)
         Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.WebBrowser1)
@@ -94,5 +116,6 @@ Partial Class Ed_CourseResource
     Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents Label1 As Label
     Friend WithEvents Button6 As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
 End Class

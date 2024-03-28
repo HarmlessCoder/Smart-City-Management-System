@@ -134,7 +134,7 @@ Partial Class UserLandingPage
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.childformPanel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.Name = "UserLandingPage"

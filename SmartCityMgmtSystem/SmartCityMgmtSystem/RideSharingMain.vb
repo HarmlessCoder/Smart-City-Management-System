@@ -76,6 +76,9 @@ Public Class RideSharingMain
     End Sub
 
     Private Sub AddPost(name As String,
+                        poster_uid As Integer,
+                        vehicleNum As String,
+                        note As String,
                         Optional datetime As String = "",
                         Optional fromPlace As String = "",
                         Optional toPlace As String = "",
@@ -90,6 +93,7 @@ Public Class RideSharingMain
             .Width = 595
         End With
         RidePost.SetDetails(name, datetime, fromPlace, toPlace, fare, capacity, image)
+        RidePost.SetAuxillaryDetails(uid, poster_uid, u_name, postNum, vehicleNum, note)
         PostsPanel.Controls.Add(RidePost)
     End Sub
 
@@ -140,7 +144,16 @@ Public Class RideSharingMain
         LoadandBindDataGridView()
 
     End Sub
-
+    Private Sub ClearAddRidePost()
+        DateTimePicker1.Value = DateTime.Today
+        DateTimePicker2.Value = DateTime.Now
+        ComboBox1.SelectedIndex = -1
+        ComboBox2.SelectedIndex = -1
+        ComboBox3.SelectedIndex = -1
+        NumericUpDown1.Value = NumericUpDown1.Minimum
+        NumericUpDown2.Value = NumericUpDown2.Minimum
+        RichTextBox1.Clear() ' Clear the rich text box
+    End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If Button3.Text = "Add" Then
             Dim selectedDate As Date = DateTimePicker1.Value.Date
@@ -160,10 +173,18 @@ Public Class RideSharingMain
                 Dim note As String = RichTextBox1.Text
                 Dim selectedVehicleId As String = ComboBox3.SelectedItem.ToString()
                 Dim insertQuery As String = "INSERT INTO ride_sharing_entries (uid, vehicle_id, src_id, dest_id, start_datetime, fare_per_person, capacity, note) VALUES (" & uid & ", '" & selectedVehicleId & "', " & fromPlace & ", " & toPlace & ", '" & combinedDateTime.ToString("yyyy-MM-dd HH:mm:ss") & "', " & fare & ", " & capacity & ", '" & note & "');"
-                Dim success As Boolean = Globals.ExecuteInsertQuery(insertQuery)
-                If success Then
-                    'Load the new posts
+                Dim req_ID As Integer = Globals.ExecuteInsertQueryAndReturnID(insertQuery)
+                If req_ID > 0 Then
+                    'Load the new posts and refresh the track posts datagridview
+                    If Not RideSharingChats.CheckIfUidExists(uid, req_ID) Then
+                        insertQuery = "INSERT into ridesharing_chats_users (req_id,uid,role,status,fee_paid) VALUES (" & req_ID & "," & uid & ",0,'added',1);"
+                        If Globals.ExecuteInsertQuery(insertQuery) Then
+                            MessageBox.Show("Your post has been added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            ClearAddRidePost()
+                        End If
+                    End If
                     LoadPosts()
+                    LoadandBindDataGridView()
                 End If
             End If
         End If
@@ -172,7 +193,7 @@ Public Class RideSharingMain
     Private Sub LoadPosts()
         ' Clear existing posts
         PostsPanel.Controls.Clear()
-        Dim query As String = "SELECT rs.req_id, users.name, rs.vehicle_id, rs.capacity, rs.fare_per_person, CONCAT(DATE_FORMAT(rs.start_datetime, '%d-%m-%Y'), ', ', DATE_FORMAT(rs.start_datetime, '%h:%i %p')) AS start_datetime, src.place_name AS src, dest.place_name AS dest FROM ride_sharing_entries rs JOIN placedb src ON rs.src_id = src.id JOIN placedb dest ON rs.dest_id = dest.id JOIN users ON users.user_id = rs.uid WHERE rs.status='approved';"
+        Dim query As String = "SELECT rs.req_id, rs.uid, users.name, rs.vehicle_id, rs.capacity, rs.note, rs.fare_per_person, CONCAT(DATE_FORMAT(rs.start_datetime, '%d-%m-%Y'), ', ', DATE_FORMAT(rs.start_datetime, '%h:%i %p')) AS start_datetime, src.place_name AS src, dest.place_name AS dest FROM ride_sharing_entries rs JOIN placedb src ON rs.src_id = src.id JOIN placedb dest ON rs.dest_id = dest.id JOIN users ON users.user_id = rs.uid WHERE rs.status='approved' ORDER BY rs.start_datetime ASC;"
         Using connection As New MySqlConnection(Globals.getdbConnectionString())
             Using command As New MySqlCommand(query, connection)
                 connection.Open()
@@ -183,15 +204,17 @@ Public Class RideSharingMain
                     While reader.Read()
                         ' Access columns by name or index
                         Dim reqId As Integer = Convert.ToInt32(reader("req_id"))
+                        Dim poster_uid As Integer = Convert.ToInt32(reader("uid"))
                         Dim userName As String = reader("name").ToString()
                         Dim vehicleId As String = reader("vehicle_id")
                         Dim capacity As Integer = Convert.ToInt32(reader("capacity"))
                         Dim farePerPerson As Integer = Convert.ToInt32(reader("fare_per_person"))
                         Dim startDatetime As String = reader("start_datetime").ToString()
                         Dim src As String = reader("src").ToString()
+                        Dim note As String = reader("note").ToString()
                         Dim dest As String = reader("dest").ToString()
                         'Add to PostsPanel
-                        AddPost(userName, startDatetime, src, dest, farePerPerson, capacity, reqId, Nothing)
+                        AddPost(userName, poster_uid, vehicleId, note, startDatetime, src, dest, farePerPerson, capacity, reqId, Nothing)
                     End While
 
                 End Using
@@ -218,5 +241,36 @@ Public Class RideSharingMain
         If selectedPlace1 IsNot Nothing AndAlso selectedPlace2 IsNot Nothing AndAlso selectedPlace1.ID = selectedPlace2.ID Then
             ComboBox1.SelectedIndex = -1 ' Clear selection from ComboBox1
         End If
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        LoadandBindDataGridView()
+        LoadPosts()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        ' Check if the clicked column is the "DeleteBut" column
+        If e.ColumnIndex = DataGridView1.Columns("DeleteBut").Index AndAlso e.RowIndex >= 0 Then
+            ' Show a confirmation dialog
+            Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this post?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            ' If the user clicks Yes, proceed with the deletion
+            If result = DialogResult.Yes Then
+                ' Delete the entry from the database
+                Dim req_id As Integer = Convert.ToInt32(DataGridView1.Rows(e.RowIndex).Cells("Column5").Value)
+                Dim query As String = "DELETE FROM ride_sharing_entries WHERE req_id = " & req_id & ";"
+
+                If Globals.ExecuteDeleteQuery(query) Then
+                    MessageBox.Show("Post deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    LoadandBindDataGridView()
+                    LoadPosts()
+                End If
+            End If
+        End If
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ClearAddRidePost()
     End Sub
 End Class

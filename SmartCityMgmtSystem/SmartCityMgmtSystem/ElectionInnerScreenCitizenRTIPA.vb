@@ -1,79 +1,57 @@
 ﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
+Imports SmartCityMgmtSystem.ElectionInnerScreenCitizenRTI
 Public Class ElectionInnerScreenCitizenRTIPA
+
+    Dim instance As New ProfileClass()
     Private Sub ElectionInnerScreen1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DataGridView1.Columns(0).DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DataGridView1.Columns(1).DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DataGridView1.Columns(2).DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DataGridView1.Columns(3).DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DataGridView1.Columns(4).DefaultCellStyle.WrapMode = DataGridViewTriState.True
 
+        instance.UID = 10 ' Setting the value
+        Dim value As Integer = instance.UID ' Getting the
+        LoadandBindDataGridView()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
+    Private Sub LoadandBindDataGridView()
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
 
-    End Sub
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
+        cmd = New MySqlCommand("SELECT query_id, ministry_name, query, status, response
+                                FROM rti_queries_table
+                                JOIN ministries ON ministries.ministry_id = rti_queries_table.ministry
+                                WHERE citizen_uid = " & instance.UID & ";", Con)
+        reader = cmd.ExecuteReader()
 
-    End Sub
+        ' Create a DataTable to store the data
+        Dim dataTable As New DataTable()
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
+        'Fill the DataTable with data from the SQL table
+        dataTable.Load(reader)
+        reader.Close()
+        Con.Close()
 
-    End Sub
+        'IMP: Specify the Column Mappings from DataGridView to SQL Table
+        DataGridView1.AutoGenerateColumns = False
+        DataGridView1.Columns(0).DataPropertyName = "query_id"
+        DataGridView1.Columns(1).DataPropertyName = "ministry_name"
+        DataGridView1.Columns(2).DataPropertyName = "query"
+        DataGridView1.Columns(3).DataPropertyName = "status"
+        DataGridView1.Columns(4).DataPropertyName = "response"
 
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs)
-
+        ' Bind the data to DataGridView
+        DataGridView1.DataSource = dataTable
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
