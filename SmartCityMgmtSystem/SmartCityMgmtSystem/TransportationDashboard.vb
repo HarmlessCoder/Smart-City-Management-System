@@ -8,9 +8,11 @@
     Private transportTollPlaza As TransportTollPlaza = Nothing
     Private transportdrivingLicenseReq As TransportDrivingLicenseReq = Nothing
     Private transportVehicleRegReq As TransportVehicleRegReq = Nothing
+    Private transportEnterTG As TransportTGEnter = Nothing
 
     Private Sub TransportationDashboard_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
+        Label2.Text = u_name
+        Label3.Text = "Unique Identification No: " & uid
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
@@ -69,5 +71,17 @@
         transportdrivingLicenseReq?.Dispose()
         transportVehicleRegReq?.Dispose()
         rideSharingMainForm?.Dispose()
+        transportEnterTG?.Dispose()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        'View Enter TG Screen
+        transportEnterTG?.Dispose()
+        transportEnterTG = New TransportTGEnter()
+        Globals.viewChildForm(childformPanel, transportEnterTG)
     End Sub
 End Class
