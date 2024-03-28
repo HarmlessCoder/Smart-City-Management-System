@@ -16,6 +16,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,7 +29,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -68,6 +68,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -140,6 +143,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="BankingCreateAccount.Designer.vb">
       <DependentUpon>BankingCreateAccount.vb</DependentUpon>
     </Compile>
@@ -230,6 +234,7 @@
     <Compile Include="Ed_Inst_FeeDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_LoginHandle.vb" />
     <Compile Include="Ed_ManageECourse.Designer.vb">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </Compile>
@@ -265,6 +270,12 @@
     </Compile>
     <Compile Include="Ed_Moodle_CourseResource.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_ResourceLinkItem.Designer.vb">
+      <DependentUpon>Ed_ResourceLinkItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ResourceLinkItem.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ed_Stud_MyCourses.Designer.vb">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
@@ -1039,6 +1050,9 @@
     <EmbeddedResource Include="Ed_Moodle_CourseResource.resx">
       <DependentUpon>Ed_Moodle_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ResourceLinkItem.resx">
+      <DependentUpon>Ed_ResourceLinkItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </EmbeddedResource>
@@ -1384,6 +1398,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -1806,6 +1821,7 @@
     <None Include="Resources\iconBankAccountProfile.png" />
     <None Include="Resources\icon-paybills.png" />
     <None Include="Resources\bus_default.png" />
+    <None Include="Resources\ed_course_resource.png" />
     <Content Include="Resources\icons8-car-100.png" />
     <None Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-car-1001.png" />
