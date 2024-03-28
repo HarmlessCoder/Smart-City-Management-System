@@ -30,10 +30,14 @@ Partial Class Ed_Moodle_CourseResource
         '
         'RichTextBox1
         '
+        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Location = New System.Drawing.Point(122, 389)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.RichTextBox1.Location = New System.Drawing.Point(132, 494)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(730, 326)
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(719, 221)
         Me.RichTextBox1.TabIndex = 36
         Me.RichTextBox1.Text = ""
         '
@@ -59,18 +63,19 @@ Partial Class Ed_Moodle_CourseResource
         '
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(12, 83)
+        Me.Label1.Location = New System.Drawing.Point(274, 74)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(463, 43)
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "{ Resource Name }"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 129)
+        Me.WebBrowser1.Location = New System.Drawing.Point(132, 120)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(970, 245)
+        Me.WebBrowser1.Size = New System.Drawing.Size(719, 353)
         Me.WebBrowser1.TabIndex = 33
         '
         'Ed_Moodle_CourseResource
