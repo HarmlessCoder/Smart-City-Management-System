@@ -6,21 +6,20 @@
     ' StartupNextInstance: Raised when launching a single-instance application and the application is already active. 
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
     Partial Friend Class MyApplication
-        Private WithEvents printTimer As New Timer()
+        Private WithEvents PrintTimer As New Timer()
 
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             ' Set up the timer
-            printTimer.Interval = 10000 ' 10 seconds
-            printTimer.Start()
+            PrintTimer.Interval = 10000 ' 10 seconds
+            PrintTimer.Start()
         End Sub
 
-        Private Sub printTimer_Tick(sender As Object, e As EventArgs) Handles printTimer.Tick
+        Private Sub PrintTimer_Tick(sender As Object, e As EventArgs) Handles PrintTimer.Tick
             PrintOpenForms()
         End Sub
 
         Private Sub PrintOpenForms()
             Dim openFormsList As String = ""
-
             For Each frm As Form In Application.OpenForms
                 openFormsList &= frm.Name & vbCrLf
             Next

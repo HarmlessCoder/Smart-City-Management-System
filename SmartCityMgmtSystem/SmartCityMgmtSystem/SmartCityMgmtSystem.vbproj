@@ -439,6 +439,7 @@
     <Compile Include="NewsDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransportGlobals.vb" />
     <Compile Include="TransportManageTollGatesAdmin.Designer.vb">
       <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
     </Compile>
@@ -1815,6 +1816,7 @@
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\loading.gif" />
     <None Include="Resources\icon_view_transactions.png" />
     <None Include="Resources\banking_logo.png" />
     <None Include="Resources\icon checkbalance.png" />
@@ -1836,6 +1838,7 @@
     <None Include="Resources\icons8-event-accepted-64.png" />
     <Content Include="Resources\icons8-eye-48.png" />
     <None Include="Resources\icons8-eye-481.png" />
+    <None Include="Resources\icons8-fastag-50.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <None Include="Resources\icons8-licence-48.png" />
     <None Include="Resources\icons8-law-violation-100.png" />
