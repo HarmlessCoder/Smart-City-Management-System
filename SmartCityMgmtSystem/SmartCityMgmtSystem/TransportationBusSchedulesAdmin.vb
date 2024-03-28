@@ -22,7 +22,7 @@ Public Class TransportationBusSchedulesAdmin
                 Using reader As MySqlDataReader = command.ExecuteReader()
                     While reader.Read()
                         TextBox6.Text = txt 'Bus Number
-                        TextBox3.Text = reader.GetTimeSpan("starting_time").ToString() ' Bus pickup time
+                        DateTimePicker2.Text = reader.GetTimeSpan("starting_time").ToString() ' Bus pickup time
                         Dim temp As Integer = reader.GetInt16("days_operating")
                         Dim binary As String = Convert.ToString(temp, 2)
                         binary = binary.PadLeft(7, "0").Substring(0, 7)
@@ -247,7 +247,7 @@ Public Class TransportationBusSchedulesAdmin
         Label3.Text = "Add New Bus Schedule"
         Button3.Text = "Add"
         TextBox6.Clear()
-        TextBox3.Clear()
+        DateTimePicker2.Value = DateTime.Now
         TextBox8.Clear()
         TextBox7.Clear()
         CheckBox1.Checked = False
@@ -267,13 +267,6 @@ Public Class TransportationBusSchedulesAdmin
             Label3.Text = "Add New Bus Schedule"
             Button3.Text = "Add"
             TextBox6.Clear()
-            Return
-        End If
-        If String.IsNullOrWhiteSpace(TextBox3.Text) Then
-            MessageBox.Show("Please enter some input in the Pickup time textbox.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Label3.Text = "Add New Bus Schedule"
-            Button3.Text = "Add"
-            TextBox3.Clear()
             Return
         End If
         If String.IsNullOrWhiteSpace(TextBox8.Text) Then
@@ -332,19 +325,16 @@ Public Class TransportationBusSchedulesAdmin
 
             Dim decimalValue As Integer = Convert.ToInt32(bitString, 2)
 
-            cmd = "UPDATE bus_schedules SET bus_no = '" & TextBox6.Text & "', starting_time = '" & TextBox3.Text & "', days_operating = " & decimalValue.ToString() & ", src_id = " & ComboBox1.SelectedValue & ", dest_id = " & ComboBox2.SelectedValue & ", bus_fare = '" & TextBox8.Text & "', capacity = '" & TextBox7.Text & "' WHERE bus_no = " & primaryKeyEdit
-
-            'cmd = "UPDATE bus_schedules SET bus_no = '" & TextBox6.Text & "' starting_time = '" & TextBox3.Text & "' days_operating = " & decimalValue.ToString() & " src_id = " & ComboBox1.SelectedValue & " dest_id = " & ComboBox2.SelectedValue & " bus_fare = '" & TextBox8.Text & "' capacity = '" & TextBox7.Text & "'WHERE id =" & primaryKeyEdit
-            'cmd = "UPDATE bus_schedules SET bus_no = " & TextBox6.Text & " starting_time = " & TextBox3.Text & " days_operating = " & decimalValue.ToString() & " src_id = " & ComboBox1.SelectedValue & " dest_id = " & ComboBox2.SelectedValue & " bus_fare = " & TextBox8.Text & " capacity = " & TextBox7.Text & "WHERE id =" & primaryKeyEdit
+            cmd = "UPDATE bus_schedules SET bus_no = '" & TextBox6.Text & "', starting_time = '" & DateTimePicker2.Value.TimeOfDay.ToString() & "', days_operating = " & decimalValue.ToString() & ", src_id = " & ComboBox1.SelectedValue & ", dest_id = " & ComboBox2.SelectedValue & ", bus_fare = '" & TextBox8.Text & "', capacity = '" & TextBox7.Text & "' WHERE bus_no = " & primaryKeyEdit
             Dim success As Boolean = Globals.ExecuteUpdateQuery(cmd)
-                If success Then
+            If success Then
                     LoadandBindDataGridView()
                 End If
             Label3.Text = "Add New Bus Schedule"
             Button3.Text = "Add"
                 TextBox6.Clear()
-                TextBox3.Clear()
-                TextBox8.Clear()
+            DateTimePicker2.Value = DateTime.Now
+            TextBox8.Clear()
                 TextBox7.Clear()
                 CheckBox1.Checked = False
                 CheckBox2.Checked = False
@@ -382,14 +372,14 @@ Public Class TransportationBusSchedulesAdmin
             End If
 
             Dim decimalValue As Integer = Convert.ToInt32(bitString, 2)
-            cmd = "INSERT into bus_schedules (bus_no,starting_time,days_operating,src_id,dest_id,bus_fare,capacity) VALUES ('" & TextBox6.Text & "','" & TextBox3.Text & "'," & decimalValue.ToString() & "," & ComboBox1.SelectedValue & "," & ComboBox2.SelectedValue & ",'" & TextBox8.Text & "','" & TextBox7.Text & "')"
+            cmd = "INSERT into bus_schedules (bus_no,starting_time,days_operating,src_id,dest_id,bus_fare,capacity) VALUES ('" & TextBox6.Text & "','" & DateTimePicker2.Value.TimeOfDay.ToString() & "'," & decimalValue.ToString() & "," & ComboBox1.SelectedValue & "," & ComboBox2.SelectedValue & ",'" & TextBox8.Text & "','" & TextBox7.Text & "')"
             Dim success As Boolean = Globals.ExecuteInsertQuery(cmd)
                 If success Then
                     LoadandBindDataGridView()
                 End If
                 TextBox6.Clear()
-                TextBox3.Clear()
-                TextBox8.Clear()
+            DateTimePicker2.Value = DateTime.Now
+            TextBox8.Clear()
                 TextBox7.Clear()
                 CheckBox1.Checked = False
                 CheckBox2.Checked = False
