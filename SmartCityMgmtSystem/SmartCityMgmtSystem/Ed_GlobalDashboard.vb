@@ -52,4 +52,20 @@
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+    Private Sub Ed_GlobalDashboard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        ' Create a list to store references to forms to close
+        Dim formsToClose As New List(Of Form)
+
+        ' Identify forms to close and add them to the list
+        For Each form As Form In Application.OpenForms
+            If form IsNot Me Then
+                formsToClose.Add(form)
+            End If
+        Next
+
+        ' Close the identified forms
+        For Each form As Form In formsToClose
+            form.Close()
+        Next
+    End Sub
 End Class
