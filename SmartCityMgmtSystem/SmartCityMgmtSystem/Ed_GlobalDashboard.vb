@@ -1,5 +1,35 @@
 ﻿Public Class Ed_GlobalDashboard
     Public innerpanel As Panel
+    Public userID As Integer
+    Public Structure Profile
+        Public Ed_User_ID As Integer
+        Public Ed_Username As String
+        Public Ed_User_Type As UserType
+        Public Ed_User_Role As UserRole?
+        Public Ed_Affiliation As Integer?
+        Public Ed_Name As String
+        Public Ed_DOB As Date?
+        Public Ed_Class As Integer?
+        Public Ed_Sem As Integer?
+        Public Ed_LastEduQlf As String
+    End Structure
+
+    Public Enum UserType
+        Student
+        Teacher
+        Admin
+        Others
+    End Enum
+
+    Public Enum UserRole
+        Minister
+        Principal
+        EcourseAdmin
+        Bus
+        Security
+    End Enum
+
+    Public Ed_Profile As Profile
     Public Sub OpenFormInGlobalEdPanel(ByVal formToShow As Form)
         ' Clear the panel before adding a new form
         Panel1.Controls.Clear()
