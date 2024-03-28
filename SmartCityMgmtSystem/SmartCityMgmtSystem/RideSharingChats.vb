@@ -106,7 +106,12 @@ Public Class RideSharingChats
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-        cmd = New MySqlCommand("SELECT DISTINCT rs.uid,users.name,rs.fee_paid,rs.status FROM ride_sharing_chats rs JOIN users ON users.user_id = rs.uid WHERE rs.role = 1 AND rs.req_id = " & req_id & ";", Con)
+        Dim query As String = "SELECT DISTINCT rcu.uid, users.name, rcu.fee_paid, rcu.status, rcu.role " &
+                      "FROM ride_sharing_chats rs " &
+                      "JOIN ridesharing_chats_users rcu ON rs.req_id = rcu.req_id " &
+                      "JOIN users ON users.user_id = rcu.uid " &
+                      "WHERE rs.req_id = " & req_id & " AND rcu.role = 1;"
+        cmd = New MySqlCommand(query, Con)
         reader = cmd.ExecuteReader
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
@@ -173,7 +178,7 @@ Public Class RideSharingChats
 
             Dim query As String = "UPDATE ride_sharing_entries SET fare_per_person =" & dialogBox.NumericUpDown1.Value & " WHERE req_id=" & req_id & ";"
             If Globals.ExecuteUpdateQuery(query) Then
-                MsgBox("Fare per person is updated to ₹" & dialogBox.NumericUpDown1.Value)
+                MsgBox("Fare per person Is updated to ₹" & dialogBox.NumericUpDown1.Value)
             End If
         End If
 
@@ -183,7 +188,7 @@ Public Class RideSharingChats
         Dim comment As String = RichTextBox1.Text
         RichTextBox1.Clear()
         Dim role As Boolean = (poster_uid = uid)
-        Dim currentTimestamp As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        Dim currentTimestamp As String = DateTime.Now.ToString("yyyy-MM-dd HH: mm:ss")
         Dim query As String = "INSERT INTO ride_sharing_chats (req_id,uid,msg,time_stamp,role) VALUES (" & req_id & "," & uid & ",'" & comment & "','" & currentTimestamp & "'," & If(role, 0, 1) & ");"
         If Globals.ExecuteInsertQuery(query) Then
             LoadChats()

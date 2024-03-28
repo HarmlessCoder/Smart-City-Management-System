@@ -1,6 +1,6 @@
 ﻿Public Class UserLandingPage
 
-    Private Sub TransportationDashboard_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+    Private Sub UserLanding_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
     End Sub
 
@@ -10,14 +10,16 @@
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim login = New UserLogin()
+        Dim login = New UserLogin With {
+            .TopMost = True
+        }
         login.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim sign = New UserSignUp()
         sign.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class

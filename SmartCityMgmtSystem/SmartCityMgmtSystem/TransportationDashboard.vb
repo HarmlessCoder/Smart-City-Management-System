@@ -39,4 +39,8 @@
         'View Veh Reg Form
         Globals.viewChildForm(childformPanel, TransportVehicleRegReq)
     End Sub
+
+    Private Sub TransportationDashboard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+
+    End Sub
 End Class

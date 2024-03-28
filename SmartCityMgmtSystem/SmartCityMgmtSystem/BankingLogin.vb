@@ -10,13 +10,13 @@
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        Me.Hide()
+        Me.Close()
         Dim createAccountForm As New BankingCreateAccount()
         createAccountForm.Show()
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+        Me.Close()
         Dim createAccountForm As New BankingDashboard()
         createAccountForm.Show()
     End Sub
