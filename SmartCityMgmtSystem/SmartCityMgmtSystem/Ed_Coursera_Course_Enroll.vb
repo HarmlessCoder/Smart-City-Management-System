@@ -16,10 +16,8 @@ Public Class Ed_Coursera_Course_Enroll
         callingPanel = panel
     End Sub
     Private Sub Ed_Coursera_CourseContent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         ResourceName = "Testing 123"
         VideoLink = "https://www.youtube.com/watch?v=I0czvJ_jikg&list=RDI0czvJ_jikg&start_radio=1"
-        Label1.Text = ResourceName
         Dim youtubeUrl As String = "https://www.youtube.com/watch?v=WVOiDcFUg_I" ' Your YouTube video URL
         Dim videoId As String = ExtractYouTubeVideoId(youtubeUrl)
 
@@ -30,6 +28,7 @@ Public Class Ed_Coursera_Course_Enroll
         Else
             MessageBox.Show("Invalid YouTube URL")
         End If
+
     End Sub
     Private Function ExtractYouTubeVideoId(url As String) As String
         Dim regexPattern As String = "(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})"

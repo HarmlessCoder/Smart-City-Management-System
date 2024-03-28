@@ -34,7 +34,6 @@ Public Class Ed_RoleSelect
             Dim title As String = "Access Denied"
             Dim buttons As MessageBoxButtons = MessageBoxButtons.OK
             Dim icon As MessageBoxIcon = MessageBoxIcon.Exclamation
-
             MessageBox.Show(message, title, buttons, icon)
         End If
 
