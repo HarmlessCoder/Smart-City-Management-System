@@ -224,6 +224,7 @@
     <Compile Include="Ed_Inst_FeeDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_LoginHandle.vb" />
     <Compile Include="Ed_ManageECourse.Designer.vb">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </Compile>
