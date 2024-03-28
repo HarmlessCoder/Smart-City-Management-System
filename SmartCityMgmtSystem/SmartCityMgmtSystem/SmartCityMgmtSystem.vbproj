@@ -198,12 +198,14 @@
     <Compile Include="Ed_Coursera_Course_Enroll.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Coursera_Handler.vb" />
     <Compile Include="Ed_CourseResource.Designer.vb">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_EntranceExam_Handler.vb" />
     <Compile Include="Ed_EntranceInnerScreen.Designer.vb">
       <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
     </Compile>
@@ -222,6 +224,7 @@
     <Compile Include="Ed_Institute_BusList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Institute_Handler.vb" />
     <Compile Include="Ed_Inst_FeeDetails.Designer.vb">
       <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
     </Compile>
@@ -271,6 +274,7 @@
     <Compile Include="Ed_Moodle_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Moodle_Handler.vb" />
     <Compile Include="Ed_ResourceLinkItem.Designer.vb">
       <DependentUpon>Ed_ResourceLinkItem.vb</DependentUpon>
     </Compile>
