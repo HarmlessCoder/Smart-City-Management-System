@@ -10,4 +10,8 @@
     Private Sub Ed_TeacherDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Globals.viewChildForm(childformPanel, Ed_ManageECourse)
     End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Globals.viewChildForm(childformPanel, Ed_AddECourse)
+    End Sub
 End Class
