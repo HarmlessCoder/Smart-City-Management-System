@@ -87,7 +87,7 @@ Public Class Globals
         childform.Show() 'Add to panel and show the child form
     End Sub
 
-    Public Shared Sub viewChildFormAndClose(ByVal parentpanel As Panel, ByVal childform As Form, ByVal parentForm As Form)
+    Public Shared Sub viewChildFormAndClose(ByVal parentpanel As Panel, ByRef childform As Form, ByRef parentForm As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False
         childform.FormBorderStyle = Windows.Forms.FormBorderStyle.None
@@ -95,11 +95,10 @@ Public Class Globals
         childform.BringToFront()
         parentpanel.Controls.Add(childform)
         childform.Show() ' Add to panel and show the child form
-
         ' Pass reference of the parent form to the child form
         If TypeOf childform Is HomePage Then
             Dim yourChildForm As HomePage = CType(childform, HomePage)
-            yourChildForm.SetMainForm(parentForm)
+            CType(childform, HomePage).SetMainForm(parentForm)
         End If
     End Sub
 
