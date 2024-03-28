@@ -228,6 +228,12 @@
     <Compile Include="Ed_Inst_FeeDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_LeftPanelItem.Designer.vb">
+      <DependentUpon>Ed_LeftPanelItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_LeftPanelItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_LoginHandle.vb" />
     <Compile Include="Ed_ManageECourse.Designer.vb">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
@@ -1022,6 +1028,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Inst_FeeDetails.resx">
       <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_LeftPanelItem.resx">
+      <DependentUpon>Ed_LeftPanelItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ManageECourse.resx">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>

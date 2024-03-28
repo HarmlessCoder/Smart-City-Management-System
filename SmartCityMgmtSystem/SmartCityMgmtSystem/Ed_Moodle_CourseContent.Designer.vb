@@ -32,11 +32,11 @@ Partial Class Ed_Moodle_CourseContent
         Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
@@ -46,11 +46,11 @@ Partial Class Ed_Moodle_CourseContent
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn6 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn6 = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -126,7 +126,7 @@ Partial Class Ed_Moodle_CourseContent
         '
         Me.Label3.Font = New System.Drawing.Font("Cascadia Mono", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(308, 174)
+        Me.Label3.Location = New System.Drawing.Point(457, 174)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(597, 31)
         Me.Label3.TabIndex = 17
@@ -136,7 +136,7 @@ Partial Class Ed_Moodle_CourseContent
         '
         Me.Label2.Font = New System.Drawing.Font("Cascadia Mono", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(308, 143)
+        Me.Label2.Location = New System.Drawing.Point(457, 143)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(597, 31)
         Me.Label2.TabIndex = 16
@@ -146,19 +146,19 @@ Partial Class Ed_Moodle_CourseContent
         '
         Me.Label1.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(49, 78)
+        Me.Label1.Location = New System.Drawing.Point(202, 48)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(572, 46)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Name"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(56, 143)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(246, 520)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(370, 549)
         Me.FlowLayoutPanel1.TabIndex = 13
         '
         'DataGridView1
@@ -177,7 +177,7 @@ Partial Class Ed_Moodle_CourseContent
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -201,7 +201,7 @@ Partial Class Ed_Moodle_CourseContent
         DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle24
         Me.DataGridView1.GridColor = System.Drawing.Color.DodgerBlue
-        Me.DataGridView1.Location = New System.Drawing.Point(313, 229)
+        Me.DataGridView1.Location = New System.Drawing.Point(462, 229)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(6)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -230,54 +230,8 @@ Partial Class Ed_Moodle_CourseContent
         Me.DataGridView1.RowTemplate.Height = 40
         Me.DataGridView1.RowTemplate.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(592, 434)
+        Me.DataGridView1.Size = New System.Drawing.Size(461, 463)
         Me.DataGridView1.TabIndex = 18
-        '
-        'Column1
-        '
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.Goldenrod
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle21
-        Me.Column1.FillWeight = 21.10518!
-        Me.Column1.HeaderText = "Assignment"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column1.Width = 200
-        '
-        'Column2
-        '
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle22
-        Me.Column2.FillWeight = 306.6845!
-        Me.Column2.HeaderText = "Sub. Time"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 240
-        '
-        'Column3
-        '
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle23
-        Me.Column3.FillWeight = 42.21035!
-        Me.Column3.HeaderText = "Marks"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 150
         '
         'DataGridViewImageColumn3
         '
@@ -316,6 +270,52 @@ Partial Class Ed_Moodle_CourseContent
         Me.DataGridViewImageColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn6.ToolTipText = "Delete"
         Me.DataGridViewImageColumn6.Width = 125
+        '
+        'Column1
+        '
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.Goldenrod
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle21
+        Me.Column1.FillWeight = 21.10518!
+        Me.Column1.HeaderText = "Assignment"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column1.Width = 150
+        '
+        'Column2
+        '
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle22
+        Me.Column2.FillWeight = 306.6845!
+        Me.Column2.HeaderText = "Sub. Time"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 200
+        '
+        'Column3
+        '
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle23
+        Me.Column3.FillWeight = 42.21035!
+        Me.Column3.HeaderText = "Marks"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 110
         '
         'Ed_Moodle_CourseContent
         '
