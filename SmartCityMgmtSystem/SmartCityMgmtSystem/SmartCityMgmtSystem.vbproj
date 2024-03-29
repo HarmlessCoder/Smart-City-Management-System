@@ -146,6 +146,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Ed_Teacher_Moodle_CourseAss.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseAss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseList.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseResource.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseResource.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareApproveAppointmentAdmin.Designer.vb">
       <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
     </Compile>
@@ -1084,6 +1108,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseAss.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseContent.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseList.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseResource.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareApproveAppointmentAdmin.resx">
       <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
     </EmbeddedResource>
