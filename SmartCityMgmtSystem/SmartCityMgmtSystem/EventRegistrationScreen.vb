@@ -241,7 +241,7 @@ Public Class EventRegistrationScreen
         TextBox2.Text = uid
 
 
-
+        TextBox5.PasswordChar = "*"
 
         ' Dummy Data, Change it to LoadandBindDataGridView() 
         If False Then

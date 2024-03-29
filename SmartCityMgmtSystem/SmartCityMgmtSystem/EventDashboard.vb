@@ -29,7 +29,17 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim EventLoginWindowForm = New EventLoginWindow
+        ' Check if the form is already open
+        EventLoginWindowForm?.Dispose()
 
+        ' Create a new instance of the form
+        EventLoginWindowForm = New EventLoginWindow With {
+            .uid = uid,
+            .u_name = u_name
+        }
+
+        Globals.viewChildForm(childformPanel, EventLoginWindowForm)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
