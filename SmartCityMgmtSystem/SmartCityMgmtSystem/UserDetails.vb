@@ -36,26 +36,28 @@ Public Class UserDetails
         Dim formattedDate As String = selectedDate.ToString("yyyy-MM-dd")
         Dim voter As Integer = 0
         Dim voted As Integer = 0
-        cmd = "INSERT INTO users (name, email, dob, age, age_group, profile_photo, gender, password,
-            phone_number, house_number, ward_number, occupation, guardian_uid, voter, voted) 
-            VALUES (@name, @email, @dob, @age, @age_group, @profile, @gender, @pass,
-            @phno, @houseno, @wardno, @occupation, @guid, @voter, @voted)"
+        Dim gid As Integer? = Nothing
+        If Not String.IsNullOrEmpty(TextBox8.Text) Then
+            gid = Convert.ToInt32(TextBox8.Text)
+        End If
+        cmd = "INSERT INTO users (name, email, dob, age, profile_photo, gender, password,
+            phone_number, occupation, guardian_uid, voter, voted, address) 
+            VALUES (@name, @email, @dob, @age, @profile, @gender, @pass,
+            @phno, @occupation, @guid, @voter, @voted, @address)"
         Dim conStr As String = Globals.getdbConnectionString()
         Using connection As New MySqlConnection(conStr)
             Using sqlCommand As New MySqlCommand(cmd, connection)
                 sqlCommand.Parameters.AddWithValue("@name", TextBox1.Text)
                 sqlCommand.Parameters.AddWithValue("@email", email)
                 sqlCommand.Parameters.AddWithValue("@dob", formattedDate)
-                sqlCommand.Parameters.AddWithValue("@age", TextBox2.Text)
-                sqlCommand.Parameters.AddWithValue("@age_group", ComboBox1.SelectedItem.ToString())
+                sqlCommand.Parameters.AddWithValue("@age", Convert.ToInt32(TextBox2.Text))
                 sqlCommand.Parameters.AddWithValue("@profile", imageBytes)
                 sqlCommand.Parameters.AddWithValue("@gender", TextBox3.Text)
                 sqlCommand.Parameters.AddWithValue("@pass", password)
                 sqlCommand.Parameters.AddWithValue("@phno", TextBox4.Text)
-                sqlCommand.Parameters.AddWithValue("@houseno", TextBox5.Text)
-                sqlCommand.Parameters.AddWithValue("@wardno", TextBox6.Text)
+                sqlCommand.Parameters.AddWithValue("@address", TextBox5.Text)
                 sqlCommand.Parameters.AddWithValue("@occupation", TextBox7.Text)
-                sqlCommand.Parameters.AddWithValue("@guid", TextBox8.Text)
+                sqlCommand.Parameters.AddWithValue("@guid", gid)
                 sqlCommand.Parameters.AddWithValue("@voter", voter)
                 sqlCommand.Parameters.AddWithValue("@voted", voted)
 
