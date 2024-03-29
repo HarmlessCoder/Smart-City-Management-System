@@ -170,6 +170,12 @@
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_AddMoodleCourse.Designer.vb">
+      <DependentUpon>Ed_AddMoodleCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_AddMoodleCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_BusItem.Designer.vb">
       <DependentUpon>Ed_BusItem.vb</DependentUpon>
     </Compile>
@@ -244,6 +250,12 @@
     <Compile Include="Ed_FeePopup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_AddECourse.Designer.vb">
+      <DependentUpon>Ed_AddECourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_AddECourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Institute_BusList.Designer.vb">
       <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
     </Compile>
@@ -311,6 +323,18 @@
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Stud_MyCourses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Coursera_Course_Content.Designer.vb">
+      <DependentUpon>Ed_Teacher_Coursera_Course_Content.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Coursera_Course_Content.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Course_Resource.Designer.vb">
+      <DependentUpon>Ed_Teacher_Course_Resource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Course_Resource.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_ViewPaymentPopup.Designer.vb">
@@ -1010,6 +1034,12 @@
     <Compile Include="UserProfilePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserResetPassword.Designer.vb">
+      <DependentUpon>UserResetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserResetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserSignUp.Designer.vb">
       <DependentUpon>UserSignUp.vb</DependentUpon>
     </Compile>
@@ -1035,6 +1065,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_AddMoodleCourse.resx">
+      <DependentUpon>Ed_AddMoodleCourse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_BusItem.resx">
       <DependentUpon>Ed_BusItem.vb</DependentUpon>
@@ -1072,6 +1105,9 @@
     <EmbeddedResource Include="Ed_FeePopup.resx">
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_AddECourse.resx">
+      <DependentUpon>Ed_AddECourse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Institute_BusList.resx">
       <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
     </EmbeddedResource>
@@ -1104,6 +1140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Coursera_Course_Content.resx">
+      <DependentUpon>Ed_Teacher_Coursera_Course_Content.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Course_Resource.resx">
+      <DependentUpon>Ed_Teacher_Course_Resource.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ViewPaymentPopup.resx">
       <DependentUpon>Ed_ViewPaymentPopup.vb</DependentUpon>
@@ -1440,6 +1482,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfilePage.resx">
       <DependentUpon>UserProfilePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserResetPassword.resx">
+      <DependentUpon>UserResetPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>

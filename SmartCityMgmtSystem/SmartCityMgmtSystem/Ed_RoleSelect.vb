@@ -91,8 +91,8 @@ Public Class Ed_RoleSelect
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.ParentForm.Close()
         Me.Close()
-        Dim homepage = New HomePageDashboard
-        homepage.Show()
+        'Dim homepage = New HomePageDashboard
+        'HomePage.Show()
     End Sub
 
     Private Sub Ed_RoleSelect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
