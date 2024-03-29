@@ -45,15 +45,38 @@ Public Class UserGetOtp
             mail.From = New MailAddress(from) ' the sender's email address
             mail.To.Add(recipientEmail) ' the recipient's email address
             mail.Subject = "SmartCityGuwahati Verification Code"
-            mail.Body = "Your 4-digit verification code is: " & randomNumber
+
+            ' HTML content with dynamic random number
+            Dim htmlContent As String = "<div style=""font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2"">" &
+            "<div style=""margin:50px auto;width:70%;padding:20px 0"">" &
+            "<div style=""border-bottom:1px solid #eee"">" &
+            "<a href="""" style=""font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600"">SmartGhy - Smart City Management System for Guwahati</a>" &
+            "</div>" &
+            "<p style=""font-size:1.1em"">Hi,</p>" &
+            "<p>Use the following OTP to complete your Sign Up procedures</p>" &
+            "<h2 style=""background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;"">" & randomNumber & "</h2>" &
+            "<p style=""font-size:0.9em;"">Regards,<br />Smart City Management System, Guwahati</p>" &
+            "<hr style=""border:none;border-top:1px solid #eee"" />" &
+            "<div style=""float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300"">" &
+            "<p>SmartGhy Inc</p>" &
+            "<p>IIT Guwahati,Amingaon</p>" &
+            "<p>Assam</p>" &
+            "</div>" &
+            "</div>" &
+            "</div>"
+
+            ' Set HTML content to the email body
+            mail.IsBodyHtml = True
+            mail.Body = htmlContent
 
             ' Send the email
             smtpClient.Send(mail)
-            MessageBox.Show("Please check your mail and enter the OTP")
+            MsgBox("An email with the OTP has been sent to your registered email address.")
         Catch ex As Exception
-            MessageBox.Show("Error sending email: " & ex.Message)
+            MsgBox(ex.Message)
         End Try
     End Sub
+
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs)
         'View the TransportationAdminHome screen by default - first argument, name of the panel in the parent panel, second - name of the child form
         'Globals.viewChildForm(childformPanel, TransportationAdminHome)
