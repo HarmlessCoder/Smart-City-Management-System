@@ -26,12 +26,12 @@ Partial Class Ed_RoleSelect
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
+        Me.PictureButtonvb3 = New SmartCityMgmtSystem.pictureButtonvb()
+        Me.PictureButtonvb2 = New SmartCityMgmtSystem.pictureButtonvb()
+        Me.PictureButtonvb1 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.PictureButtonvb1 = New SmartCityMgmtSystem.pictureButtonvb()
-        Me.PictureButtonvb2 = New SmartCityMgmtSystem.pictureButtonvb()
-        Me.PictureButtonvb3 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
@@ -88,6 +88,36 @@ Partial Class Ed_RoleSelect
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 1
         '
+        'PictureButtonvb3
+        '
+        Me.PictureButtonvb3.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb3.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.admin
+        Me.PictureButtonvb3.Location = New System.Drawing.Point(923, 254)
+        Me.PictureButtonvb3.Name = "PictureButtonvb3"
+        Me.PictureButtonvb3.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb3.TabIndex = 6
+        Me.PictureButtonvb3.Title = "Admin"
+        '
+        'PictureButtonvb2
+        '
+        Me.PictureButtonvb2.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb2.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.teacher
+        Me.PictureButtonvb2.Location = New System.Drawing.Point(535, 254)
+        Me.PictureButtonvb2.Name = "PictureButtonvb2"
+        Me.PictureButtonvb2.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb2.TabIndex = 5
+        Me.PictureButtonvb2.Title = "Teacher"
+        '
+        'PictureButtonvb1
+        '
+        Me.PictureButtonvb1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.PictureButtonvb1.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.student
+        Me.PictureButtonvb1.Location = New System.Drawing.Point(143, 254)
+        Me.PictureButtonvb1.Name = "PictureButtonvb1"
+        Me.PictureButtonvb1.Size = New System.Drawing.Size(257, 286)
+        Me.PictureButtonvb1.TabIndex = 4
+        Me.PictureButtonvb1.Title = "Student"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -130,36 +160,6 @@ Partial Class Ed_RoleSelect
         Me.Button6.TabIndex = 7
         Me.Button6.Text = "      Home Page"
         Me.Button6.UseVisualStyleBackColor = False
-        '
-        'PictureButtonvb1
-        '
-        Me.PictureButtonvb1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.PictureButtonvb1.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.student
-        Me.PictureButtonvb1.Location = New System.Drawing.Point(143, 254)
-        Me.PictureButtonvb1.Name = "PictureButtonvb1"
-        Me.PictureButtonvb1.Size = New System.Drawing.Size(257, 286)
-        Me.PictureButtonvb1.TabIndex = 4
-        Me.PictureButtonvb1.Title = "Student"
-        '
-        'PictureButtonvb2
-        '
-        Me.PictureButtonvb2.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.PictureButtonvb2.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.teacher
-        Me.PictureButtonvb2.Location = New System.Drawing.Point(535, 254)
-        Me.PictureButtonvb2.Name = "PictureButtonvb2"
-        Me.PictureButtonvb2.Size = New System.Drawing.Size(257, 286)
-        Me.PictureButtonvb2.TabIndex = 5
-        Me.PictureButtonvb2.Title = "Teacher"
-        '
-        'PictureButtonvb3
-        '
-        Me.PictureButtonvb3.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.PictureButtonvb3.Icon = Global.SmartCityMgmtSystem.My.Resources.Resources.admin
-        Me.PictureButtonvb3.Location = New System.Drawing.Point(923, 254)
-        Me.PictureButtonvb3.Name = "PictureButtonvb3"
-        Me.PictureButtonvb3.Size = New System.Drawing.Size(257, 286)
-        Me.PictureButtonvb3.TabIndex = 6
-        Me.PictureButtonvb3.Title = "Admin"
         '
         'Ed_RoleSelect
         '

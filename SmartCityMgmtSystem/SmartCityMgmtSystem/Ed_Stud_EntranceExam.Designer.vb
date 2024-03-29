@@ -23,22 +23,22 @@ Partial Class Ed_Stud_EntranceExam
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.childformPanel = New System.Windows.Forms.Panel()
         Me.PictureButtonvb4 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.PictureButtonvb3 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.PictureButtonvb2 = New SmartCityMgmtSystem.pictureButtonvb()
         Me.PictureButtonvb1 = New SmartCityMgmtSystem.pictureButtonvb()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        Me.childformPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.childformPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -57,64 +57,6 @@ Partial Class Ed_Stud_EntranceExam
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(282, 783)
         Me.Panel1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(0, 159)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(282, 141)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "SmartGhy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Education" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'childformPanel
-        '
-        Me.childformPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.childformPanel.Controls.Add(Me.PictureButtonvb4)
-        Me.childformPanel.Controls.Add(Me.PictureButtonvb3)
-        Me.childformPanel.Controls.Add(Me.PictureButtonvb2)
-        Me.childformPanel.Controls.Add(Me.PictureButtonvb1)
-        Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.childformPanel.Location = New System.Drawing.Point(278, 45)
-        Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.childformPanel.Name = "childformPanel"
-        Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
-        Me.childformPanel.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Ivory
-        Me.Label2.Location = New System.Drawing.Point(293, 9)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 28)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "{Name}"
-        '
-        'Button6
-        '
-        Me.Button6.CausesValidation = False
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.Ivory
-        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(1388, 0)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(163, 39)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "     Back"
-        Me.Button6.UseVisualStyleBackColor = False
         '
         'Button3
         '
@@ -191,6 +133,33 @@ Partial Class Ed_Stud_EntranceExam
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(0, 159)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(282, 141)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "SmartGhy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Education" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'childformPanel
+        '
+        Me.childformPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb4)
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb3)
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb2)
+        Me.childformPanel.Controls.Add(Me.PictureButtonvb1)
+        Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.childformPanel.Location = New System.Drawing.Point(278, 45)
+        Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.childformPanel.Name = "childformPanel"
+        Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
+        Me.childformPanel.TabIndex = 1
+        '
         'PictureButtonvb4
         '
         Me.PictureButtonvb4.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
@@ -231,6 +200,37 @@ Partial Class Ed_Stud_EntranceExam
         Me.PictureButtonvb1.TabIndex = 4
         Me.PictureButtonvb1.Title = "Engineering"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Ivory
+        Me.Label2.Location = New System.Drawing.Point(293, 9)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 28)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "{Name}"
+        '
+        'Button6
+        '
+        Me.Button6.CausesValidation = False
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Ivory
+        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(1388, 0)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.Button6.Size = New System.Drawing.Size(163, 39)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "     Back"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
         'Ed_Stud_EntranceExam
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -247,8 +247,8 @@ Partial Class Ed_Stud_EntranceExam
         Me.Name = "Ed_Stud_EntranceExam"
         Me.Text = "Education"
         Me.Panel1.ResumeLayout(False)
-        Me.childformPanel.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.childformPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

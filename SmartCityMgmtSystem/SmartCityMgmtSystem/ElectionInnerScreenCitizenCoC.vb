@@ -1,83 +1,41 @@
 ﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
 Public Class ElectionInnerScreenCitizenCoC
     Private Sub ElectionInnerScreen1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        GetCoC()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
+    Private Sub GetCoC()
+        Dim Con = Globals.GetDBConnection()
+        Dim cmd As MySqlCommand
+        Dim COC As String ' Variable to store the number of rows in election_time table
+        Dim electionId As Integer = 0
 
-    End Sub
+        Try
+            Con.Open()
+            ' Execute query to count rows in election_time table
+            cmd = New MySqlCommand("SELECT COUNT(*) FROM election_time;", Con)
+            electionId = Convert.ToInt32(cmd.ExecuteScalar())
 
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
 
-    End Sub
+            If electionId = 0 Then
+                MessageBox.Show("No elections have been scheduled yet.")
+                RichTextBox1.Text = "Code of Conduct will be updated when an election is scheduled."
+                Exit Sub
+            End If
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
-
+            cmd = New MySqlCommand("SELECT code_of_conduct_text FROM code_of_conduct where election_id = @election_id;", Con)
+            cmd.Parameters.AddWithValue("@election_id", electionId)
+            COC = cmd.ExecuteScalar().ToString
+            RichTextBox1.Text = COC
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            ' Close the connection
+            If Con.State = ConnectionState.Open Then
+                Con.Close()
+            End If
+        End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

@@ -1,18 +1,64 @@
-﻿Imports System.Data.SqlClient
-Imports System.Drawing.Printing
+﻿Imports System.Configuration
+Imports System.Data.SqlClient
+Imports System.Data.SqlTypes
+Imports System.Threading
+Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI.Common
+Imports Org.BouncyCastle.Ocsp
 Public Class RideSharingChats
+    'To pass information from the parent form in form of property
+    Public Property uid As Integer = 1
+    Public Property capacity As Integer = 1
+    Public Property u_name As String = "Dhanesh"
+    Public Property poster_uid As Integer = 1     'UID of the poster of this post
+    Public Property req_id As Integer = 1
+    Public DriverNote As String = ""
+    Public VehicleNumber As String = ""
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-        ' Check if the clicked cell is in the "EditBut" column and not a header cell
-        If e.ColumnIndex = DataGridView1.Columns("EditBut").Index AndAlso e.RowIndex >= 0 Then
-            ' Change this to DB logic later
-            MessageBox.Show("Edit button clicked for row " & e.RowIndex.ToString(), "Edit Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' Check if the clicked cell is in the "DeleteBut" column and not a header cell
-        ElseIf e.ColumnIndex = DataGridView1.Columns("DeleteBut").Index AndAlso e.RowIndex >= 0 Then
-            ' Perform the action for the "DeleteButton" column
-            MessageBox.Show("Delete button clicked for row " & e.RowIndex.ToString(), "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        ' For checkbox column - only for poster - allow editing
+        If poster_uid = uid Then
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = DataGridView1.Columns("Approve").Index Then
+                ' Check if the clicked cell is in the "Approve" column
+                Dim cell As DataGridViewCheckBoxCell = TryCast(DataGridView1.Rows(e.RowIndex).Cells("Approve"), DataGridViewCheckBoxCell)
 
+                If cell IsNot Nothing Then
+                    ' Manually toggle the checkbox value
+                    If cell.Value = "added" Then
+                        cell.Value = "not-added"
+                        capacity += 1
+                        Dim query As String = "UPDATE ride_sharing_entries SET capacity = capacity + 1 where req_id = " & req_id & ";"
+                        If Globals.ExecuteInsertQuery(query) Then
+                            query = "UPDATE ridesharing_chats_users SET status = 'not-added' WHERE req_id = " & req_id & " AND uid = " & Convert.ToInt32(DataGridView1.Rows(e.RowIndex).Cells("Id").Value) & ";"
+                            If Globals.ExecuteInsertQuery(query) Then
+                                LoadandBindDataGridView()
+                            End If
+                        End If
+
+                    Else
+                        capacity -= 1
+                        If (capacity < 0) Then
+                            MessageBox.Show("All seats are filled. Remove some other person to add this person", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            capacity += 1
+                        Else
+                            If CheckIfFeePaid(Convert.ToInt32(DataGridView1.Rows(e.RowIndex).Cells("Id").Value), req_id) Then
+                                cell.Value = "added"
+                                Dim query As String = "UPDATE ride_sharing_entries SET capacity = capacity - 1 WHERE req_id = " & req_id & ";"
+                                If Globals.ExecuteInsertQuery(query) Then
+                                    query = "UPDATE ridesharing_chats_users SET status = 'added' WHERE req_id = " & req_id & " AND uid = " & Convert.ToInt32(DataGridView1.Rows(e.RowIndex).Cells("Id").Value) & ";"
+                                    If Globals.ExecuteInsertQuery(query) Then
+                                        LoadandBindDataGridView()
+                                    End If
+                                End If
+                            Else
+                                MessageBox.Show("This user hasn't paid fee yet, Can't Accept", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                capacity += 1
+                            End If
+                        End If
+                    End If
+                End If
+            End If
         End If
     End Sub
 
@@ -33,56 +79,245 @@ Public Class RideSharingChats
         ChatBubble.SetDetails(name, datetime, comment, image, isRider)
         PostsPanel.Controls.Add(ChatBubble)
     End Sub
+
+
+    Private Sub LoadChats()
+
+        'Clear all chats
+        PostsPanel.Controls.Clear()
+        Dim query As String = "SELECT rs.post_id, rs.uid, users.name, rs.time_stamp, rs.msg
+                        FROM ride_sharing_chats rs
+                        JOIN users ON users.user_id = rs.uid
+                        WHERE rs.req_id = " & req_id.ToString() & ";"
+        Using connection As New MySqlConnection(Globals.getdbConnectionString())
+            Using command As New MySqlCommand(query, connection)
+                connection.Open()
+
+                ' Execute the command
+                Using reader As MySqlDataReader = command.ExecuteReader()
+                    ' Read each row
+                    While reader.Read()
+                        ' Access columns by name or index
+                        Dim postuid As Integer = Convert.ToInt32(reader("uid"))
+                        Dim role As Boolean = If(uid = postuid, False, True)
+                        Dim userName As String = reader("name").ToString()
+                        Dim timeStamp As String = Convert.ToDateTime(reader("time_stamp")).ToString("dd MMM yy, hh:mm tt") 'Like 12 March 24,08:45PM
+                        Dim message As String = reader("msg").ToString()
+                        Dim postNum As Integer = Convert.ToInt32(reader("post_id"))
+
+                        'Add Chat
+                        AddChat(userName, postNum, timeStamp, message, Nothing, role) 'role = 0 for sender, 1 for receiver
+                    End While
+
+                End Using
+            End Using
+        End Using
+    End Sub
+
+
+
+    Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView1.CellFormatting
+        ' Check if the current cell belongs to the "fee_paid" column and the value is 0
+        If e.ColumnIndex = DataGridView1.Columns("Column2").Index AndAlso e.Value IsNot Nothing AndAlso e.Value.ToString() = "True" Then
+            ' Set the cell value to "Paid"
+            e.Value = "Yes"
+        ElseIf e.ColumnIndex = DataGridView1.Columns("Column2").Index AndAlso e.Value IsNot Nothing AndAlso e.Value.ToString() <> "True" Then
+            ' Set the cell value to "Not Paid"
+            e.Value = "No"
+        End If
+    End Sub
     Private Sub LoadandBindDataGridView()
-        'Get connection String from globals
-        Dim conString = Globals.getdbConnectionString()
-        Dim Con = New SqlConnection(conString)
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
 
-        'Query for SQL table
-        Dim query = "enter your query"
-        Con.Open()
-
-        Dim cmd As New SqlCommand(query, Con)
-        Dim adapter As New SqlDataAdapter(cmd)
-
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Dim query As String = "SELECT rcu.uid, users.name, rcu.fee_paid, rcu.status, rcu.role " &
+                      "FROM ridesharing_chats_users AS rcu " &
+                      "JOIN users ON users.user_id = rcu.uid " &
+                      "WHERE rcu.req_id = " & req_id & " AND rcu.role = 1;"
+        cmd = New MySqlCommand(query, Con)
+        reader = cmd.ExecuteReader
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
 
         'Fill the DataTable with data from the SQL table
-        adapter.Fill(dataTable)
+        dataTable.Load(reader)
+        reader.Close()
+
+
 
         'IMP: Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
-        DataGridView1.Columns(0).DataPropertyName = "Column Name in SQL table"
-        DataGridView1.Columns(1).DataPropertyName = "Column Name in SQL table"
-
+        DataGridView1.Columns(0).DataPropertyName = "name"
+        DataGridView1.Columns(1).DataPropertyName = "fee_paid"
+        DataGridView1.Columns(2).DataPropertyName = "status"
+        DataGridView1.Columns(3).DataPropertyName = "uid"
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
+        ' Loop through the rows to set Tag to uid from SQL command
+        Con.Close()
     End Sub
+    'Checks if the UID already exists in the ride_sharing_users table
+    Public Shared Function CheckIfUidExists(uid As Integer, req_id As Integer) As Boolean
+        Dim query As String = "SELECT COUNT(*) FROM ridesharing_chats_users WHERE uid = @Uid AND req_id = @Req ;"
+        Try
+            Using connection As New MySqlConnection(Globals.getdbConnectionString())
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@Uid", uid)
+                    command.Parameters.AddWithValue("@Req", req_id)
+                    connection.Open()
+                    Dim result As Integer = Convert.ToInt32(command.ExecuteScalar())
+                    Return result > 0
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Display an error message
+            MessageBox.Show("An error occurred while checking if UID exists: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' Return True assuming UID does not exist due to error
+            Return True
+        End Try
+    End Function
+    'Check if fee is paid
+    Public Shared Function CheckIfFeePaid(uid As Integer, req_id As Integer) As Boolean
+        Dim query As String = "SELECT COUNT(*) FROM ridesharing_chats_users WHERE req_id = @Reqq AND uid = @Uid AND fee_paid = 1;"
+        Try
+            Using connection As New MySqlConnection(Globals.getdbConnectionString())
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@Uid", uid)
+                    command.Parameters.AddWithValue("@Reqq", req_id)
+                    connection.Open()
 
+                    Dim result As Integer = Convert.ToInt32(command.ExecuteScalar())
+                    Return result > 0
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Display an error message
+            MessageBox.Show("An error occurred while checking if UID paid fees: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' Return True assuming UID does not exist due to error
+            Return True
+        End Try
+    End Function
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        ' Dummy Data, Change it to LoadandBindDataGridView() 
-        'DataGridView1.Columns("Approve").Visible = False
-        For i As Integer = 1 To 8
-            ' Add an empty row to the DataGridView
-            Dim row As New DataGridViewRow()
-            DataGridView1.Rows.Add(row)
+        'Set the Button Text based on fee paid
+        If CheckIfFeePaid(uid, req_id) Then
+            Button1.Text = "Withdraw"
+        Else
+            Button1.Text = "Pay"
+        End If
 
-            ' Set values for the first three columns in the current row
-            DataGridView1.Rows(i - 1).Cells("Column1").Value = "DummyVal"
-            DataGridView1.Rows(i - 1).Cells("Column2").Value = "DummyVal"
-        Next
-        AddChat("Dhanesh", 1, "13th March, 9:30PM", "Hey guys, pay the fee and then I will approve your requests", Nothing, False)
-        AddChat("Shivam", 2, "13th March, 9:35PM", "Okay, But the fare is bit more, can you like reduce it please?", Nothing, True)
-        AddChat("Adarsh", 3, "13th March, 9:36PM", "Yes,same concern", Nothing, True)
-        AddChat("Dhanesh", 4, "13th March, 9:40PM", "No, I can't do that, I have to pay the petrol fare", Nothing, False)
-        AddChat("Shivam", 5, "13th March, 9:45PM", "Okay, I will pay the fare", Nothing, True)
-        AddChat("Dhanesh", 6, "13th March, 9:46PM", "Okay, I will approve your request", Nothing, False)
-        AddChat("Adarsh", 7, "13th March, 9:50PM", "Fine,But I have no more choice.", Nothing, True)
-        AddChat("Dhanesh", 8, "13th March, 9:55PM", "Okay, I will approve your request", Nothing, False)
+        'Get the vehicle Details, TODO: Vehicle Picture Fetching
+        Dim query As String = "SELECT vehicle_type from vehicle_reg WHERE vehicle_id = '" & VehicleNumber & "';"
+        Using connection As New MySqlConnection(Globals.getdbConnectionString())
+            Using command As New MySqlCommand(query, connection)
+
+                Try
+                    connection.Open()
+                    Dim objResult As Object = command.ExecuteScalar()
+                    If objResult IsNot Nothing AndAlso Not DBNull.Value.Equals(objResult) Then
+                        Dim vehicle_type As Integer = Convert.ToInt32(objResult)
+                        Label4.Text = TransportGlobals.GetVehicleType(vehicle_type)
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("Error fetching vehicle desc: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End Using
+        End Using
+
+        'For requester, show the approve button
+        If poster_uid <> uid Then
+            Button3.Visible = False
+            Button1.Visible = True
+            ' For the poster of the post
+        Else
+            Button3.Visible = True
+            Button1.Visible = False
+        End If
+
+        'Load the more details 
+        'TODO: Picture and vehicle type from sql query
+        Label2.Text = VehicleNumber
+        RichTextBox2.Text = DriverNote
+
+        'Load the Ride List Datagridview
+        LoadandBindDataGridView()
+
+
+        ' Load Chats
+        LoadChats()
+
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ' Set the dialog box to be always on top
+        Dim dialogBox As New Transport_EnterFee With {
+            .TopMost = True
+        }
+
+        ' Show the dialog box
+        Dim result As DialogResult = dialogBox.ShowDialog()
+
+        ' Process the result if needed
+        If result = DialogResult.OK Then
+
+            Dim query As String = "UPDATE ride_sharing_entries SET fare_per_person =" & dialogBox.NumericUpDown1.Value & " WHERE req_id=" & req_id & ";"
+            If Globals.ExecuteUpdateQuery(query) Then
+                MsgBox("Fare per person Is updated to ₹" & dialogBox.NumericUpDown1.Value)
+            End If
+        End If
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
+        If RichTextBox1.Text.Trim() <> "" Then
+            Dim comment As String = RichTextBox1.Text
+            RichTextBox1.Clear()
+            Dim role As Boolean = (poster_uid = uid)
+            Dim currentTimestamp As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+            Dim query As String = "INSERT INTO ride_sharing_chats (req_id,uid,msg,time_stamp) VALUES (" & req_id & "," & uid & ",'" & comment & "','" & currentTimestamp & "');"
+            If Globals.ExecuteInsertQuery(query) Then
+                LoadChats()
+                If Not CheckIfUidExists(uid, req_id) Then
+                    'Insert only if it doesn't exist already
+                    query = "INSERT INTO ridesharing_chats_users (req_id,uid,role) VALUES (" & req_id & "," & uid & "," & If(role, 0, 1) & ");"
+                    If Globals.ExecuteInsertQuery(query) Then
+                        LoadandBindDataGridView()
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        LoadChats()
+        LoadandBindDataGridView()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        'Pay or withdraw fees
+        If Button1.Text = "Pay" Then
+            Dim query As String = "UPDATE ridesharing_chats_users SET fee_paid = 1 WHERE req_id = " & req_id & " AND uid = " & uid & ";"
+            If Globals.ExecuteUpdateQuery(query) Then
+                MsgBox("Fee Paid Successfully")
+                LoadandBindDataGridView()
+                Button1.Text = "Withdraw"
+            End If
+        Else 'Automatically remove accept status also
+            Dim query As String = "UPDATE ridesharing_chats_users SET fee_paid = 0,status='not-added' WHERE req_id = " & req_id & " AND uid = " & uid & ";"
+            If Globals.ExecuteUpdateQuery(query) Then
+                MsgBox("Fee Payment Withdrawn")
+                LoadandBindDataGridView()
+                Button1.Text = "Pay"
+            End If
+        End If
     End Sub
 End Class

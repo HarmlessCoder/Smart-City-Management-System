@@ -1,121 +1,146 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports MySql.Data.MySqlClient
 Public Class ElectionInnerScreenAdminResults
     Private Sub LoadandBindDataGridView()
-        'Get connection String from globals
-        Dim conString = Globals.getdbConnectionString()
-        Dim Con = New SqlConnection(conString)
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim cmd As MySqlCommand
 
-        'Query for SQL table
-        Dim query = "enter your query"
-        Con.Open()
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-        Dim cmd As New SqlCommand(query, Con)
-        Dim adapter As New SqlDataAdapter(cmd)
+        Dim lastElectionID As Integer = 0 ' Default value in case there are no rows in election_time
+        Dim lastElectionIDQuery As String = "SELECT election_id FROM election_time ORDER BY election_id DESC LIMIT 1;"
+        cmd = New MySqlCommand(lastElectionIDQuery, Con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+        If reader.Read() Then
+            lastElectionID = Convert.ToInt32(reader("election_id"))
+        End If
+        reader.Close()
 
+
+
+        Dim updateCmd As New MySqlCommand("SELECT users.name, m.ministry_name, cr.votes, t.votes_received, cr.status
+                                            FROM candidate_register cr
+                                            JOIN ministries m ON cr.ministry_id = m.ministry_id
+                                            JOIN turnout t ON cr.election_id = t.election_id AND cr.ministry_id = t.ministry_id
+                                            JOIN users ON users.user_id = cr.candidate_uid
+                                            JOIN (
+                                                SELECT ministry_id, MAX(votes) AS max_votes
+                                                FROM candidate_register
+                                                WHERE @electionID = 3 and status = 'Approved'
+                                                GROUP BY ministry_id
+                                            ) max_votes_per_ministry ON cr.ministry_id = max_votes_per_ministry.ministry_id AND cr.votes = max_votes_per_ministry.max_votes
+                                            WHERE cr.election_id = @electionID and cr.status = 'Approved';", Con)
+        updateCmd.Parameters.AddWithValue("@electionID", lastElectionID)
+        reader = updateCmd.ExecuteReader
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
 
         'Fill the DataTable with data from the SQL table
-        adapter.Fill(dataTable)
+        dataTable.Load(reader)
+        reader.Close()
+        Con.Close()
 
         'IMP: Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
-        DataGridView1.Columns(0).DataPropertyName = "Column Name in SQL table"
-        DataGridView1.Columns(1).DataPropertyName = "Column Name in SQL table"
+        DataGridView1.Columns(0).DataPropertyName = "ministry_name"
+        DataGridView1.Columns(1).DataPropertyName = "name"
+        DataGridView1.Columns(2).DataPropertyName = "votes"
+        DataGridView1.Columns(3).DataPropertyName = "votes_received"
 
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
     End Sub
     Private Sub ElectionInnerScreen1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        For i As Integer = 1 To 8
-            ' Add an empty row to the DataGridView
-            Dim row As New DataGridViewRow()
-            DataGridView1.Rows.Add(row)
+        'For i As Integer = 1 To 8
+        ' Add an empty row to the DataGridView
+        'Dim' row As New DataGridViewRow()
+        'DataGridView1.Rows.Add(row)
 
-            ' Set values for the first three columns in the current row
-            DataGridView1.Rows(i - 1).Cells("Column1").Value = "DummyVal"
-            DataGridView1.Rows(i - 1).Cells("Column2").Value = "DummyVal"
-            DataGridView1.Rows(i - 1).Cells("Column3").Value = "DummyVal"
-        Next
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs)
-
+        ' Set values for the first three columns in the current row
+        'DataGridView1.Rows(i - 1).Cells("Column1").Value = "DummyVal"
+        'DataGridView1.Rows(i - 1).Cells("Column2").Value = "DummyVal"
+        'DataGridView1.Rows(i - 1).Cells("Column3").Value = "DummyVal"
+        'Next
+        LoadandBindDataGridView()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Globals.viewChildForm(ElectionDashboard.childformPanel, ElectionInnerScreenAdmin)
     End Sub
 
-    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim cmd As MySqlCommand
+
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Dim lastElectionID As Integer = 0 ' Default value in case there are no rows in election_time
+        Dim lastElectionIDQuery As String = "SELECT election_id FROM election_time ORDER BY election_id DESC LIMIT 1;"
+        cmd = New MySqlCommand(lastElectionIDQuery, Con)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+        If reader.Read() Then
+            lastElectionID = Convert.ToInt32(reader("election_id"))
+        End If
+        reader.Close()
+
+        If lastElectionID = 0 Then
+            MessageBox.Show("No elections have been conducted yet. Conduct elections to release results.")
+            Exit Sub
+        End If
+
+        Dim announced As Integer = 0 ' Default value in case there are no rows in election_time
+        Dim announcedQuery As String = "SELECT announced FROM election_time ORDER BY election_id DESC LIMIT 1;"
+        cmd = New MySqlCommand(lastElectionIDQuery, Con)
+        reader = cmd.ExecuteReader()
+        If reader.Read() Then
+            lastElectionID = Convert.ToInt32(reader("election_id"))
+        End If
+        reader.Close()
+
+        If announced = 0 Then
+            Dim current_date As String = "2024-01-03"
+            Dim resultAnnouncementDate As DateTime = DateTime.MinValue
+
+            ' Retrieve the value of nomination_start from the last row of the election_time table
+            Dim selectQuery As String = "SELECT results_announcement FROM election_time ORDER BY election_id DESC LIMIT 1;"
+            cmd = New MySqlCommand(selectQuery, Con)
+            Dim result As Object = cmd.ExecuteScalar()
+
+            ' Check if the result is not null and assign it to nominationStartDate
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                resultAnnouncementDate = Convert.ToDateTime(result)
+            End If
+
+            ' Check if the current date is after the nomination start date
+            If resultAnnouncementDate <> DateTime.MinValue AndAlso DateTime.Parse(current_date) >= resultAnnouncementDate Then
+                Dim updateCmd As New MySqlCommand("UPDATE election_time SET announced = 1 WHERE election_id = @electionID;", Con)
+                updateCmd.Parameters.AddWithValue("@electionID", lastElectionID)
+                Dim rowsAffected As Integer = updateCmd.ExecuteNonQuery()
+
+                If rowsAffected > 0 Then
+                    MessageBox.Show("Results have been released.")
+                Else
+                    MessageBox.Show("Failed to release results. Please try again later.")
+                End If
+            Else
+                MessageBox.Show("It's not the time to release results yet. Please wait patiently.")
+            End If
+        End If
+
+
+
+
 
     End Sub
 End Class
