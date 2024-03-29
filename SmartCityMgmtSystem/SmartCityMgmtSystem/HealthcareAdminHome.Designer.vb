@@ -22,6 +22,7 @@ Partial Class HealthcareAdminHome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HealthcareAdminHome))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -155,7 +156,7 @@ Partial Class HealthcareAdminHome
         Me.Label3.Location = New System.Drawing.Point(45, 10)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(231, 38)
+        Me.Label3.Size = New System.Drawing.Size(215, 38)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Appointment Corner"
         '
@@ -184,6 +185,8 @@ Partial Class HealthcareAdminHome
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.LightBlue
+        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_medical_doctor_50
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(126, 79)
@@ -204,7 +207,7 @@ Partial Class HealthcareAdminHome
         Me.DataGridViewImageColumn1.ReadOnly = True
         Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn1.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn1.Width = 123
+        Me.DataGridViewImageColumn1.Width = 125
         '
         'DataGridViewImageColumn2
         '
@@ -223,7 +226,7 @@ Partial Class HealthcareAdminHome
         Me.DataGridViewImageColumn2.ReadOnly = True
         Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn2.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn2.Width = 123
+        Me.DataGridViewImageColumn2.Width = 125
         '
         'Panel8
         '
@@ -278,7 +281,7 @@ Partial Class HealthcareAdminHome
         Me.Label11.Location = New System.Drawing.Point(35, 11)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(265, 38)
+        Me.Label11.Size = New System.Drawing.Size(247, 38)
         Me.Label11.TabIndex = 2
         Me.Label11.Text = "Doctor and Staff Corner"
         '
@@ -401,7 +404,7 @@ Partial Class HealthcareAdminHome
         Me.Label6.Location = New System.Drawing.Point(31, 11)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(245, 38)
+        Me.Label6.Size = New System.Drawing.Size(226, 38)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Health Record Corner"
         '
@@ -457,7 +460,7 @@ Partial Class HealthcareAdminHome
         Me.Label9.Location = New System.Drawing.Point(57, 11)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(214, 38)
+        Me.Label9.Size = New System.Drawing.Size(195, 38)
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "Emergency Corner"
         '
@@ -513,7 +516,7 @@ Partial Class HealthcareAdminHome
         Me.Label15.Location = New System.Drawing.Point(60, 11)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(188, 38)
+        Me.Label15.Size = New System.Drawing.Size(175, 38)
         Me.Label15.TabIndex = 2
         Me.Label15.Text = "Medicine Corner"
         '
@@ -604,7 +607,7 @@ Partial Class HealthcareAdminHome
         Me.Label19.Location = New System.Drawing.Point(34, 10)
         Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(256, 38)
+        Me.Label19.Size = New System.Drawing.Size(240, 38)
         Me.Label19.TabIndex = 2
         Me.Label19.Text = "Blood Donation Corner"
         '
@@ -645,14 +648,14 @@ Partial Class HealthcareAdminHome
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Agency FB", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_user_shield_48
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label4.Location = New System.Drawing.Point(21, 7)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(235, 50)
+        Me.Label4.Size = New System.Drawing.Size(333, 46)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "      Admin Home"
         '
