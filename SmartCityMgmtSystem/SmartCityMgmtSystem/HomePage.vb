@@ -15,9 +15,7 @@ Public Class HomePage
     End Sub
 
     Private Sub electionDept_Click(sender As Object, e As EventArgs) Handles electionDept.Click
-        Dim elec = New ElectionDashboard With {
-            .LoggedInUserId = uid
-        }
+        Dim elec = New ElectionDashboard()
         elec.Show()
         Me.ParentForm.Close()
         Me.Close()
