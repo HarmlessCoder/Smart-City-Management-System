@@ -1,13 +1,14 @@
 ﻿Imports System.Data.SqlClient
 Public Class HomePage
-
+    Public Property uid As Integer = -1
+    Public Property u_name As String = "Hello"
     Public mainForm As Form
     Public Sub SetMainForm(ByRef parentForm As Form)
         mainForm = parentForm
     End Sub
     Private Sub ed_dept_Click(sender As Object, e As EventArgs) Handles ed_dept.Click
         Dim ed = Ed_GlobalDashboard
-        ed.userID = 100
+        ed.userID = 101
         ed.Show()
         Me.ParentForm.Close()
         Me.Close()
@@ -21,7 +22,10 @@ Public Class HomePage
     End Sub
 
     Private Sub tranDept_Click(sender As Object, e As EventArgs) Handles tranDept.Click
-        Dim transport = New TransportationDashboard()
+        Dim transport = New TransportationDashboard With {
+            .uid = uid,
+            .u_name = u_name
+        }
         transport.Show()
         Me.ParentForm.Close()
         Me.Close()
@@ -56,6 +60,6 @@ Public Class HomePage
     End Sub
 
     Private Sub HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'MessageBox.Show(uid.ToString + " " + u_name)
     End Sub
 End Class
