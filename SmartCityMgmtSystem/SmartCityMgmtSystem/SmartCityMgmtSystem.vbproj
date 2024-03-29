@@ -364,6 +364,12 @@
     <Compile Include="Employment_portal_admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Employment_portal_search.Designer.vb">
+      <DependentUpon>Employment_portal_search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal_search.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="hc_B_Appointment.Designer.vb">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>
     </Compile>
@@ -1173,6 +1179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employment_portal_admin.resx">
       <DependentUpon>Employment_portal_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employment_portal_search.resx">
+      <DependentUpon>Employment_portal_search.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hc_B_Appointment.resx">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>
