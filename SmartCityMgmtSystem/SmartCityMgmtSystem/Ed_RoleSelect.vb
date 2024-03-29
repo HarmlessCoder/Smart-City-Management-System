@@ -89,10 +89,12 @@ Public Class Ed_RoleSelect
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim homepage = New HomePageDashboard With {
+            .uid = Ed_GlobalDashboard.userID
+        }
         Me.ParentForm.Close()
         Me.Close()
-        'Dim homepage = New HomePageDashboard
-        'HomePage.Show()
+        homepage.Show()
     End Sub
 
     Private Sub Ed_RoleSelect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
