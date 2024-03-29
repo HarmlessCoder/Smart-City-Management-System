@@ -1010,6 +1010,12 @@
     <Compile Include="UserProfilePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserResetPassword.Designer.vb">
+      <DependentUpon>UserResetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserResetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserSignUp.Designer.vb">
       <DependentUpon>UserSignUp.vb</DependentUpon>
     </Compile>
@@ -1440,6 +1446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfilePage.resx">
       <DependentUpon>UserProfilePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserResetPassword.resx">
+      <DependentUpon>UserResetPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>
