@@ -2,42 +2,166 @@
 Imports MySql.Data.MySqlClient
 Public Class EventRegistrationScreen
 
+
+    Public Property uid As Integer
+    Public Property u_name As String
+
+
+
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Check if the clicked cell is in the "EditBut" column and not a header cell
         If e.ColumnIndex = DataGridView1.Columns("EditBut").Index AndAlso e.RowIndex >= 0 Then
-            ' Change this to DB logic later
-            MessageBox.Show("Edit button clicked for row " & e.RowIndex.ToString(), "Edit Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ' Retrieve the vendor name from the selected row
+            Dim vendorName As String = DataGridView1.Rows(e.RowIndex).Cells("Column1").Value.ToString()
 
-            ' Check if the clicked cell is in the "DeleteBut" column and not a header cell
+            ' Call a method to retrieve the vendor ID based on the vendor name
+            Dim vendorID As Integer = GetVendorID(vendorName)
+
+            ' Retrieve the cost from the DataTable based on the vendor name
+            Dim cost As Integer = GetCostFromDB(vendorName)
+
+            ' Populate the vendor ID in TextBox4
+            TextBox4.Text = vendorID.ToString()
+            Label15.Text = cost.ToString()
+            Label16.Text = cost.ToString()
+
+
+            MessageBox.Show("Vendor ID: " & TextBox4.Text, "Edit Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
         ElseIf e.ColumnIndex = DataGridView1.Columns("DeleteBut").Index AndAlso e.RowIndex >= 0 Then
             ' Perform the action for the "DeleteButton" column
             MessageBox.Show("Delete button clicked for row " & e.RowIndex.ToString(), "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End If
     End Sub
 
+    Private Function GetVendorID(ByVal vendorName As String) As Integer
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim cmd As MySqlCommand
+        Dim vendorID As Integer = -1
+
+        Try
+            Con.Open()
+
+            ' Use parameterized query to prevent SQL injection
+            Dim query As String = "SELECT vendorID FROM Vendor WHERE vendorName = @VendorName;"
+            cmd = New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@VendorName", vendorName)
+
+            ' Execute the query to retrieve the vendor ID
+            vendorID = Convert.ToInt32(cmd.ExecuteScalar())
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            Con.Close()
+        End Try
+
+        Return vendorID
+    End Function
+
+
+    Private Function GetCostFromDB(ByVal vendorName As String) As Integer
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim cmd As MySqlCommand
+        Dim cost As Integer = -1
+
+        Try
+            Con.Open()
+
+            ' Use parameterized query to prevent SQL injection
+            Dim query As String = "SELECT serviceCost FROM Vendor WHERE vendorName = @VendorName;"
+            cmd = New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@VendorName", vendorName)
+
+            ' Execute the query to retrieve the cost
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing Then
+                cost = Convert.ToInt32(result)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            Con.Close()
+        End Try
+
+        Return cost
+    End Function
+
+
+
     Private Sub LoadandBindDataGridView()
-        'Get connection String from globals
-        Dim conString = Globals.getdbConnectionString()
-        Dim Con = New SqlConnection(conString)
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
 
-        'Query for SQL table
-        Dim query = "enter your query"
-        Con.Open()
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-        Dim cmd As New SqlCommand(query, Con)
-        Dim adapter As New SqlDataAdapter(cmd)
+        cmd = New MySqlCommand("SELECT v.vendorID,v.vendorName,v.specialisation,v.rating,v.experience FROM Vendor v LEFT JOIN  eventBookings eb ON v.vendorID = eb.vendorID WHERE  v.specialisation = 'your_specialisation'  AND (eb.startdate IS NULL OR eb.enddate < 'your_start_date' OR eb.startdate > 'your_end_date'); -- Replace 'your_start_date' and 'your_end_date' with actual start and end dates", Con)
+        reader = cmd.ExecuteReader
+        ' Create a DataTable to store the data
+        Dim dataTable As New DataTable()
+
+        'Fill the DataTable with data from the SQL table
+        dataTable.Load(reader)
+        reader.Close()
+        Con.Close()
+
+        'IMP: Specify the Column Mappings from DataGridView to SQL Table
+        DataGridView1.AutoGenerateColumns = False
+        'DataGridView1.Columns(0).DataPropertyName = "id"
+        'DataGridView1.Columns(1).DataPropertyName = "place_name"
+
+        ' Bind the data to DataGridView
+        DataGridView1.DataSource = dataTable
+    End Sub
+
+
+    Private Sub LoadandBindDataGridView1(ByVal startDate As Date, ByVal endDate As Date, ByVal eventType As String)
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
+
+        Try
+            Con.Open()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        ' Use parameterized query to prevent SQL injection and handle dates properly
+        Dim query As String = "SELECT v.vendorID, v.vendorName, v.specialisation, v.rating, v.experience " &
+                          "FROM Vendor v " &
+                          "LEFT JOIN eventBookings eb ON v.vendorID = eb.vendorID " &
+                          "WHERE v.specialisation = @EventType " &
+                          "AND (eb.startdate IS NULL OR eb.enddate < @EventEndDate OR eb.startdate > @EventStartDate);"
+
+        cmd = New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@EventType", eventType)
+        cmd.Parameters.AddWithValue("@EventStartDate", startDate)
+        cmd.Parameters.AddWithValue("@EventEndDate", endDate)
+
+        reader = cmd.ExecuteReader()
 
         ' Create a DataTable to store the data
         Dim dataTable As New DataTable()
 
         'Fill the DataTable with data from the SQL table
-        adapter.Fill(dataTable)
+        dataTable.Load(reader)
+        reader.Close()
+        Con.Close()
 
         'IMP: Specify the Column Mappings from DataGridView to SQL Table
         DataGridView1.AutoGenerateColumns = False
-        DataGridView1.Columns(0).DataPropertyName = "Column Name in SQL table"
-        DataGridView1.Columns(1).DataPropertyName = "Column Name in SQL table"
+        'DataGridView1.Columns(0).DataPropertyName = "vendorID"
+        DataGridView1.Columns(0).DataPropertyName = "vendorName"
+        'DataGridView1.Columns(2).DataPropertyName = "specialisation"
+        DataGridView1.Columns(1).DataPropertyName = "rating"
+        DataGridView1.Columns(2).DataPropertyName = "experience"
 
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
@@ -113,7 +237,8 @@ Public Class EventRegistrationScreen
         ComboBox1.Items.Add("Exhibition")
         ComboBox1.Items.Add("Art Gallery")
 
-
+        TextBox1.Text = u_name
+        TextBox2.Text = uid
 
 
 
@@ -162,19 +287,24 @@ Public Class EventRegistrationScreen
 
     End Sub
 
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
 
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Viewtable()
+        Dim CustomerName As String = u_name
+        Dim CustomerID As String = uid
+        Dim ContactNo As String = TextBox3.Text
+        Dim EventStartDate As Date = DateTimePicker1.Value
+        Dim EventEndDate As Date = DateTimePicker2.Value
+        Dim EventType As String = ComboBox1.SelectedItem.ToString()
+        Dim VendorID As String = TextBox4.Text
+        Dim Password As String = TextBox5.Text
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim EventStartDate1 As Date = DateTimePicker1.Value
+        Dim EventEndDate1 As Date = DateTimePicker2.Value
+        Dim EventType1 As String = ComboBox1.SelectedItem.ToString()
+        LoadandBindDataGridView1(EventStartDate1, EventEndDate1, EventType1)
     End Sub
 End Class
