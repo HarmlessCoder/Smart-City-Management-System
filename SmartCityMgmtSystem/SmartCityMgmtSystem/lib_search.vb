@@ -88,7 +88,7 @@ Public Class lib_search
             ' Read the data from the reader
             While reader.Read()
                 Dim status As String
-                If reader("issued").ToString() = "0" Then
+                If reader("issued").ToString() = "False" Then
                     status = "Available"
                 Else
                     status = "Not Available"
@@ -130,7 +130,7 @@ Public Class lib_search
             ' Read the data from the reader
             While reader.Read()
                 Dim status As String
-                If reader("issued").ToString() = "0" Then
+                If reader("issued").ToString() = "False" Then
                     status = "Available"
                 Else
                     status = "Not Available"
@@ -170,7 +170,7 @@ Public Class lib_search
             ' Read the data from the reader
             While reader.Read()
                 Dim status As String
-                If reader("issued").ToString() = "0" Then
+                If reader("issued").ToString() = "False" Then
                     status = "Available"
                 Else
                     status = "Not Available"
@@ -211,7 +211,7 @@ Public Class lib_search
             ' Read the data from the reader
             While reader.Read()
                 Dim status As String
-                If reader("issued").ToString() = "0" Then
+                If reader("issued").ToString() = "False" Then
                     status = "Available"
                 Else
                     status = "Not Available"
@@ -318,7 +318,7 @@ Public Class lib_search
         ' Read the data from the reader
         While reader.Read()
             Dim status As String
-            If reader("issued").ToString() = "0" Then
+            If reader("issued").ToString() = "False" Then
                 status = "Available"
             Else
                 status = "Not Available"
