@@ -1,4 +1,4 @@
-﻿Public Class Employment_portal_search
+﻿Public Class Employment_portal_admin_withdraw
 
     Private Sub TransportationDashboard_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
@@ -8,7 +8,7 @@
         Me.Close()
 
         ' Create an instance of employment_portal.vb and display it
-        Dim employmentPortalForm As New Employment_portal()
-        employmentPortalForm.Show()
+        Dim employmentPortalAdminForm As New Employment_portal_admin()
+        employmentPortalAdminForm.Show()
     End Sub
 End Class

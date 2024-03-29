@@ -4,8 +4,16 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
         'View the TransportationAdminHome screen by default - first argument, name of the panel in the parent panel, second - name of the child form
-        Globals.viewChildForm(childformPanel, TransportationAdminHome)
+        Globals.viewChildForm(childformPanel, Employment_portal_admin_add)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+
+        ' Create an instance of employment_portal_admin_withdraw.vb and display it
+        Dim employmentPortalAdminWithdrawForm As New Employment_portal_admin_withdraw()
+        employmentPortalAdminWithdrawForm.Show()
     End Sub
 End Class
