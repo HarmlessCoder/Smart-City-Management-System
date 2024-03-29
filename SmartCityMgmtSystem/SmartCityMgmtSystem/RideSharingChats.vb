@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Data.SqlTypes
 Imports System.Threading
 Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI.Common
 Imports Org.BouncyCastle.Ocsp
 Public Class RideSharingChats
     'To pass information from the parent form in form of property
@@ -210,6 +211,24 @@ Public Class RideSharingChats
         Else
             Button1.Text = "Pay"
         End If
+
+        'Get the vehicle Details, TODO: Vehicle Picture Fetching
+        Dim query As String = "SELECT vehicle_type from vehicle_reg WHERE vehicle_id = '" & VehicleNumber & "';"
+        Using connection As New MySqlConnection(Globals.getdbConnectionString())
+            Using command As New MySqlCommand(query, connection)
+
+                Try
+                    connection.Open()
+                    Dim objResult As Object = command.ExecuteScalar()
+                    If objResult IsNot Nothing AndAlso Not DBNull.Value.Equals(objResult) Then
+                        Dim vehicle_type As Integer = Convert.ToInt32(objResult)
+                        Label4.Text = TransportGlobals.GetVehicleType(vehicle_type)
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("Error fetching vehicle desc: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End Using
+        End Using
 
         'For requester, show the approve button
         If poster_uid <> uid Then

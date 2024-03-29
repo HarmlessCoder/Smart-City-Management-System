@@ -4,25 +4,16 @@ Public Class Ed_Moodle_CourseList
     Public RoomID As Integer
     Public Cur_All As String
     Private Sub Ed_Stud_Coursera_Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim labels As Label() = New Label(21) {}
+        Dim labels As Ed_LeftPanelItem() = New Ed_LeftPanelItem(8) {}
 
         ' Create labels and set properties
-        For i As Integer = 0 To 20
-            labels(i) = New Label()
-            labels(i).Text = "Course " & (i + 1)
-            labels(i).AutoSize = False
-            labels(i).Width = FlowLayoutPanel1.Width - 10
-            labels(i).Height = 20 ' Adjust the height as needed
-            labels(i).BackColor = Color.Transparent
-            labels(i).BorderStyle = BorderStyle.None
-            labels(i).Font = New Font("Cascadia Mono", 10) ' Set font to Cascadia Mono, size 10
-            labels(i).ForeColor = Color.FromArgb(40, 68, 114) ' Set text color
-            AddHandler labels(i).Click, AddressOf Label_Click ' Add click event handler
+        For i As Integer = 0 To 7
+            labels(i) = New Ed_LeftPanelItem()
+            labels(i).Label1.Text = "Resource " & (i + 1)
+            AddHandler labels(i).Label1.Click, AddressOf Label_Click ' Add click event handler
         Next
-
-
         ' Add labels to the FlowLayoutPanel
-        For Each Label As Label In labels
+        For Each Label As Ed_LeftPanelItem In labels
             FlowLayoutPanel1.Controls.Add(Label)
         Next
     End Sub
