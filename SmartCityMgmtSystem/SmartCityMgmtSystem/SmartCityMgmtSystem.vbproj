@@ -146,6 +146,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Ed_CertificateList.Designer.vb">
+      <DependentUpon>Ed_CertificateList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CertificateList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareApproveAppointmentAdmin.Designer.vb">
       <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
     </Compile>
@@ -1084,6 +1090,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ed_CertificateList.resx">
+      <DependentUpon>Ed_CertificateList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareApproveAppointmentAdmin.resx">
       <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
     </EmbeddedResource>
