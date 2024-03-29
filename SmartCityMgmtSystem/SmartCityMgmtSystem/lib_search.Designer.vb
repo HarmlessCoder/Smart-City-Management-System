@@ -51,7 +51,7 @@ Partial Class lib_search
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.overdueBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.searchBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -201,7 +201,7 @@ Partial Class lib_search
         Me.childformPanel.Controls.Add(Me.Label11)
         Me.childformPanel.Controls.Add(Me.searchBar)
         Me.childformPanel.Controls.Add(Me.overdueBooksTitleTable)
-        Me.childformPanel.Controls.Add(Me.overdueBooksTablePanel)
+        Me.childformPanel.Controls.Add(Me.searchBooksTablePanel)
         Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.childformPanel.Location = New System.Drawing.Point(279, 46)
         Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -318,7 +318,7 @@ Partial Class lib_search
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1228, 68)
         Me.overdueBooksTitleTable.TabIndex = 48
         '
@@ -327,7 +327,7 @@ Partial Class lib_search
         Me.Panel6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Label7)
-        Me.Panel6.Location = New System.Drawing.Point(920, 3)
+        Me.Panel6.Location = New System.Drawing.Point(920, 4)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(182, 72)
@@ -350,7 +350,7 @@ Partial Class lib_search
         Me.Panel7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel7.Controls.Add(Me.Label8)
-        Me.Panel7.Location = New System.Drawing.Point(1104, 3)
+        Me.Panel7.Location = New System.Drawing.Point(1104, 4)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(123, 72)
@@ -373,7 +373,7 @@ Partial Class lib_search
         Me.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Location = New System.Drawing.Point(797, 3)
+        Me.Panel3.Location = New System.Drawing.Point(797, 4)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(122, 72)
@@ -396,7 +396,7 @@ Partial Class lib_search
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Location = New System.Drawing.Point(492, 3)
+        Me.Panel4.Location = New System.Drawing.Point(492, 4)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(303, 72)
@@ -419,7 +419,7 @@ Partial Class lib_search
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Location = New System.Drawing.Point(186, 3)
+        Me.Panel5.Location = New System.Drawing.Point(186, 4)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(303, 72)
@@ -442,7 +442,7 @@ Partial Class lib_search
         Me.Panel10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel10.Controls.Add(Me.Label6)
-        Me.Panel10.Location = New System.Drawing.Point(1, 3)
+        Me.Panel10.Location = New System.Drawing.Point(1, 4)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(182, 72)
@@ -460,26 +460,26 @@ Partial Class lib_search
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Book ID"
         '
-        'overdueBooksTablePanel
+        'searchBooksTablePanel
         '
-        Me.overdueBooksTablePanel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.overdueBooksTablePanel.AutoScroll = True
-        Me.overdueBooksTablePanel.BackColor = System.Drawing.Color.Transparent
-        Me.overdueBooksTablePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.overdueBooksTablePanel.ColumnCount = 6
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.overdueBooksTablePanel.Location = New System.Drawing.Point(18, 238)
-        Me.overdueBooksTablePanel.Margin = New System.Windows.Forms.Padding(0)
-        Me.overdueBooksTablePanel.Name = "overdueBooksTablePanel"
-        Me.overdueBooksTablePanel.RowCount = 1
-        Me.overdueBooksTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.overdueBooksTablePanel.Size = New System.Drawing.Size(1228, 479)
-        Me.overdueBooksTablePanel.TabIndex = 47
+        Me.searchBooksTablePanel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.searchBooksTablePanel.AutoScroll = True
+        Me.searchBooksTablePanel.BackColor = System.Drawing.Color.Transparent
+        Me.searchBooksTablePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.searchBooksTablePanel.ColumnCount = 6
+        Me.searchBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.searchBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.searchBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.searchBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.searchBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.searchBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.searchBooksTablePanel.Location = New System.Drawing.Point(18, 238)
+        Me.searchBooksTablePanel.Margin = New System.Windows.Forms.Padding(0)
+        Me.searchBooksTablePanel.Name = "searchBooksTablePanel"
+        Me.searchBooksTablePanel.RowCount = 1
+        Me.searchBooksTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.searchBooksTablePanel.Size = New System.Drawing.Size(1228, 479)
+        Me.searchBooksTablePanel.TabIndex = 47
         '
         'Label2
         '
@@ -568,7 +568,7 @@ Partial Class lib_search
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents overdueBooksTablePanel As TableLayoutPanel
+    Friend WithEvents searchBooksTablePanel As TableLayoutPanel
     Friend WithEvents searchBar As TableLayoutPanel
     Friend WithEvents btnSearch As Button
     Friend WithEvents queryBook As TextBox

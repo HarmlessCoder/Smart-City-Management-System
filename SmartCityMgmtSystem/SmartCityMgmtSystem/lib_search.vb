@@ -40,4 +40,8 @@
     Private Sub lib_search_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
     End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+
+    End Sub
 End Class
