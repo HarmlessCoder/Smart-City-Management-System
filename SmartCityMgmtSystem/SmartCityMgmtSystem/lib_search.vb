@@ -345,4 +345,9 @@ Public Class lib_search
     Private Sub queryBook_TextChanged(sender As Object, e As EventArgs) Handles queryBook.TextChanged
 
     End Sub
+
+    Private Sub queryBook_Click(sender As Object, e As EventArgs) Handles queryBook.Click
+        queryBook.Text = ""
+    End Sub
+
 End Class
