@@ -103,6 +103,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
@@ -118,6 +119,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -168,6 +170,12 @@
     <Compile Include="CheckBankBalance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_AddMoodleCourse.Designer.vb">
+      <DependentUpon>Ed_AddMoodleCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_AddMoodleCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_BusItem.Designer.vb">
       <DependentUpon>Ed_BusItem.vb</DependentUpon>
     </Compile>
@@ -216,6 +224,12 @@
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_FeePopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_AddECourse.Designer.vb">
+      <DependentUpon>Ed_AddECourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_AddECourse.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_Institute_BusList.Designer.vb">
@@ -285,6 +299,18 @@
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Stud_MyCourses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Coursera_Course_Content.Designer.vb">
+      <DependentUpon>Ed_Teacher_Coursera_Course_Content.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Coursera_Course_Content.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Course_Resource.Designer.vb">
+      <DependentUpon>Ed_Teacher_Course_Resource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Course_Resource.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_ViewPaymentPopup.Designer.vb">
@@ -442,6 +468,12 @@
     </Compile>
     <Compile Include="NewsDashboard.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationBubble.Designer.vb">
+      <DependentUpon>NotificationBubble.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationBubble.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TransportGlobals.vb" />
     <Compile Include="TransportManageTollGatesAdmin.Designer.vb">
@@ -1010,6 +1042,9 @@
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_AddMoodleCourse.resx">
+      <DependentUpon>Ed_AddMoodleCourse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_BusItem.resx">
       <DependentUpon>Ed_BusItem.vb</DependentUpon>
     </EmbeddedResource>
@@ -1033,6 +1068,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_FeePopup.resx">
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_AddECourse.resx">
+      <DependentUpon>Ed_AddECourse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Institute_BusList.resx">
       <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
@@ -1066,6 +1104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Coursera_Course_Content.resx">
+      <DependentUpon>Ed_Teacher_Coursera_Course_Content.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Course_Resource.resx">
+      <DependentUpon>Ed_Teacher_Course_Resource.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ViewPaymentPopup.resx">
       <DependentUpon>Ed_ViewPaymentPopup.vb</DependentUpon>
@@ -1141,6 +1185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewsDashboard.resx">
       <DependentUpon>NewsDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationBubble.resx">
+      <DependentUpon>NotificationBubble.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportManageTollGatesAdmin.resx">
       <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>

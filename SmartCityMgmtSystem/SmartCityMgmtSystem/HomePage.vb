@@ -7,10 +7,8 @@ Public Class HomePage
         mainForm = parentForm
     End Sub
     Private Sub ed_dept_Click(sender As Object, e As EventArgs) Handles ed_dept.Click
-        Dim ed = New Ed_GlobalDashboard With {
-            .userID = uid
-        }
-
+        Dim ed = Ed_GlobalDashboard
+        ed.userID = 101
         ed.Show()
         Me.ParentForm.Close()
         Me.Close()

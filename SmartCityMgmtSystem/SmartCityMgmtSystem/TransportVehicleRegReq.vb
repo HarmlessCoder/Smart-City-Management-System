@@ -26,7 +26,7 @@ Public Class TransportVehicleRegReq
         Next
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         MessageBox.Show("Payment request will be sent. ", "Registration fee Payment", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
@@ -34,9 +34,21 @@ Public Class TransportVehicleRegReq
         MessageBox.Show("Registration will be cancelled ", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         MessageBox.Show("Select Invoice PDF ", "browse", MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
     End Sub
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim openFileDialog As New OpenFileDialog()
+        openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg;*.gif;*.png)|*.bmp;*.jpg;*.jpeg;*.gif;*.png"
+        If openFileDialog.ShowDialog() = DialogResult.OK Then
+            Dim imageFilePath As String = openFileDialog.FileName
+            Dim image As Image = Image.FromFile(imageFilePath)
+            PictureBox1.Image = image
+        End If
+    End Sub
 End Class
