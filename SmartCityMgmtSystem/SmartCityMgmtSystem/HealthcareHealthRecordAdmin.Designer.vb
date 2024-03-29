@@ -22,23 +22,28 @@ Partial Class HealthcareHealthRecordAdmin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HealthcareHealthRecordAdmin))
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -51,13 +56,8 @@ Partial Class HealthcareHealthRecordAdmin
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,9 +71,9 @@ Partial Class HealthcareHealthRecordAdmin
         'DataGridViewImageColumn1
         '
         Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle27.NullValue = "System.Drawing.Bitmap"
-        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.NullValue = "System.Drawing.Bitmap"
+        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewImageColumn1.HeaderText = "  "
         Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.DataGridViewImageColumn1.MinimumWidth = 6
@@ -81,18 +81,18 @@ Partial Class HealthcareHealthRecordAdmin
         Me.DataGridViewImageColumn1.ReadOnly = True
         Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn1.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn1.Width = 125
+        Me.DataGridViewImageColumn1.Width = 123
         '
         'DataGridViewImageColumn2
         '
         Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle28.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle28.NullValue = CType(resources.GetObject("DataGridViewCellStyle28.NullValue"), Object)
-        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.NullValue = CType(resources.GetObject("DataGridViewCellStyle2.NullValue"), Object)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewImageColumn2.HeaderText = ""
         Me.DataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.DataGridViewImageColumn2.MinimumWidth = 6
@@ -100,7 +100,7 @@ Partial Class HealthcareHealthRecordAdmin
         Me.DataGridViewImageColumn2.ReadOnly = True
         Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn2.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn2.Width = 125
+        Me.DataGridViewImageColumn2.Width = 123
         '
         'DataGridView1
         '
@@ -108,13 +108,13 @@ Partial Class HealthcareHealthRecordAdmin
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        DataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle29.Font = New System.Drawing.Font("Trebuchet MS", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Trebuchet MS", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -124,47 +124,47 @@ Partial Class HealthcareHealthRecordAdmin
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.ColumnHeadersHeight = 47
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.DeleteBut, Me.EditBut})
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.DarkGoldenrod
-        DataGridViewCellStyle35.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.DarkGoldenrod
-        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkGoldenrod
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkGoldenrod
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView1.GridColor = System.Drawing.Color.DimGray
         Me.DataGridView1.Location = New System.Drawing.Point(550, 128)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(6)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.DarkGoldenrod
-        DataGridViewCellStyle36.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.DarkGoldenrod
-        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.DarkGoldenrod
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkGoldenrod
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Trebuchet MS", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Trebuchet MS", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -175,6 +175,80 @@ Partial Class HealthcareHealthRecordAdmin
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(674, 531)
         Me.DataGridView1.TabIndex = 14
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Patient Name"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Column2.FillWeight = 196.8496!
+        Me.Column2.HeaderText = "Appointment IDs"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Column3.FillWeight = 175.1962!
+        Me.Column3.HeaderText = "Date"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'DeleteBut
+        '
+        Me.DeleteBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle7.NullValue = CType(resources.GetObject("DataGridViewCellStyle7.NullValue"), Object)
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DeleteBut.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DeleteBut.HeaderText = ""
+        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
+        Me.DeleteBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DeleteBut.MinimumWidth = 6
+        Me.DeleteBut.Name = "DeleteBut"
+        Me.DeleteBut.ReadOnly = True
+        Me.DeleteBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DeleteBut.ToolTipText = "Delete"
+        Me.DeleteBut.Width = 6
+        '
+        'EditBut
+        '
+        Me.EditBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle8.NullValue = CType(resources.GetObject("DataGridViewCellStyle8.NullValue"), Object)
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.EditBut.DefaultCellStyle = DataGridViewCellStyle8
+        Me.EditBut.HeaderText = ""
+        Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
+        Me.EditBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.EditBut.MinimumWidth = 6
+        Me.EditBut.Name = "EditBut"
+        Me.EditBut.ReadOnly = True
+        Me.EditBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EditBut.ToolTipText = "Delete"
+        Me.EditBut.Width = 6
         '
         'Panel1
         '
@@ -260,7 +334,7 @@ Partial Class HealthcareHealthRecordAdmin
         Me.Label3.Location = New System.Drawing.Point(116, 25)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(194, 37)
+        Me.Label3.Size = New System.Drawing.Size(209, 37)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Add Health Record"
         '
@@ -309,51 +383,16 @@ Partial Class HealthcareHealthRecordAdmin
         Me.Button1.Text = "Add"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Patient Name"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        DataGridViewCellStyle31.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle31
-        Me.Column2.FillWeight = 196.8496!
-        Me.Column2.HeaderText = "Appointment IDs"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        DataGridViewCellStyle32.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle32.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle32
-        Me.Column3.FillWeight = 175.1962!
-        Me.Column3.HeaderText = "Date"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
         'DataGridViewImageColumn3
         '
         Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle38.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle38.NullValue = CType(resources.GetObject("DataGridViewCellStyle38.NullValue"), Object)
-        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle12.NullValue = CType(resources.GetObject("DataGridViewCellStyle12.NullValue"), Object)
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridViewImageColumn3.HeaderText = ""
         Me.DataGridViewImageColumn3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
         Me.DataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
@@ -361,18 +400,18 @@ Partial Class HealthcareHealthRecordAdmin
         Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
         Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn3.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn3.Width = 6
+        Me.DataGridViewImageColumn3.Width = 123
         '
         'DataGridViewImageColumn4
         '
         Me.DataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle39.NullValue = CType(resources.GetObject("DataGridViewCellStyle39.NullValue"), Object)
-        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle13.NullValue = CType(resources.GetObject("DataGridViewCellStyle13.NullValue"), Object)
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridViewImageColumn4.HeaderText = ""
         Me.DataGridViewImageColumn4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
         Me.DataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
@@ -380,60 +419,21 @@ Partial Class HealthcareHealthRecordAdmin
         Me.DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
         Me.DataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn4.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn4.Width = 6
-        '
-        'DeleteBut
-        '
-        Me.DeleteBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle33.NullValue = CType(resources.GetObject("DataGridViewCellStyle33.NullValue"), Object)
-        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DeleteBut.DefaultCellStyle = DataGridViewCellStyle33
-        Me.DeleteBut.HeaderText = ""
-        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
-        Me.DeleteBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DeleteBut.MinimumWidth = 6
-        Me.DeleteBut.Name = "DeleteBut"
-        Me.DeleteBut.ReadOnly = True
-        Me.DeleteBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DeleteBut.ToolTipText = "Delete"
-        Me.DeleteBut.Width = 6
-        '
-        'EditBut
-        '
-        Me.EditBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle34.NullValue = CType(resources.GetObject("DataGridViewCellStyle34.NullValue"), Object)
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.EditBut.DefaultCellStyle = DataGridViewCellStyle34
-        Me.EditBut.HeaderText = ""
-        Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
-        Me.EditBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.EditBut.MinimumWidth = 6
-        Me.EditBut.Name = "EditBut"
-        Me.EditBut.ReadOnly = True
-        Me.EditBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.EditBut.ToolTipText = "Delete"
-        Me.EditBut.Width = 6
+        Me.DataGridViewImageColumn4.Width = 123
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 23.79661!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Agency FB", 23.79661!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label4.Location = New System.Drawing.Point(35, 9)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(483, 46)
+        Me.Label4.Size = New System.Drawing.Size(364, 50)
         Me.Label4.TabIndex = 12
-        Me.Label4.Text = "    Update Health Record"
+        Me.Label4.Text = "      Update Health Record"
         '
         'PictureBox1
         '
