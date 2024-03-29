@@ -32,7 +32,10 @@ Public Class HomePage
     End Sub
 
     Private Sub event_dept_Click(sender As Object, e As EventArgs) Handles event_dept.Click
-        Dim fest = New EventDashboard()
+        Dim fest = New EventDashboard() With {
+            .uid = uid,
+            .u_name = u_name
+        }
         fest.Show()
         Me.ParentForm.Close()
         Me.Close()

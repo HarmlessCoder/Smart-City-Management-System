@@ -23,8 +23,7 @@ Public Class UserProfilePage
                         TextBox1.Text = reader("name").ToString()
                         TextBox3.Text = reader("gender").ToString()
                         TextBox4.Text = reader("phone_number").ToString()
-                        TextBox5.Text = reader("house_number").ToString()
-                        TextBox6.Text = reader("ward_number").ToString()
+                        TextBox5.Text = reader("address").ToString()
                         If reader("occupation") IsNot Nothing AndAlso Not IsDBNull(reader("occupation")) Then
                             TextBox7.Text = reader("occupation").ToString()
                         End If
@@ -39,7 +38,6 @@ Public Class UserProfilePage
                                 PictureBox2.Image = Image.FromStream(ms)
                             End Using
                         End If
-                        ComboBox1.Text = reader("age_group").ToString()
 
                         Dim dobString As String = reader("dob").ToString()
                         ' Parse the date string into a DateTime object
@@ -65,10 +63,10 @@ Public Class UserProfilePage
         Dim formattedDate As String = selectedDate.ToString("yyyy-MM-dd")
         Dim voter As Integer = 0
         Dim voted As Integer = 0
-        cmd = "UPDATE users SET name = @name, dob = @dob, age = @age, age_group = @age_group,
+        cmd = "UPDATE users SET name = @name, dob = @dob, age = @age,
     profile_photo = @profile, gender = @gender, phone_number = @phno,
-    house_number = @houseno, ward_number = @wardno, occupation = @occupation,
-    guardian_uid = @guid WHERE user_id = @uid"
+    occupation = @occupation, guardian_uid = @guid, address = @address 
+    WHERE user_id = @uid"
         Dim conStr As String = Globals.getdbConnectionString()
         Using connection As New MySqlConnection(conStr)
             Using sqlCommand As New MySqlCommand(cmd, connection)
@@ -76,12 +74,10 @@ Public Class UserProfilePage
                 sqlCommand.Parameters.AddWithValue("@name", TextBox1.Text)
                 sqlCommand.Parameters.AddWithValue("@dob", formattedDate)
                 sqlCommand.Parameters.AddWithValue("@age", TextBox2.Text)
-                sqlCommand.Parameters.AddWithValue("@age_group", ComboBox1.SelectedItem.ToString())
                 sqlCommand.Parameters.AddWithValue("@profile", imageBytes)
                 sqlCommand.Parameters.AddWithValue("@gender", TextBox3.Text)
                 sqlCommand.Parameters.AddWithValue("@phno", TextBox4.Text)
-                sqlCommand.Parameters.AddWithValue("@houseno", TextBox5.Text)
-                sqlCommand.Parameters.AddWithValue("@wardno", TextBox6.Text)
+                sqlCommand.Parameters.AddWithValue("@address", TextBox5.Text)
                 sqlCommand.Parameters.AddWithValue("@occupation", TextBox7.Text)
                 sqlCommand.Parameters.AddWithValue("@guid", TextBox8.Text)
 
