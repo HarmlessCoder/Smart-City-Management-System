@@ -174,7 +174,6 @@ Partial Class Ed_Coursera_CourseContent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1270, 736)
         Me.Controls.Add(Me.Button6)
