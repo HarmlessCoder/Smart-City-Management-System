@@ -33,15 +33,18 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
-
         Globals.viewChildForm(childformPanel, EventVendorRegistrationScreen)
-
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
     End Sub
 
-
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'Dim home = New HomePageDashboard With {
+        '    .uid = uid
+        '}
+        'home.Show()
+        'Me.Close()
+    End Sub
 End Class

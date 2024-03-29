@@ -89,39 +89,7 @@ Public Class EventRegistrationScreen
 
 
 
-    Private Sub LoadandBindDataGridView()
-        'Get connection from globals
-        Dim Con = Globals.GetDBConnection()
-        Dim reader As MySqlDataReader
-        Dim cmd As MySqlCommand
-
-        Try
-            Con.Open()
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-
-        cmd = New MySqlCommand("SELECT v.vendorID,v.vendorName,v.specialisation,v.rating,v.experience FROM Vendor v LEFT JOIN  eventBookings eb ON v.vendorID = eb.vendorID WHERE  v.specialisation = 'your_specialisation'  AND (eb.startdate IS NULL OR eb.enddate < 'your_start_date' OR eb.startdate > 'your_end_date'); -- Replace 'your_start_date' and 'your_end_date' with actual start and end dates", Con)
-        reader = cmd.ExecuteReader
-        ' Create a DataTable to store the data
-        Dim dataTable As New DataTable()
-
-        'Fill the DataTable with data from the SQL table
-        dataTable.Load(reader)
-        reader.Close()
-        Con.Close()
-
-        'IMP: Specify the Column Mappings from DataGridView to SQL Table
-        DataGridView1.AutoGenerateColumns = False
-        'DataGridView1.Columns(0).DataPropertyName = "id"
-        'DataGridView1.Columns(1).DataPropertyName = "place_name"
-
-        ' Bind the data to DataGridView
-        DataGridView1.DataSource = dataTable
-    End Sub
-
-
-    Private Sub LoadandBindDataGridView1(ByVal startDate As Date, ByVal endDate As Date, ByVal eventType As String)
+    Private Sub LoadandBindDataGridView(ByVal startDate As Date, ByVal endDate As Date, ByVal eventType As String)
         'Get connection from globals
         Dim Con = Globals.GetDBConnection()
         Dim reader As MySqlDataReader
@@ -165,6 +133,38 @@ Public Class EventRegistrationScreen
 
         ' Bind the data to DataGridView
         DataGridView1.DataSource = dataTable
+    End Sub
+
+
+    Private Sub InsertEventBooking(ByVal specialisation As String, ByVal startDate As Date, ByVal endDate As Date, ByVal vendorID As Integer, ByVal customerID As Integer, ByVal password As String)
+        'Get connection from globals
+        Dim Con = Globals.GetDBConnection()
+        Dim cmd As MySqlCommand
+
+        Try
+            Con.Open()
+
+            ' Use parameterized query to prevent SQL injection
+            Dim query As String = "INSERT INTO eventBookings (specialisation, startdate, enddate, vendorID, customerID, password) " &
+                              "VALUES (@Specialisation, @StartDate, @EndDate, @VendorID, @CustomerID, @Password);"
+
+            cmd = New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@Specialisation", specialisation)
+            cmd.Parameters.AddWithValue("@StartDate", startDate)
+            cmd.Parameters.AddWithValue("@EndDate", endDate)
+            cmd.Parameters.AddWithValue("@VendorID", vendorID)
+            cmd.Parameters.AddWithValue("@CustomerID", customerID)
+            cmd.Parameters.AddWithValue("@Password", password)
+
+            ' Execute the SQL command
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("Event booking inserted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            Con.Close()
+        End Try
     End Sub
 
 
@@ -299,12 +299,23 @@ Public Class EventRegistrationScreen
         Dim VendorID As String = TextBox4.Text
         Dim Password As String = TextBox5.Text
 
+
+
+        InsertEventBooking(EventType, EventStartDate, EventEndDate, CInt(VendorID), CInt(CustomerID), Password)
+
+
+        EventDashboard.Show()
+        Me.Close()
+
+
+
+
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim EventStartDate1 As Date = DateTimePicker1.Value
         Dim EventEndDate1 As Date = DateTimePicker2.Value
         Dim EventType1 As String = ComboBox1.SelectedItem.ToString()
-        LoadandBindDataGridView1(EventStartDate1, EventEndDate1, EventType1)
+        LoadandBindDataGridView(EventStartDate1, EventEndDate1, EventType1)
     End Sub
 End Class
