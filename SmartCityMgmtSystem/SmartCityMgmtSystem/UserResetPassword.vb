@@ -17,7 +17,7 @@ Public Class UserResetPassword
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs)
         'View the TransportationAdminHome screen by default - first argument, name of the panel in the parent panel, second - name of the child form
-        Globals.viewChildForm(childformPanel, TransportationAdminHome)
+        'Globals.viewChildForm(childformPanel, TransportationAdminHome)
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
@@ -43,7 +43,9 @@ Public Class UserResetPassword
                                 uid = Convert.ToInt32(result)
                             End If
                         End Using
-                        Dim home = New HomePageDashboard(uid)
+                        Dim home = New HomePageDashboard With {
+                            .uid = uid
+                        }
                         home.Show()
                         Me.Close()
                     Catch ex As Exception

@@ -10,7 +10,7 @@ Public Class UserGetOtp
         InitializeComponent()
         Me.email = email ' Store the passed email ID in a private field
         Me.password = password
-        Me.nextPage = nextPage
+        Me.nextPage = nextPage          '0 for details page, 1 for password reset page
 
         Dim randomNumber As Integer = New Random().Next(1000, 10000)
         randstr = randomNumber.ToString()

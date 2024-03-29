@@ -74,7 +74,9 @@ Public Class UserDetails
                             uid = Convert.ToInt32(result)
                         End If
                     End Using
-                    Dim home = New HomePageDashboard(uid)
+                    Dim home = New HomePageDashboard With {
+                        .uid = uid
+                    }
                     home.Show()
                         Me.Close()
                 Catch ex As Exception

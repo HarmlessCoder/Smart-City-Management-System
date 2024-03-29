@@ -36,7 +36,9 @@ Public Class UserLogin
                 End Using
 
                 If TextBox3.Text = pass Then
-                    Dim home = New HomePageDashboard(uid)
+                    Dim home = New HomePageDashboard With {
+                        .uid = uid
+                    }
                     home.Show()
                     Me.Close()
                 Else
@@ -69,11 +71,13 @@ Public Class UserLogin
             End Using
 
             If TextBox3.Text = pass Then
-                Dim home = New HomePageDashboard(uid)
+                Dim home = New HomePageDashboard With {
+                    .uid = uid
+                }
                 home.Show()
                 Me.Close()
             Else
-                MessageBox.Show("Incorrect password or UserID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Incorrect password or EmailID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 TextBox1.Clear()
                 TextBox2.Clear()
                 TextBox3.Clear()
