@@ -250,7 +250,7 @@ Partial Class Service_Portal
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_job_seeker_64
+        Me.Button2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_job_48
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(0, 302)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)

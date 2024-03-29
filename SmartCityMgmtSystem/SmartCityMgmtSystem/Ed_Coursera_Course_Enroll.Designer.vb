@@ -83,7 +83,7 @@ Partial Class Ed_Coursera_Course_Enroll
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(567, 189)
         Me.RichTextBox1.TabIndex = 18
-        Me.RichTextBox1.Text = "Summary"
+        Me.RichTextBox1.Text = "Summary" & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label3
         '
