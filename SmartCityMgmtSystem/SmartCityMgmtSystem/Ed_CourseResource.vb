@@ -39,7 +39,7 @@ Public Class Ed_CourseResource
 
         If Not String.IsNullOrEmpty(videoId) Then
             Dim embedUrl As String = $"https://www.youtube.com/embed/{videoId}"
-            Dim html As String = $"<!DOCTYPE html><html><head><meta http-equiv='X-UA-Compatible' content='IE=edge'></head><body style='margin:0'><iframe width='1207' height='386' src='{embedUrl}' frameborder='0' allowfullscreen></iframe></body></html>"
+            Dim html As String = $"<!DOCTYPE html><html><head><meta http-equiv='X-UA-Compatible' content='IE=edge'></head><body style='margin:0'><iframe width='1019' height='386' src='{embedUrl}' frameborder='0' allowfullscreen></iframe></body></html>"
             WebBrowser1.DocumentText = html
         Else
             MessageBox.Show("Invalid YouTube URL")
