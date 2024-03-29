@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{911117A9-8F55-492B-A323-7D950BE7FEFF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SmartCityMgmtSystem.UserLandingPage</StartupObject>
+    <StartupObject>SmartCityMgmtSystem.My.MyApplication</StartupObject>
     <RootNamespace>SmartCityMgmtSystem</RootNamespace>
     <AssemblyName>SmartCityMgmtSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -403,48 +403,6 @@
     <Compile Include="ElectionInnerScreenNominateNoElection.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employment_portal.Designer.vb">
-      <DependentUpon>Employment_portal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employment_portal.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employment_portal_admin.Designer.vb">
-      <DependentUpon>Employment_portal_admin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employment_portal_admin.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employment_portal_admin_add.Designer.vb">
-      <DependentUpon>Employment_portal_admin_add.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employment_portal_admin_add.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employment_portal_admin_withdraw.Designer.vb">
-      <DependentUpon>Employment_portal_admin_withdraw.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employment_portal_admin_withdraw.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employment_portal_applicationstatus.Designer.vb">
-      <DependentUpon>Employment_portal_applicationstatus.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employment_portal_applicationstatus.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employment_portal_apply.Designer.vb">
-      <DependentUpon>Employment_portal_apply.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employment_portal_apply.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employment_portal_search.Designer.vb">
-      <DependentUpon>Employment_portal_search.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Employment_portal_search.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="hc_B_Appointment.Designer.vb">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>
     </Compile>
@@ -559,12 +517,6 @@
     <Compile Include="EventVendorRegistrationScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Request_Cancel_Service.Designer.vb">
-      <DependentUpon>Request_Cancel_Service.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Request_Cancel_Service.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="NewsDashboard.Designer.vb">
       <DependentUpon>NewsDashboard.vb</DependentUpon>
     </Compile>
@@ -578,60 +530,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TransportGlobals.vb" />
-    <Compile Include="Service_History.Designer.vb">
-      <DependentUpon>Service_History.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_History.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_Payment.Designer.vb">
-      <DependentUpon>Service_Payment.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_Payment.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_Portal.Designer.vb">
-      <DependentUpon>Service_Portal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_Portal.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_Post.Designer.vb">
-      <DependentUpon>Service_Post.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_Post.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_Provider.Designer.vb">
-      <DependentUpon>Service_Provider.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_Provider.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_Scheduled.Designer.vb">
-      <DependentUpon>Service_Scheduled.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_Scheduled.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_search_results.Designer.vb">
-      <DependentUpon>Service_search_results.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_search_results.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_View_Offered.Designer.vb">
-      <DependentUpon>Service_View_Offered.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_View_Offered.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Service_Withdraw.Designer.vb">
-      <DependentUpon>Service_Withdraw.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Service_Withdraw.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TransportManageTollGatesAdmin.Designer.vb">
       <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
     </Compile>
@@ -1312,27 +1210,6 @@
     <EmbeddedResource Include="ElectionInnerScreenNominateNoElection.resx">
       <DependentUpon>ElectionInnerScreenNominateNoElection.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employment_portal.resx">
-      <DependentUpon>Employment_portal.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employment_portal_admin.resx">
-      <DependentUpon>Employment_portal_admin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employment_portal_admin_add.resx">
-      <DependentUpon>Employment_portal_admin_add.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employment_portal_admin_withdraw.resx">
-      <DependentUpon>Employment_portal_admin_withdraw.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employment_portal_applicationstatus.resx">
-      <DependentUpon>Employment_portal_applicationstatus.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employment_portal_apply.resx">
-      <DependentUpon>Employment_portal_apply.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employment_portal_search.resx">
-      <DependentUpon>Employment_portal_search.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="hc_B_Appointment.resx">
       <DependentUpon>hc_B_Appointment.vb</DependentUpon>
     </EmbeddedResource>
@@ -1387,38 +1264,8 @@
     <EmbeddedResource Include="EventVendorRegistrationScreen.resx">
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Request_Cancel_Service.resx">
-      <DependentUpon>Request_Cancel_Service.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NewsDashboard.resx">
       <DependentUpon>NewsDashboard.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_History.resx">
-      <DependentUpon>Service_History.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_Payment.resx">
-      <DependentUpon>Service_Payment.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_Portal.resx">
-      <DependentUpon>Service_Portal.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_Post.resx">
-      <DependentUpon>Service_Post.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_Provider.resx">
-      <DependentUpon>Service_Provider.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_Scheduled.resx">
-      <DependentUpon>Service_Scheduled.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_search_results.resx">
-      <DependentUpon>Service_search_results.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_View_Offered.resx">
-      <DependentUpon>Service_View_Offered.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Service_Withdraw.resx">
-      <DependentUpon>Service_Withdraw.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationBubble.resx">
       <DependentUpon>NotificationBubble.vb</DependentUpon>
