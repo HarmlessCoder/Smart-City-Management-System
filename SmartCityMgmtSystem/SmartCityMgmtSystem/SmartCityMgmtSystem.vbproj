@@ -207,6 +207,30 @@
     <Compile Include="Ed_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_EcourseApproveCourses.Designer.vb">
+      <DependentUpon>Ed_EcourseApproveCourses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_EcourseApproveCourses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_ECourseApproveItem.Designer.vb">
+      <DependentUpon>Ed_ECourseApproveItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ECourseApproveItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ed_ECourseManage_Stats.Designer.vb">
+      <DependentUpon>Ed_ECourseManage_Stats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ECourseManage_Stats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_ECourseStatDropItem.Designer.vb">
+      <DependentUpon>Ed_ECourseStatDropItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ECourseStatDropItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_EntranceExam_Handler.vb" />
     <Compile Include="Ed_EntranceInnerScreen.Designer.vb">
       <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
@@ -1029,6 +1053,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_CourseResource.resx">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_EcourseApproveCourses.resx">
+      <DependentUpon>Ed_EcourseApproveCourses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ECourseApproveItem.resx">
+      <DependentUpon>Ed_ECourseApproveItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ECourseManage_Stats.resx">
+      <DependentUpon>Ed_ECourseManage_Stats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ECourseStatDropItem.resx">
+      <DependentUpon>Ed_ECourseStatDropItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_EntranceInnerScreen.resx">
       <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
