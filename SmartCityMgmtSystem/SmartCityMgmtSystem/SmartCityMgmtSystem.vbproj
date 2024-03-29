@@ -146,10 +146,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="EventLoginWindow.Designer.vb">
+      <DependentUpon>EventLoginWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventLoginWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventVendorLoginWindow.Designer.vb">
+      <DependentUpon>EventVendorLoginWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventVendorLoginWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_CertificateList.Designer.vb">
       <DependentUpon>Ed_CertificateList.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_CertificateList.vb">
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HealthcareApproveAppointmentAdmin.Designer.vb">
@@ -1090,6 +1103,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EventLoginWindow.resx">
+      <DependentUpon>EventLoginWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventVendorLoginWindow.resx">
+      <DependentUpon>EventVendorLoginWindow.vb</DependentUpon>
+      </EmbeddedResource>
+
     <EmbeddedResource Include="Ed_CertificateList.resx">
       <DependentUpon>Ed_CertificateList.vb</DependentUpon>
     </EmbeddedResource>
