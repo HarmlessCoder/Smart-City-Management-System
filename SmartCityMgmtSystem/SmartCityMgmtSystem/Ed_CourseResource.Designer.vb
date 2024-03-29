@@ -31,10 +31,10 @@ Partial Class Ed_CourseResource
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(33, 87)
+        Me.WebBrowser1.Location = New System.Drawing.Point(134, 87)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(1213, 392)
+        Me.WebBrowser1.Size = New System.Drawing.Size(1025, 392)
         Me.WebBrowser1.TabIndex = 0
         '
         'Label1
@@ -85,18 +85,17 @@ Partial Class Ed_CourseResource
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.RichTextBox1.Location = New System.Drawing.Point(33, 517)
+        Me.RichTextBox1.Location = New System.Drawing.Point(134, 517)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(1213, 193)
+        Me.RichTextBox1.Size = New System.Drawing.Size(1025, 193)
         Me.RichTextBox1.TabIndex = 37
         Me.RichTextBox1.Text = ""
         '
         'Ed_CourseResource
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.AutoSize = True
-        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1270, 736)
         Me.Controls.Add(Me.RichTextBox1)
