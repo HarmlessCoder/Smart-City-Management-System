@@ -30,17 +30,18 @@ Partial Class TransportAddSecys
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransportAddSecys))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -48,7 +49,6 @@ Partial Class TransportAddSecys
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
@@ -56,12 +56,13 @@ Partial Class TransportAddSecys
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -127,10 +128,9 @@ Partial Class TransportAddSecys
         DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
         DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Empty
         Me.DataGridView1.RowTemplate.DividerHeight = 1
         Me.DataGridView1.RowTemplate.Height = 40
         Me.DataGridView1.RowTemplate.ReadOnly = True
@@ -146,7 +146,7 @@ Partial Class TransportAddSecys
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Column1.HeaderText = "Aadhar No."
+        Me.Column1.HeaderText = "UID"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
@@ -180,6 +180,45 @@ Partial Class TransportAddSecys
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
+        'DeleteBut
+        '
+        Me.DeleteBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle6.NullValue = Nothing
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DeleteBut.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DeleteBut.HeaderText = ""
+        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
+        Me.DeleteBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.DeleteBut.MinimumWidth = 6
+        Me.DeleteBut.Name = "DeleteBut"
+        Me.DeleteBut.ReadOnly = True
+        Me.DeleteBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DeleteBut.ToolTipText = "Delete"
+        Me.DeleteBut.Width = 6
+        '
+        'EditBut
+        '
+        Me.EditBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle7.NullValue = Nothing
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Maroon
+        Me.EditBut.DefaultCellStyle = DataGridViewCellStyle7
+        Me.EditBut.HeaderText = ""
+        Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
+        Me.EditBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.EditBut.MinimumWidth = 6
+        Me.EditBut.Name = "EditBut"
+        Me.EditBut.ReadOnly = True
+        Me.EditBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EditBut.ToolTipText = "Edit"
+        Me.EditBut.Width = 6
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
@@ -212,7 +251,7 @@ Partial Class TransportAddSecys
         Me.Label2.Location = New System.Drawing.Point(20, 11)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 35)
+        Me.Label2.Size = New System.Drawing.Size(78, 35)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Role:"
         '
@@ -220,10 +259,11 @@ Partial Class TransportAddSecys
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(147, 11)
+        Me.ComboBox1.Items.AddRange(New Object() {"R.T.O. Officer", "Public Transport Officer", "Ride Sharing Regulator", "Toll Plaza Officer"})
+        Me.ComboBox1.Location = New System.Drawing.Point(99, 11)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(208, 26)
+        Me.ComboBox1.Size = New System.Drawing.Size(256, 26)
         Me.ComboBox1.TabIndex = 1
         '
         'Button2
@@ -246,16 +286,17 @@ Partial Class TransportAddSecys
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bodoni MT Condensed", 20.13559!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Maroon
-        Me.Label3.Location = New System.Drawing.Point(10, 9)
+        Me.Label3.Location = New System.Drawing.Point(18, 9)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(255, 40)
+        Me.Label3.Size = New System.Drawing.Size(138, 40)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "{Add|Update} Officer"
+        Me.Label3.Text = "Add Officer"
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.NumericUpDown1)
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -265,15 +306,6 @@ Partial Class TransportAddSecys
         Me.Panel2.Size = New System.Drawing.Size(369, 51)
         Me.Panel2.TabIndex = 2
         '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(147, 11)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(208, 27)
-        Me.TextBox1.TabIndex = 1
-        '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -282,7 +314,7 @@ Partial Class TransportAddSecys
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(165, 27)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Aadhar No:"
+        Me.Label1.Text = "UID:"
         '
         'Button1
         '
@@ -319,7 +351,7 @@ Partial Class TransportAddSecys
         DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleGreen
         DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle12.NullValue = CType(resources.GetObject("DataGridViewCellStyle12.NullValue"), Object)
+        DataGridViewCellStyle12.NullValue = Nothing
         DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Maroon
         Me.DataGridViewImageColumn2.DefaultCellStyle = DataGridViewCellStyle12
@@ -337,7 +369,7 @@ Partial Class TransportAddSecys
         Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle13.NullValue = CType(resources.GetObject("DataGridViewCellStyle13.NullValue"), Object)
+        DataGridViewCellStyle13.NullValue = Nothing
         DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewImageColumn3.DefaultCellStyle = DataGridViewCellStyle13
@@ -349,7 +381,7 @@ Partial Class TransportAddSecys
         Me.DataGridViewImageColumn3.ReadOnly = True
         Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn3.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn3.Width = 6
+        Me.DataGridViewImageColumn3.Width = 123
         '
         'DataGridViewImageColumn4
         '
@@ -357,7 +389,7 @@ Partial Class TransportAddSecys
         DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle14.BackColor = System.Drawing.Color.PaleGreen
         DataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle14.NullValue = CType(resources.GetObject("DataGridViewCellStyle14.NullValue"), Object)
+        DataGridViewCellStyle14.NullValue = Nothing
         DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Maroon
         Me.DataGridViewImageColumn4.DefaultCellStyle = DataGridViewCellStyle14
@@ -369,7 +401,7 @@ Partial Class TransportAddSecys
         Me.DataGridViewImageColumn4.ReadOnly = True
         Me.DataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn4.ToolTipText = "Edit"
-        Me.DataGridViewImageColumn4.Width = 6
+        Me.DataGridViewImageColumn4.Width = 123
         '
         'Label4
         '
@@ -386,44 +418,24 @@ Partial Class TransportAddSecys
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "      Manage Officers"
         '
-        'DeleteBut
+        'NumericUpDown1
         '
-        Me.DeleteBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle6.NullValue = CType(resources.GetObject("DataGridViewCellStyle6.NullValue"), Object)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DeleteBut.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DeleteBut.HeaderText = ""
-        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
-        Me.DeleteBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.DeleteBut.MinimumWidth = 6
-        Me.DeleteBut.Name = "DeleteBut"
-        Me.DeleteBut.ReadOnly = True
-        Me.DeleteBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DeleteBut.ToolTipText = "Delete"
-        Me.DeleteBut.Width = 6
+        Me.NumericUpDown1.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NumericUpDown1.Location = New System.Drawing.Point(75, 11)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(65, 26)
+        Me.NumericUpDown1.TabIndex = 2
         '
-        'EditBut
+        'TextBox1
         '
-        Me.EditBut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.PaleGreen
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle7.NullValue = CType(resources.GetObject("DataGridViewCellStyle7.NullValue"), Object)
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Maroon
-        Me.EditBut.DefaultCellStyle = DataGridViewCellStyle7
-        Me.EditBut.HeaderText = ""
-        Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
-        Me.EditBut.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.EditBut.MinimumWidth = 6
-        Me.EditBut.Name = "EditBut"
-        Me.EditBut.ReadOnly = True
-        Me.EditBut.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.EditBut.ToolTipText = "Edit"
-        Me.EditBut.Width = 6
+        Me.TextBox1.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(147, 11)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(208, 26)
+        Me.TextBox1.TabIndex = 1
         '
         'TransportAddSecys
         '
@@ -445,6 +457,7 @@ Partial Class TransportAddSecys
         Me.Panel4.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -455,7 +468,6 @@ Partial Class TransportAddSecys
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -465,9 +477,11 @@ Partial Class TransportAddSecys
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents DataGridViewImageColumn3 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn4 As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DeleteBut As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents EditBut As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents DeleteBut As DataGridViewImageColumn
+    Friend WithEvents EditBut As DataGridViewImageColumn
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents TextBox1 As TextBox
 End Class
