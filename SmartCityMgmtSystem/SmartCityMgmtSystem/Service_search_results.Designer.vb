@@ -184,7 +184,7 @@ Partial Class Service_search_results
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_job_seeker_64
+        Me.PictureBox1.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_job_48
         Me.PictureBox1.Location = New System.Drawing.Point(263, 15)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(66, 60)

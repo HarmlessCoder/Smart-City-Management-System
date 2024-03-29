@@ -34,6 +34,7 @@ Namespace My
         Protected Overrides Sub OnCreateMainForm()
             Me.MainForm = Global.SmartCityMgmtSystem.Employment_portal_search
             Me.MainForm = Global.SmartCityMgmtSystem.TransportationDashboard
+            Me.MainForm = Global.SmartCityMgmtSystem.Employment_portal
         End Sub
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>

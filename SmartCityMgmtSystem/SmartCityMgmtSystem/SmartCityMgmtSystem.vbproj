@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{911117A9-8F55-492B-A323-7D950BE7FEFF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SmartCityMgmtSystem.My.MyApplication</StartupObject>
+    <StartupObject>SmartCityMgmtSystem.Employment_portal_admin</StartupObject>
     <RootNamespace>SmartCityMgmtSystem</RootNamespace>
     <AssemblyName>SmartCityMgmtSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -362,6 +362,30 @@
       <DependentUpon>Employment_portal_admin.vb</DependentUpon>
     </Compile>
     <Compile Include="Employment_portal_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employment_portal_admin_add.Designer.vb">
+      <DependentUpon>Employment_portal_admin_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal_admin_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employment_portal_admin_withdraw.Designer.vb">
+      <DependentUpon>Employment_portal_admin_withdraw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal_admin_withdraw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employment_portal_applicationstatus.Designer.vb">
+      <DependentUpon>Employment_portal_applicationstatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal_applicationstatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employment_portal_apply.Designer.vb">
+      <DependentUpon>Employment_portal_apply.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employment_portal_apply.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employment_portal_search.Designer.vb">
@@ -1179,6 +1203,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employment_portal_admin.resx">
       <DependentUpon>Employment_portal_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employment_portal_admin_add.resx">
+      <DependentUpon>Employment_portal_admin_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employment_portal_admin_withdraw.resx">
+      <DependentUpon>Employment_portal_admin_withdraw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employment_portal_applicationstatus.resx">
+      <DependentUpon>Employment_portal_applicationstatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employment_portal_apply.resx">
+      <DependentUpon>Employment_portal_apply.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employment_portal_search.resx">
       <DependentUpon>Employment_portal_search.vb</DependentUpon>
