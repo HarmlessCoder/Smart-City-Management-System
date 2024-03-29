@@ -80,7 +80,7 @@ Partial Class ElectionInnerScreen2
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_active_directory_100
+
         Me.PictureBox1.Location = New System.Drawing.Point(21, 21)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(85, 77)

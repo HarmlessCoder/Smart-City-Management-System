@@ -1,4 +1,7 @@
 ﻿Public Class ElectionDashboard
+
+    Public Property LoggedInUserId As Integer = 2
+
     Private Sub election_Click(sender As Object, e As EventArgs) Handles election.Click
         Globals.viewChildForm(childformPanel, ElectionInnerScreen1)
     End Sub
@@ -17,5 +20,9 @@
 
     Private Sub organizational_structure_Click(sender As Object, e As EventArgs) Handles organizational_structure.Click
         Globals.viewChildForm(childformPanel, ElectionInnerScreen2)
+    End Sub
+
+    Private Sub about_us_Click(sender As Object, e As EventArgs) Handles about_us.Click
+        Globals.viewChildForm(childformPanel, ElectionInnerScreenWelcomeScreen)
     End Sub
 End Class

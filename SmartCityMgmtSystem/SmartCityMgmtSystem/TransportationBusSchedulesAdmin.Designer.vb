@@ -22,20 +22,27 @@ Partial Class TransportationBusSchedulesAdmin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim Button1 As System.Windows.Forms.Button
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransportationBusSchedulesAdmin))
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -49,15 +56,15 @@ Partial Class TransportationBusSchedulesAdmin
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -65,21 +72,10 @@ Partial Class TransportationBusSchedulesAdmin
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
-        Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -89,22 +85,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Button1.BackColor = System.Drawing.Color.Maroon
-        Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Button1.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Button1.ForeColor = System.Drawing.Color.Linen
-        Button1.Location = New System.Drawing.Point(33, 611)
-        Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Button1.Name = "Button1"
-        Button1.Size = New System.Drawing.Size(122, 37)
-        Button1.TabIndex = 0
-        Button1.Text = "Add"
-        Button1.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
@@ -113,7 +94,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(118, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -164,12 +145,12 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Trebuchet MS", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(87, Byte), Integer))
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle7
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Trebuchet MS", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -180,9 +161,87 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridView1.Size = New System.Drawing.Size(736, 658)
         Me.DataGridView1.TabIndex = 4
         '
+        'Column1
+        '
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Column1.FillWeight = 37.6564!
+        Me.Column1.HeaderText = "Bus Number"
+        Me.Column1.MinimumWidth = 100
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.FillWeight = 409.5745!
+        Me.Column2.HeaderText = "Days Operating"
+        Me.Column2.MinimumWidth = 100
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'Column3
+        '
+        Me.Column3.FillWeight = 53.79486!
+        Me.Column3.HeaderText = "Pickup Time"
+        Me.Column3.MinimumWidth = 150
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Column4.FillWeight = 107.5897!
+        Me.Column4.HeaderText = "Source"
+        Me.Column4.MinimumWidth = 100
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'Column5
+        '
+        Me.Column5.FillWeight = 53.79486!
+        Me.Column5.HeaderText = "Destination"
+        Me.Column5.MinimumWidth = 120
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'DeleteBut
+        '
+        Me.DeleteBut.FillWeight = 53.79486!
+        Me.DeleteBut.HeaderText = ""
+        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
+        Me.DeleteBut.MinimumWidth = 6
+        Me.DeleteBut.Name = "DeleteBut"
+        Me.DeleteBut.ReadOnly = True
+        Me.DeleteBut.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DeleteBut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'EditBut
+        '
+        Me.EditBut.FillWeight = 53.79486!
+        Me.EditBut.HeaderText = ""
+        Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
+        Me.EditBut.MinimumWidth = 6
+        Me.EditBut.Name = "EditBut"
+        Me.EditBut.ReadOnly = True
+        Me.EditBut.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EditBut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Panel8)
         Me.Panel1.Controls.Add(Me.Panel9)
         Me.Panel1.Controls.Add(Me.Panel7)
@@ -192,13 +251,26 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Button1)
         Me.Panel1.Location = New System.Drawing.Point(18, 63)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(446, 661)
         Me.Panel1.TabIndex = 5
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Maroon
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.Linen
+        Me.Button3.Location = New System.Drawing.Point(33, 611)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(122, 37)
+        Me.Button3.TabIndex = 9
+        Me.Button3.Text = "Add"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Panel8
         '
@@ -224,11 +296,11 @@ Partial Class TransportationBusSchedulesAdmin
         '
         'TextBox7
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox7.Location = New System.Drawing.Point(147, 11)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(204, 27)
+        Me.TextBox7.Size = New System.Drawing.Size(204, 26)
         Me.TextBox7.TabIndex = 1
         '
         'Panel9
@@ -237,7 +309,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Panel9.Controls.Add(Me.Label10)
         Me.Panel9.Controls.Add(Me.TextBox8)
         Me.Panel9.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel9.Location = New System.Drawing.Point(33, 478)
+        Me.Panel9.Location = New System.Drawing.Point(33, 475)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(380, 51)
@@ -255,11 +327,11 @@ Partial Class TransportationBusSchedulesAdmin
         '
         'TextBox8
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox8.Location = New System.Drawing.Point(147, 11)
         Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(204, 27)
+        Me.TextBox8.Size = New System.Drawing.Size(204, 26)
         Me.TextBox8.TabIndex = 1
         '
         'Panel7
@@ -268,7 +340,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Panel7.Controls.Add(Me.ComboBox2)
         Me.Panel7.Controls.Add(Me.Label8)
         Me.Panel7.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel7.Location = New System.Drawing.Point(33, 411)
+        Me.Panel7.Location = New System.Drawing.Point(33, 402)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(380, 51)
@@ -276,10 +348,11 @@ Partial Class TransportationBusSchedulesAdmin
         '
         'ComboBox2
         '
+        Me.ComboBox2.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(146, 12)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(205, 26)
+        Me.ComboBox2.Size = New System.Drawing.Size(205, 30)
         Me.ComboBox2.TabIndex = 6
         '
         'Label8
@@ -298,7 +371,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Panel6.Controls.Add(Me.ComboBox1)
         Me.Panel6.Controls.Add(Me.Label7)
         Me.Panel6.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel6.Location = New System.Drawing.Point(33, 345)
+        Me.Panel6.Location = New System.Drawing.Point(33, 325)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(380, 51)
@@ -306,10 +379,11 @@ Partial Class TransportationBusSchedulesAdmin
         '
         'ComboBox1
         '
+        Me.ComboBox1.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(147, 16)
+        Me.ComboBox1.Location = New System.Drawing.Point(147, 13)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(204, 26)
+        Me.ComboBox1.Size = New System.Drawing.Size(204, 30)
         Me.ComboBox1.TabIndex = 5
         '
         'Label7
@@ -325,14 +399,26 @@ Partial Class TransportationBusSchedulesAdmin
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.DateTimePicker2)
         Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Controls.Add(Me.TextBox3)
         Me.Panel5.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(33, 279)
+        Me.Panel5.Location = New System.Drawing.Point(33, 248)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(380, 51)
         Me.Panel5.TabIndex = 4
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.CustomFormat = "hh:mm tt"
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker2.Location = New System.Drawing.Point(147, 12)
+        Me.DateTimePicker2.MinDate = New Date(2024, 3, 12, 0, 0, 0, 0)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.ShowUpDown = True
+        Me.DateTimePicker2.Size = New System.Drawing.Size(204, 26)
+        Me.DateTimePicker2.TabIndex = 4
         '
         'Label6
         '
@@ -344,43 +430,34 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Pickup Time:"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(147, 11)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(204, 27)
-        Me.TextBox3.TabIndex = 1
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.CheckBox7)
-        Me.Panel3.Controls.Add(Me.CheckBox6)
         Me.Panel3.Controls.Add(Me.CheckBox5)
-        Me.Panel3.Controls.Add(Me.CheckBox4)
+        Me.Panel3.Controls.Add(Me.CheckBox6)
         Me.Panel3.Controls.Add(Me.CheckBox3)
         Me.Panel3.Controls.Add(Me.CheckBox2)
+        Me.Panel3.Controls.Add(Me.CheckBox7)
+        Me.Panel3.Controls.Add(Me.CheckBox4)
         Me.Panel3.Controls.Add(Me.CheckBox1)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel3.Location = New System.Drawing.Point(33, 188)
+        Me.Panel3.Location = New System.Drawing.Point(33, 145)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(380, 77)
         Me.Panel3.TabIndex = 3
         '
-        'CheckBox7
+        'CheckBox5
         '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox7.Location = New System.Drawing.Point(221, 30)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(50, 21)
-        Me.CheckBox7.TabIndex = 11
-        Me.CheckBox7.Text = "Fri"
-        Me.CheckBox7.UseVisualStyleBackColor = True
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox5.Location = New System.Drawing.Point(221, 30)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(47, 21)
+        Me.CheckBox5.TabIndex = 11
+        Me.CheckBox5.Text = "Fri"
+        Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'CheckBox6
         '
@@ -388,54 +465,54 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox6.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox6.Location = New System.Drawing.Point(221, 53)
         Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(55, 21)
+        Me.CheckBox6.Size = New System.Drawing.Size(52, 21)
         Me.CheckBox6.TabIndex = 10
         Me.CheckBox6.Text = "Sat"
         Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox5.Location = New System.Drawing.Point(145, 53)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(65, 21)
-        Me.CheckBox5.TabIndex = 9
-        Me.CheckBox5.Text = "Wed"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox4.Location = New System.Drawing.Point(145, 30)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(59, 21)
-        Me.CheckBox4.TabIndex = 8
-        Me.CheckBox4.Text = "Tue"
-        Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox3.Location = New System.Drawing.Point(295, 7)
+        Me.CheckBox3.Location = New System.Drawing.Point(145, 53)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(60, 21)
-        Me.CheckBox3.TabIndex = 7
-        Me.CheckBox3.Text = "Sun"
+        Me.CheckBox3.Size = New System.Drawing.Size(62, 21)
+        Me.CheckBox3.TabIndex = 9
+        Me.CheckBox3.Text = "Wed"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox2.Location = New System.Drawing.Point(221, 6)
+        Me.CheckBox2.Location = New System.Drawing.Point(145, 30)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(60, 21)
-        Me.CheckBox2.TabIndex = 6
-        Me.CheckBox2.Text = "Thu"
+        Me.CheckBox2.Size = New System.Drawing.Size(56, 21)
+        Me.CheckBox2.TabIndex = 8
+        Me.CheckBox2.Text = "Tue"
         Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox7.Location = New System.Drawing.Point(295, 7)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(57, 21)
+        Me.CheckBox7.TabIndex = 7
+        Me.CheckBox7.Text = "Sun"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox4.Location = New System.Drawing.Point(221, 6)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(57, 21)
+        Me.CheckBox4.TabIndex = 6
+        Me.CheckBox4.Text = "Thu"
+        Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
@@ -443,7 +520,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.CheckBox1.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox1.Location = New System.Drawing.Point(145, 6)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(63, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(60, 21)
         Me.CheckBox1.TabIndex = 5
         Me.CheckBox1.Text = "Mon"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -464,7 +541,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Controls.Add(Me.TextBox6)
         Me.Panel4.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel4.Location = New System.Drawing.Point(33, 124)
+        Me.Panel4.Location = New System.Drawing.Point(33, 72)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(380, 51)
@@ -482,11 +559,11 @@ Partial Class TransportationBusSchedulesAdmin
         '
         'TextBox6
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.Location = New System.Drawing.Point(147, 11)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(204, 27)
+        Me.TextBox6.Size = New System.Drawing.Size(204, 26)
         Me.TextBox6.TabIndex = 2
         '
         'Button2
@@ -516,37 +593,6 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Add New Bus Schedule"
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(33, 52)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(380, 51)
-        Me.Panel2.TabIndex = 2
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Verdana", 9.762712!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(147, 11)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(204, 27)
-        Me.TextBox1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(5, 12)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 27)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Bus Driver UID:"
-        '
         'DataGridViewImageColumn1
         '
         Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
@@ -560,7 +606,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridViewImageColumn1.ReadOnly = True
         Me.DataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn1.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn1.Width = 125
+        Me.DataGridViewImageColumn1.Width = 123
         '
         'DataGridViewImageColumn2
         '
@@ -579,7 +625,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridViewImageColumn2.ReadOnly = True
         Me.DataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn2.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn2.Width = 125
+        Me.DataGridViewImageColumn2.Width = 123
         '
         'Label4
         '
@@ -592,7 +638,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Label4.Location = New System.Drawing.Point(21, 7)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(381, 50)
+        Me.Label4.Size = New System.Drawing.Size(358, 46)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "      Manage Bus Schedules"
         '
@@ -613,79 +659,7 @@ Partial Class TransportationBusSchedulesAdmin
         Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
         Me.DataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewImageColumn3.ToolTipText = "Delete"
-        Me.DataGridViewImageColumn3.Width = 125
-        '
-        'Column1
-        '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Column1.FillWeight = 70.0!
-        Me.Column1.HeaderText = "Bus Number"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Days Operating"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Pickup Time"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Column4.FillWeight = 200.0!
-        Me.Column4.HeaderText = "Source"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Destination"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        '
-        'DeleteBut
-        '
-        Me.DeleteBut.HeaderText = ""
-        Me.DeleteBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_delete_40
-        Me.DeleteBut.MinimumWidth = 6
-        Me.DeleteBut.Name = "DeleteBut"
-        Me.DeleteBut.ReadOnly = True
-        Me.DeleteBut.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DeleteBut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'EditBut
-        '
-        Me.EditBut.HeaderText = ""
-        Me.EditBut.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_edit_40
-        Me.EditBut.MinimumWidth = 6
-        Me.EditBut.Name = "EditBut"
-        Me.EditBut.ReadOnly = True
-        Me.EditBut.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EditBut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewImageColumn3.Width = 123
         '
         'TransportationBusSchedulesAdmin
         '
@@ -711,13 +685,10 @@ Partial Class TransportationBusSchedulesAdmin
         Me.Panel7.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -726,9 +697,6 @@ Partial Class TransportationBusSchedulesAdmin
     Friend WithEvents DataGridViewImageColumn1 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -740,7 +708,6 @@ Partial Class TransportationBusSchedulesAdmin
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
@@ -754,12 +721,12 @@ Partial Class TransportationBusSchedulesAdmin
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox7 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
     Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox6 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -767,4 +734,6 @@ Partial Class TransportationBusSchedulesAdmin
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents DeleteBut As DataGridViewImageColumn
     Friend WithEvents EditBut As DataGridViewImageColumn
+    Friend WithEvents Button3 As Button
+    Friend WithEvents DateTimePicker2 As DateTimePicker
 End Class

@@ -28,6 +28,7 @@ Partial Class TransportationDashboard
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -42,6 +43,7 @@ Partial Class TransportationDashboard
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.PictureBox1)
@@ -125,6 +127,24 @@ Partial Class TransportationDashboard
         Me.Button6.Text = "      Home Page"
         Me.Button6.UseVisualStyleBackColor = False
         '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.NavajoWhite
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.Black
+        Me.Button8.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_fastag_50
+        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.Location = New System.Drawing.Point(0, 631)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.Button8.Size = New System.Drawing.Size(304, 61)
+        Me.Button8.TabIndex = 10
+        Me.Button8.Text = "Fastag Corner"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.NavajoWhite
@@ -134,7 +154,7 @@ Partial Class TransportationDashboard
         Me.Button7.ForeColor = System.Drawing.Color.Black
         Me.Button7.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_vehicle_insurance_50
         Me.Button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button7.Location = New System.Drawing.Point(0, 562)
+        Me.Button7.Location = New System.Drawing.Point(0, 557)
         Me.Button7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button7.Name = "Button7"
         Me.Button7.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
@@ -237,7 +257,7 @@ Partial Class TransportationDashboard
         Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_50
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(0, 640)
+        Me.Button1.Location = New System.Drawing.Point(0, 706)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
@@ -281,5 +301,5 @@ Partial Class TransportationDashboard
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-
+    Friend WithEvents Button8 As Button
 End Class
