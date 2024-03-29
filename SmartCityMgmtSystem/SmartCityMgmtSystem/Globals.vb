@@ -27,7 +27,7 @@ Public Class Globals
                 conn.Open()
                 Using cmd As MySqlCommand = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("Row deleted successfully.", "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'MessageBox.Show("Deleted successfully.", "Delete Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return True
                 End Using
             Catch ex As Exception
@@ -45,7 +45,7 @@ Public Class Globals
                 conn.Open()
                 Using cmd As MySqlCommand = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("Row updated successfully.", "Update Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'MessageBox.Show("Updated successfully.", "Update Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return True
                 End Using
             Catch ex As Exception
@@ -64,7 +64,7 @@ Public Class Globals
                 conn.Open()
                 Using cmd As MySqlCommand = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("Row Insert successfully.", "Insert Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'MessageBox.Show("Inserted successfully.", "Insert Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return True
                 End Using
             Catch ex As Exception
@@ -74,20 +74,38 @@ Public Class Globals
         End Using
         Return False
     End Function
+    'Returns the ID of the last inserted row
+    Public Shared Function ExecuteInsertQueryAndReturnID(query As String) As Integer
 
+        Using conn As MySqlConnection = GetDBConnection()
+            Try
+                conn.Open()
+                Using cmd As MySqlCommand = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                    'Retrieve the last inserted ID
+                    cmd.CommandText = "SELECT LAST_INSERT_ID();"
+                    Return Convert.ToInt32(cmd.ExecuteScalar())
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error executing query: " & ex.Message, "Query Execution Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return -1
+            End Try
+        End Using
+        Return False
+    End Function
     'To view the child form in the same window inside a parentPanel
     'Eg. to view InnerScreen(childform) in Dashboard Screen
     Public Shared Sub viewChildForm(ByVal parentpanel As Panel, ByVal childform As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False
-        childform.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        childform.FormBorderStyle = FormBorderStyle.None
         childform.Dock = DockStyle.Fill
         childform.BringToFront()
         parentpanel.Controls.Add(childform)
         childform.Show() 'Add to panel and show the child form
     End Sub
 
-    Public Shared Sub viewChildFormAndClose(ByVal parentpanel As Panel, ByVal childform As Form, ByVal parentForm As Form)
+    Public Shared Sub viewChildFormAndClose(ByVal parentpanel As Panel, ByRef childform As Form, ByRef parentForm As Form)
         parentpanel.Controls.Clear()
         childform.TopLevel = False
         childform.FormBorderStyle = Windows.Forms.FormBorderStyle.None
@@ -95,11 +113,9 @@ Public Class Globals
         childform.BringToFront()
         parentpanel.Controls.Add(childform)
         childform.Show() ' Add to panel and show the child form
-
         ' Pass reference of the parent form to the child form
         If TypeOf childform Is HomePage Then
-            Dim yourChildForm As HomePage = CType(childform, HomePage)
-            yourChildForm.SetMainForm(parentForm)
+            CType(childform, HomePage).SetMainForm(parentForm)
         End If
     End Sub
 
