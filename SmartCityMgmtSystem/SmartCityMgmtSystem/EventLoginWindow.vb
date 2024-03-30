@@ -44,7 +44,7 @@ Public Class EventLoginWindow
                 .uid = CustomerID,
                 .password = Password
             }
-
+            EventDashboard.Show()
             Globals.viewChildForm(EventDashboard.childformPanel, EventCustomerScreenForm)
             Me.Close()
         Else

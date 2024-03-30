@@ -146,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-
     <Compile Include="Ed_Add_Institution.Designer.vb">
       <DependentUpon>Ed_Add_Institution.vb</DependentUpon>
     </Compile>
@@ -165,7 +164,6 @@
     <Compile Include="Ed_Teacher_AddSummary.vb">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="EventLoginWindow.Designer.vb">
       <DependentUpon>EventLoginWindow.vb</DependentUpon>
     </Compile>
@@ -1146,7 +1144,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-
     <EmbeddedResource Include="Ed_Add_Institution.resx">
       <DependentUpon>Ed_Add_Institution.vb</DependentUpon>
     </EmbeddedResource>
@@ -1156,7 +1153,6 @@
     <EmbeddedResource Include="Ed_Teacher_AddSummary.resx">
       <DependentUpon>Ed_Teacher_AddSummary.vb</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="EventLoginWindow.resx">
       <DependentUpon>EventLoginWindow.vb</DependentUpon>
     </EmbeddedResource>
