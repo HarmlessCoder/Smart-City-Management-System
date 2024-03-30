@@ -3,25 +3,17 @@ Imports System.Diagnostics.Eventing
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Relational
-Imports TransportGlobals
 
 Public Class TransportDrivingLicenseReq
-    Public Property uid As Integer = 13
-    Public Property u_name As String = "Dhanesh"
+    Public Property uid As Integer = 12
+    Public Property u_name As String
     Dim pay_clicked As Integer = 0
-    Private currentDlId = 1
-    Function GenerateDlId() As Integer
-        ' Increment the current ID value
-        currentDlId += 1
-        ' Return the new ID
-        Return currentDlId
-    End Function
-
+    Private currentDlId As Integer
     Private Sub LoadandBindData()
         'Get connection from globals
         Dim Con = Globals.GetDBConnection()
-        Dim reader1, reader2 As MySqlDataReader
-        Dim cmd1, cmd2 As MySqlCommand
+        Dim reader1, reader2, reader3 As MySqlDataReader
+        Dim cmd1, cmd2, cmd3 As MySqlCommand
 
         Try
             Con.Open()
@@ -82,6 +74,15 @@ Public Class TransportDrivingLicenseReq
 
         reader1.Close()
 
+        cmd3 = New MySqlCommand("SELECT MAX(dl_id) as max_dl_id FROM dl_entries WHERE uid = @a", Con)
+        cmd3.Parameters.AddWithValue("@a", uid)
+        reader3 = cmd3.ExecuteReader()
+        Dim dataTable3 As New DataTable()
+        dataTable3.Load(reader3)
+        Dim r2 As DataRow = dataTable3.Rows(0)
+        currentDlId = If(Not IsDBNull(r2("max_dl_id")), Convert.ToInt32(r2("max_dl_id")), -1)
+        reader3.Close()
+
         cmd2 = New MySqlCommand("SELECT dl_id, vehicle_type, issued_on, valid_till, test_status, fee_paid, req_type FROM dl_entries WHERE uid = @a", Con)
         cmd2.Parameters.AddWithValue("@a", uid)
         reader2 = cmd2.ExecuteReader()
@@ -132,7 +133,6 @@ Public Class TransportDrivingLicenseReq
         If pay_clicked = 1 Then
             Dim insertStatement As String = "INSERT INTO dl_entries (dl_id, uid, vehicle_type, fee_paid, req_type) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5) ON DUPLICATE KEY UPDATE uid = VALUES(uid), fee_paid = VALUES(fee_paid), req_type = VALUES(req_type)"
 
-
             Using command As New MySqlCommand(insertStatement, Con)
                 ' Set parameter values
                 command.Parameters.AddWithValue("@Value2", uid)
@@ -141,7 +141,7 @@ Public Class TransportDrivingLicenseReq
                 command.Parameters.AddWithValue("@Value3", vTypeid)
                 command.Parameters.AddWithValue("@Value4", 1)
                 If dataTable2.Rows.Count = 0 Then
-                    Dim dlid As Integer = GenerateDlId()
+                    Dim dlid As Integer = currentDlId + 1
                     ' Create a command object with the INSERT statement and connection
                     command.Parameters.AddWithValue("@Value1", dlid)
                     command.Parameters.AddWithValue("@Value5", "fresh")
