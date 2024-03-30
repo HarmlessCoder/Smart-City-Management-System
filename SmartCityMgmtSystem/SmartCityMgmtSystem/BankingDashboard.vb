@@ -77,7 +77,10 @@ Public Class BankingDashboard
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.Close()
-        Dim createAccountForm As New HomePageDashboard()
+        Dim createAccountForm = New HomePageDashboard With
+            {
+                .uid = uid
+            }
         createAccountForm.Show()
     End Sub
 End Class
