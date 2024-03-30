@@ -11,6 +11,7 @@ Public Class lib_search
         Public DueDate As String
         Public Rating As String
         Public Status As String
+        Public Genre As String
         Public RadioButton As RadioButton ' Added RadioButton field
     End Structure
 
@@ -268,11 +269,14 @@ Public Class lib_search
             titleLabel.Anchor = AnchorStyles.None ' Set Anchor to None
             titleLabel.AutoSize = True
 
-            Dim ratingLabel As New Label()
-            ratingLabel.Text = entry.Rating
-            searchBooksTablePanel.Controls.Add(ratingLabel, 3, rowIndex)
-            ratingLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            ratingLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+            Dim genreLabel As New Label()
+            genreLabel.Text = entry.Genre
+            searchBooksTablePanel.Controls.Add(genreLabel, 3, rowIndex)
+            genreLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+            genreLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+            genreLabel.AutoSize = True
+
+
 
             Dim statusLabel As New Label()
             statusLabel.Text = entry.Status
@@ -281,11 +285,24 @@ Public Class lib_search
             statusLabel.Anchor = AnchorStyles.None ' Set Anchor to None
             statusLabel.AutoSize = True
 
+            ' Set color based on status
+            If entry.Status = "Available" Then
+                statusLabel.ForeColor = Color.Green
+            Else
+                statusLabel.ForeColor = Color.Red
+            End If
+
+            Dim ratingLabel As New Label()
+            ratingLabel.Text = entry.Rating
+            searchBooksTablePanel.Controls.Add(ratingLabel, 5, rowIndex)
+            ratingLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+            ratingLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
             ' Add radio button for options
-            searchBooksTablePanel.Controls.Add(allBooks(rowIndex).RadioButton, 5, rowIndex)
-            entry.RadioButton.TextAlign = ContentAlignment.MiddleCenter ' center the radio button
-            entry.RadioButton.Anchor = AnchorStyles.None ' set anchor to none
-            entry.RadioButton.Size = New Size(16, 16) ' set the size of the radio button
+            'searchBooksTablePanel.Controls.Add(allBooks(rowIndex).RadioButton, 5, rowIndex)
+            'entry.RadioButton.TextAlign = ContentAlignment.MiddleCenter ' center the radio button
+            'entry.RadioButton.Anchor = AnchorStyles.None ' set anchor to none
+            'entry.RadioButton.Size = New Size(16, 16) ' set the size of the radio button
 
         Next
 
@@ -329,6 +346,7 @@ Public Class lib_search
                     .Author = reader("author").ToString(),
                     .Title = reader("title").ToString(),
                     .Rating = reader("rating").ToString(),
+                    .Genre = reader("genre").ToString(),
                     .Status = status,
                     .RadioButton = New RadioButton()
                 })
@@ -350,4 +368,7 @@ Public Class lib_search
         queryBook.Text = ""
     End Sub
 
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
 End Class

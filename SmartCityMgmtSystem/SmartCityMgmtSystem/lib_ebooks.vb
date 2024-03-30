@@ -40,4 +40,8 @@
     Private Sub lib_ebooks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
     End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
 End Class
