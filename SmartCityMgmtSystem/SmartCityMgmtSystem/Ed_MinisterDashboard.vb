@@ -18,4 +18,8 @@
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Globals.viewChildForm(childformPanel, New Ed_Add_Institution)
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_RoleSelect)
+    End Sub
 End Class
