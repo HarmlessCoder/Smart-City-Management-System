@@ -146,7 +146,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-
+    <Compile Include="Ed_Institute_Edit.Designer.vb">
+      <DependentUpon>Ed_Institute_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Institute_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EventLoginWindow.Designer.vb">
       <DependentUpon>EventLoginWindow.vb</DependentUpon>
     </Compile>
@@ -163,10 +168,8 @@
       <DependentUpon>Ed_CertificateList.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_CertificateList.vb">
-       <SubType>Form</SubType>
+      <SubType>Form</SubType>
     </Compile>
-
-
     <Compile Include="Ed_Teacher_Moodle_CourseAss.Designer.vb">
       <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
     </Compile>
@@ -189,7 +192,6 @@
       <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Teacher_Moodle_CourseResource.vb">
-
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HealthcareApproveAppointmentAdmin.Designer.vb">
@@ -1130,18 +1132,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-
+    <EmbeddedResource Include="Ed_Institute_Edit.resx">
+      <DependentUpon>Ed_Institute_Edit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventLoginWindow.resx">
       <DependentUpon>EventLoginWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventVendorLoginWindow.resx">
       <DependentUpon>EventVendorLoginWindow.vb</DependentUpon>
-      </EmbeddedResource>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_CertificateList.resx">
       <DependentUpon>Ed_CertificateList.vb</DependentUpon>
-      </EmbeddedResource>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Teacher_Moodle_CourseAss.resx">
       <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
     </EmbeddedResource>
@@ -1153,7 +1155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Teacher_Moodle_CourseResource.resx">
       <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareApproveAppointmentAdmin.resx">
       <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
