@@ -130,7 +130,7 @@ Public Class TransportDrivingLicenseReq
         reader2.Close()
 
         If pay_clicked = 1 Then
-            Dim insertStatement As String = "INSERT INTO dl_entries (dl_id, uid, vehicle_type, fee_paid, req_type) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5)"
+            Dim insertStatement As String = "INSERT INTO dl_entries (dl_id, uid, vehicle_type, fee_paid, req_type) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5) ON DUPLICATE KEY UPDATE uid = VALUES(uid), fee_paid = VALUES(fee_paid), req_type = VALUES(req_type)"
 
 
             Using command As New MySqlCommand(insertStatement, Con)
@@ -185,10 +185,11 @@ Public Class TransportDrivingLicenseReq
     Private Sub Paytb_Click(sender As Object, e As EventArgs) Handles Paytb.Click
         pay_clicked = 1
         LoadandBindData()
-        MessageBox.Show("Paymeny request will be sent", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Payment request will be sent", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub Canceltb_Click(sender As Object, e As EventArgs) Handles Canceltb.Click
+        VTypeCb.SelectedIndex = -1
         MessageBox.Show("Driving license request will not be proceeded ", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
     End Sub
 End Class
