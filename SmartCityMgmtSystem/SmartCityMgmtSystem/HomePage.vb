@@ -9,6 +9,7 @@ Public Class HomePage
     Private Sub ed_dept_Click(sender As Object, e As EventArgs) Handles ed_dept.Click
         Dim ed = Ed_GlobalDashboard
         ed.userID = uid
+        ed.userName = u_name
         ed.Show()
         Me.ParentForm.Close()
         Me.Close()
