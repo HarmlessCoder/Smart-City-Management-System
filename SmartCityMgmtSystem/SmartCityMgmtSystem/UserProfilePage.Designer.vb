@@ -149,7 +149,6 @@ Partial Class UserProfilePage
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(352, 34)
         Me.TextBox8.TabIndex = 70
-        Me.TextBox8.Text = "{Guardian UID}"
         '
         'Label11
         '
@@ -224,7 +223,6 @@ Partial Class UserProfilePage
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(352, 34)
         Me.TextBox7.TabIndex = 62
-        Me.TextBox7.Text = "{Occupation}"
         '
         'Label8
         '
@@ -245,7 +243,6 @@ Partial Class UserProfilePage
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(352, 88)
         Me.TextBox5.TabIndex = 58
-        Me.TextBox5.Text = "{Address}"
         '
         'Label6
         '
@@ -266,7 +263,6 @@ Partial Class UserProfilePage
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(352, 34)
         Me.TextBox4.TabIndex = 56
-        Me.TextBox4.Text = "{Phone number}"
         '
         'Label5
         '
@@ -298,7 +294,6 @@ Partial Class UserProfilePage
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(352, 34)
         Me.TextBox2.TabIndex = 52
-        Me.TextBox2.Text = "{Age}"
         '
         'Label2
         '
@@ -319,7 +314,6 @@ Partial Class UserProfilePage
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(352, 34)
         Me.TextBox1.TabIndex = 50
-        Me.TextBox1.Text = "{Name}"
         '
         'Label1
         '
@@ -340,11 +334,11 @@ Partial Class UserProfilePage
         Me.ComboBox1.BackColor = System.Drawing.Color.SeaShell
         Me.ComboBox1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold)
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Male", "Female", "Others"})
         Me.ComboBox1.Location = New System.Drawing.Point(231, 261)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(352, 34)
         Me.ComboBox1.TabIndex = 73
-        Me.ComboBox1.Text = "{Gender}"
         '
         'UserProfilePage
         '
