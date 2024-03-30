@@ -41,7 +41,7 @@ Public Class HomePage
     End Sub
 
     Private Sub bankDept_Click(sender As Object, e As EventArgs) Handles bankDept.Click
-        Dim bank = New BankingDashboard()
+        Dim bank = New BankingLogin()
         bank.Show()
         Me.ParentForm.Close()
         Me.Close()
