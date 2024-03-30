@@ -137,6 +137,7 @@ Public Class EventRegistrationScreen
 
 
     Private Sub InsertEventBooking(ByVal specialisation As String, ByVal startDate As Date, ByVal endDate As Date, ByVal vendorID As Integer, ByVal customerID As Integer, ByVal password As String)
+        Dim transactionId As String = "452126321865278"
         'Get connection from globals
         Dim Con = Globals.GetDBConnection()
         Dim cmd As MySqlCommand
@@ -145,8 +146,8 @@ Public Class EventRegistrationScreen
             Con.Open()
 
             ' Use parameterized query to prevent SQL injection
-            Dim query As String = "INSERT INTO eventBookings (specialisation, startdate, enddate, vendorID, customerID, password) " &
-                              "VALUES (@Specialisation, @StartDate, @EndDate, @VendorID, @CustomerID, @Password);"
+            Dim query As String = "INSERT INTO eventBookings (specialisation, startdate, enddate, vendorID, customerID, password,transactionID) " &
+                              "VALUES (@Specialisation, @StartDate, @EndDate, @VendorID, @CustomerID, @Password,@TransactionID);"
 
             cmd = New MySqlCommand(query, Con)
             cmd.Parameters.AddWithValue("@Specialisation", specialisation)
@@ -155,6 +156,8 @@ Public Class EventRegistrationScreen
             cmd.Parameters.AddWithValue("@VendorID", vendorID)
             cmd.Parameters.AddWithValue("@CustomerID", customerID)
             cmd.Parameters.AddWithValue("@Password", password)
+            cmd.Parameters.AddWithValue("@TransactionID", transactionId)
+
 
             ' Execute the SQL command
             cmd.ExecuteNonQuery()
@@ -238,7 +241,9 @@ Public Class EventRegistrationScreen
         ComboBox1.Items.Add("Art Gallery")
 
         TextBox1.Text = u_name
+        'TextBox1.ReadOnly = True
         TextBox2.Text = uid
+        TextBox2.ReadOnly = True
 
 
         TextBox5.PasswordChar = "*"
