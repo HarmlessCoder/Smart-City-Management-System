@@ -21,9 +21,15 @@ Public Class UserProfilePage
                 Using reader As MySqlDataReader = sqlCommand.ExecuteReader()
                     If reader.Read() Then
                         TextBox1.Text = reader("name").ToString()
-                        ComboBox1.Text = reader("gender").ToString()
-                        TextBox4.Text = reader("phone_number").ToString()
-                        TextBox5.Text = reader("address").ToString()
+                        If reader("gender") IsNot Nothing AndAlso Not IsDBNull(reader("gender")) Then
+                            ComboBox1.Text = reader("gender").ToString()
+                        End If
+                        If reader("phone_number") IsNot Nothing AndAlso Not IsDBNull(reader("phone_number")) Then
+                            TextBox4.Text = reader("phone_number").ToString()
+                        End If
+                        If reader("address") IsNot Nothing AndAlso Not IsDBNull(reader("address")) Then
+                            TextBox5.Text = reader("address").ToString()
+                        End If
                         If reader("occupation") IsNot Nothing AndAlso Not IsDBNull(reader("occupation")) Then
                             TextBox7.Text = reader("occupation").ToString()
                         End If
@@ -38,18 +44,19 @@ Public Class UserProfilePage
                                 PictureBox2.Image = Image.FromStream(ms)
                             End Using
                         End If
-
-                        Dim dobString As String = reader("dob").ToString()
-                        ' Parse the date string into a DateTime object
-                        Dim dob As DateTime = DateTime.ParseExact(dobString, "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture)
-                        ' Set the parsed date to the DateTimePicker control
-                        DateTimePicker1.Value = dob.Date
-                        'MessageBox.Show(dobString)
-                        Dim age As Integer = DateTime.Now.Year - dob.Year
-                        If dob.Month > DateTime.Now.Month Then
-                            age -= 1
+                        If reader("dob") IsNot Nothing AndAlso Not IsDBNull(reader("dob")) Then
+                            Dim dobString As String = reader("dob").ToString()
+                            ' Parse the date string into a DateTime object
+                            Dim dob As DateTime = DateTime.ParseExact(dobString, "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture)
+                            ' Set the parsed date to the DateTimePicker control
+                            DateTimePicker1.Value = dob.Date
+                            'MessageBox.Show(dobString)
+                            Dim age As Integer = DateTime.Now.Year - dob.Year
+                            If dob.Month > DateTime.Now.Month Then
+                                age -= 1
+                            End If
+                            TextBox2.Text = age
                         End If
-                        TextBox2.Text = age
                     Else
                         MessageBox.Show("Invalid UID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -114,6 +121,12 @@ Public Class UserProfilePage
             ' Convert the image to a byte array
             imageBytes = File.ReadAllBytes(imagePath)
 
+        End If
+    End Sub
+
+    Private Sub UserProfilePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If uid >= 1 AndAlso uid <= 10 Then
+            Button9.Enabled = False ' Disable the button if uid is between 1 and 10
         End If
     End Sub
 End Class
