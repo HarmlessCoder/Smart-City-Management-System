@@ -146,6 +146,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+
+    <Compile Include="EventLoginWindow.Designer.vb">
+      <DependentUpon>EventLoginWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventLoginWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventVendorLoginWindow.Designer.vb">
+      <DependentUpon>EventVendorLoginWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventVendorLoginWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_CertificateList.Designer.vb">
+      <DependentUpon>Ed_CertificateList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CertificateList.vb">
+       <SubType>Form</SubType>
+    </Compile>
+
+
+    <Compile Include="Ed_Teacher_Moodle_CourseAss.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseAss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseList.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseResource.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseResource.vb">
+
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareApproveAppointmentAdmin.Designer.vb">
       <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
     </Compile>
@@ -1084,6 +1130,31 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+
+    <EmbeddedResource Include="EventLoginWindow.resx">
+      <DependentUpon>EventLoginWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventVendorLoginWindow.resx">
+      <DependentUpon>EventVendorLoginWindow.vb</DependentUpon>
+      </EmbeddedResource>
+
+    <EmbeddedResource Include="Ed_CertificateList.resx">
+      <DependentUpon>Ed_CertificateList.vb</DependentUpon>
+      </EmbeddedResource>
+
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseAss.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseContent.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseList.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseResource.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
+
+    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareApproveAppointmentAdmin.resx">
       <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -1263,6 +1334,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventVendorRegistrationScreen.resx">
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_borrowed.resx">
+      <DependentUpon>lib_borrowed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_request.resx">
+      <DependentUpon>lib_request.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewsDashboard.resx">
       <DependentUpon>NewsDashboard.vb</DependentUpon>
