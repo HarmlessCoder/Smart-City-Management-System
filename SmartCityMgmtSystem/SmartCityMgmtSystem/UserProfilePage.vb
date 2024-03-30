@@ -21,7 +21,7 @@ Public Class UserProfilePage
                 Using reader As MySqlDataReader = sqlCommand.ExecuteReader()
                     If reader.Read() Then
                         TextBox1.Text = reader("name").ToString()
-                        TextBox3.Text = reader("gender").ToString()
+                        ComboBox1.Text = reader("gender").ToString()
                         TextBox4.Text = reader("phone_number").ToString()
                         TextBox5.Text = reader("address").ToString()
                         If reader("occupation") IsNot Nothing AndAlso Not IsDBNull(reader("occupation")) Then
@@ -45,8 +45,11 @@ Public Class UserProfilePage
                         ' Set the parsed date to the DateTimePicker control
                         DateTimePicker1.Value = dob.Date
                         'MessageBox.Show(dobString)
-                        'Dim age As Integer = DateTime.Now.Year - dob.Year
-                        TextBox2.Text = reader("age").ToString()
+                        Dim age As Integer = DateTime.Now.Year - dob.Year
+                        If dob.Month > DateTime.Now.Month Then
+                            age -= 1
+                        End If
+                        TextBox2.Text = age
                     Else
                         MessageBox.Show("Invalid UID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -61,8 +64,17 @@ Public Class UserProfilePage
         Dim selectedDate As DateTime = DateTimePicker1.Value
         ' Format the selected date to match MySQL date format ("YYYY-MM-DD")
         Dim formattedDate As String = selectedDate.ToString("yyyy-MM-dd")
+        Dim birthDate As Date = DateTime.ParseExact(formattedDate, "yyyy-MM-dd", CultureInfo.InvariantCulture)
+        ' Get the current date
+        Dim currentDate As Date = Date.Now
+        ' Calculate the age
+        Dim age As Integer = currentDate.Year - birthDate.Year
+        If birthDate.Month > currentDate.Month Then
+            age -= 1
+        End If
         Dim voter As Integer = 0
         Dim voted As Integer = 0
+        Dim gender As String = ComboBox1.SelectedItem.ToString()
         cmd = "UPDATE users SET name = @name, dob = @dob, age = @age,
     profile_photo = @profile, gender = @gender, phone_number = @phno,
     occupation = @occupation, guardian_uid = @guid, address = @address 
@@ -73,9 +85,9 @@ Public Class UserProfilePage
                 sqlCommand.Parameters.AddWithValue("@uid", uid)
                 sqlCommand.Parameters.AddWithValue("@name", TextBox1.Text)
                 sqlCommand.Parameters.AddWithValue("@dob", formattedDate)
-                sqlCommand.Parameters.AddWithValue("@age", TextBox2.Text)
+                sqlCommand.Parameters.AddWithValue("@age", age)
                 sqlCommand.Parameters.AddWithValue("@profile", imageBytes)
-                sqlCommand.Parameters.AddWithValue("@gender", TextBox3.Text)
+                sqlCommand.Parameters.AddWithValue("@gender", gender)
                 sqlCommand.Parameters.AddWithValue("@phno", TextBox4.Text)
                 sqlCommand.Parameters.AddWithValue("@address", TextBox5.Text)
                 sqlCommand.Parameters.AddWithValue("@occupation", TextBox7.Text)
