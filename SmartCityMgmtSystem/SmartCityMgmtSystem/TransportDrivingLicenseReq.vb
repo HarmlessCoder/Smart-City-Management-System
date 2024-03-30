@@ -29,7 +29,6 @@ Public Class TransportDrivingLicenseReq
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
-        'cmd1 = New MySqlCommand("SELECT age, profile_photo, gender, house_number, ward_number FROM users WHERE user_id = @a", Con)
         cmd1 = New MySqlCommand("SELECT name, age, profile_photo, gender, address FROM users WHERE user_id = @a", Con)
         cmd1.Parameters.AddWithValue("@a", uid)
         reader1 = cmd1.ExecuteReader()
@@ -43,7 +42,7 @@ Public Class TransportDrivingLicenseReq
         ' Check if there are any rows in the DataTable
         If dataTable1.Rows.Count > 0 Then
             ' Access data from the DataTable
-            Dim row As DataRow = dataTable1.Rows(0) ' Assuming there's only one row
+            Dim row As DataRow = dataTable1.Rows(0)
             Nametb.Text = Convert.ToString(row("name"))
             Agetb.Text = If(Not IsDBNull(row("age")), Convert.ToInt32(row("age")), "NULL")
             Dim Address As String = If(Not IsDBNull(row("address")), Convert.ToString(row("address")), "NULL")
@@ -101,8 +100,6 @@ Public Class TransportDrivingLicenseReq
 
                 Dim dlId As Integer = If(Not IsDBNull(row("dl_id")), Convert.ToInt32(row("dl_id")), "NULL")
                 LabelDLID.Text = dlId
-                'LabelIssuedD.Text = DirectCast(reader2("issued_on"), DateTime).ToString()
-                'LabelValidTill.Text = DirectCast(reader2("valid_till"), DateTime).ToString()
                 Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("issued_on")), DirectCast(row("issued_on"), DateTime), DateTime.MinValue)
                 Dim highestvalidTill As DateTime = If(Not IsDBNull(row("valid_till")), DirectCast(row("valid_till"), DateTime), DateTime.MinValue)
                 VTypeLB.Items.Clear()
@@ -125,8 +122,6 @@ Public Class TransportDrivingLicenseReq
                         End If
                     End If
                 Next
-                'Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("min_issued_on")), DirectCast(row("min_issued_on"), DateTime), "NULL")
-                ' Dim highestvalidTill As DateTime = If(Not IsDBNull(row("max_valid_till")), DirectCast(row("max_valid_till"), DateTime), "NULL")
                 LabelIssuedD.Text = lowestissuedOn.ToString()
                 LabelValidTill.Text = highestvalidTill.ToString()
             End If
