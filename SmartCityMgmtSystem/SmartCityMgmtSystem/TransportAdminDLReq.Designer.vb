@@ -263,14 +263,14 @@ Partial Class TransportAdminDLReq
         '
         'Column5
         '
-        Me.Column5.HeaderText = "Test Status"
+        Me.Column5.HeaderText = "fee_paid"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         '
         'Column6
         '
-        Me.Column6.HeaderText = "Action"
+        Me.Column6.HeaderText = "Test_status"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
@@ -279,7 +279,7 @@ Partial Class TransportAdminDLReq
         '
         'Column7
         '
-        Me.Column7.HeaderText = "Action"
+        Me.Column7.HeaderText = "Test_status"
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
