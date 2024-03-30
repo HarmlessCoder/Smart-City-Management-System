@@ -517,6 +517,12 @@
     <Compile Include="EventVendorRegistrationScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="lib_NewRequest.Designer.vb">
+      <DependentUpon>lib_NewRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_NewRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewsDashboard.Designer.vb">
       <DependentUpon>NewsDashboard.vb</DependentUpon>
     </Compile>
@@ -1266,6 +1272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="lib_borrowed.resx">
       <DependentUpon>lib_borrowed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_NewRequest.resx">
+      <DependentUpon>lib_NewRequest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_request.resx">
       <DependentUpon>lib_request.vb</DependentUpon>
