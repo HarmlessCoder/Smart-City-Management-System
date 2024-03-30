@@ -1,4 +1,5 @@
 ﻿Imports System.Configuration
+Imports System.IO
 Imports MySql.Data.MySqlClient
 
 'To get the global variables/declarations to be used all over the project
@@ -143,5 +144,41 @@ Public Class Globals
         End Using
     End Sub
 
+    'Fetches the Picture from DB, given the query and field name
+    Public Shared Function GetPicture(query As String, fieldName As String) As Image
+        Dim profileImage As Image = Nothing
+
+        Try
+            Using connection As New MySqlConnection(getdbConnectionString())
+                connection.Open()
+                Using command As New MySqlCommand(query, connection)
+
+                    Using reader As MySqlDataReader = command.ExecuteReader()
+                        If reader.Read() Then
+                            ' Check if the photo data is not null
+                            If Not reader.IsDBNull(0) Then
+                                ' Retrieve the photo data as a byte array
+                                Dim photoData As Byte() = DirectCast(reader(fieldName), Byte())
+
+                                ' Load the photo data into a MemoryStream
+                                Using ms As New MemoryStream(photoData)
+                                    ' Create an Image object from the MemoryStream
+                                    profileImage = Image.FromStream(ms)
+                                End Using
+                            End If
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Handle any exceptions
+            MessageBox.Show("Error fetching profile photo: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return profileImage
+    End Function
+
 
 End Class
+
+
