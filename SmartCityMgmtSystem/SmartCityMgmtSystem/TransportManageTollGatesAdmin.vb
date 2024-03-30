@@ -139,7 +139,7 @@ Public Class TransportManageTollGatesAdmin
             TextBox3.Clear()
         Else
             Dim cmd As String
-            cmd = "INSERT into tollboothdb VALUES ('" & TextBox1.Text & "','" & TextBox6.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "')"
+            cmd = "INSERT into tollboothdb VALUES (" & Convert.ToInt32(TextBox1.Text) & ",'" & TextBox6.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "')"
             Dim success As Boolean = Globals.ExecuteInsertQuery(cmd)
             If success Then
                 LoadandBindDataGridView()
