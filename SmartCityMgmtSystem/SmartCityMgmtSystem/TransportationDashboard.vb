@@ -86,4 +86,14 @@
         transportEnterTG = New TransportTGEnter()
         Globals.viewChildForm(childformPanel, transportEnterTG)
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'Go back to Homepage
+        Dim homepage As New HomePageDashboard With
+        {
+            .uid = uid
+        }
+        homepage.Show()
+        Me.Close()
+    End Sub
 End Class

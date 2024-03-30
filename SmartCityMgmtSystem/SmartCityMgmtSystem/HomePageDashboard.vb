@@ -41,4 +41,10 @@ Public Class HomePageDashboard
         login.Show()
         Me.Close()
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim notif As New NotificationInnerScreen
+        NotificationInnerScreen.uid = uid
+        Globals.viewChildForm(childformPanel, notif)
+    End Sub
 End Class

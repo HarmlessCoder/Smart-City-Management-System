@@ -571,6 +571,12 @@
     <Compile Include="NotificationBubble.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="NotificationInnerScreen.Designer.vb">
+      <DependentUpon>NotificationInnerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationInnerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransportGlobals.vb" />
     <Compile Include="TransportManageTollGatesAdmin.Designer.vb">
       <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
@@ -1338,6 +1344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationBubble.resx">
       <DependentUpon>NotificationBubble.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationInnerScreen.resx">
+      <DependentUpon>NotificationInnerScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportManageTollGatesAdmin.resx">
       <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
