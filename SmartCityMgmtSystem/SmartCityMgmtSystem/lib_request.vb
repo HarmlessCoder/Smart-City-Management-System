@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Ubiety.Dns.Core
 
 Public Class lib_request
     Public Property uid As Integer = -1
@@ -154,4 +155,13 @@ Public Class lib_request
         HomePageDashboard.Show()
         Me.Close()
     End Sub
+
+    Protected Sub btnAddRequest_Click(sender As Object, e As EventArgs) Handles btnAddRequest.Click
+        Dim lib_NewRequest = New lib_NewRequest() With {
+            .uid = uid
+        }
+        lib_NewRequest.Show()
+        Me.Close()
+    End Sub
+
 End Class

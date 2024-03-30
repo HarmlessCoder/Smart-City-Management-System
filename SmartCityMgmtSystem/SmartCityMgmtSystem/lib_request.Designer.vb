@@ -31,7 +31,7 @@ Partial Class lib_request
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.btnAddBalance = New System.Windows.Forms.Button()
+        Me.btnAddRequest = New System.Windows.Forms.Button()
         Me.overdueBooksTitleTable = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -185,7 +185,7 @@ Partial Class lib_request
         '
         Me.childformPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.childformPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.childformPanel.Controls.Add(Me.btnAddBalance)
+        Me.childformPanel.Controls.Add(Me.btnAddRequest)
         Me.childformPanel.Controls.Add(Me.overdueBooksTitleTable)
         Me.childformPanel.Controls.Add(Me.requestBooksTablePanel)
         Me.childformPanel.Controls.Add(Me.Label11)
@@ -196,20 +196,20 @@ Partial Class lib_request
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 9
         '
-        'btnAddBalance
+        'btnAddRequest
         '
-        Me.btnAddBalance.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.btnAddBalance.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnAddBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddBalance.Font = New System.Drawing.Font("Agency FB", 20.0!)
-        Me.btnAddBalance.ForeColor = System.Drawing.Color.White
-        Me.btnAddBalance.Location = New System.Drawing.Point(506, 632)
-        Me.btnAddBalance.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnAddBalance.Name = "btnAddBalance"
-        Me.btnAddBalance.Size = New System.Drawing.Size(297, 53)
-        Me.btnAddBalance.TabIndex = 51
-        Me.btnAddBalance.Text = "New Request"
-        Me.btnAddBalance.UseVisualStyleBackColor = False
+        Me.btnAddRequest.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.btnAddRequest.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnAddRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddRequest.Font = New System.Drawing.Font("Agency FB", 20.0!)
+        Me.btnAddRequest.ForeColor = System.Drawing.Color.White
+        Me.btnAddRequest.Location = New System.Drawing.Point(506, 632)
+        Me.btnAddRequest.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAddRequest.Name = "btnAddRequest"
+        Me.btnAddRequest.Size = New System.Drawing.Size(297, 53)
+        Me.btnAddRequest.TabIndex = 51
+        Me.btnAddRequest.Text = "New Request"
+        Me.btnAddRequest.UseVisualStyleBackColor = False
         '
         'overdueBooksTitleTable
         '
@@ -229,7 +229,7 @@ Partial Class lib_request
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1115, 68)
         Me.overdueBooksTitleTable.TabIndex = 50
         '
@@ -438,5 +438,5 @@ Partial Class lib_request
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents requestBooksTablePanel As TableLayoutPanel
-    Friend WithEvents btnAddBalance As Button
+    Friend WithEvents btnAddRequest As Button
 End Class
