@@ -100,43 +100,53 @@ Public Class lib_request
 
     Private Sub PopulateTable()
         requestBooksTablePanel.Controls.Clear()
-
+        requestBooksTablePanel.RowStyles.Clear()
         For rowIndex As Integer = 0 To requestBooks.Count - 1
-            Dim entry As Entry = requestBooks(rowIndex)
-            requestBooksTablePanel.RowStyles(rowIndex).SizeType = SizeType.Absolute
-            requestBooksTablePanel.RowStyles(rowIndex).Height = 50
-
-            ' Add book details
-            Dim statusLabel As New Label()
-            statusLabel.Text = entry.Status.ToString()
-            requestBooksTablePanel.Controls.Add(statusLabel, 3, rowIndex)
-            statusLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            statusLabel.Anchor = AnchorStyles.None ' Set Anchor to None
-
-            Dim authorLabel As New Label()
-            authorLabel.Text = entry.Author
-            authorLabel.Width = 200 ' Adjust width as needed
-            requestBooksTablePanel.Controls.Add(authorLabel, 1, rowIndex)
-            authorLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            authorLabel.Anchor = AnchorStyles.None ' Set Anchor to None
-
-            Dim titleLabel As New Label()
-            titleLabel.Text = entry.Title
-            titleLabel.AutoSize = True
-            requestBooksTablePanel.Controls.Add(titleLabel, 0, rowIndex)
-            titleLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            titleLabel.Anchor = AnchorStyles.None ' Set Anchor to None
-
-            Dim RDateLabel As New Label()
-            RDateLabel.Text = entry.RDate
-            requestBooksTablePanel.Controls.Add(RDateLabel, 2, rowIndex)
-            RDateLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            RDateLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+            requestBooksTablePanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 50))
         Next
 
-        Dim adjustLabel2 As New Label()
-        adjustLabel2.Text = ""
-        requestBooksTablePanel.Controls.Add(adjustLabel2, 1, requestBooks.Count)
+        If requestBooks.Count > 0 Then
+            For rowIndex As Integer = 0 To requestBooks.Count - 1
+                Dim entry As Entry = requestBooks(rowIndex)
+
+
+                ' Add book details
+                Dim statusLabel As New Label()
+                statusLabel.Text = entry.Status.ToString()
+                requestBooksTablePanel.Controls.Add(statusLabel, 3, rowIndex)
+                statusLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                statusLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+                Dim authorLabel As New Label()
+                authorLabel.Text = entry.Author
+                authorLabel.Width = 200 ' Adjust width as needed
+                requestBooksTablePanel.Controls.Add(authorLabel, 1, rowIndex)
+                authorLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                authorLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+                Dim titleLabel As New Label()
+                titleLabel.Text = entry.Title
+                titleLabel.AutoSize = True
+                requestBooksTablePanel.Controls.Add(titleLabel, 0, rowIndex)
+                titleLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                titleLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+                Dim RDateLabel As New Label()
+                RDateLabel.Text = entry.RDate
+                RDateLabel.Width = 200
+                requestBooksTablePanel.Controls.Add(RDateLabel, 2, rowIndex)
+                RDateLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                RDateLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+                requestBooksTablePanel.RowStyles(rowIndex).SizeType = SizeType.Absolute
+                requestBooksTablePanel.RowStyles(rowIndex).Height = 50
+            Next
+
+            Dim adjustLabel2 As New Label()
+            adjustLabel2.Text = ""
+            requestBooksTablePanel.Controls.Add(adjustLabel2, 1, requestBooks.Count)
+        End If
+
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
