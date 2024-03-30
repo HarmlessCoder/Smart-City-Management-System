@@ -6,7 +6,7 @@ Public Class TransportAdminDLReq
     Public Property u_name As String
     Private Accept_click As Integer = 0
     Private Reject_click As Integer = 0
-    Private row1 As Integer
+    Private row1 As Integer = 0
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Check if the clicked cell is in the "Column7" column and not a header cell
         If e.ColumnIndex = DataGridView1.Columns("Column7").Index AndAlso e.RowIndex >= 0 Then
@@ -14,16 +14,12 @@ Public Class TransportAdminDLReq
             Accept_click = 1
             row1 = e.RowIndex
             LoadandBindDataGridView()
-            MessageBox.Show("Accept button clicked for row " & e.RowIndex.ToString(), "Accept Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
             ' Check if the clicked cell is in the "Column8" column and not a header cell
         ElseIf e.ColumnIndex = DataGridView1.Columns("Column8").Index AndAlso e.RowIndex >= 0 Then
             ' Perform the action for the "Column8" column
             Reject_click = 1
             row1 = e.RowIndex
             LoadandBindDataGridView()
-            MessageBox.Show("Reject button clicked for row " & e.RowIndex.ToString(), "Reject Entry", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End If
 
     End Sub
@@ -44,6 +40,8 @@ Public Class TransportAdminDLReq
         Using command As New MySqlCommand("update dl_entries set test_status = @c,issued_on = @d, valid_till = @e where uid = @a and vehicle_type = @b", Con)
 
             If Accept_click = 1 Then
+                command.Parameters.AddWithValue("@a", DataGridView1.Rows(row1).Cells(0).Value)
+                command.Parameters.AddWithValue("@b", DataGridView1.Rows(row1).Cells(3).Value)
                 command.Parameters.AddWithValue("@c", "pass")
                 command.Parameters.AddWithValue("@d", DateTime.Today)
                 command.Parameters.AddWithValue("@e", DateTime.Today.AddYears(10))
@@ -51,6 +49,8 @@ Public Class TransportAdminDLReq
                 ' Execute the command (Update statement)
                 command.ExecuteNonQuery()
             ElseIf Reject_click = 1 Then
+                command.Parameters.AddWithValue("@a", DataGridView1.Rows(row1).Cells(0).Value)
+                command.Parameters.AddWithValue("@b", DataGridView1.Rows(row1).Cells(3).Value)
                 command.Parameters.AddWithValue("@c", "fail")
                 command.Parameters.AddWithValue("@d", DBNull.Value)
                 command.Parameters.AddWithValue("@e", DBNull.Value)
@@ -58,8 +58,7 @@ Public Class TransportAdminDLReq
                 ' Execute the command (Update statement)
                 command.ExecuteNonQuery()
             End If
-            command.Parameters.AddWithValue("@a", DataGridView1.Rows(row1).Cells(0).Value)
-            command.Parameters.AddWithValue("@b", DataGridView1.Rows(row1).Cells(3).Value)
+
         End Using
 
         cmd = New MySqlCommand("SELECT uid, vehicle_type, req_type, fee_paid, name, age FROM dl_entries JOIN users ON dl_entries.uid = users.user_id where test_status is NULL ", Con)
