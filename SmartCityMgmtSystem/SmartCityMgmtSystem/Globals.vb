@@ -121,7 +121,7 @@ Public Class Globals
     'To send notifications to the users, give uid as -1 if u want to send to all
     'refer to your ministry id from ministries table in db
     Public Shared Sub SendNotifications(ministry_id As Integer, to_uid As Integer, notif_title As String, notifmsg As String)
-        Dim query As String = "INSERT INTO notifications (ministry_id, to_id, title, message) VALUES (@ministry_id, @to_uid, @notif_title, @notifmsg)"
+        Dim query As String = "INSERT INTO notifications (ministry_id, to_id, title, message, time_stamp) VALUES (@ministry_id, @to_uid, @notif_title, @notifmsg, NOW())"
 
         Using connection As New MySqlConnection(getdbConnectionString())
             Using command As New MySqlCommand(query, connection)
