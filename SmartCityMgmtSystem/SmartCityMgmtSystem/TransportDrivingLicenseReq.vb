@@ -96,37 +96,40 @@ Public Class TransportDrivingLicenseReq
         ' Display driver's license information
         If dataTable2.Rows.Count > 0 Then
             ' Access data from the DataTable
-            Dim row As DataRow = dataTable2.Rows(0) ' Assuming there's only one row
-            Dim dlId As Integer = If(Not IsDBNull(row("dl_id")), Convert.ToInt32(row("dl_id")), "NULL")
-            LabelDLID.Text = dlId
-            'LabelIssuedD.Text = DirectCast(reader2("issued_on"), DateTime).ToString()
-            'LabelValidTill.Text = DirectCast(reader2("valid_till"), DateTime).ToString()
-            Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("issued_on")), DirectCast(row("issued_on"), DateTime), "NULL")
-            Dim highestvalidTill As DateTime = If(Not IsDBNull(row("valid_till")), DirectCast(row("valid_till"), DateTime), "NULL")
-            VTypeLB.Items.Clear()
-            For Each dr As DataRow In dataTable2.Rows
-                If Convert.ToInt32(dr("fee_paid")) = 1 And Convert.ToString(dr("test_status")) = "pass" Then
-                    ' Access data from the current row
-                    Dim vtype_id As Integer = Convert.ToInt32(dr("vehicle_type"))
-                    Dim vType As String = TransportGlobals.GetVehicleType(vtype_id)
-                    VTypeLB.Items.Add(vType)
-                    Dim issuedOn As DateTime = If(Not IsDBNull(dr("issued_on")), DirectCast(dr("issued_on"), DateTime), DateTime.MinValue)
-                    Dim validTill As DateTime = If(Not IsDBNull(dr("valid_till")), DirectCast(dr("valid_till"), DateTime), DateTime.MinValue)
-                    ' Update the highest valid_till date
-                    If validTill > highestvalidTill Then
-                        highestvalidTill = validTill
-                    End If
+            Dim row As DataRow = dataTable2.Rows(0)
+            If Not IsDBNull(row("test_status")) Then
 
-                    ' Update the lowest issued_on date
-                    If issuedOn < lowestissuedOn Then
-                        lowestissuedOn = issuedOn
+                Dim dlId As Integer = If(Not IsDBNull(row("dl_id")), Convert.ToInt32(row("dl_id")), "NULL")
+                LabelDLID.Text = dlId
+                'LabelIssuedD.Text = DirectCast(reader2("issued_on"), DateTime).ToString()
+                'LabelValidTill.Text = DirectCast(reader2("valid_till"), DateTime).ToString()
+                Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("issued_on")), DirectCast(row("issued_on"), DateTime), DateTime.MinValue)
+                Dim highestvalidTill As DateTime = If(Not IsDBNull(row("valid_till")), DirectCast(row("valid_till"), DateTime), DateTime.MinValue)
+                VTypeLB.Items.Clear()
+                For Each dr As DataRow In dataTable2.Rows
+                    If Convert.ToInt32(dr("fee_paid")) = 1 And Convert.ToString(dr("test_status")) = "pass" Then
+                        ' Access data from the current row
+                        Dim vtype_id As Integer = Convert.ToInt32(dr("vehicle_type"))
+                        Dim vType As String = TransportGlobals.GetVehicleType(vtype_id)
+                        VTypeLB.Items.Add(vType)
+                        Dim issuedOn As DateTime = If(Not IsDBNull(dr("issued_on")), DirectCast(dr("issued_on"), DateTime), DateTime.MinValue)
+                        Dim validTill As DateTime = If(Not IsDBNull(dr("valid_till")), DirectCast(dr("valid_till"), DateTime), DateTime.MinValue)
+                        ' Update the highest valid_till date
+                        If validTill > highestvalidTill Then
+                            highestvalidTill = validTill
+                        End If
+
+                        ' Update the lowest issued_on date
+                        If issuedOn < lowestissuedOn Then
+                            lowestissuedOn = issuedOn
+                        End If
                     End If
-                End If
-            Next
-            'Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("min_issued_on")), DirectCast(row("min_issued_on"), DateTime), "NULL")
-            ' Dim highestvalidTill As DateTime = If(Not IsDBNull(row("max_valid_till")), DirectCast(row("max_valid_till"), DateTime), "NULL")
-            LabelIssuedD.Text = lowestIssuedOn.ToString()
-            LabelValidTill.Text = highestValidTill.ToString()
+                Next
+                'Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("min_issued_on")), DirectCast(row("min_issued_on"), DateTime), "NULL")
+                ' Dim highestvalidTill As DateTime = If(Not IsDBNull(row("max_valid_till")), DirectCast(row("max_valid_till"), DateTime), "NULL")
+                LabelIssuedD.Text = lowestissuedOn.ToString()
+                LabelValidTill.Text = highestvalidTill.ToString()
+            End If
         End If
 
         reader2.Close()
