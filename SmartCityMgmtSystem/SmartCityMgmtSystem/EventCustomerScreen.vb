@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class EventCustomerScreen
-
+    Public Property uid As Integer
+    Public Property password As String
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Check if the clicked cell is in the "EditBut" column and not a header cell
         If e.ColumnIndex = DataGridView1.Columns("EditBut").Index AndAlso e.RowIndex >= 0 Then

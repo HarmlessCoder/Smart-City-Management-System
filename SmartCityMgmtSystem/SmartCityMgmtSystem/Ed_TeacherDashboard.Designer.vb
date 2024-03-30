@@ -68,6 +68,7 @@ Partial Class Ed_TeacherDashboard
         Me.Button4.TabIndex = 25
         Me.Button4.Text = "Manage Moodle Course"
         Me.Button4.UseVisualStyleBackColor = False
+        AddHandler Me.Button4.Click, AddressOf Me.Button4_Click
         '
         'Button5
         '
@@ -160,7 +161,7 @@ Partial Class Ed_TeacherDashboard
         Me.Label2.Location = New System.Drawing.Point(293, 9)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 28)
+        Me.Label2.Size = New System.Drawing.Size(75, 31)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "{Name}"
         '

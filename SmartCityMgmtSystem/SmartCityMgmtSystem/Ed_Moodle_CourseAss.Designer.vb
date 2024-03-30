@@ -33,9 +33,9 @@ Partial Class Ed_Moodle_CourseAss
         'RichTextBox1
         '
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Location = New System.Drawing.Point(22, 125)
+        Me.RichTextBox1.Location = New System.Drawing.Point(26, 163)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(927, 212)
+        Me.RichTextBox1.Size = New System.Drawing.Size(550, 309)
         Me.RichTextBox1.TabIndex = 40
         Me.RichTextBox1.Text = ""
         '
@@ -43,7 +43,7 @@ Partial Class Ed_Moodle_CourseAss
         '
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(22, 66)
+        Me.Label1.Location = New System.Drawing.Point(22, 79)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(463, 23)
         Me.Label1.TabIndex = 38
@@ -53,7 +53,7 @@ Partial Class Ed_Moodle_CourseAss
         '
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(22, 89)
+        Me.Label2.Location = New System.Drawing.Point(22, 102)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(463, 23)
         Me.Label2.TabIndex = 41
@@ -63,13 +63,13 @@ Partial Class Ed_Moodle_CourseAss
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Cascadia Mono", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Cascadia Mono", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(686, 475)
+        Me.Button2.Location = New System.Drawing.Point(26, 500)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(263, 64)
+        Me.Button2.Size = New System.Drawing.Size(263, 40)
         Me.Button2.TabIndex = 42
-        Me.Button2.Text = "Upload File"
+        Me.Button2.Text = "Upload"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -78,11 +78,11 @@ Partial Class Ed_Moodle_CourseAss
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Cascadia Mono", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(686, 569)
+        Me.Button1.Location = New System.Drawing.Point(652, 163)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(263, 48)
+        Me.Button1.Size = New System.Drawing.Size(263, 40)
         Me.Button1.TabIndex = 43
-        Me.Button1.Text = "Submit Assignment"
+        Me.Button1.Text = "Turn-In"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button6

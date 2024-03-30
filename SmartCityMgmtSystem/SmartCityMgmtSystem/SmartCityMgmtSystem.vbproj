@@ -103,6 +103,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
@@ -118,6 +119,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -144,6 +146,58 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+
+    <Compile Include="EventLoginWindow.Designer.vb">
+      <DependentUpon>EventLoginWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventLoginWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventVendorLoginWindow.Designer.vb">
+      <DependentUpon>EventVendorLoginWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventVendorLoginWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_CertificateList.Designer.vb">
+      <DependentUpon>Ed_CertificateList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_CertificateList.vb">
+       <SubType>Form</SubType>
+    </Compile>
+
+
+    <Compile Include="Ed_Teacher_Moodle_CourseAss.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseAss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseContent.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseContent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseList.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseResource.Designer.vb">
+      <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Moodle_CourseResource.vb">
+
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthcareApproveAppointmentAdmin.Designer.vb">
+      <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareApproveAppointmentAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BankingCreateAccount.Designer.vb">
       <DependentUpon>BankingCreateAccount.vb</DependentUpon>
     </Compile>
@@ -166,6 +220,12 @@
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
     </Compile>
     <Compile Include="CheckBankBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_AddMoodleCourse.Designer.vb">
+      <DependentUpon>Ed_AddMoodleCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_AddMoodleCourse.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_BusItem.Designer.vb">
@@ -198,12 +258,38 @@
     <Compile Include="Ed_Coursera_Course_Enroll.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Coursera_Handler.vb" />
     <Compile Include="Ed_CourseResource.Designer.vb">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_EcourseApproveCourses.Designer.vb">
+      <DependentUpon>Ed_EcourseApproveCourses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_EcourseApproveCourses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_ECourseApproveItem.Designer.vb">
+      <DependentUpon>Ed_ECourseApproveItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ECourseApproveItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ed_ECourseManage_Stats.Designer.vb">
+      <DependentUpon>Ed_ECourseManage_Stats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ECourseManage_Stats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_ECourseStatDropItem.Designer.vb">
+      <DependentUpon>Ed_ECourseStatDropItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ECourseStatDropItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ed_EntranceExam_Handler.vb" />
     <Compile Include="Ed_EntranceInnerScreen.Designer.vb">
       <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
     </Compile>
@@ -216,18 +302,32 @@
     <Compile Include="Ed_FeePopup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_AddECourse.Designer.vb">
+      <DependentUpon>Ed_AddECourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_AddECourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ed_Institute_BusList.Designer.vb">
       <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Institute_BusList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Institute_Handler.vb" />
     <Compile Include="Ed_Inst_FeeDetails.Designer.vb">
       <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Inst_FeeDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_LeftPanelItem.Designer.vb">
+      <DependentUpon>Ed_LeftPanelItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_LeftPanelItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ed_LoginHandle.vb" />
     <Compile Include="Ed_ManageECourse.Designer.vb">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
     </Compile>
@@ -264,10 +364,29 @@
     <Compile Include="Ed_Moodle_CourseResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_Moodle_Handler.vb" />
+    <Compile Include="Ed_ResourceLinkItem.Designer.vb">
+      <DependentUpon>Ed_ResourceLinkItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_ResourceLinkItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_Stud_MyCourses.Designer.vb">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Stud_MyCourses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Coursera_Course_Content.Designer.vb">
+      <DependentUpon>Ed_Teacher_Coursera_Course_Content.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Coursera_Course_Content.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ed_Teacher_Course_Resource.Designer.vb">
+      <DependentUpon>Ed_Teacher_Course_Resource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_Teacher_Course_Resource.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ed_ViewPaymentPopup.Designer.vb">
@@ -354,6 +473,30 @@
     <Compile Include="hc_Pharmacy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HealthcareAssignDoctorAdmin.Designer.vb">
+      <DependentUpon>HealthcareAssignDoctorAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareAssignDoctorAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthcareBirthDeathCertificateAdmin.Designer.vb">
+      <DependentUpon>HealthcareBirthDeathCertificateAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareBirthDeathCertificateAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthcareHealthRecordAdmin.Designer.vb">
+      <DependentUpon>HealthcareHealthRecordAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareHealthRecordAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Healthcare_BookAppointment.Designer.vb">
+      <DependentUpon>Healthcare_BookAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Healthcare_BookAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Healthcare_homepage.Designer.vb">
       <DependentUpon>Healthcare_homepage.vb</DependentUpon>
     </Compile>
@@ -426,6 +569,13 @@
     <Compile Include="NewsDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NotificationBubble.Designer.vb">
+      <DependentUpon>NotificationBubble.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationBubble.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransportGlobals.vb" />
     <Compile Include="TransportManageTollGatesAdmin.Designer.vb">
       <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
     </Compile>
@@ -960,6 +1110,12 @@
     <Compile Include="UserProfilePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserResetPassword.Designer.vb">
+      <DependentUpon>UserResetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserResetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserSignUp.Designer.vb">
       <DependentUpon>UserSignUp.vb</DependentUpon>
     </Compile>
@@ -974,6 +1130,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+
+    <EmbeddedResource Include="EventLoginWindow.resx">
+      <DependentUpon>EventLoginWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventVendorLoginWindow.resx">
+      <DependentUpon>EventVendorLoginWindow.vb</DependentUpon>
+      </EmbeddedResource>
+
+    <EmbeddedResource Include="Ed_CertificateList.resx">
+      <DependentUpon>Ed_CertificateList.vb</DependentUpon>
+      </EmbeddedResource>
+
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseAss.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseAss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseContent.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseList.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Moodle_CourseResource.resx">
+      <DependentUpon>Ed_Teacher_Moodle_CourseResource.vb</DependentUpon>
+
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareApproveAppointmentAdmin.resx">
+      <DependentUpon>HealthcareApproveAppointmentAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BankingCreateAccount.resx">
       <DependentUpon>BankingCreateAccount.vb</DependentUpon>
     </EmbeddedResource>
@@ -985,6 +1169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckBankBalance.resx">
       <DependentUpon>CheckBankBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_AddMoodleCourse.resx">
+      <DependentUpon>Ed_AddMoodleCourse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_BusItem.resx">
       <DependentUpon>Ed_BusItem.vb</DependentUpon>
@@ -1004,17 +1191,35 @@
     <EmbeddedResource Include="Ed_CourseResource.resx">
       <DependentUpon>Ed_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_EcourseApproveCourses.resx">
+      <DependentUpon>Ed_EcourseApproveCourses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ECourseApproveItem.resx">
+      <DependentUpon>Ed_ECourseApproveItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ECourseManage_Stats.resx">
+      <DependentUpon>Ed_ECourseManage_Stats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ECourseStatDropItem.resx">
+      <DependentUpon>Ed_ECourseStatDropItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_EntranceInnerScreen.resx">
       <DependentUpon>Ed_EntranceInnerScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_FeePopup.resx">
       <DependentUpon>Ed_FeePopup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_AddECourse.resx">
+      <DependentUpon>Ed_AddECourse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Institute_BusList.resx">
       <DependentUpon>Ed_Institute_BusList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Inst_FeeDetails.resx">
       <DependentUpon>Ed_Inst_FeeDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_LeftPanelItem.resx">
+      <DependentUpon>Ed_LeftPanelItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ManageECourse.resx">
       <DependentUpon>Ed_ManageECourse.vb</DependentUpon>
@@ -1034,8 +1239,17 @@
     <EmbeddedResource Include="Ed_Moodle_CourseResource.resx">
       <DependentUpon>Ed_Moodle_CourseResource.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ed_ResourceLinkItem.resx">
+      <DependentUpon>Ed_ResourceLinkItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Stud_MyCourses.resx">
       <DependentUpon>Ed_Stud_MyCourses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Coursera_Course_Content.resx">
+      <DependentUpon>Ed_Teacher_Coursera_Course_Content.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_Teacher_Course_Resource.resx">
+      <DependentUpon>Ed_Teacher_Course_Resource.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_ViewPaymentPopup.resx">
       <DependentUpon>Ed_ViewPaymentPopup.vb</DependentUpon>
@@ -1079,6 +1293,18 @@
     <EmbeddedResource Include="hc_Pharmacy.resx">
       <DependentUpon>hc_Pharmacy.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareAssignDoctorAdmin.resx">
+      <DependentUpon>HealthcareAssignDoctorAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareBirthDeathCertificateAdmin.resx">
+      <DependentUpon>HealthcareBirthDeathCertificateAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareHealthRecordAdmin.resx">
+      <DependentUpon>HealthcareHealthRecordAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Healthcare_BookAppointment.resx">
+      <DependentUpon>Healthcare_BookAppointment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Healthcare_homepage.resx">
       <DependentUpon>Healthcare_homepage.vb</DependentUpon>
     </EmbeddedResource>
@@ -1109,8 +1335,17 @@
     <EmbeddedResource Include="EventVendorRegistrationScreen.resx">
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lib_borrowed.resx">
+      <DependentUpon>lib_borrowed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_request.resx">
+      <DependentUpon>lib_request.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewsDashboard.resx">
       <DependentUpon>NewsDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationBubble.resx">
+      <DependentUpon>NotificationBubble.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransportManageTollGatesAdmin.resx">
       <DependentUpon>TransportManageTollGatesAdmin.vb</DependentUpon>
@@ -1369,6 +1604,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfilePage.resx">
       <DependentUpon>UserProfilePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserResetPassword.resx">
+      <DependentUpon>UserResetPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.vb</DependentUpon>
@@ -1796,12 +2034,16 @@
     <None Include="Resources\icons8-active-directory-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\loading.gif" />
     <None Include="Resources\icon_view_transactions.png" />
     <None Include="Resources\banking_logo.png" />
     <None Include="Resources\icon checkbalance.png" />
     <None Include="Resources\iconBankAccountProfile.png" />
     <None Include="Resources\icon-paybills.png" />
     <None Include="Resources\bus_default.png" />
+    <None Include="Resources\ed_course_resource.png" />
+    <None Include="Resources\healthcare_bg.jpg" />
+    <None Include="Resources\icons8-appointment-time-64.png" />
     <Content Include="Resources\icons8-car-100.png" />
     <None Include="Resources\icons8-vendor-48.png" />
     <None Include="Resources\icons8-car-1001.png" />
@@ -1816,6 +2058,7 @@
     <None Include="Resources\icons8-event-accepted-64.png" />
     <Content Include="Resources\icons8-eye-48.png" />
     <None Include="Resources\icons8-eye-481.png" />
+    <None Include="Resources\icons8-fastag-50.png" />
     <Content Include="Resources\icons8-health-100.png" />
     <None Include="Resources\icons8-licence-48.png" />
     <None Include="Resources\icons8-law-violation-100.png" />
@@ -1824,6 +2067,7 @@
     <None Include="Resources\icons8-people-in-car-1001.png" />
     <None Include="Resources\icons8-people-in-car-50.png" />
     <None Include="Resources\icons8-passenger-48.png" />
+    <None Include="Resources\icons8-medical-doctor-50.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
     <Content Include="Resources\icons8-person-80.png" />
     <None Include="Resources\icons8-person-801.png" />
