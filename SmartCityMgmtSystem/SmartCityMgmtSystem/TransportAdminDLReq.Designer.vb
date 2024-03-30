@@ -46,8 +46,9 @@ Partial Class TransportAdminDLReq
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,7 +84,7 @@ Partial Class TransportAdminDLReq
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeight = 47
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkGoldenrod
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -222,6 +223,7 @@ Partial Class TransportAdminDLReq
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         Me.Column1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Column1.FillWeight = 25.66845!
         Me.Column1.HeaderText = "UID"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
@@ -236,6 +238,7 @@ Partial Class TransportAdminDLReq
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         Me.Column2.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Column2.FillWeight = 25.66845!
         Me.Column2.HeaderText = "Name"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
@@ -249,6 +252,7 @@ Partial Class TransportAdminDLReq
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkCyan
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke
         Me.Column3.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Column3.FillWeight = 25.66845!
         Me.Column3.HeaderText = "Age"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
@@ -256,6 +260,7 @@ Partial Class TransportAdminDLReq
         '
         'Column4
         '
+        Me.Column4.FillWeight = 25.66845!
         Me.Column4.HeaderText = "Vehicle Type"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
@@ -263,29 +268,40 @@ Partial Class TransportAdminDLReq
         '
         'Column5
         '
-        Me.Column5.HeaderText = "fee_paid"
+        Me.Column5.FillWeight = 25.66845!
+        Me.Column5.HeaderText = "Request_Type"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         '
         'Column6
         '
-        Me.Column6.HeaderText = "Test_status"
+        Me.Column6.FillWeight = 25.66845!
+        Me.Column6.HeaderText = "fee_paid"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
-        Me.Column6.Text = "Accept"
-        Me.Column6.UseColumnTextForButtonValue = True
         '
         'Column7
         '
+        Me.Column7.FillWeight = 25.66845!
         Me.Column7.HeaderText = "Test_status"
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
-        Me.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column7.Text = "Reject"
+        Me.Column7.Text = "Accept"
         Me.Column7.UseColumnTextForButtonValue = True
+        '
+        'Column8
+        '
+        Me.Column8.FillWeight = 25.66845!
+        Me.Column8.HeaderText = "Test_status"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column8.Text = "Reject"
+        Me.Column8.UseColumnTextForButtonValue = True
         '
         'TransportAdminDLReq
         '
@@ -316,6 +332,7 @@ Partial Class TransportAdminDLReq
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewButtonColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewButtonColumn
+    Friend WithEvents Column8 As DataGridViewButtonColumn
 End Class

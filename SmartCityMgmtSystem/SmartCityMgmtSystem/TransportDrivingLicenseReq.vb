@@ -5,7 +5,7 @@ Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Relational
 
 Public Class TransportDrivingLicenseReq
-    Public Property uid As Integer = 12
+    Public Property uid As Integer = 13
     Public Property u_name As String
     Dim pay_clicked As Integer = 0
     Private currentDlId As Integer
@@ -101,7 +101,7 @@ Public Class TransportDrivingLicenseReq
 
                 Dim dlId As Integer = If(Not IsDBNull(row("dl_id")), Convert.ToInt32(row("dl_id")), "NULL")
                 LabelDLID.Text = dlId
-                Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("issued_on")), DirectCast(row("issued_on"), DateTime), DateTime.MinValue)
+                Dim lowestissuedOn As DateTime = If(Not IsDBNull(row("issued_on")), DirectCast(row("issued_on"), DateTime), DateTime.MaxValue)
                 Dim highestvalidTill As DateTime = If(Not IsDBNull(row("valid_till")), DirectCast(row("valid_till"), DateTime), DateTime.MinValue)
                 VTypeLB.Items.Clear()
                 For Each dr As DataRow In dataTable2.Rows
@@ -110,7 +110,7 @@ Public Class TransportDrivingLicenseReq
                         Dim vtype_id As Integer = Convert.ToInt32(dr("vehicle_type"))
                         Dim vType As String = TransportGlobals.GetVehicleType(vtype_id)
                         VTypeLB.Items.Add(vType)
-                        Dim issuedOn As DateTime = If(Not IsDBNull(dr("issued_on")), DirectCast(dr("issued_on"), DateTime), DateTime.MinValue)
+                        Dim issuedOn As DateTime = If(Not IsDBNull(dr("issued_on")), DirectCast(dr("issued_on"), DateTime), DateTime.MaxValue)
                         Dim validTill As DateTime = If(Not IsDBNull(dr("valid_till")), DirectCast(dr("valid_till"), DateTime), DateTime.MinValue)
                         ' Update the highest valid_till date
                         If validTill > highestvalidTill Then
