@@ -14,4 +14,8 @@
         ed_list.user_type = "Admin"
         Globals.viewChildForm(childformPanel, ed_list)
     End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Globals.viewChildForm(childformPanel, New Ed_Add_Institution)
+    End Sub
 End Class
