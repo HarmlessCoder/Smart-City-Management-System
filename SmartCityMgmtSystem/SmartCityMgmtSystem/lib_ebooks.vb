@@ -308,11 +308,38 @@ Public Class lib_ebooks
             linkLabel.LinkBehavior = LinkBehavior.HoverUnderline
             linkLabel.LinkColor = Color.Blue
             linkLabel.Cursor = Cursors.Hand
-            linkLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+            linkLabel.Margin = New Padding(0)
+            linkLabel.Font = New Font(linkLabel.Font.FontFamily, 10, linkLabel.Font.Style) ' Set the font size to 12
+            linkLabel.Padding = New Padding(0, 3, 0, 0) ' Adjust the padding to center the text vertically
+            linkLabel.TextAlign = ContentAlignment.BottomCenter ' Center the label both horizontally and vertically
+            linkLabel.AutoSize = True
             AddHandler linkLabel.LinkClicked, Sub(sender As Object, e As LinkLabelLinkClickedEventArgs)
                                                   Process.Start(entry.Link)
                                               End Sub
             eBooksTablePanel.Controls.Add(linkLabel, 5, rowIndex)
+
+            'Dim linkLabel As New LinkLabel()
+            'linkLabel.Text = "Click here"
+            'linkLabel.LinkBehavior = LinkBehavior.HoverUnderline
+            'linkLabel.LinkColor = Color.Blue
+            'linkLabel.Cursor = Cursors.Hand
+            'linkLabel.TextAlign = ContentAlignment.BottomCenter ' Center the label both horizontally and vertically
+
+            '' Create a TableLayoutPanel with a single cell and add the linkLabel to it
+            'Dim linkPanel As New TableLayoutPanel()
+            'linkPanel.RowCount = 1
+            'linkPanel.ColumnCount = 1
+            'linkPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100))
+            'linkPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100))
+            'linkPanel.Controls.Add(linkLabel, 0, 0)
+
+            'AddHandler linkLabel.LinkClicked, Sub(sender As Object, e As LinkLabelLinkClickedEventArgs)
+            '                                      Process.Start(entry.Link)
+            '                                  End Sub
+
+            'eBooksTablePanel.Controls.Add(linkPanel, 5, rowIndex)
+
+
 
 
             ' Add radio button for options
