@@ -118,6 +118,30 @@ Public Class Globals
             CType(childform, HomePage).SetMainForm(parentForm)
         End If
     End Sub
+    'To send notifications to the users, give uid as -1 if u want to send to all
+    'refer to your ministry id from ministries table in db
+    Public Shared Sub SendNotifications(ministry_id As Integer, to_uid As Integer, notif_title As String, notifmsg As String)
+        Dim query As String = "INSERT INTO notifications (ministry_id, to_id, title, message) VALUES (@ministry_id, @to_uid, @notif_title, @notifmsg)"
+
+        Using connection As New MySqlConnection(getdbConnectionString())
+            Using command As New MySqlCommand(query, connection)
+                ' Add parameters
+                command.Parameters.AddWithValue("@ministry_id", ministry_id)
+                command.Parameters.AddWithValue("@to_uid", to_uid)
+                command.Parameters.AddWithValue("@notif_title", notif_title)
+                command.Parameters.AddWithValue("@notifmsg", notifmsg)
+
+                Try
+                    connection.Open()
+                    If command.ExecuteNonQuery() > 0 Then
+                        'MessageBox.Show("Notification sent successfully", "Notification Sent", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("Error sending notification: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End Using
+        End Using
+    End Sub
 
 
 End Class
