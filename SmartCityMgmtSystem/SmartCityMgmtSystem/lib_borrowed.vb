@@ -141,8 +141,6 @@ Public Class lib_borrowed
                 entry.RadioButton.Anchor = AnchorStyles.None ' Set Anchor to None
                 entry.RadioButton.Size = New Size(16, 16) ' Set the size of the radio button
 
-                borrowedBooksTablePanel.RowStyles(rowIndex).SizeType = SizeType.Absolute
-                borrowedBooksTablePanel.RowStyles(rowIndex).Height = 50
             Next
 
             Dim adjustLabel2 As New Label()

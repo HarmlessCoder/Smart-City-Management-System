@@ -138,8 +138,6 @@ Public Class lib_request
                 RDateLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
                 RDateLabel.Anchor = AnchorStyles.None ' Set Anchor to None
 
-                requestBooksTablePanel.RowStyles(rowIndex).SizeType = SizeType.Absolute
-                requestBooksTablePanel.RowStyles(rowIndex).Height = 50
             Next
 
             Dim adjustLabel2 As New Label()
