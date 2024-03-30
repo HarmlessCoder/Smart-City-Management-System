@@ -18,7 +18,9 @@
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         'View the TransportationAdminHome screen by default - first argument, name of the panel in the parent panel, second - name of the child form
         transportationAdminHome?.Dispose()
-        transportationAdminHome = New TransportationAdminHome()
+        transportationAdminHome = New TransportationAdminHome With {
+            .innerPanel = childformPanel
+        }
         Globals.viewChildForm(childformPanel, transportationAdminHome)
     End Sub
 
