@@ -61,13 +61,13 @@ Public Class Ed_RoleSelect
             'Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Institute_AdminDashboard)
             'End If
             '   If (Ed_GlobalDashboard.Ed_Profile.Ed_User_Role = Ed_GlobalDashboard.UserRole.EcourseAdmin) Then
-            Ed_GlobalDashboard.innerpanel = Ed_Coursera_AdminDashboard.childformPanel
-            Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Coursera_AdminDashboard)
+            'Ed_GlobalDashboard.innerpanel = Ed_Coursera_AdminDashboard.childformPanel
+            'Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_Coursera_AdminDashboard)
             'End If
-            '   If (Ed_GlobalDashboard.Ed_Profile.Ed_User_Role = Ed_GlobalDashboard.UserRole.Minister) Then
-            'Ed_GlobalDashboard.innerpanel = Ed_MinisterDashboard.childformPanel
-            'Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_MinisterDashboard)
-            ' End If
+            'If (Ed_GlobalDashboard.Ed_Profile.Ed_User_Role = Ed_GlobalDashboard.UserRole.Minister) Then
+            Ed_GlobalDashboard.innerpanel = Ed_MinisterDashboard.childformPanel
+            Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_MinisterDashboard)
+            'End If
         Else
             Dim message As String = "Sorry, you are not qualified to enter as an admin."
             Dim title As String = "Access Denied"
