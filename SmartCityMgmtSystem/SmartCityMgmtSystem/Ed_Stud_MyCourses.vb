@@ -40,20 +40,23 @@ Public Class Ed_Stud_MyCourses
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        FlowLayoutPanel1.Controls.Clear()
         Button2.BackColor = Color.FromArgb(88, 133, 175)
         Button1.BackColor = Color.FromArgb(40, 68, 114)
-        Dim labels As Ed_CourseProgress() = New Ed_CourseProgress(21) {}
 
-        ' Create labels and set properties
-        For i As Integer = 0 To 20
+        Dim courses As Course() = handler.GetCompletedCourses(Ed_GlobalDashboard.userID)
+
+        ' Create Ed_CourseProgress objects and set properties
+        Dim labels As Ed_CourseProgress() = New Ed_CourseProgress(courses.Length - 1) {}
+
+        For i As Integer = 0 To courses.Length - 1
             labels(i) = New Ed_CourseProgress()
-            labels(i).CourseID = i
-            labels(i).ProgressBar1.Value = labels(i).ProgressBar1.Maximum
-            labels(i).Label2.Text = "Completed"
+            labels(i).CourseID = courses(i).CourseID
+            labels(i).CourseItem = courses(i)
+
         Next
 
-        ' Add labels to the FlowLayoutPanel
+        FlowLayoutPanel1.Controls.Clear()
+        ' Add Ed_CourseProgress objects to the FlowLayoutPanel
         For Each Ed_CourseProgress As Ed_CourseProgress In labels
             FlowLayoutPanel1.Controls.Add(Ed_CourseProgress)
         Next
