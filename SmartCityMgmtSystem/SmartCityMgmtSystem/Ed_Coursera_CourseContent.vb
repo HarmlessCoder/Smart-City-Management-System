@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
+Imports System.Web.UI.Design
 Imports SmartCityMgmtSystem.Ed_Coursera_Handler
 Public Class Ed_Coursera_CourseContent
 
@@ -60,6 +61,7 @@ Public Class Ed_Coursera_CourseContent
             labels(i) = New Ed_ResourceLinkItem()
             labels(i).content = contents(i)
             labels(i).CourseItem = CourseItem
+            labels(i).Label1.Text = contents(i).ContentName
 
         Next
 
