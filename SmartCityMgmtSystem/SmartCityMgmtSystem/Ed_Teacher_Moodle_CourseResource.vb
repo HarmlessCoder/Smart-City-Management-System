@@ -58,4 +58,9 @@ Public Class Ed_Teacher_Moodle_CourseResource
         Globals.viewChildForm(callingPanel, New Ed_Teacher_Moodle_CourseContent(CourseID, callingPanel))
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim edit_res_form As New Ed_Teacher_EditResource()
+        edit_res_form.ShowDialog()
+    End Sub
 End Class

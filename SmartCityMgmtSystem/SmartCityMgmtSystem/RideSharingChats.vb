@@ -1,6 +1,7 @@
 ﻿Imports System.Configuration
 Imports System.Data.SqlClient
 Imports System.Data.SqlTypes
+Imports System.IO
 Imports System.Threading
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Common
@@ -106,9 +107,9 @@ Public Class RideSharingChats
                         Dim timeStamp As String = Convert.ToDateTime(reader("time_stamp")).ToString("dd MMM yy, hh:mm tt") 'Like 12 March 24,08:45PM
                         Dim message As String = reader("msg").ToString()
                         Dim postNum As Integer = Convert.ToInt32(reader("post_id"))
-
+                        Dim profilePhoto As Image = Globals.GetPicture("SELECT profile_photo FROM users WHERE user_id = " & postuid, "profile_photo")
                         'Add Chat
-                        AddChat(userName, postNum, timeStamp, message, Nothing, role) 'role = 0 for sender, 1 for receiver
+                        AddChat(userName, postNum, timeStamp, message, profilePhoto, role) 'role = 0 for sender, 1 for receiver
                     End While
 
                 End Using
@@ -215,19 +216,31 @@ Public Class RideSharingChats
         End If
 
         'Get the vehicle Details, TODO: Vehicle Picture Fetching
-        Dim query As String = "SELECT vehicle_type from vehicle_reg WHERE vehicle_id = '" & VehicleNumber & "';"
+        Dim query As String = "SELECT vehicle_type, vehicle_pic FROM vehicle_reg WHERE vehicle_id = @VehicleNumber;"
         Using connection As New MySqlConnection(Globals.getdbConnectionString())
             Using command As New MySqlCommand(query, connection)
+                ' Use parameterized query to prevent SQL injection
+                command.Parameters.AddWithValue("@VehicleNumber", VehicleNumber)
 
                 Try
                     connection.Open()
-                    Dim objResult As Object = command.ExecuteScalar()
-                    If objResult IsNot Nothing AndAlso Not DBNull.Value.Equals(objResult) Then
-                        Dim vehicle_type As Integer = Convert.ToInt32(objResult)
-                        Label4.Text = TransportGlobals.GetVehicleType(vehicle_type)
+                    Dim reader As MySqlDataReader = command.ExecuteReader()
+                    If reader.Read() Then
+                        Dim vehicleType As Integer = Convert.ToInt32(reader("vehicle_type"))
+                        Label4.Text = TransportGlobals.GetVehicleType(vehicleType)
+                        If Not reader.IsDBNull(reader.GetOrdinal("vehicle_pic")) Then
+                            Dim photoData As Byte() = DirectCast(reader("vehicle_pic"), Byte())
+                            Using ms As New MemoryStream(photoData)
+                                picbox.Image = Image.FromStream(ms)
+                            End Using
+                        End If
+                    Else
+                        ' Handle case where no record is found for the given vehicle ID
+                        MessageBox.Show("Vehicle information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
+                    reader.Close() ' Close the reader after fetching data
                 Catch ex As Exception
-                    MessageBox.Show("Error fetching vehicle desc: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Error fetching vehicle details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             End Using
         End Using
@@ -243,7 +256,6 @@ Public Class RideSharingChats
         End If
 
         'Load the more details 
-        'TODO: Picture and vehicle type from sql query
         Label2.Text = VehicleNumber
         RichTextBox2.Text = DriverNote
 
