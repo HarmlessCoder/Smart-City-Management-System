@@ -11,4 +11,5 @@
         Label6.Text = CourseItem.Name
         Label1.Text = CourseItem.TeacherName
     End Sub
+
 End Class

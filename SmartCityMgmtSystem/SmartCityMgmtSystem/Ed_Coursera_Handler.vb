@@ -197,6 +197,44 @@ Public Class Ed_Coursera_Handler
         Return courses.ToArray()
     End Function
 
+    Public Function GetCompletedCourses(ByVal studentId As Integer) As Course()
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim courses As New List(Of Course)()
+
+        Dim query As String = "SELECT ec_course.Course_ID, ec_course.Affiliation, ec_course.Name, ec_course.Category, ec_course.Teacher_Name, ec_course.Teacher_ID, ec_course.SYLLABUS, ec_course.Intro_Video_link, ec_course.Appr_Status, ec_course.Fees, ec_course.Rating, ec_course.Rating_Count, ed_institution.Inst_Name " &
+                          "FROM ec_course " &
+                          "INNER JOIN ed_institution ON ec_course.Affiliation = ed_institution.Inst_ID " &
+                          "INNER JOIN ec_studentcourse ON ec_course.Course_ID = ec_studentcourse.Course_ID " &
+                          "WHERE ec_studentcourse.Student_ID = @studentId AND ec_studentcourse.Completion_Status = 'Completed'"
+
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@studentId", studentId)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        While reader.Read()
+            Dim course As New Course()
+
+            course.CourseID = If(reader("Course_ID") IsNot DBNull.Value, Convert.ToInt32(reader("Course_ID")), 0)
+            course.Affiliation = If(reader("Affiliation") IsNot DBNull.Value, Convert.ToInt32(reader("Affiliation")), 0)
+            course.Name = If(reader("Name") IsNot DBNull.Value, reader("Name").ToString(), "")
+            course.Category = If(reader("Category") IsNot DBNull.Value, reader("Category").ToString(), "")
+            course.TeacherName = If(reader("Teacher_Name") IsNot DBNull.Value, reader("Teacher_Name").ToString(), "")
+            course.TeacherID = If(reader("Teacher_ID") IsNot DBNull.Value, Convert.ToInt32(reader("Teacher_ID")), 0)
+            course.Syllabus = If(reader("SYLLABUS") IsNot DBNull.Value, reader("SYLLABUS").ToString(), "")
+            course.IntroVideoLink = If(reader("Intro_Video_link") IsNot DBNull.Value, reader("Intro_Video_link").ToString(), "")
+            course.ApprStatus = If(reader("Appr_Status") IsNot DBNull.Value, reader("Appr_Status").ToString(), "")
+            course.Fees = If(reader("Fees") IsNot DBNull.Value, Convert.ToInt32(reader("Fees")), 0)
+            course.Rating = If(reader("Rating") IsNot DBNull.Value, Convert.ToDouble(reader("Rating")), 0.0)
+            course.RatingCount = If(reader("Rating_Count") IsNot DBNull.Value, Convert.ToInt32(reader("Rating_Count")), 0)
+            course.Institution = If(reader("Inst_Name") IsNot DBNull.Value, reader("Inst_Name").ToString(), "")
+
+            courses.Add(course)
+        End While
+
+        Return courses.ToArray()
+    End Function
+
 
 
 
