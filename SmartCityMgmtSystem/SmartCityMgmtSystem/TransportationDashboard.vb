@@ -54,7 +54,10 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         'View DL req form
         transportdrivingLicenseReq?.Dispose()
-        transportdrivingLicenseReq = New TransportDrivingLicenseReq()
+        transportdrivingLicenseReq = New TransportDrivingLicenseReq() With {
+            .uid = uid,
+            .u_name = u_name
+        }
         Globals.viewChildForm(childformPanel, transportdrivingLicenseReq)
     End Sub
 
