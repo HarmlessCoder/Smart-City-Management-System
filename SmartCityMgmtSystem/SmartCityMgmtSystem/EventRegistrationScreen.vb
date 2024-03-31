@@ -306,7 +306,7 @@ Public Class EventRegistrationScreen
         InsertEventBooking(EventType, EventStartDate, EventEndDate, CInt(VendorID), CInt(CustomerID), Password)
 
 
-        EventDashboard.Show()
+        'EventDashboard.Show()
         Me.Close()
 
 
