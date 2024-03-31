@@ -5,14 +5,6 @@ Public Class lib_NewRequest
     Public Property uid As Integer = -1
     Public Property u_name As String = "Hello"
 
-    Private Structure Entry
-        Public Title As String
-        Public Author As String
-        Public RDate As String
-        Public Status As String
-    End Structure
-
-    Dim requestBooks As New List(Of Entry)
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim lib_search = New lib_search() With {
             .uid = uid,
@@ -49,7 +41,7 @@ Public Class lib_NewRequest
         Me.Close()
     End Sub
 
-    Private Sub lib_request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub lib_NewRequest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
     End Sub
 
@@ -64,7 +56,7 @@ Public Class lib_NewRequest
     End Sub
 
     Private Sub btnAddBalance_Click(sender As Object, e As EventArgs) Handles btnAddBalance.Click
-
+        Dim success As Boolean
         ' Define SQL query to insert data into the database
         Dim query As String = "INSERT INTO lib_book_request (title, author, date, status, uid) VALUES (@title, @author, @date, @status, @uid)"
 
@@ -88,8 +80,10 @@ Public Class lib_NewRequest
             ' Check if any rows were affected
             If rowsAffected > 0 Then
                 MessageBox.Show("Request added successfully!")
+                success = True
             Else
                 MessageBox.Show("No rows were affected. Request not added.")
+                success = False
             End If
 
 
@@ -106,9 +100,13 @@ Public Class lib_NewRequest
             End If
         End Try
 
-    End Sub
-
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs)
-
+        If success Then
+            Dim lib_request = New lib_request() With {
+            .uid = uid,
+            .u_name = u_name
+        }
+            lib_request.Show()
+            Me.Close()
+        End If
     End Sub
 End Class

@@ -85,47 +85,53 @@ Public Class lib_dash
 
     Private Sub PopulateTable()
         overdueBooksTablePanel.Controls.Clear()
-
+        overdueBooksTablePanel.RowStyles.Clear()
         For rowIndex As Integer = 0 To overdueBooks.Count - 1
-            Dim entry As Entry = overdueBooks(rowIndex)
-            overdueBooksTablePanel.RowStyles(rowIndex).SizeType = SizeType.Absolute
-            overdueBooksTablePanel.RowStyles(rowIndex).Height = 50
-
-            ' Add book details
-            Dim bookIdLabel As New Label()
-            bookIdLabel.Text = entry.BookID.ToString()
-            bookIdLabel.Font = New Font(bookIdLabel.Font.FontFamily, 13) ' Set font size
-            overdueBooksTablePanel.Controls.Add(bookIdLabel, 0, rowIndex)
-            bookIdLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            bookIdLabel.Anchor = AnchorStyles.None ' Set Anchor to None
-
-            Dim authorLabel As New Label()
-            authorLabel.Text = entry.Author
-            authorLabel.Width = 200 ' Adjust width as needed
-            authorLabel.Font = New Font(authorLabel.Font.FontFamily, 13) ' Set font size
-            overdueBooksTablePanel.Controls.Add(authorLabel, 1, rowIndex)
-            authorLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            authorLabel.Anchor = AnchorStyles.None ' Set Anchor to None
-
-            Dim titleLabel As New Label()
-            titleLabel.Text = entry.Title
-            titleLabel.AutoSize = True
-            titleLabel.Font = New Font(titleLabel.Font.FontFamily, 13) ' Set font size
-            overdueBooksTablePanel.Controls.Add(titleLabel, 2, rowIndex)
-            titleLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            titleLabel.Anchor = AnchorStyles.None ' Set Anchor to None
-
-            Dim dueDateLabel As New Label()
-            dueDateLabel.Text = entry.DueDate
-            dueDateLabel.Font = New Font(dueDateLabel.Font.FontFamily, 13) ' Set font size
-            overdueBooksTablePanel.Controls.Add(dueDateLabel, 3, rowIndex)
-            dueDateLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            dueDateLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+            overdueBooksTablePanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 50))
         Next
 
-        Dim adjustLabel2 As New Label()
-        adjustLabel2.Text = ""
-        overdueBooksTablePanel.Controls.Add(adjustLabel2, 1, overdueBooks.Count)
+        If overdueBooks.Count > 0 Then
+            For rowIndex As Integer = 0 To overdueBooks.Count - 1
+                Dim entry As Entry = overdueBooks(rowIndex)
+                ' Add book details
+                Dim bookIdLabel As New Label()
+                bookIdLabel.Text = entry.BookID.ToString()
+                bookIdLabel.Font = New Font(bookIdLabel.Font.FontFamily, 13) ' Set font size
+                overdueBooksTablePanel.Controls.Add(bookIdLabel, 0, rowIndex)
+                bookIdLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                bookIdLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+                Dim authorLabel As New Label()
+                authorLabel.Text = entry.Author
+                authorLabel.Width = 200 ' Adjust width as needed
+                authorLabel.Font = New Font(authorLabel.Font.FontFamily, 13) ' Set font size
+                overdueBooksTablePanel.Controls.Add(authorLabel, 1, rowIndex)
+                authorLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                authorLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+                Dim titleLabel As New Label()
+                titleLabel.Text = entry.Title
+                titleLabel.AutoSize = True
+                titleLabel.Font = New Font(titleLabel.Font.FontFamily, 13) ' Set font size
+                overdueBooksTablePanel.Controls.Add(titleLabel, 2, rowIndex)
+                titleLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                titleLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+                Dim dueDateLabel As New Label()
+                dueDateLabel.Text = entry.DueDate
+                dueDateLabel.Width = 200
+                dueDateLabel.Font = New Font(dueDateLabel.Font.FontFamily, 13) ' Set font size
+                overdueBooksTablePanel.Controls.Add(dueDateLabel, 3, rowIndex)
+                dueDateLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
+                dueDateLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+
+            Next
+
+            Dim adjustLabel2 As New Label()
+            adjustLabel2.Text = ""
+            overdueBooksTablePanel.Controls.Add(adjustLabel2, 1, overdueBooks.Count)
+        End If
+
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click

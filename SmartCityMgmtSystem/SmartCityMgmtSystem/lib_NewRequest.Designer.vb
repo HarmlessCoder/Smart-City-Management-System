@@ -33,17 +33,23 @@ Partial Class lib_NewRequest
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnAddBalance = New System.Windows.Forms.Button()
         Me.childformPanel = New System.Windows.Forms.Panel()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -204,9 +210,9 @@ Partial Class lib_NewRequest
         '
         Me.childformPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.childformPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.childformPanel.Controls.Add(Me.TextBox3)
-        Me.childformPanel.Controls.Add(Me.TextBox2)
-        Me.childformPanel.Controls.Add(Me.TextBox1)
+        Me.childformPanel.Controls.Add(Me.Panel4)
+        Me.childformPanel.Controls.Add(Me.Panel3)
+        Me.childformPanel.Controls.Add(Me.Panel2)
         Me.childformPanel.Controls.Add(Me.Button10)
         Me.childformPanel.Controls.Add(Me.Button9)
         Me.childformPanel.Controls.Add(Me.Button8)
@@ -218,6 +224,33 @@ Partial Class lib_NewRequest
         Me.childformPanel.Name = "childformPanel"
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 13
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Agency FB", 16.0!)
+        Me.TextBox3.Location = New System.Drawing.Point(4, 10)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(389, 39)
+        Me.TextBox3.TabIndex = 62
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Agency FB", 16.0!)
+        Me.TextBox2.Location = New System.Drawing.Point(-1, 10)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(394, 39)
+        Me.TextBox2.TabIndex = 61
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Agency FB", 16.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 10)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(394, 39)
+        Me.TextBox1.TabIndex = 60
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Button10
         '
@@ -298,29 +331,32 @@ Partial Class lib_NewRequest
         Me.Button6.Text = "     Back"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'Panel2
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Trebuchet MS", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(682, 189)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(389, 46)
-        Me.TextBox1.TabIndex = 60
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Location = New System.Drawing.Point(677, 182)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(393, 56)
+        Me.Panel2.TabIndex = 63
         '
-        'TextBox2
+        'Panel3
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Trebuchet MS", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(682, 305)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(389, 46)
-        Me.TextBox2.TabIndex = 61
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Location = New System.Drawing.Point(678, 305)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(393, 56)
+        Me.Panel3.TabIndex = 64
         '
-        'TextBox3
+        'Panel4
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Trebuchet MS", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(682, 429)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(389, 46)
-        Me.TextBox3.TabIndex = 62
+        Me.Panel4.BackColor = System.Drawing.Color.White
+        Me.Panel4.Controls.Add(Me.TextBox3)
+        Me.Panel4.Location = New System.Drawing.Point(678, 420)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(393, 56)
+        Me.Panel4.TabIndex = 65
         '
         'lib_NewRequest
         '
@@ -337,7 +373,12 @@ Partial Class lib_NewRequest
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.childformPanel.ResumeLayout(False)
-        Me.childformPanel.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -362,4 +403,7 @@ Partial Class lib_NewRequest
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class
