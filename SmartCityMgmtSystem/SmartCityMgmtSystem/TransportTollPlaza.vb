@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class TransportTollPlaza
+    Public Property uid As Integer = 11
+    Public Property u_name As String = "Dhanesh"
     Private Sub AddPostPurchase(postNum As Integer, vehnum As String,
                            Optional drvlicensenum As String = "12345",
                           Optional dt As String = "21st March 2024",
