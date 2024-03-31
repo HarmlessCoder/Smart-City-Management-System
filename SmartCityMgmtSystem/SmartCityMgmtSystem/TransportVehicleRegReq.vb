@@ -42,7 +42,7 @@ Public Class TransportVehicleRegReq
 
     End Sub
 
-    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Vehicle_picbtn.Click
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg;*.gif;*.png)|*.bmp;*.jpg;*.jpeg;*.gif;*.png"
         If openFileDialog.ShowDialog() = DialogResult.OK Then
