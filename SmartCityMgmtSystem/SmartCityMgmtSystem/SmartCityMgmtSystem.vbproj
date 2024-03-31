@@ -152,46 +152,16 @@
     <Compile Include="Ed_Add_Institution.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ed_EditECourse.Designer.vb">
-      <DependentUpon>Ed_EditECourse.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_EditECourse.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Ed_Institute_Edit.Designer.vb">
       <DependentUpon>Ed_Institute_Edit.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Institute_Edit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ed_Teacher_AddAssgn.Designer.vb">
-      <DependentUpon>Ed_Teacher_AddAssgn.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_Teacher_AddAssgn.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ed_Teacher_AddResource.Designer.vb">
-      <DependentUpon>Ed_Teacher_AddResource.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_Teacher_AddResource.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Ed_Teacher_AddSummary.Designer.vb">
       <DependentUpon>Ed_Teacher_AddSummary.vb</DependentUpon>
     </Compile>
     <Compile Include="Ed_Teacher_AddSummary.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ed_Teacher_EditAssgn.Designer.vb">
-      <DependentUpon>Ed_Teacher_EditAssgn.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_Teacher_EditAssgn.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ed_Teacher_EditResource.Designer.vb">
-      <DependentUpon>Ed_Teacher_EditResource.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ed_Teacher_EditResource.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EventLoginWindow.Designer.vb">
@@ -1183,26 +1153,11 @@
     <EmbeddedResource Include="Ed_Add_Institution.resx">
       <DependentUpon>Ed_Add_Institution.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_EditECourse.resx">
-      <DependentUpon>Ed_EditECourse.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Institute_Edit.resx">
       <DependentUpon>Ed_Institute_Edit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Teacher_AddAssgn.resx">
-      <DependentUpon>Ed_Teacher_AddAssgn.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Teacher_AddResource.resx">
-      <DependentUpon>Ed_Teacher_AddResource.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ed_Teacher_AddSummary.resx">
       <DependentUpon>Ed_Teacher_AddSummary.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Teacher_EditAssgn.resx">
-      <DependentUpon>Ed_Teacher_EditAssgn.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ed_Teacher_EditResource.resx">
-      <DependentUpon>Ed_Teacher_EditResource.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventLoginWindow.resx">
       <DependentUpon>EventLoginWindow.vb</DependentUpon>

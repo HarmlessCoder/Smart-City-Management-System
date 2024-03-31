@@ -35,8 +35,4 @@ Public Class Ed_Teacher_Moodle_CourseAss
         Globals.viewChildForm(callingPanel, New Ed_Teacher_Moodle_CourseContent(RoomID, callingPanel))
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim edit_assgn As New Ed_Teacher_EditAssgn()
-        edit_assgn.ShowDialog() ' Show as dialog if needed
-    End Sub
 End Class
