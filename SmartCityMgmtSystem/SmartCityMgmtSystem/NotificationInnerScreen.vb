@@ -131,6 +131,7 @@ Public Class NotificationInnerScreen
         End If
     End Sub
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'Load the places from database and populate the combobox
         PopulateComboBox()
         FilterNotifications(-1)
     End Sub

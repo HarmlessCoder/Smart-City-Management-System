@@ -244,4 +244,8 @@ Public Class TransportDrivingLicenseReq
     Private Sub Canceltb_Click(sender As Object, e As EventArgs) Handles Canceltb.Click
         VTypeCb.SelectedIndex = -1
     End Sub
+
+    Private Sub LabelDLID_Click(sender As Object, e As EventArgs) Handles LabelDLID.Click
+
+    End Sub
 End Class
