@@ -22,9 +22,9 @@ Public Class EventVendorLoginWindow
 
 
 
-        Dim query As String = "SELECT COUNT(*) FROM eventBookings WHERE vendorID = @VendorID AND password = @Password"
+        Dim query As String = "SELECT COUNT(*) FROM vendor WHERE vendorID = @VendorID AND password = @Password"
         cmd = New MySqlCommand(query, Con)
-        cmd.Parameters.AddWithValue("@CustomerID", VendorID)
+        cmd.Parameters.AddWithValue("@VendorID", VendorID)
         cmd.Parameters.AddWithValue("@Password", Password)
 
         Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
@@ -50,5 +50,7 @@ Public Class EventVendorLoginWindow
         End If
     End Sub
 
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
+    End Sub
 End Class

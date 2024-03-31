@@ -282,7 +282,7 @@ Partial Class TransportAdminDLReq
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
-        Me.Column7.Text = "Accept"
+        Me.Column7.Text = "Pass"
         Me.Column7.UseColumnTextForButtonValue = True
         '
         'Column8
@@ -292,7 +292,7 @@ Partial Class TransportAdminDLReq
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
         Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column8.Text = "Reject"
+        Me.Column8.Text = "Fail"
         Me.Column8.UseColumnTextForButtonValue = True
         '
         'TransportAdminDLReq
