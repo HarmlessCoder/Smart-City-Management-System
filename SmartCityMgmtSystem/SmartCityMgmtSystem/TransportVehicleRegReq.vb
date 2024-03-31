@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class TransportVehicleRegReq
-
+    Public Property uid = 11
+    Public Property u_name = "Dhanesh"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         ' Check if the clicked cell is in the "Column3" column and not a header cell
         If e.ColumnIndex = DataGridView1.Columns("Column3").Index AndAlso e.RowIndex >= 0 Then

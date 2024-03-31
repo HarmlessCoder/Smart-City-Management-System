@@ -22,9 +22,9 @@ Public Class EventVendorLoginWindow
 
 
 
-        Dim query As String = "SELECT COUNT(*) FROM eventBookings WHERE vendorID = @VendorID AND password = @Password"
+        Dim query As String = "SELECT COUNT(*) FROM vendor WHERE vendorID = @VendorID AND password = @Password"
         cmd = New MySqlCommand(query, Con)
-        cmd.Parameters.AddWithValue("@CustomerID", VendorID)
+        cmd.Parameters.AddWithValue("@VendorID", VendorID)
         cmd.Parameters.AddWithValue("@Password", Password)
 
         Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
@@ -38,17 +38,25 @@ Public Class EventVendorLoginWindow
 
         If CheckCredentials(VendorID, Password) Then
             ' Record exists, so you can pass parameters to another form
-            Dim EventCustomerScreenForm As New EventCustomerScreen With {
+            Dim EventVendorLoginInnerScreenForm As New Events_vendorLoginInnerScreen With {
                 .uid = VendorID,
                 .password = Password
             }
+            Me.ParentForm.Close()
+
+            Dim EventDashboard As New EventDashboard With {
+                .uid = uid,
+                .u_name = u_name
+            }
             EventDashboard.Show()
-            Globals.viewChildForm(EventDashboard.childformPanel, EventCustomerScreenForm)
+            Globals.viewChildForm(EventDashboard.childformPanel, EventVendorLoginInnerScreenForm)
             Me.Close()
         Else
             MessageBox.Show("Invalid VendorID or Password")
         End If
     End Sub
 
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
+    End Sub
 End Class
