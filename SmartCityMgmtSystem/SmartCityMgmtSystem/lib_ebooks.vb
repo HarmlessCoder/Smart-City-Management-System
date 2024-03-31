@@ -197,7 +197,7 @@ Public Class lib_ebooks
             Con.Close()
         ElseIf selectedSearchMode = "Category" Then
             'Dim bookQuery = "SELECT * FROM books WHERE (NOT isIssued AND NOT isReserved AND Subject like '%" & queryBook.Text & "%')"
-            Dim bookQuery = "SELECT * FROM lib_books WHERE genre LIKE '%" & queryBook.Text & "%'"
+            Dim bookQuery = "SELECT * FROM lib_ebooks WHERE genre LIKE '%" & queryBook.Text & "%'"
             Dim Con = Globals.GetDBConnection()
             Dim reader As MySqlDataReader
             Dim cmd As MySqlCommand
