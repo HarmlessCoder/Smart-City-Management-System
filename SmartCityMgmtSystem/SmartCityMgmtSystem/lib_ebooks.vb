@@ -155,7 +155,7 @@ Public Class lib_ebooks
             reader.Close()
             Con.Close()
         ElseIf selectedSearchMode = "Title" Then
-            Dim bookQuery = "SELECT * FROM lib_books WHERE title LIKE '%" & queryBook.Text & "%'"
+            Dim bookQuery = "SELECT * FROM lib_ebooks WHERE title LIKE '%" & queryBook.Text & "%'"
             Dim Con = Globals.GetDBConnection()
             Dim reader As MySqlDataReader
             Dim cmd As MySqlCommand
