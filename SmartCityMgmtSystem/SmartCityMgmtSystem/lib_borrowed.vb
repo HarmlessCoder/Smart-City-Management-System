@@ -251,30 +251,38 @@ Public Class lib_borrowed
                 renewID = entry.BookID
 
                 Dim currentDate As DateTime = DateTime.Now.Date
-                Dim futureDate As DateTime = DateAdd("d", 14, currentDate)
+                Dim futureDate As DateTime = DateAdd("d", 14, DateTime.Parse(entry.DueDate))
 
-                Dim updateQueryInBooks = "UPDATE lib_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_Id = '" & renewID & "'"
-                Dim updateQueryInBorrowed_Books = "UPDATE lib_borrowed_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_ID = '" & renewID & "'"
+                If entry.DueDate < currentDate Then
+                    MessageBox.Show("Book can't be renewed as it is past it's due date. Please pay fine and re-issue.")
+                    Return
+                Else
 
-                Dim Con = Globals.GetDBConnection()
-                Try
-                    Con.Open()
+                    Dim updateQueryInBooks = "UPDATE lib_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_Id = '" & renewID & "'"
+                    Dim updateQueryInBorrowed_Books = "UPDATE lib_borrowed_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_ID = '" & renewID & "'"
 
-                    Dim cmdUpdate As New MySqlCommand(updateQueryInBooks, Con)
-                    cmdUpdate.ExecuteNonQuery()
+                    Dim Con = Globals.GetDBConnection()
+                    Try
+                        Con.Open()
 
-                    Dim cmdUpdatebb As New MySqlCommand(updateQueryInBorrowed_Books, Con)
-                    cmdUpdatebb.ExecuteNonQuery()
+                        Dim cmdUpdate As New MySqlCommand(updateQueryInBooks, Con)
+                        cmdUpdate.ExecuteNonQuery()
 
-                    MessageBox.Show("Renewed Successfully.")
+                        Dim cmdUpdatebb As New MySqlCommand(updateQueryInBorrowed_Books, Con)
+                        cmdUpdatebb.ExecuteNonQuery()
 
-                Catch ex As Exception
-                    MessageBox.Show("Error: " & ex.Message)
-                Finally
-                    If Con.State = ConnectionState.Open Then
-                        Con.Close() ' Close the connection in the finally block to ensure it's closed even if an exception occurs
-                    End If
-                End Try
+                        MessageBox.Show("Renewed Successfully.")
+
+                    Catch ex As Exception
+                        MessageBox.Show("Error: " & ex.Message)
+                    Finally
+                        If Con.State = ConnectionState.Open Then
+                            Con.Close() ' Close the connection in the finally block to ensure it's closed even if an exception occurs
+                        End If
+                    End Try
+
+                End If
+
             End If
         Next
         If count = 0 Then
