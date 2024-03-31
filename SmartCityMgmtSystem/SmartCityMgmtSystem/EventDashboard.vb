@@ -43,11 +43,23 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim EventVendorRegistrationScreen = New EventVendorRegistrationScreen With {
+            .uid = uid,
+            .u_name = u_name
+        }
+
         Globals.viewChildForm(childformPanel, EventVendorRegistrationScreen)
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        ' Create a new instance of the form
+        Dim EventVendorLoginWindow = New EventVendorLoginWindow With {
+            .uid = uid,
+            .u_name = u_name
+        }
 
+        Globals.viewChildForm(childformPanel, EventVendorLoginWindow)
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
