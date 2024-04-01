@@ -338,7 +338,7 @@ Partial Class lib_ebooks
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1226, 68)
         Me.overdueBooksTitleTable.TabIndex = 48
         '
@@ -346,7 +346,7 @@ Partial Class lib_ebooks
         '
         Me.Panel8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(1149, 1)
+        Me.Panel8.Location = New System.Drawing.Point(1149, 2)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(76, 78)
@@ -554,6 +554,7 @@ Partial Class lib_ebooks
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label2)
         Me.Name = "lib_ebooks"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "lib_ebooks" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "        "
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

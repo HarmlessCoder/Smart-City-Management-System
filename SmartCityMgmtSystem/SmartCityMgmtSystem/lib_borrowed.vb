@@ -102,7 +102,7 @@ Public Class lib_borrowed
                 ' Add book details
                 Dim bookIdLabel As New Label()
                 bookIdLabel.Text = entry.BookID.ToString()
-                bookIdLabel.Font = New Font(bookIdLabel.Font.FontFamily, 13) ' Set font size
+                'bookIdLabel.Font = New Font(bookIdLabel.Font.FontFamily, 13) ' Set font size
                 bookIdLabel.ForeColor = Color.Black ' Set font color to black
                 borrowedBooksTablePanel.Controls.Add(bookIdLabel, 0, rowIndex)
                 bookIdLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
@@ -111,7 +111,7 @@ Public Class lib_borrowed
                 Dim authorLabel As New Label()
                 authorLabel.Text = entry.Author
                 authorLabel.Width = 200 ' Adjust width as needed
-                authorLabel.Font = New Font(authorLabel.Font.FontFamily, 13) ' Set font size
+                'authorLabel.Font = New Font(authorLabel.Font.FontFamily, 13) ' Set font size
                 authorLabel.ForeColor = Color.Black ' Set font color to black
                 borrowedBooksTablePanel.Controls.Add(authorLabel, 1, rowIndex)
                 authorLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
@@ -120,7 +120,7 @@ Public Class lib_borrowed
                 Dim titleLabel As New Label()
                 titleLabel.Text = entry.Title
                 titleLabel.AutoSize = True
-                titleLabel.Font = New Font(titleLabel.Font.FontFamily, 13) ' Set font size
+                'titleLabel.Font = New Font(titleLabel.Font.FontFamily, 13) ' Set font size
                 titleLabel.ForeColor = Color.Black ' Set font color to black
                 borrowedBooksTablePanel.Controls.Add(titleLabel, 2, rowIndex)
                 titleLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
@@ -129,7 +129,7 @@ Public Class lib_borrowed
                 Dim dueDateLabel As New Label()
                 dueDateLabel.Text = entry.DueDate
                 dueDateLabel.Width = 200
-                dueDateLabel.Font = New Font(dueDateLabel.Font.FontFamily, 13) ' Set font size
+                'dueDateLabel.Font = New Font(dueDateLabel.Font.FontFamily, 13) ' Set font size
                 dueDateLabel.ForeColor = Color.Black ' Set font color to black
                 borrowedBooksTablePanel.Controls.Add(dueDateLabel, 3, rowIndex)
                 dueDateLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
@@ -214,6 +214,7 @@ Public Class lib_borrowed
                 If Con.State = ConnectionState.Open Then
                     Con.Close() ' Close the connection in the finally block to ensure it's closed even if an exception occurs
                 End If
+                MessageBox.Show("Rating Successful")
             End Try
             Panel6.Visible = False
             TextBox2.Text = "Enter your Rating"

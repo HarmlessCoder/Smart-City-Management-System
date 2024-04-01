@@ -100,6 +100,7 @@ Public Class lib_search
                     .BookID = reader("book_ID").ToString(),
                     .Author = reader("author").ToString(),
                     .Title = reader("title").ToString(),
+                    .Genre = reader("genre").ToString(),
                     .Rating = reader("rating").ToString(),
                     .Status = status,
                     .RadioButton = New RadioButton()
@@ -142,6 +143,7 @@ Public Class lib_search
                     .BookID = reader("book_ID").ToString(),
                     .Author = reader("author").ToString(),
                     .Title = reader("title").ToString(),
+                    .Genre = reader("genre").ToString(),
                     .Rating = reader("rating").ToString(),
                     .Status = status,
                     .RadioButton = New RadioButton()
@@ -182,6 +184,7 @@ Public Class lib_search
                     .BookID = reader("book_ID").ToString(),
                     .Author = reader("author").ToString(),
                     .Title = reader("title").ToString(),
+                    .Genre = reader("genre").ToString(),
                     .Rating = reader("rating").ToString(),
                     .Status = status,
                     .RadioButton = New RadioButton()
@@ -223,6 +226,7 @@ Public Class lib_search
                     .BookID = reader("book_ID").ToString(),
                     .Author = reader("author").ToString(),
                     .Title = reader("title").ToString(),
+                    .Genre = reader("genre").ToString(),
                     .Rating = reader("rating").ToString(),
                     .Status = status,
                     .RadioButton = New RadioButton()

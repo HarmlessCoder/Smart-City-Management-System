@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports MySql.Data.MySqlClient
 Imports Ubiety.Dns.Core
 
 Public Class lib_request
@@ -118,6 +119,24 @@ Public Class lib_request
                 statusLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
                 statusLabel.Anchor = AnchorStyles.None ' Set Anchor to None
 
+
+                Select Case entry.Status
+                    Case "Rejected"
+                        statusLabel.ForeColor = Color.Red
+                    Case "Pending"
+                        statusLabel.ForeColor = Color.Yellow
+                    Case "Approved"
+                        statusLabel.ForeColor = Color.Green
+                    Case Else
+                        statusLabel.ForeColor = Color.Black
+                End Select
+
+                If entry.Status = "Available" Then
+
+                Else
+                    statusLabel.ForeColor = Color.Red
+                End If
+
                 Dim authorLabel As New Label()
                 authorLabel.Text = entry.Author
                 authorLabel.Width = 200 ' Adjust width as needed
@@ -164,4 +183,7 @@ Public Class lib_request
         Me.Close()
     End Sub
 
+    Private Sub childformPanel_Paint(sender As Object, e As PaintEventArgs) Handles childformPanel.Paint
+
+    End Sub
 End Class

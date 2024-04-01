@@ -25,6 +25,7 @@ Partial Class lib_borrowed
         Me.Button6 = New System.Windows.Forms.Button()
         Me.childformPanel = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -53,7 +54,6 @@ Partial Class lib_borrowed
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.childformPanel.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -113,6 +113,15 @@ Partial Class lib_borrowed
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(365, 341)
         Me.Panel6.TabIndex = 40
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(120, 213)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(132, 23)
+        Me.Label4.TabIndex = 26
+        Me.Label4.Text = "(Rate from 0-5)"
         '
         'Button8
         '
@@ -196,7 +205,7 @@ Partial Class lib_borrowed
         Me.borrowedTableLayout.Margin = New System.Windows.Forms.Padding(0)
         Me.borrowedTableLayout.Name = "borrowedTableLayout"
         Me.borrowedTableLayout.RowCount = 1
-        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72.0!))
+        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
         Me.borrowedTableLayout.Size = New System.Drawing.Size(1080, 68)
         Me.borrowedTableLayout.TabIndex = 23
         '
@@ -506,15 +515,6 @@ Partial Class lib_borrowed
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "{Name}"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(120, 213)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(132, 23)
-        Me.Label4.TabIndex = 26
-        Me.Label4.Text = "(Rate from 0-5)"
-        '
         'lib_borrowed
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -526,6 +526,7 @@ Partial Class lib_borrowed
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label2)
         Me.Name = "lib_borrowed"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "lib_borrowed"
         Me.childformPanel.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
