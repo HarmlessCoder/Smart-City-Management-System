@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class HealthcareAssignDoctorAdmin
+Public Class HealthcareManageDoctorAdmin
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
         ' Check if the clicked cell is in the "EditBut" column and not a header cell
@@ -56,19 +56,11 @@ Public Class HealthcareAssignDoctorAdmin
         Next
     End Sub
 
-    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick_2(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
 
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick_3(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 End Class
