@@ -635,6 +635,10 @@
       <DependentUpon>Healthcare_Pharmacy.vb</DependentUpon>
     </Compile>
     <Compile Include="Healthcare_Pharmacy.vb">
+    <Compile Include="lib_NewRequest.Designer.vb">
+      <DependentUpon>lib_NewRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_NewRequest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewsDashboard.Designer.vb">
@@ -1452,6 +1456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="lib_borrowed.resx">
       <DependentUpon>lib_borrowed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_NewRequest.resx">
+      <DependentUpon>lib_NewRequest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_request.resx">
       <DependentUpon>lib_request.vb</DependentUpon>
