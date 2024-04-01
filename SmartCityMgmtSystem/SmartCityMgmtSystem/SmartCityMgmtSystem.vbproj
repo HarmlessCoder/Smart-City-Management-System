@@ -553,6 +553,12 @@
     <Compile Include="Healthcare_BookAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Healthcare_History.Designer.vb">
+      <DependentUpon>Healthcare_History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Healthcare_History.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Healthcare_homepage.Designer.vb">
       <DependentUpon>Healthcare_homepage.vb</DependentUpon>
     </Compile>
@@ -617,6 +623,18 @@
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="EventVendorRegistrationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Healthcare_DonateBlood.Designer.vb">
+      <DependentUpon>Healthcare_DonateBlood.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Healthcare_DonateBlood.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Healthcare_Pharmacy.Designer.vb">
+      <DependentUpon>Healthcare_Pharmacy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Healthcare_Pharmacy.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewsDashboard.Designer.vb">
@@ -1393,6 +1411,9 @@
     <EmbeddedResource Include="Healthcare_BookAppointment.resx">
       <DependentUpon>Healthcare_BookAppointment.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Healthcare_History.resx">
+      <DependentUpon>Healthcare_History.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Healthcare_homepage.resx">
       <DependentUpon>Healthcare_homepage.vb</DependentUpon>
     </EmbeddedResource>
@@ -1422,6 +1443,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventVendorRegistrationScreen.resx">
       <DependentUpon>EventVendorRegistrationScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Healthcare_DonateBlood.resx">
+      <DependentUpon>Healthcare_DonateBlood.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Healthcare_Pharmacy.resx">
+      <DependentUpon>Healthcare_Pharmacy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_borrowed.resx">
       <DependentUpon>lib_borrowed.vb</DependentUpon>
