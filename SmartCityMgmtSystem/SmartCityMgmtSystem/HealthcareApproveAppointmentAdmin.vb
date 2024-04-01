@@ -52,7 +52,7 @@ Public Class HealthcareApproveAppointmentAdmin
             ' Set values for the first three columns in the current row
             DataGridView1.Rows(i - 1).Cells("Column1").Value = "DummyVal"
             DataGridView1.Rows(i - 1).Cells("Column2").Value = "DummyVal"
-            DataGridView1.Rows(i - 1).Cells("Column3").Value = "DummyVal"
+            'DataGridView1.Rows(i - 1).Cells("Column3").Value = "DummyVal"
         Next
     End Sub
 

@@ -3,13 +3,16 @@ Imports System.Numerics
 Imports MySql.Data.MySqlClient
 Imports SmartCityMgmtSystem.RideSharingMain
 Public Class TransportBusSchedule
+    Public Property uid = 11
+    Public Property u_name = "Dhanesh"
     Dim day As Integer
     Dim primaryKeyBuy As String
 
     Private Sub ShowBuyOption(ByVal txt As String)
         ' Change this to DB logic later, update capacity=capacity -1, check capacity not 0, increase fr bus_revenue
         Dim cur_capacity(6), cur_fare As Integer
-        Dim cur_day(6) As String
+        Dim cur_day(6), formattedTime As String
+        Dim TimeValue As TimeSpan
         cur_day(6) = "mon"
         cur_day(5) = "tue"
         cur_day(4) = "wed"
@@ -20,10 +23,12 @@ Public Class TransportBusSchedule
         Using conn As New MySqlConnection(Globals.getdbConnectionString())
             conn.Open()
 
-            Dim query As String = "SELECT * FROM bus_capacity bc JOIN bus_schedules bs ON bc.bus_no=bs.bus_no having bc.bus_no=" & primaryKeyBuy
+            Dim query As String = "SELECT * FROM bus_capacity bc JOIN bus_schedules bs ON bc.bus_no=bs.bus_no having bc.bus_no=" & txt
             Using command As New MySqlCommand(query, conn)
                 Using reader As MySqlDataReader = command.ExecuteReader()
                     While reader.Read()
+                        TimeValue = reader.GetTimeSpan("starting_time")
+                        formattedTime = DateTime.Today.Add(TimeValue).ToString("hh:mm tt")
                         cur_fare = reader.GetInt32("bus_fare")
                         cur_capacity(0) = reader.GetInt32("mon")
                         cur_capacity(1) = reader.GetInt32("tue")
@@ -36,11 +41,17 @@ Public Class TransportBusSchedule
                 End Using
             End Using
         End Using
-        If cur_capacity(6 - day) >= 1 Then
-            Globals.ExecuteUpdateQuery("update bus_capacity set " & cur_day(day) & " = " & cur_day(day) & "-1 where bus_no =" & primaryKeyBuy)
-            Globals.ExecuteUpdateQuery("update admin_records set bus_revenue = bus_revenue + " & cur_fare)
-        Else
-            MessageBox.Show("Seats are full!", "Seats Full", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to buy this ticket?", "Confirm Buying", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            If cur_capacity(6 - day) >= 1 Then
+                Dim success As Boolean = Globals.ExecuteUpdateQuery("update bus_capacity set " & cur_day(day) & " = " & cur_day(day) & "-1 where bus_no =" & primaryKeyBuy)
+                If success Then
+                    MessageBox.Show("1 Ticket bought for Bus No. " & txt & " on " & TextBox1.Text & " scheduled for " & formattedTime & ".", "Ticket Bought", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Globals.ExecuteUpdateQuery("update admin_records set bus_revenue = bus_revenue + " & cur_fare)
+                End If
+            Else
+                MessageBox.Show("Seats are full!", "Seats Full", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
         End If
     End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -150,6 +161,7 @@ Public Class TransportBusSchedule
     End Sub
 
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        TextBox1.Text = DateTime.Now.ToString("dddd")
         'Load the places from database and populate the combobox
         Dim places As List(Of Place) = GetPlacesFromDatabase()
         'To bind the places as their names in the combobox and their IDs as values

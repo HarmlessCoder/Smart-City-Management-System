@@ -5,6 +5,7 @@ Public Class EventLoginWindow
     Public Property uid As Integer
     Public Property u_name As String
 
+
     Private Sub EventLoginWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.Text = uid
         TextBox2.PasswordChar = "*"
@@ -35,16 +36,22 @@ Public Class EventLoginWindow
     End Function
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim CustomerID As Integer = uid
+        Dim CustomerID As Integer = TextBox1.Text
         Dim Password As String = TextBox2.Text
 
         If CheckCredentials(CustomerID, Password) Then
             ' Record exists, so you can pass parameters to another form
             Dim EventCustomerScreenForm As New EventCustomerScreen With {
-                .uid = uid,
+                .uid = CustomerID,
                 .password = Password
             }
+            Me.ParentForm.Close()
 
+            Dim EventDashboard As New EventDashboard With {
+                .uid = CustomerID,
+                .u_name = u_name
+            }
+            EventDashboard.Show()
             Globals.viewChildForm(EventDashboard.childformPanel, EventCustomerScreenForm)
             Me.Close()
         Else
