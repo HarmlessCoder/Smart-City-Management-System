@@ -499,30 +499,6 @@
     <Compile Include="ElectionInnerScreenNominateNoElection.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hc_B_Appointment.Designer.vb">
-      <DependentUpon>hc_B_Appointment.vb</DependentUpon>
-    </Compile>
-    <Compile Include="hc_B_Appointment.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="hc_Donate_Blood.Designer.vb">
-      <DependentUpon>hc_Donate_Blood.vb</DependentUpon>
-    </Compile>
-    <Compile Include="hc_Donate_Blood.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="hc_History.Designer.vb">
-      <DependentUpon>hc_History.vb</DependentUpon>
-    </Compile>
-    <Compile Include="hc_History.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="hc_Pharmacy.Designer.vb">
-      <DependentUpon>hc_Pharmacy.vb</DependentUpon>
-    </Compile>
-    <Compile Include="hc_Pharmacy.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="HealthcareAssignDoctorAdmin.Designer.vb">
       <DependentUpon>HealthcareAssignDoctorAdmin.vb</DependentUpon>
     </Compile>
@@ -541,10 +517,28 @@
     <Compile Include="HealthcareHealthRecordAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HealthcareManageAmbulanceAdmin.Designer.vb">
+      <DependentUpon>HealthcareManageAmbulanceAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareManageAmbulanceAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthcareManageBloodAppointmentAdmin.Designer.vb">
+      <DependentUpon>HealthcareManageBloodAppointmentAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareManageBloodAppointmentAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareManageDoctorAdmin.Designer.vb">
       <DependentUpon>HealthcareManageDoctorAdmin.vb</DependentUpon>
     </Compile>
     <Compile Include="HealthcareManageDoctorAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthcareMedicineInventoryAdmin.Designer.vb">
+      <DependentUpon>HealthcareMedicineInventoryAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareMedicineInventoryAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Healthcare_BookAppointment.Designer.vb">
@@ -1384,18 +1378,6 @@
     <EmbeddedResource Include="ElectionInnerScreenNominateNoElection.resx">
       <DependentUpon>ElectionInnerScreenNominateNoElection.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hc_B_Appointment.resx">
-      <DependentUpon>hc_B_Appointment.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="hc_Donate_Blood.resx">
-      <DependentUpon>hc_Donate_Blood.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="hc_History.resx">
-      <DependentUpon>hc_History.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="hc_Pharmacy.resx">
-      <DependentUpon>hc_Pharmacy.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareAssignDoctorAdmin.resx">
       <DependentUpon>HealthcareAssignDoctorAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -1405,8 +1387,17 @@
     <EmbeddedResource Include="HealthcareHealthRecordAdmin.resx">
       <DependentUpon>HealthcareHealthRecordAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareManageAmbulanceAdmin.resx">
+      <DependentUpon>HealthcareManageAmbulanceAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareManageBloodAppointmentAdmin.resx">
+      <DependentUpon>HealthcareManageBloodAppointmentAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareManageDoctorAdmin.resx">
       <DependentUpon>HealthcareManageDoctorAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareMedicineInventoryAdmin.resx">
+      <DependentUpon>HealthcareMedicineInventoryAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Healthcare_BookAppointment.resx">
       <DependentUpon>Healthcare_BookAppointment.vb</DependentUpon>
