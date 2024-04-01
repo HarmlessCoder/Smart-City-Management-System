@@ -194,6 +194,12 @@
     <Compile Include="Ed_Teacher_EditResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElectionInnerScreenAdminAccDenied.Designer.vb">
+      <DependentUpon>ElectionInnerScreenAdminAccDenied.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionInnerScreenAdminAccDenied.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElectionInnerScreenCitizenViolationPR.Designer.vb">
       <DependentUpon>ElectionInnerScreenCitizenViolationPR.vb</DependentUpon>
     </Compile>
@@ -1240,6 +1246,9 @@
     <EmbeddedResource Include="Ed_Teacher_EditResource.resx">
       <DependentUpon>Ed_Teacher_EditResource.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElectionInnerScreenAdminAccDenied.resx">
+      <DependentUpon>ElectionInnerScreenAdminAccDenied.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElectionInnerScreenCitizenViolationPR.resx">
       <DependentUpon>ElectionInnerScreenCitizenViolationPR.vb</DependentUpon>
     </EmbeddedResource>
@@ -2195,6 +2204,8 @@
     <None Include="Resources\icons8-people-in-car-50.png" />
     <None Include="Resources\icons8-passenger-48.png" />
     <None Include="Resources\icons8-medical-doctor-50.png" />
+    <None Include="Resources\icons8-locked-48.png" />
+    <None Include="Resources\icons8-locked-481.png" />
     <Content Include="Resources\icons8-permanent-job-100.png" />
     <Content Include="Resources\icons8-person-80.png" />
     <None Include="Resources\icons8-person-801.png" />
