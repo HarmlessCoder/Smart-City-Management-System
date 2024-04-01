@@ -65,7 +65,6 @@ Partial Class Election_Home_Page
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Tahoma", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.Black
-        'Me.Button7.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_vehicle_insurance_50
         Me.Button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button7.Location = New System.Drawing.Point(0, 633)
         Me.Button7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -85,7 +84,6 @@ Partial Class Election_Home_Page
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        'Me'.Button5.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_tollbooth_50
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button5.Location = New System.Drawing.Point(4, 554)
         Me.Button5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -99,7 +97,6 @@ Partial Class Election_Home_Page
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        'Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.SMART_CITY___GUWAHATI
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.PictureBox1.Name = "PictureBox1"
@@ -115,7 +112,6 @@ Partial Class Election_Home_Page
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.Black
-        'Me.Button4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_carpool_50
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button4.Location = New System.Drawing.Point(0, 477)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -133,7 +129,6 @@ Partial Class Election_Home_Page
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        'Me.Button3.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_bus_50
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.Location = New System.Drawing.Point(0, 404)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -151,7 +146,6 @@ Partial Class Election_Home_Page
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        'Me.Button2.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_driver_license_50
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(0, 334)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -169,7 +163,6 @@ Partial Class Election_Home_Page
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        'Me.Button1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_50
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(0, 711)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -183,7 +176,7 @@ Partial Class Election_Home_Page
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Agency FB", 20.13559!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.13559!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.MistyRose
         Me.Label1.Location = New System.Drawing.Point(0, 159)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -207,12 +200,12 @@ Partial Class Election_Home_Page
         '
         Me.Label2.AutoSize = True
         Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Agency FB", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Ivory
         Me.Label2.Location = New System.Drawing.Point(292, 4)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 31)
+        Me.Label2.Size = New System.Drawing.Size(102, 29)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "{Name}"
         '
@@ -220,12 +213,12 @@ Partial Class Election_Home_Page
         '
         Me.Label3.AutoSize = True
         Me.Label3.CausesValidation = False
-        Me.Label3.Font = New System.Drawing.Font("Agency FB", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Ivory
         Me.Label3.Location = New System.Drawing.Point(862, 4)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 31)
+        Me.Label3.Size = New System.Drawing.Size(163, 29)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "{Aadhar No.}"
         '
@@ -234,9 +227,8 @@ Partial Class Election_Home_Page
         Me.Button6.CausesValidation = False
         Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Agency FB", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.Ivory
-        'Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button6.Location = New System.Drawing.Point(1388, 0)
         Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -252,7 +244,7 @@ Partial Class Election_Home_Page
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1552, 779)
+        Me.ClientSize = New System.Drawing.Size(1440, 779)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -262,6 +254,7 @@ Partial Class Election_Home_Page
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.Name = "Election_Home_Page"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Transportation"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
