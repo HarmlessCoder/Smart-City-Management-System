@@ -21,7 +21,7 @@
     Private Sub btnview_Click(sender As Object, e As EventArgs) Handles btnview.Click
         'Add to fastag purchases
         Dim dl_id As Integer = getDLID()
-        Dim query As String = "INSERT INTO fastag_purchases (fastag_id, user_id, purchase_date) VALUES (@fastag_id, @user_id, @purchase_date)"
+        Dim query As String = "INSERT INTO fastag_purchases (ft_id, uid, purchase_date) VALUES (@fastag_id, @user_id, @purchase_date)"
 
     End Sub
 End Class
