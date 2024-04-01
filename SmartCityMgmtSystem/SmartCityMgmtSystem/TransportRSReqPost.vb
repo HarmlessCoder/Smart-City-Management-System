@@ -45,6 +45,7 @@ Public Class TransportRSReqPost
         'Get connection from globals
         Dim Con = Globals.GetDBConnection()
         Dim cmd As MySqlCommand
+        Dim reader As MySqlDataReader
 
         Try
             Con.Open()
@@ -59,6 +60,21 @@ Public Class TransportRSReqPost
             cmd.Parameters.AddWithValue("@status1", "requested")
             cmd.Parameters.AddWithValue("@req", req_id)
             cmd.ExecuteNonQuery()
+
+            query = "select rs.uid, src.place_name as src, dest.place_name as dest, rs.start_datetime as DT  from ride_sharing_entries rs JOIN placedb src ON rs.src_id = src.id JOIN placedb dest ON rs.dest_id = dest.id where req_id = @r"
+            cmd = New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@r", req_id)
+            reader = cmd.ExecuteReader()
+            'Dim datatable As New DataTable
+            'DataTable.Load(reader)
+            While reader.Read()
+                Dim uid As Integer = Convert.ToInt32(reader("uid"))
+                Dim src As String = reader("src").ToString
+                Dim dest As String = reader("dest").ToString
+                Dim DT As String = reader("DT").ToString
+                Globals.SendNotifications(5, uid, "Your ride sharing request is Approved", $"Your ride sharing request with request id {req_id} from {src} to {dest} at {DT} is approved ")
+            End While
+            reader.Close()
             acceptclick = False
         End If
 
@@ -70,6 +86,21 @@ Public Class TransportRSReqPost
             cmd.Parameters.AddWithValue("@status1", "requested")
             cmd.Parameters.AddWithValue("@req", req_id)
             cmd.ExecuteNonQuery()
+
+            query = "select rs.uid, src.place_name as src, dest.place_name as dest, rs.start_datetime as DT  from ride_sharing_entries rs JOIN placedb src ON rs.src_id = src.id JOIN placedb dest ON rs.dest_id = dest.id where req_id = @r"
+            cmd = New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@r", req_id)
+            reader = cmd.ExecuteReader()
+            'Dim datatable As New DataTable
+            'DataTable.Load(reader)
+            While reader.Read()
+                Dim uid As Integer = Convert.ToInt32(reader("uid"))
+            Dim src As String = reader("src").ToString
+            Dim dest As String = reader("dest").ToString
+            Dim DT As String = reader("DT").ToString
+            Globals.SendNotifications(5, uid, "Your ride sharing request is Rejected", $"Your ride sharing request with request id {req_id} from {src} to {dest} at {DT} is rejected ")
+            End While
+            reader.Close()
             rejectclick = False
         End If
 
