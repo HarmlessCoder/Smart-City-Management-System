@@ -22,6 +22,7 @@ Partial Class Healthcare_Pharmacy
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Healthcare_Pharmacy))
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -34,13 +35,15 @@ Partial Class Healthcare_Pharmacy
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.d1 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button7.Location = New System.Drawing.Point(656, 394)
+        Me.Button7.Location = New System.Drawing.Point(818, 452)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(104, 61)
         Me.Button7.TabIndex = 39
@@ -51,7 +54,7 @@ Partial Class Healthcare_Pharmacy
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button5.Location = New System.Drawing.Point(656, 484)
+        Me.Button5.Location = New System.Drawing.Point(818, 542)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(104, 61)
         Me.Button5.TabIndex = 38
@@ -62,7 +65,7 @@ Partial Class Healthcare_Pharmacy
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(656, 576)
+        Me.Button3.Location = New System.Drawing.Point(818, 634)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(104, 61)
         Me.Button3.TabIndex = 37
@@ -73,7 +76,7 @@ Partial Class Healthcare_Pharmacy
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(656, 308)
+        Me.Button2.Location = New System.Drawing.Point(818, 366)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(104, 61)
         Me.Button2.TabIndex = 36
@@ -84,7 +87,7 @@ Partial Class Healthcare_Pharmacy
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(656, 218)
+        Me.Button1.Location = New System.Drawing.Point(818, 276)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 61)
         Me.Button1.TabIndex = 35
@@ -95,63 +98,63 @@ Partial Class Healthcare_Pharmacy
         '
         Me.Label7.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label7.Location = New System.Drawing.Point(140, 576)
+        Me.Label7.Location = New System.Drawing.Point(302, 634)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(620, 61)
         Me.Label7.TabIndex = 34
-        Me.Label7.Text = "P5"
+        Me.Label7.Text = "CareSure"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(140, 309)
+        Me.Label6.Location = New System.Drawing.Point(302, 367)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(620, 60)
         Me.Label6.TabIndex = 33
-        Me.Label6.Text = "P2"
+        Me.Label6.Text = "VitaMedics"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(140, 399)
+        Me.Label5.Location = New System.Drawing.Point(302, 457)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(620, 56)
         Me.Label5.TabIndex = 32
-        Me.Label5.Text = "P3"
+        Me.Label5.Text = "CureWise"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(140, 484)
+        Me.Label4.Location = New System.Drawing.Point(302, 542)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(620, 61)
         Me.Label4.TabIndex = 31
-        Me.Label4.Text = "P4"
+        Me.Label4.Text = "MedEssentia"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(140, 218)
+        Me.Label3.Location = New System.Drawing.Point(302, 276)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(609, 61)
         Me.Label3.TabIndex = 30
-        Me.Label3.Text = "P1"
+        Me.Label3.Text = "AllWellness"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RichTextBox1
         '
         Me.RichTextBox1.Font = New System.Drawing.Font("Trebuchet MS", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(133, 96)
+        Me.RichTextBox1.Location = New System.Drawing.Point(262, 130)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(627, 56)
+        Me.RichTextBox1.Size = New System.Drawing.Size(637, 65)
         Me.RichTextBox1.TabIndex = 29
         Me.RichTextBox1.Text = ""
         '
@@ -160,13 +163,38 @@ Partial Class Healthcare_Pharmacy
         Me.d1.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.d1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.14286!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.d1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.d1.Location = New System.Drawing.Point(791, 96)
+        Me.d1.Location = New System.Drawing.Point(932, 130)
         Me.d1.Margin = New System.Windows.Forms.Padding(2)
         Me.d1.Name = "d1"
-        Me.d1.Size = New System.Drawing.Size(113, 56)
+        Me.d1.Size = New System.Drawing.Size(129, 72)
         Me.d1.TabIndex = 28
         Me.d1.Text = "Search"
         Me.d1.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Location = New System.Drawing.Point(30, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(333, 101)
+        Me.Label1.TabIndex = 40
+        Me.Label1.Text = "     Pharmacy"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label2.Location = New System.Drawing.Point(123, 221)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(1044, 27)
+        Me.Label2.TabIndex = 41
+        Me.Label2.Text = "Purchase the medicine from the pharmacy that stocks the specific medication you r" &
+    "equested."
         '
         'Healthcare_Pharmacy
         '
@@ -175,6 +203,8 @@ Partial Class Healthcare_Pharmacy
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.healthcare_bg
         Me.ClientSize = New System.Drawing.Size(1270, 736)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
@@ -208,4 +238,6 @@ Partial Class Healthcare_Pharmacy
     Friend WithEvents Label3 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents d1 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
