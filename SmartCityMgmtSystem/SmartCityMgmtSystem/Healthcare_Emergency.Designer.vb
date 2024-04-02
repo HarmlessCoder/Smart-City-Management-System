@@ -76,7 +76,7 @@ Partial Class Healthcare_Emergency
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -85,7 +85,7 @@ Partial Class Healthcare_Emergency
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(331, 101)
         Me.Label2.TabIndex = 46
-        Me.Label2.Text = "       Emergency"
+        Me.Label2.Text = "    Emergency"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Healthcare_Emergency

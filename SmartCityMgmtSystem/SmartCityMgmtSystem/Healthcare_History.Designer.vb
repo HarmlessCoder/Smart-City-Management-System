@@ -58,7 +58,7 @@ Partial Class Healthcare_History
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1096, 524)
+        Me.DataGridView1.Size = New System.Drawing.Size(1095, 524)
         Me.DataGridView1.TabIndex = 0
         '
         'Column1
@@ -97,7 +97,7 @@ Partial Class Healthcare_History
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -113,10 +113,10 @@ Partial Class Healthcare_History
         Me.d1.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.d1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.d1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.d1.Location = New System.Drawing.Point(561, 21)
-        Me.d1.Margin = New System.Windows.Forms.Padding(2)
+        Me.d1.Location = New System.Drawing.Point(562, 35)
+        Me.d1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.d1.Name = "d1"
-        Me.d1.Size = New System.Drawing.Size(153, 48)
+        Me.d1.Size = New System.Drawing.Size(169, 66)
         Me.d1.TabIndex = 50
         Me.d1.Text = "Hospital"
         Me.d1.UseVisualStyleBackColor = False
@@ -126,10 +126,10 @@ Partial Class Healthcare_History
         Me.Button1.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(717, 21)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Location = New System.Drawing.Point(757, 35)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(133, 48)
+        Me.Button1.Size = New System.Drawing.Size(171, 66)
         Me.Button1.TabIndex = 51
         Me.Button1.Text = "Pharmacy"
         Me.Button1.UseVisualStyleBackColor = False
@@ -139,12 +139,12 @@ Partial Class Healthcare_History
         Me.Button2.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(854, 21)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Location = New System.Drawing.Point(956, 35)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(198, 48)
+        Me.Button2.Size = New System.Drawing.Size(214, 66)
         Me.Button2.TabIndex = 52
-        Me.Button2.Text = "Blood_Donation"
+        Me.Button2.Text = "Blood Donation"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Healthcare_History
@@ -153,7 +153,7 @@ Partial Class Healthcare_History
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.healthcare_bg
-        Me.ClientSize = New System.Drawing.Size(1270, 736)
+        Me.ClientSize = New System.Drawing.Size(1271, 738)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.d1)
@@ -161,7 +161,7 @@ Partial Class Healthcare_History
         Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Healthcare_History"
         Me.Text = "Home Page"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

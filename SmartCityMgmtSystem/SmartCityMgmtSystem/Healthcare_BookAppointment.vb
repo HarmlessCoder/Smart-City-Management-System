@@ -66,7 +66,8 @@ Public Class Healthcare_BookAppointment
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
-        cmd = New MySqlCommand("SELECT * FROM department ", Con)
+        cmd = New MySqlCommand("SELECT * FROM department WHERE hospital_id = 1", Con)
+
         reader = cmd.ExecuteReader()
         Dim i As Integer = 0
         'Fill the DataTable with data from the SQL table
