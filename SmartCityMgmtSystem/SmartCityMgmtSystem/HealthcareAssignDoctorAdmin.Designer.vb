@@ -75,6 +75,7 @@ Partial Class HealthcareAssignDoctorAdmin
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DeleteBut = New System.Windows.Forms.DataGridViewImageColumn()
         Me.EditBut = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -84,6 +85,7 @@ Partial Class HealthcareAssignDoctorAdmin
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridViewImageColumn1
@@ -143,14 +145,13 @@ Partial Class HealthcareAssignDoctorAdmin
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("AgencyFB", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_medical_doctor_50
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label4.Location = New System.Drawing.Point(21, 7)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(356, 46)
+        Me.Label4.Size = New System.Drawing.Size(259, 46)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "      Assign Doctor"
         '
@@ -381,7 +382,7 @@ Partial Class HealthcareAssignDoctorAdmin
         Me.Label3.Location = New System.Drawing.Point(83, 27)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(272, 37)
+        Me.Label3.Size = New System.Drawing.Size(252, 37)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Add Doctor Appointment"
         '
@@ -621,6 +622,17 @@ Partial Class HealthcareAssignDoctorAdmin
         Me.EditBut.ToolTipText = "Delete"
         Me.EditBut.Width = 6
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_medical_doctor_50
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 7)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(47, 46)
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
         'HealthcareAssignDoctorAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
@@ -628,6 +640,7 @@ Partial Class HealthcareAssignDoctorAdmin
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.healthcare_bg
         Me.ClientSize = New System.Drawing.Size(1270, 736)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label4)
@@ -653,6 +666,7 @@ Partial Class HealthcareAssignDoctorAdmin
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -696,4 +710,5 @@ Partial Class HealthcareAssignDoctorAdmin
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents DeleteBut As DataGridViewImageColumn
     Friend WithEvents EditBut As DataGridViewImageColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
