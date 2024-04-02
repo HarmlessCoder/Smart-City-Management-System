@@ -30,9 +30,9 @@ Partial Class Healthcare_homepage
         Me.donate_blood = New System.Windows.Forms.Button()
         Me.pharmacy = New System.Windows.Forms.Button()
         Me.book_appointment = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.childformPanel = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
@@ -154,6 +154,17 @@ Partial Class Healthcare_homepage
         Me.book_appointment.Text = "Book Appointment"
         Me.book_appointment.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 3)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(136, Byte), Integer))
@@ -180,17 +191,6 @@ Partial Class Healthcare_homepage
         Me.Label2.Size = New System.Drawing.Size(72, 28)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "{Name}"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.final
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 3)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
         '
         'Button6
         '
@@ -234,6 +234,7 @@ Partial Class Healthcare_homepage
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.childformPanel)
         Me.Name = "Healthcare_homepage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Healthcare_homepage"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
