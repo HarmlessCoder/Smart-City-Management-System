@@ -72,7 +72,7 @@
         Next
     End Sub
     Private Sub Form1_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        If Not hasLoaded Then
+        If hasLoaded Then
             Globals.viewChildForm(Panel1, New Ed_RoleSelect())
         End If
     End Sub
