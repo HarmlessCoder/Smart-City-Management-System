@@ -559,10 +559,22 @@
     <Compile Include="HealthcareManageBloodAppointmentAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HealthcareManageBloodBankAdmin.Designer.vb">
+      <DependentUpon>HealthcareManageBloodBankAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareManageBloodBankAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareManageDoctorAdmin.Designer.vb">
       <DependentUpon>HealthcareManageDoctorAdmin.vb</DependentUpon>
     </Compile>
     <Compile Include="HealthcareManageDoctorAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthcareManageStaffAdmn.Designer.vb">
+      <DependentUpon>HealthcareManageStaffAdmn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareManageStaffAdmn.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HealthcareMedicineInventoryAdmin.Designer.vb">
@@ -575,6 +587,12 @@
       <DependentUpon>Healthcare_BookAppointment.vb</DependentUpon>
     </Compile>
     <Compile Include="Healthcare_BookAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Healthcare_Emergency.Designer.vb">
+      <DependentUpon>Healthcare_Emergency.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Healthcare_Emergency.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Healthcare_History.Designer.vb">
@@ -1441,14 +1459,23 @@
     <EmbeddedResource Include="HealthcareManageBloodAppointmentAdmin.resx">
       <DependentUpon>HealthcareManageBloodAppointmentAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareManageBloodBankAdmin.resx">
+      <DependentUpon>HealthcareManageBloodBankAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HealthcareManageDoctorAdmin.resx">
       <DependentUpon>HealthcareManageDoctorAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareManageStaffAdmn.resx">
+      <DependentUpon>HealthcareManageStaffAdmn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareMedicineInventoryAdmin.resx">
       <DependentUpon>HealthcareMedicineInventoryAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Healthcare_BookAppointment.resx">
       <DependentUpon>Healthcare_BookAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Healthcare_Emergency.resx">
+      <DependentUpon>Healthcare_Emergency.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Healthcare_History.resx">
       <DependentUpon>Healthcare_History.vb</DependentUpon>
