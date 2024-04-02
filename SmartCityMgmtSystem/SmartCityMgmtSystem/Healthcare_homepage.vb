@@ -71,7 +71,9 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim home = New HomePageDashboard
+        Dim home = New HomePageDashboard() With {
+            .uid = uid
+        }
         home.Show()
         Me.Close()
     End Sub
@@ -93,7 +95,7 @@
     End Sub
 
     Private Sub Healthcare_homepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Label2.Text = u_name
     End Sub
 
 
