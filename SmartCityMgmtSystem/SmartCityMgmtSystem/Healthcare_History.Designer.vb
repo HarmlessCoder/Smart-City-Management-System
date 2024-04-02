@@ -24,12 +24,15 @@ Partial Class Healthcare_History
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Healthcare_History))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.d1 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,20 +60,6 @@ Partial Class Healthcare_History
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1096, 524)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(30, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(333, 101)
-        Me.Label1.TabIndex = 41
-        Me.Label1.Text = "History"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Column1
         '
@@ -105,6 +94,59 @@ Partial Class Healthcare_History
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Location = New System.Drawing.Point(30, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(333, 101)
+        Me.Label1.TabIndex = 41
+        Me.Label1.Text = "History"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'd1
+        '
+        Me.d1.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.d1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.d1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.d1.Location = New System.Drawing.Point(561, 21)
+        Me.d1.Margin = New System.Windows.Forms.Padding(2)
+        Me.d1.Name = "d1"
+        Me.d1.Size = New System.Drawing.Size(153, 48)
+        Me.d1.TabIndex = 50
+        Me.d1.Text = "Hospital"
+        Me.d1.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(717, 21)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(133, 48)
+        Me.Button1.TabIndex = 51
+        Me.Button1.Text = "Pharmacy"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.Location = New System.Drawing.Point(854, 21)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(198, 48)
+        Me.Button2.TabIndex = 52
+        Me.Button2.Text = "Blood_Donation"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Healthcare_History
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
@@ -112,6 +154,9 @@ Partial Class Healthcare_History
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.healthcare_bg
         Me.ClientSize = New System.Drawing.Size(1270, 736)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.d1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -131,4 +176,7 @@ Partial Class Healthcare_History
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents d1 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

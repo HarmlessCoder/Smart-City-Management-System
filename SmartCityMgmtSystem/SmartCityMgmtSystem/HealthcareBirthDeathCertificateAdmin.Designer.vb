@@ -351,7 +351,7 @@ Partial Class HealthcareBirthDeathCertificateAdmin
         Me.Label3.Location = New System.Drawing.Point(54, 23)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(352, 37)
+        Me.Label3.Size = New System.Drawing.Size(319, 37)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Generate Birth/Death Certificate"
         '
@@ -404,18 +404,19 @@ Partial Class HealthcareBirthDeathCertificateAdmin
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("AgencyFB", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label4.Location = New System.Drawing.Point(13, 9)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(714, 46)
+        Me.Label4.Size = New System.Drawing.Size(536, 46)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "        Generate Birth/Death Certificate"
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_birth_certificate_100
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
