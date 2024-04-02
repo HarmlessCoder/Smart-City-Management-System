@@ -164,6 +164,12 @@
     <Compile Include="Ed_Institute_Edit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ed_MoodleResouceLinkItem.Designer.vb">
+      <DependentUpon>Ed_MoodleResouceLinkItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ed_MoodleResouceLinkItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ed_Teacher_AddAssgn.Designer.vb">
       <DependentUpon>Ed_Teacher_AddAssgn.vb</DependentUpon>
     </Compile>
@@ -1230,6 +1236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Institute_Edit.resx">
       <DependentUpon>Ed_Institute_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ed_MoodleResouceLinkItem.resx">
+      <DependentUpon>Ed_MoodleResouceLinkItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ed_Teacher_AddAssgn.resx">
       <DependentUpon>Ed_Teacher_AddAssgn.vb</DependentUpon>
