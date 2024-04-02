@@ -541,6 +541,12 @@
     <Compile Include="HealthcareManageDoctorAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HealthcareManageStaffAdmn.Designer.vb">
+      <DependentUpon>HealthcareManageStaffAdmn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthcareManageStaffAdmn.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HealthcareMedicineInventoryAdmin.Designer.vb">
       <DependentUpon>HealthcareMedicineInventoryAdmin.vb</DependentUpon>
     </Compile>
@@ -1416,6 +1422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareManageDoctorAdmin.resx">
       <DependentUpon>HealthcareManageDoctorAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthcareManageStaffAdmn.resx">
+      <DependentUpon>HealthcareManageStaffAdmn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HealthcareMedicineInventoryAdmin.resx">
       <DependentUpon>HealthcareMedicineInventoryAdmin.vb</DependentUpon>

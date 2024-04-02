@@ -29,6 +29,7 @@ Partial Class Healthcare_DonateBlood
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'd1
@@ -98,6 +99,15 @@ Partial Class Healthcare_DonateBlood
         Me.Label3.Text = "Blood Group"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Panel1
+        '
+        Me.Panel1.AutoScroll = True
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Location = New System.Drawing.Point(12, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1097, 242)
+        Me.Panel1.TabIndex = 42
+        '
         'Healthcare_DonateBlood
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
@@ -105,6 +115,7 @@ Partial Class Healthcare_DonateBlood
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.healthcare_bg
         Me.ClientSize = New System.Drawing.Size(1270, 736)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.d1)
         Me.Controls.Add(Me.RichTextBox3)
         Me.Controls.Add(Me.RichTextBox2)
@@ -128,4 +139,5 @@ Partial Class Healthcare_DonateBlood
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Panel1 As Panel
 End Class
