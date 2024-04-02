@@ -346,6 +346,7 @@ Partial Class HealthcareApproveAppointmentAdmin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
+        Me.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.healthcare_bg
         Me.ClientSize = New System.Drawing.Size(1270, 736)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel1)

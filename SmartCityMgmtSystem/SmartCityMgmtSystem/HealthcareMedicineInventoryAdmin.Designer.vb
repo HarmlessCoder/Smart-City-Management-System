@@ -81,6 +81,7 @@ Partial Class HealthcareMedicineInventoryAdmin
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -90,6 +91,7 @@ Partial Class HealthcareMedicineInventoryAdmin
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridViewImageColumn1
@@ -672,14 +674,24 @@ Partial Class HealthcareMedicineInventoryAdmin
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("AgencyFB", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label4.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_medical_doctor_50
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(3, 6)
+        Me.Label4.Location = New System.Drawing.Point(22, 9)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(434, 46)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "      Manage Medicine Inventory"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_medicine_96
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(7, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(67, 60)
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
         '
         'HealthcareMedicineInventoryAdmin
         '
@@ -690,8 +702,9 @@ Partial Class HealthcareMedicineInventoryAdmin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1270, 736)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label4)
         Me.Font = New System.Drawing.Font("Verdana", 10.98305!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -714,6 +727,7 @@ Partial Class HealthcareMedicineInventoryAdmin
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -760,4 +774,5 @@ Partial Class HealthcareMedicineInventoryAdmin
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

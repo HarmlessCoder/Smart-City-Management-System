@@ -9,6 +9,7 @@
     Private healthcare_DonateBlood As Healthcare_DonateBlood = Nothing
     Private healthcare_Pharmacy As Healthcare_Pharmacy = Nothing
     Private healthcare_History As Healthcare_History = Nothing
+    Private healthcare_Emergency As Healthcare_Emergency = Nothing
 
     Private Sub book_appointment_Click(sender As Object, e As EventArgs) Handles book_appointment.Click
         ' Navigate to hc_B_Appointment page
@@ -62,6 +63,9 @@
     Private Sub emergency_Click(sender As Object, e As EventArgs) Handles emergency.Click
         ' Navigate to hc_Emergency page (if you have one)
         ' Add similar logic for emergency page if needed
+        healthcare_Emergency?.Dispose()
+        healthcare_Emergency = New Healthcare_Emergency()
+        Globals.viewChildForm(childformPanel, healthcare_Emergency)
         book_appointment.BackColor = Color.FromArgb(88, 133, 175)
         donate_blood.BackColor = Color.FromArgb(88, 133, 175)
         history.BackColor = Color.FromArgb(88, 133, 175)
