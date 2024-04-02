@@ -268,7 +268,7 @@ Partial Class HealthcareManageBloodAppointmentAdmin
         Me.Label3.Location = New System.Drawing.Point(44, 16)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(334, 37)
+        Me.Label3.Size = New System.Drawing.Size(361, 37)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Add Blood Donation Appointment"
         '
@@ -461,13 +461,13 @@ Partial Class HealthcareManageBloodAppointmentAdmin
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("AgencyFB", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label4.Location = New System.Drawing.Point(35, 10)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(572, 46)
+        Me.Label4.Size = New System.Drawing.Size(811, 46)
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "      Manage Blood Donation Appointments"
         '
