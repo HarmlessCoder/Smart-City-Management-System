@@ -79,10 +79,11 @@ Partial Class Healthcare_Pharmacy
         '
         'Panel1
         '
+        Me.Panel1.AutoScroll = True
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Location = New System.Drawing.Point(12, 269)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1167, 416)
+        Me.Panel1.Size = New System.Drawing.Size(1209, 416)
         Me.Panel1.TabIndex = 42
         '
         'Healthcare_Pharmacy
