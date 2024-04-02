@@ -9,13 +9,9 @@ Public Class HealthcareAdminHome
     Private healthcareApproveAppointmentAdmin As HealthcareApproveAppointmentAdmin = Nothing
     Private healthcareBirthDeathCertificateAdmin As HealthcareBirthDeathCertificateAdmin = Nothing
     Private healthcareManageDoctorAdmin As HealthcareManageDoctorAdmin = Nothing
+    Private healthcareManageStaffAdmn As HealthcareManageStaffAdmn = Nothing
     Private healthcareHedalthRecordAdmin As HealthcareHealthRecordAdmin = Nothing
-    Private healthcareHealtfhRecordAdmin As HealthcareHealthRecordAdmin = Nothing
     Public innerPanel As Panel
-
-    Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
 
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -46,5 +42,11 @@ Public Class HealthcareAdminHome
         healthcareBirthDeathCertificateAdmin?.Dispose()
         healthcareBirthDeathCertificateAdmin = New HealthcareBirthDeathCertificateAdmin()
         Globals.viewChildForm(innerPanel, healthcareBirthDeathCertificateAdmin)
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        healthcareManageStaffAdmn?.Dispose()
+        healthcareManageStaffAdmn = New HealthcareManageStaffAdmn()
+        Globals.viewChildForm(innerPanel, healthcareManageStaffAdmn)
     End Sub
 End Class
