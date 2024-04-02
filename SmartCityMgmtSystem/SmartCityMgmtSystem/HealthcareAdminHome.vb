@@ -13,6 +13,7 @@ Public Class HealthcareAdminHome
     Private healthcareManageAmbulanceAdmin As HealthcareManageAmbulanceAdmin = Nothing
     Private healthcareMedicineInventoryAdmin As HealthcareMedicineInventoryAdmin = Nothing
     Private healthcareManageBloodAppointmentAdmin As HealthcareManageBloodAppointmentAdmin = Nothing
+    Private healthcareManageBloodBankAdmin As HealthcareManageBloodBankAdmin = Nothing
     Public innerPanel As Panel
 
 
@@ -68,5 +69,11 @@ Public Class HealthcareAdminHome
         healthcareManageBloodAppointmentAdmin?.Dispose()
         healthcareManageBloodAppointmentAdmin = New HealthcareManageBloodAppointmentAdmin()
         Globals.viewChildForm(innerPanel, healthcareManageBloodAppointmentAdmin)
+    End Sub
+
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
+        healthcareManageBloodBankAdmin?.Dispose()
+        healthcareManageBloodBankAdmin = New HealthcareManageBloodBankAdmin()
+        Globals.viewChildForm(innerPanel, healthcareManageBloodBankAdmin)
     End Sub
 End Class
