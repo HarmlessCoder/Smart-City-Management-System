@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports SmartCityMgmtSystem.Ed_Coursera_Handler
 
 Public Class Ed_Moodle_Handler
     Public Class MoodleCourse
@@ -179,6 +180,41 @@ Public Class Ed_Moodle_Handler
 
         Return course
     End Function
+
+    Public Function GetEnrolledAssignments(ByVal studentID As Integer) As RoomContent()
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+
+        Dim assignments As New List(Of RoomContent)()
+
+        ' Query to fetch assignments of courses the student is enrolled in
+        Dim query As String = "SELECT mc.Room_ID, mc.Content_Name, mc.Content_Type, mc.Video_Link, mc.Content, mc.Seq_no " &
+                          "FROM moodle_coursecontent mc " &
+                          "INNER JOIN moodle_enrollments ms ON mc.Room_ID = ms.Room_ID " &
+                          "WHERE ms.Student_ID = @studentID AND mc.Content_Type = 'Assignment'"
+
+        Using cmd As New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@studentID", studentID)
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                While reader.Read()
+                    Dim assignment As New RoomContent()
+                    assignment.RoomID = If(reader("Room_ID") IsNot DBNull.Value, Convert.ToInt32(reader("Room_ID")), 0)
+                    assignment.ContentName = If(reader("Content_Name") IsNot DBNull.Value, reader("Content_Name").ToString(), "")
+                    assignment.ContentType = If(reader("Content_Type") IsNot DBNull.Value, reader("Content_Type").ToString(), "")
+                    assignment.VideoLink = If(reader("Video_Link") IsNot DBNull.Value, reader("Video_Link").ToString(), "")
+                    assignment.Content = If(reader("Content") IsNot DBNull.Value, reader("Content").ToString(), "")
+                    assignment.SeqNo = If(reader("Seq_no") IsNot DBNull.Value, Convert.ToInt32(reader("Seq_no")), 0)
+
+                    assignments.Add(assignment)
+                End While
+            End Using
+        End Using
+
+        Con.Close()
+
+        Return assignments.ToArray()
+    End Function
+
 
 
 End Class
