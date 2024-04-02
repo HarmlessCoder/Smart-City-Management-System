@@ -14,6 +14,7 @@ Public Class Ed_Moodle_CourseResource
     Private Course_type As String
     Public Property content As Ed_Moodle_Handler.RoomContent
     Public Property course As Ed_Moodle_Handler.MoodleCourse
+    Dim handler As New Ed_Moodle_Handler()
 
     Public Sub New(panel As Panel, type As String)
         InitializeComponent()
@@ -28,6 +29,7 @@ Public Class Ed_Moodle_CourseResource
     End Sub
     Private Sub Ed_Stud_Coursera_Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AutoScroll = True
+        course = handler.LoadCourseDetails(CourseID)
 
         AddHandler RichTextBox1.ContentsResized, AddressOf RichTextBox_ContentsResized
 
