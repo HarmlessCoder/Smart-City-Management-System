@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(New Ed_StudentDashboard())
+        Ed_GlobalDashboard.OpenFormInGlobalEdPanel(Ed_StudentDashboard)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
