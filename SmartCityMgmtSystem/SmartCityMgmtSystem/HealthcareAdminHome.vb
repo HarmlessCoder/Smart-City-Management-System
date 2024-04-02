@@ -10,7 +10,9 @@ Public Class HealthcareAdminHome
     Private healthcareBirthDeathCertificateAdmin As HealthcareBirthDeathCertificateAdmin = Nothing
     Private healthcareManageDoctorAdmin As HealthcareManageDoctorAdmin = Nothing
     Private healthcareManageStaffAdmn As HealthcareManageStaffAdmn = Nothing
-    Private healthcareHedalthRecordAdmin As HealthcareHealthRecordAdmin = Nothing
+    Private healthcareManageAmbulanceAdmin As HealthcareManageAmbulanceAdmin = Nothing
+    Private healthcareMedicineInventoryAdmin As HealthcareMedicineInventoryAdmin = Nothing
+    Private healthcareManageBloodAppointmentAdmin As HealthcareManageBloodAppointmentAdmin = Nothing
     Public innerPanel As Panel
 
 
@@ -48,5 +50,23 @@ Public Class HealthcareAdminHome
         healthcareManageStaffAdmn?.Dispose()
         healthcareManageStaffAdmn = New HealthcareManageStaffAdmn()
         Globals.viewChildForm(innerPanel, healthcareManageStaffAdmn)
+    End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        healthcareManageAmbulanceAdmin?.Dispose()
+        healthcareManageAmbulanceAdmin = New HealthcareManageAmbulanceAdmin()
+        Globals.viewChildForm(innerPanel, healthcareManageAmbulanceAdmin)
+    End Sub
+
+    Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
+        healthcareMedicineInventoryAdmin?.Dispose()
+        healthcareMedicineInventoryAdmin = New HealthcareMedicineInventoryAdmin()
+        Globals.viewChildForm(innerPanel, healthcareMedicineInventoryAdmin)
+    End Sub
+
+    Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
+        healthcareManageBloodAppointmentAdmin?.Dispose()
+        healthcareManageBloodAppointmentAdmin = New HealthcareManageBloodAppointmentAdmin()
+        Globals.viewChildForm(innerPanel, healthcareManageBloodAppointmentAdmin)
     End Sub
 End Class

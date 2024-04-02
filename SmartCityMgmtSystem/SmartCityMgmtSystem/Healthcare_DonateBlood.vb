@@ -45,7 +45,7 @@ Public Class Healthcare_DonateBlood
                 button.Controls.Add(lblLocation)
 
                 ' Add the button to the form
-                Me.Controls.Add(button)
+                Panel1.Controls.Add(button)
                 'button.Text = Value & Environment.NewLine & Value1
                 button.Margin = New Padding(20) ' Set the spacing between buttons
 
@@ -55,5 +55,9 @@ Public Class Healthcare_DonateBlood
     End Sub
     Private Sub Healthcare_DonateBlood_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadandBindDataGridView()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
