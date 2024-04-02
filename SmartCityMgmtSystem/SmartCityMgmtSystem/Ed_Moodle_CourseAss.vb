@@ -11,6 +11,8 @@ Public Class Ed_Moodle_CourseAss
     Private callingPanel As Panel
     Private Course_type As String
 
+    Public Property course As Ed_Moodle_Handler.MoodleCourse
+
     Public Sub New(panel As Panel)
         InitializeComponent()
         callingPanel = panel
@@ -40,6 +42,8 @@ Public Class Ed_Moodle_CourseAss
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
-        Globals.viewChildForm(callingPanel, New Ed_Moodle_CourseContent(RoomID, callingPanel))
+        Dim form As New Ed_Moodle_CourseContent(callingPanel)
+        form.CourseContent = course
+        Globals.viewChildForm(callingPanel, form)
     End Sub
 End Class

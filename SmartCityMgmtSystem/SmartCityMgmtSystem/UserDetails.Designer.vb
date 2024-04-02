@@ -164,7 +164,7 @@ Partial Class UserDetails
         Me.DateTimePicker1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(366, 94)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(352, 31)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(352, 30)
         Me.DateTimePicker1.TabIndex = 15
         '
         'Label9
