@@ -72,4 +72,11 @@ Public Class HomePage
     Private Sub HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'MessageBox.Show(uid.ToString + " " + u_name)
     End Sub
+
+    'Private Sub Button3_Click(sender As Object, e As EventArgs)
+    'Dim pay = New PaymentGateway() With {
+    '.uid = uid
+    '   }
+    '  pay.Show()
+    'End Sub
 End Class
