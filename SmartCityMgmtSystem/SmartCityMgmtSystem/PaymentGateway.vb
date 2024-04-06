@@ -5,13 +5,27 @@ Imports Mysqlx
 Public Class PaymentGateway
 
     Public Property uid As Integer
+    Public Property PaymentSuccessful() As Boolean
 
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         TextBox4.PasswordChar = "*"
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim acc_from, acc_to, receiver, amt As Integer
+        Dim paymentSuccessful As Boolean = ProcessPayment()
+
+        ' Set DialogResult based on payment success
+        If paymentSuccessful Then
+            Me.DialogResult = DialogResult.OK
+        Else
+            Me.DialogResult = DialogResult.Cancel
+        End If
+
+        Me.Close()
+    End Sub
+    Private Function ProcessPayment() As Boolean
+        Dim ans As Boolean = False
+        Dim acc_from, acc_to, receiver, amt, from_bal As Integer
         Dim pass As String = ""
         Dim Con = Globals.GetDBConnection()
         Dim reader As MySqlDataReader
@@ -23,11 +37,12 @@ Public Class PaymentGateway
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
-        cmd = New MySqlCommand("SELECT account_number, password FROM account WHERE user_id = " & uid, Con)
+        cmd = New MySqlCommand("SELECT account_number, password, balance FROM account WHERE user_id = " & uid, Con)
         reader = cmd.ExecuteReader
         If reader.Read() Then
             acc_from = reader("account_number")
             pass = reader("password")
+            from_bal = reader("balance")
         End If
         reader.Close()
 
@@ -35,7 +50,7 @@ Public Class PaymentGateway
             ' Conversion failed, show an error message
             MessageBox.Show("Invalid integer format. Please enter a valid UID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-        ElseIf Not Integer.TryParse(TextBox2.Text, amt) Then
+        ElseIf Not Integer.TryParse(TextBox2.Text, amt) Or amt < 0 Then
             ' Conversion failed, show an error message
             MessageBox.Show("Invalid integer format. Please enter a valid amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -43,6 +58,8 @@ Public Class PaymentGateway
             MessageBox.Show("Please enter your password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf TextBox4.Text <> pass Then
             MessageBox.Show("Incorrect password!.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf from_bal < amt Then
+            MessageBox.Show("Insufficient balance!.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             cmd = New MySqlCommand("SELECT account_number FROM account WHERE user_id = " & receiver, Con)
             reader = cmd.ExecuteReader
@@ -67,6 +84,7 @@ Public Class PaymentGateway
                         Globals.ExecuteUpdateQuery(bal_to)
                         sqlCommand.ExecuteNonQuery()
                         MessageBox.Show("Transaction successful.", "Success", MessageBoxButtons.OK)
+                        ans = True
                     Catch ex As Exception
                         MessageBox.Show("Error: " & ex.Message)
                     End Try
@@ -76,7 +94,9 @@ Public Class PaymentGateway
             End If
             Me.Close()
         End If
+        Return ans
+
+    End Function
 
 
-    End Sub
 End Class

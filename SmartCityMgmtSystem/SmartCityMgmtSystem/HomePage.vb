@@ -73,10 +73,20 @@ Public Class HomePage
         'MessageBox.Show(uid.ToString + " " + u_name)
     End Sub
 
-    'Private Sub Button3_Click(sender As Object, e As EventArgs)
-    'Dim pay = New PaymentGateway() With {
-    '.uid = uid
-    '   }
-    '  pay.Show()
-    'End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim pay = New PaymentGateway() With {
+            .uid = uid
+        }
+        Dim paymentResult As Boolean? = pay.ShowDialog()
+
+        ' Check if payment was successful
+        If paymentResult.HasValue AndAlso paymentResult.Value Then
+            'MessageBox.Show("Payment successful!")
+            'Me.Close()
+        Else
+            'MessageBox.Show("Payment failed.")
+        End If
+
+    End Sub
 End Class
