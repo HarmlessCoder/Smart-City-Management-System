@@ -5,9 +5,14 @@ Imports Mysqlx
 Public Class PaymentGateway
 
     Public Property uid As Integer
+    'Set this true if you want to make the fields readonly (for automatic payments)
+    Public Property readonly_prop As Boolean = False
 
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         TextBox4.PasswordChar = "*"
+        TextBox1.ReadOnly = readonly_prop
+        TextBox2.ReadOnly = readonly_prop
+        TextBox3.ReadOnly = readonly_prop
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
