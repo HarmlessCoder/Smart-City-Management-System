@@ -23,13 +23,6 @@ Partial Class ElectionDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.rti = New System.Windows.Forms.Button()
-        Me.kym = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.election = New System.Windows.Forms.Button()
-        Me.organizational_structure = New System.Windows.Forms.Button()
-        Me.about_us = New System.Windows.Forms.Button()
-        Me.admin = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -48,16 +41,22 @@ Partial Class ElectionDashboard
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.rti = New System.Windows.Forms.Button()
+        Me.kym = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.election = New System.Windows.Forms.Button()
+        Me.organizational_structure = New System.Windows.Forms.Button()
+        Me.about_us = New System.Windows.Forms.Button()
+        Me.admin = New System.Windows.Forms.Button()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -67,6 +66,7 @@ Partial Class ElectionDashboard
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,132 +92,10 @@ Partial Class ElectionDashboard
         Me.Panel1.Size = New System.Drawing.Size(282, 783)
         Me.Panel1.TabIndex = 0
         '
-        'rti
-        '
-        Me.rti.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.rti.FlatAppearance.BorderSize = 0
-        Me.rti.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rti.Font = New System.Drawing.Font("Tahoma", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rti.ForeColor = System.Drawing.Color.Black
-        Me.rti.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_information_50
-        Me.rti.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.rti.Location = New System.Drawing.Point(0, 629)
-        Me.rti.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.rti.Name = "rti"
-        Me.rti.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.rti.Size = New System.Drawing.Size(286, 61)
-        Me.rti.TabIndex = 9
-        Me.rti.Text = "        Right to        " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "     Information"
-        Me.rti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.rti.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.rti.UseVisualStyleBackColor = False
-        '
-        'kym
-        '
-        Me.kym.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.kym.FlatAppearance.BorderSize = 0
-        Me.kym.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.kym.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kym.ForeColor = System.Drawing.Color.Black
-        Me.kym.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_city_hall_64
-        Me.kym.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.kym.Location = New System.Drawing.Point(4, 550)
-        Me.kym.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.kym.Name = "kym"
-        Me.kym.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.kym.Size = New System.Drawing.Size(335, 76)
-        Me.kym.TabIndex = 8
-        Me.kym.Text = "Know your " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ministers"
-        Me.kym.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.SmartCity_Administrative_Hierarchy
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
-        '
-        'election
-        '
-        Me.election.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.election.FlatAppearance.BorderSize = 0
-        Me.election.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.election.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.election.ForeColor = System.Drawing.Color.Black
-        Me.election.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_election_50
-        Me.election.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.election.Location = New System.Drawing.Point(0, 473)
-        Me.election.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.election.Name = "election"
-        Me.election.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.election.Size = New System.Drawing.Size(339, 61)
-        Me.election.TabIndex = 4
-        Me.election.Text = "Election"
-        Me.election.UseVisualStyleBackColor = False
-        '
-        'organizational_structure
-        '
-        Me.organizational_structure.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.organizational_structure.FlatAppearance.BorderSize = 0
-        Me.organizational_structure.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.organizational_structure.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.organizational_structure.ForeColor = System.Drawing.Color.Black
-        Me.organizational_structure.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_hierarchy_50
-        Me.organizational_structure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.organizational_structure.Location = New System.Drawing.Point(0, 400)
-        Me.organizational_structure.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.organizational_structure.Name = "organizational_structure"
-        Me.organizational_structure.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.organizational_structure.Size = New System.Drawing.Size(328, 78)
-        Me.organizational_structure.TabIndex = 3
-        Me.organizational_structure.Text = "          Organizational         Structure"
-        Me.organizational_structure.UseVisualStyleBackColor = False
-        '
-        'about_us
-        '
-        Me.about_us.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.about_us.FlatAppearance.BorderSize = 0
-        Me.about_us.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.about_us.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.about_us.ForeColor = System.Drawing.Color.Black
-        Me.about_us.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons_about_us
-        Me.about_us.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.about_us.Location = New System.Drawing.Point(0, 330)
-        Me.about_us.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.about_us.Name = "about_us"
-        Me.about_us.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.about_us.Size = New System.Drawing.Size(352, 61)
-        Me.about_us.TabIndex = 2
-        Me.about_us.Text = "About Us"
-        Me.about_us.UseVisualStyleBackColor = False
-        '
-        'admin
-        '
-        Me.admin.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.admin.FlatAppearance.BorderSize = 0
-        Me.admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.admin.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.admin.ForeColor = System.Drawing.Color.Black
-        Me.admin.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_50
-        Me.admin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.admin.Location = New System.Drawing.Point(0, 707)
-        Me.admin.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.admin.Name = "admin"
-        Me.admin.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.admin.Size = New System.Drawing.Size(328, 61)
-        Me.admin.TabIndex = 1
-        Me.admin.Text = "Admin Only"
-        Me.admin.UseVisualStyleBackColor = False
-        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.13559!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Agency FB", 20.13559!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 159)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -435,6 +313,182 @@ Partial Class ElectionDashboard
         Me.RichTextBox1.TabIndex = 5
         Me.RichTextBox1.Text = "Conducting Fair    and Transparent Elections"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(42, 35)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(1197, 59)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Welcome to the Ministry of Administrative Hierarchy!"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Ivory
+        Me.Label2.Location = New System.Drawing.Point(292, 4)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(75, 31)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "{Name}"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.CausesValidation = False
+        Me.Label3.Font = New System.Drawing.Font("Agency FB", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Ivory
+        Me.Label3.Location = New System.Drawing.Point(862, 4)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(117, 31)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "{Aadhar No.}"
+        '
+        'Button6
+        '
+        Me.Button6.CausesValidation = False
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Agency FB", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Ivory
+        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(1388, 0)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.Button6.Size = New System.Drawing.Size(163, 39)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "      Home Page"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'rti
+        '
+        Me.rti.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rti.FlatAppearance.BorderSize = 0
+        Me.rti.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rti.Font = New System.Drawing.Font("Tahoma", 12.20339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rti.ForeColor = System.Drawing.Color.Black
+        Me.rti.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_information_50
+        Me.rti.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.rti.Location = New System.Drawing.Point(0, 629)
+        Me.rti.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.rti.Name = "rti"
+        Me.rti.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.rti.Size = New System.Drawing.Size(286, 61)
+        Me.rti.TabIndex = 9
+        Me.rti.Text = "        Right to        " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "     Information"
+        Me.rti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.rti.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.rti.UseVisualStyleBackColor = False
+        '
+        'kym
+        '
+        Me.kym.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.kym.FlatAppearance.BorderSize = 0
+        Me.kym.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.kym.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.kym.ForeColor = System.Drawing.Color.Black
+        Me.kym.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_city_hall_64
+        Me.kym.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.kym.Location = New System.Drawing.Point(4, 550)
+        Me.kym.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.kym.Name = "kym"
+        Me.kym.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.kym.Size = New System.Drawing.Size(335, 76)
+        Me.kym.TabIndex = 8
+        Me.kym.Text = "Know your " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ministers"
+        Me.kym.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PictureBox1.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.SmartCity_Administrative_Hierarchy
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(282, 153)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
+        'election
+        '
+        Me.election.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.election.FlatAppearance.BorderSize = 0
+        Me.election.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.election.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.election.ForeColor = System.Drawing.Color.Black
+        Me.election.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_election_50
+        Me.election.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.election.Location = New System.Drawing.Point(0, 473)
+        Me.election.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.election.Name = "election"
+        Me.election.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.election.Size = New System.Drawing.Size(339, 61)
+        Me.election.TabIndex = 4
+        Me.election.Text = "Election"
+        Me.election.UseVisualStyleBackColor = False
+        '
+        'organizational_structure
+        '
+        Me.organizational_structure.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.organizational_structure.FlatAppearance.BorderSize = 0
+        Me.organizational_structure.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.organizational_structure.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.organizational_structure.ForeColor = System.Drawing.Color.Black
+        Me.organizational_structure.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_hierarchy_50
+        Me.organizational_structure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.organizational_structure.Location = New System.Drawing.Point(0, 400)
+        Me.organizational_structure.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.organizational_structure.Name = "organizational_structure"
+        Me.organizational_structure.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.organizational_structure.Size = New System.Drawing.Size(328, 78)
+        Me.organizational_structure.TabIndex = 3
+        Me.organizational_structure.Text = "          Organizational         Structure"
+        Me.organizational_structure.UseVisualStyleBackColor = False
+        '
+        'about_us
+        '
+        Me.about_us.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.about_us.FlatAppearance.BorderSize = 0
+        Me.about_us.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.about_us.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.about_us.ForeColor = System.Drawing.Color.Black
+        Me.about_us.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons_about_us
+        Me.about_us.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.about_us.Location = New System.Drawing.Point(0, 330)
+        Me.about_us.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.about_us.Name = "about_us"
+        Me.about_us.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.about_us.Size = New System.Drawing.Size(352, 61)
+        Me.about_us.TabIndex = 2
+        Me.about_us.Text = "About Us"
+        Me.about_us.UseVisualStyleBackColor = False
+        '
+        'admin
+        '
+        Me.admin.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.admin.FlatAppearance.BorderSize = 0
+        Me.admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.admin.Font = New System.Drawing.Font("Tahoma", 12.81356!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.admin.ForeColor = System.Drawing.Color.Black
+        Me.admin.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_admin_50
+        Me.admin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.admin.Location = New System.Drawing.Point(0, 707)
+        Me.admin.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.admin.Name = "admin"
+        Me.admin.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.admin.Size = New System.Drawing.Size(328, 61)
+        Me.admin.TabIndex = 1
+        Me.admin.Text = "Admin Only"
+        Me.admin.UseVisualStyleBackColor = False
+        '
         'PictureBox5
         '
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
@@ -479,66 +533,12 @@ Partial Class ElectionDashboard
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(42, 35)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(1197, 59)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Welcome to the Ministry of Administrative Hierarchy!"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Ivory
-        Me.Label2.Location = New System.Drawing.Point(292, 4)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 29)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "{Name}"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.CausesValidation = False
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Ivory
-        Me.Label3.Location = New System.Drawing.Point(862, 4)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(163, 29)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "{Aadhar No.}"
-        '
-        'Button6
-        '
-        Me.Button6.CausesValidation = False
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0339!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.Ivory
-        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(1388, 0)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(163, 39)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "      Home Page"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
         'ElectionDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1440, 779)
+        Me.ClientSize = New System.Drawing.Size(1552, 779)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -548,10 +548,8 @@ Partial Class ElectionDashboard
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.Name = "ElectionDashboard"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Transportation"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.childformPanel.ResumeLayout(False)
         Me.childformPanel.PerformLayout()
         Me.Panel9.ResumeLayout(False)
@@ -562,6 +560,7 @@ Partial Class ElectionDashboard
         Me.Panel4.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
