@@ -1,0 +1,82 @@
+﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
+Imports Mysqlx
+
+Public Class PaymentGateway
+
+    Public Property uid As Integer
+
+    Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        TextBox4.PasswordChar = "*"
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim acc_from, acc_to, receiver, amt As Integer
+        Dim pass As String = ""
+        Dim Con = Globals.GetDBConnection()
+        Dim reader As MySqlDataReader
+        Dim cmd As MySqlCommand
+        Try
+            Con.Open()
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        cmd = New MySqlCommand("SELECT account_number, password FROM account WHERE user_id = " & uid, Con)
+        reader = cmd.ExecuteReader
+        If reader.Read() Then
+            acc_from = reader("account_number")
+            pass = reader("password")
+        End If
+        reader.Close()
+
+        If Not Integer.TryParse(TextBox1.Text, receiver) Then
+            ' Conversion failed, show an error message
+            MessageBox.Show("Invalid integer format. Please enter a valid UID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        ElseIf Not Integer.TryParse(TextBox2.Text, amt) Then
+            ' Conversion failed, show an error message
+            MessageBox.Show("Invalid integer format. Please enter a valid amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        ElseIf String.IsNullOrWhiteSpace(TextBox4.Text) Then
+            MessageBox.Show("Please enter your password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf TextBox4.Text <> pass Then
+            MessageBox.Show("Incorrect password!.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            cmd = New MySqlCommand("SELECT account_number FROM account WHERE user_id = " & receiver, Con)
+            reader = cmd.ExecuteReader
+            If reader.Read() Then
+                acc_to = reader("account_number")
+                reader.Close()
+
+                Dim q As String = "INSERT INTO transactions (sender_account, receiver_account, time, amount, message) 
+                        VALUES (@sa, @ra, @time, @amt, @msg)"
+                Dim bal_from As String = "UPDATE account SET balance = balance - " & amt & " WHERE user_id = " & uid
+                Dim bal_to As String = "UPDATE account SET balance = balance + " & amt & " WHERE user_id = " & receiver
+                'Dim conStr As String = Globals.getdbConnectionString()
+                'Using connection As New MySqlConnection(conStr)
+                Using sqlCommand As New MySqlCommand(q, Con)
+                    sqlCommand.Parameters.AddWithValue("@sa", acc_from)
+                    sqlCommand.Parameters.AddWithValue("@ra", acc_to)
+                    sqlCommand.Parameters.AddWithValue("@time", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
+                    sqlCommand.Parameters.AddWithValue("@amt", amt)
+                    sqlCommand.Parameters.AddWithValue("@msg", TextBox3.Text)
+                    Try
+                        Dim success As Boolean = Globals.ExecuteUpdateQuery(bal_from)
+                        Globals.ExecuteUpdateQuery(bal_to)
+                        sqlCommand.ExecuteNonQuery()
+                        MessageBox.Show("Transaction successful.", "Success", MessageBoxButtons.OK)
+                    Catch ex As Exception
+                        MessageBox.Show("Error: " & ex.Message)
+                    End Try
+                End Using
+            Else
+                MessageBox.Show("Reciever does not have a bank account.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+            Me.Close()
+        End If
+
+
+    End Sub
+End Class
