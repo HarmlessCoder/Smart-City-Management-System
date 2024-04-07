@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Web.UI.WebControls
+Imports MySql.Data.MySqlClient
 
 Public Class Ed_Coursera_Handler
     Public Class Course
@@ -147,6 +148,7 @@ Public Class Ed_Coursera_Handler
         While reader.Read()
             Dim content As New CourseContent()
 
+            content.CourseID = courseId
             content.ContentName = If(reader("Content_Name") IsNot DBNull.Value, reader("Content_Name").ToString(), "")
             content.ContentType = If(reader("Content_Type") IsNot DBNull.Value, reader("Content_Type").ToString(), "")
             content.VideoLink = If(reader("Video_Link") IsNot DBNull.Value, reader("Video_Link").ToString(), "")
@@ -235,6 +237,39 @@ Public Class Ed_Coursera_Handler
         Return courses.ToArray()
     End Function
 
+    Public Function GetStudentCourseCompletionRecords(ByVal studentID As Integer, ByVal courseID As Integer) As Integer()
+        Dim seqs As New List(Of Integer)()
+
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "SELECT Seq_No FROM ec_studcoursecompletion WHERE Student_ID = @studentID AND Course_ID = @courseID"
+
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@studentId", studentID)
+        cmd.Parameters.AddWithValue("@courseID", courseID)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+
+        While reader.Read()
+            seqs.Add(Convert.ToInt32(reader("Seq_No")))
+        End While
+
+
+        Return seqs.ToArray()
+    End Function
+
+
+    Public Function CompleteResource(ByVal studentID As Integer, ByVal courseID As Integer, ByVal SeqNo As Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "INSERT INTO ec_studcoursecompletion VALUES (@CourseID, @StudentID, @SeqID)"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@StudentID", studentID)
+        cmd.Parameters.AddWithValue("@CourseID", courseID)
+        cmd.Parameters.AddWithValue("@SeqID", SeqNo)
+        cmd.ExecuteNonQuery()
+        Con.Close()
+    End Function
 
 
 
