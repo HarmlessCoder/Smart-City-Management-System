@@ -9,17 +9,19 @@ Public Class PaymentGateway
 
     Private Sub TransportationInnerScreen_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         TextBox4.PasswordChar = "*"
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim paymentSuccessful As Boolean = ProcessPayment()
-
+        Dim paymentSuccessful As Boolean = False
+        paymentSuccessful = ProcessPayment()
         ' Set DialogResult based on payment success
         If paymentSuccessful Then
             Me.DialogResult = DialogResult.OK
         Else
             Me.DialogResult = DialogResult.Cancel
         End If
+        'MessageBox.Show(paymentSuccessful)
 
         Me.Close()
     End Sub
