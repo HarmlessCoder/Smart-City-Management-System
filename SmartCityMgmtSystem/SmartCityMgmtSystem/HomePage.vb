@@ -42,7 +42,11 @@ Public Class HomePage
     End Sub
 
     Private Sub lib_dept_Click(sender As Object, e As EventArgs) Handles lib_dept.Click
-        Dim library = New lib_dash() With {
+        'Dim library = New lib_dash() With {
+        '    .uid = uid,
+        '    .u_name = u_name
+        '}
+        Dim library = New lib_adminDash() With {
             .uid = uid,
             .u_name = u_name
         }

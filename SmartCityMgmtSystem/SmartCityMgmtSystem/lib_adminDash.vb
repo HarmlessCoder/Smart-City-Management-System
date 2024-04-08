@@ -1,4 +1,9 @@
-﻿Public Class lib_adminDash
+﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
+Public Class lib_adminDash
+    Public Property uid As Integer = -1
+    Public Property u_name As String = "Hello"
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim lib_adminSearch = New lib_adminSearch()
         lib_adminSearch.Show()
