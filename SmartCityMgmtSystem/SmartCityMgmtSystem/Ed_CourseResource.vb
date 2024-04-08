@@ -57,6 +57,7 @@ Public Class Ed_CourseResource
             Dim form As New Ed_Coursera_CourseContent(content.CourseID, callingPanel)
             form.CourseItem = CourseItem
             Globals.viewChildForm(callingPanel, form)
+            Me.Close()
         End If
 
     End Sub
