@@ -39,7 +39,9 @@ Public Class Ed_Teacher_Coursera_Course_Content
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Globals.viewChildForm(callingPanel, New Ed_EditECourse(callingPanel))
+        Dim form As New Ed_EditECourse(callingPanel)
+        form.CourseItem = CourseItem
+        Globals.viewChildForm(callingPanel, form)
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -80,10 +82,10 @@ Public Class Ed_Teacher_Coursera_Course_Content
         Dim contents As CourseContent() = handler.GetCourseContents(CourseItem.CourseID)
 
         ' Create Ed_ResourceLinkItem objects and set properties
-        Dim labels As Ed_ResourceLinkItem() = New Ed_ResourceLinkItem(contents.Length - 1) {}
+        Dim labels As Ed_Teacher_ResourceLinkItem() = New Ed_Teacher_ResourceLinkItem(contents.Length - 1) {}
 
         For i As Integer = 0 To contents.Length - 1
-            labels(i) = New Ed_ResourceLinkItem()
+            labels(i) = New Ed_Teacher_ResourceLinkItem()
             labels(i).content = contents(i)
             labels(i).CourseItem = CourseItem
             labels(i).Label1.Text = contents(i).ContentName
@@ -92,7 +94,7 @@ Public Class Ed_Teacher_Coursera_Course_Content
 
         FlowLayoutPanel1.Controls.Clear()
         ' Add Ed_ResourceLinkItem objects to the FlowLayoutPanel
-        For Each Ed_ResourceLinkItem As Ed_ResourceLinkItem In labels
+        For Each Ed_ResourceLinkItem As Ed_Teacher_ResourceLinkItem In labels
             FlowLayoutPanel1.Controls.Add(Ed_ResourceLinkItem)
         Next
 
