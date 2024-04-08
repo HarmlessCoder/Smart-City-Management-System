@@ -29,7 +29,7 @@ Public Class Ed_Teacher_Course_Resource
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         If Course_type = "Coursera" Then
-            Dim form As New Ed_Teacher_Coursera_Course_Content(CourseID, callingPanel)
+            Dim form As New Ed_Teacher_Coursera_Course_Content(callingPanel)
             form.CourseItem = CourseItem
             Globals.viewChildForm(callingPanel, form)
             'Else

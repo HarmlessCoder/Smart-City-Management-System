@@ -2,7 +2,7 @@
 
 Public Class Ed_EditECourse
 
-    Public Property CourseID As Integer
+
     Public CourseItem As Ed_Coursera_Handler.Course
     Dim handler As New Ed_Coursera_Handler()
 
@@ -20,7 +20,7 @@ Public Class Ed_EditECourse
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
 
 
-        Dim form As New Ed_Teacher_Coursera_Course_Content(CourseID, callingPanel)
+        Dim form As New Ed_Teacher_Coursera_Course_Content(callingPanel)
         form.CourseItem = CourseItem
         Globals.viewChildForm(callingPanel, form)
     End Sub

@@ -4,7 +4,7 @@ Imports SmartCityMgmtSystem.Ed_Coursera_Handler
 Public Class Ed_Teacher_Coursera_Course_Content
 
 
-    Private CourseID As Integer
+
     Private callingPanel As Panel
     Public Property ResourceName As String
     Public Property VideoLink As String
@@ -13,9 +13,8 @@ Public Class Ed_Teacher_Coursera_Course_Content
     Dim handler As New Ed_Coursera_Handler()
 
     ' Constructor that accepts a Panel parameter
-    Public Sub New(courseID As Integer, panel As Panel)
+    Public Sub New(panel As Panel)
         InitializeComponent()
-        courseID = courseID
         callingPanel = panel
     End Sub
     Private Sub RichTextBox_ContentsResized(sender As Object, e As ContentsResizedEventArgs)
@@ -102,6 +101,7 @@ Public Class Ed_Teacher_Coursera_Course_Content
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim add_res_form As New Ed_Teacher_AddResource()
+        add_res_form.CourseItem = CourseItem
         add_res_form.ShowDialog()
     End Sub
 
