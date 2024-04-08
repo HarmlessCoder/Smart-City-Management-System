@@ -32,9 +32,7 @@ Public Class Ed_Teacher_Coursera_Course_Content
             Return Nothing
         End If
     End Function
-    Private Sub Label_Click(sender As Object, e As EventArgs)
-        Globals.viewChildForm(callingPanel, New Ed_Teacher_Course_Resource(callingPanel, "Coursera"))
-    End Sub
+
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -88,6 +86,7 @@ Public Class Ed_Teacher_Coursera_Course_Content
             labels(i).content = contents(i)
             labels(i).CourseItem = CourseItem
             labels(i).Label1.Text = contents(i).ContentName
+
 
         Next
 

@@ -100,6 +100,39 @@ Public Class Ed_Coursera_Handler
 
     End Function
 
+    Public Function AddCourse(ByVal affiliation As Integer, ByVal name As String, ByVal category As String, ByVal teacherName As String, ByVal teacherID As Integer, ByVal syllabus As String, ByVal introVideoLink As String, ByVal apprStatus As String, ByVal fees As Integer, ByVal rating As Double, ByVal ratingCount As Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "INSERT INTO ec_course (Course_ID,Affiliation, Name, Category, Teacher_Name, Teacher_ID, SYLLABUS, Intro_Video_link, Appr_Status, Fees, Rating, Rating_Count) VALUES (@courseid, @affiliation, @name, @category, @teacherName, @teacherID, @syllabus, @introVideoLink, @apprStatus, @fees, @rating, @ratingCount)"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@affiliation", affiliation)
+        cmd.Parameters.AddWithValue("@name", name)
+        cmd.Parameters.AddWithValue("@category", category)
+        cmd.Parameters.AddWithValue("@teacherName", teacherName)
+        cmd.Parameters.AddWithValue("@teacherID", teacherID)
+        cmd.Parameters.AddWithValue("@syllabus", syllabus)
+        cmd.Parameters.AddWithValue("@introVideoLink", introVideoLink)
+        cmd.Parameters.AddWithValue("@apprStatus", apprStatus)
+        cmd.Parameters.AddWithValue("@fees", fees)
+        cmd.Parameters.AddWithValue("@rating", rating)
+        cmd.Parameters.AddWithValue("@ratingCount", ratingCount)
+
+        'Set CourseID to the last inserted ID +1'
+        Dim query2 As String = "SELECT MAX(Course_ID) FROM ec_course"
+        Dim cmd2 As New MySqlCommand(query2, Con)
+        Dim reader As MySqlDataReader = cmd2.ExecuteReader()
+        Dim courseID As Integer = 0
+        If reader.Read() Then
+            courseID = If(reader("MAX(Course_ID)") IsNot DBNull.Value, Convert.ToInt32(reader("MAX(Course_ID)")) + 1, 100)
+        End If
+        reader.Close()
+
+        cmd.Parameters.AddWithValue("@courseid", courseID)
+
+
+        cmd.ExecuteNonQuery()
+        Con.Close()
+    End Function
 
     Public Function GetTeacherCourses(ByVal teacherID As Integer) As Course()
 
@@ -203,6 +236,83 @@ Public Class Ed_Coursera_Handler
         End While
 
         Return contents.ToArray()
+    End Function
+
+    Public Function AddCourseContent(ByVal courseId As Integer, ByVal contentName As String, ByVal contentType As String, ByVal videoLink As String, ByVal content As String)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim seqNo As Integer = 0
+        Dim query As String = "INSERT INTO ec_coursecontent (Course_ID, Content_Name, Content_Type, Video_Link, Content, Seq_no) VALUES (@courseId, @contentName, @contentType, @videoLink, @content, @seqNo)"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@courseId", courseId)
+        cmd.Parameters.AddWithValue("@contentName", contentName)
+        cmd.Parameters.AddWithValue("@contentType", contentType)
+        cmd.Parameters.AddWithValue("@videoLink", videoLink)
+        cmd.Parameters.AddWithValue("@content", content)
+
+        'obtain maximum seqNo for given courseID'
+        Dim query2 As String = "SELECT MAX(Seq_no) FROM ec_coursecontent WHERE Course_ID = @courseId"
+        Dim cmd2 As New MySqlCommand(query2, Con)
+        cmd2.Parameters.AddWithValue("@courseId", courseId)
+        Dim reader As MySqlDataReader = cmd2.ExecuteReader()
+        If reader.Read() Then
+            seqNo = If(reader("MAX(Seq_no)") IsNot DBNull.Value, Convert.ToInt32(reader("MAX(Seq_no)")) + 1, 100)
+        End If
+        reader.Close()
+
+        cmd.Parameters.AddWithValue("@seqNo", seqNo)
+        cmd.ExecuteNonQuery()
+        Con.Close()
+    End Function
+
+    Public Function UpdateCourseContent(ByVal courseId As Integer, ByVal seqNo As Integer, ByVal contentName As String, ByVal contentType As String, ByVal videoLink As String, ByVal content As String)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "UPDATE ec_coursecontent SET Content_Name = @contentName, Content_Type = @contentType, Video_Link = @videoLink, Content = @content WHERE Course_ID = @courseId AND Seq_no = @seqNo"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@courseId", courseId)
+        cmd.Parameters.AddWithValue("@seqNo", seqNo)
+        cmd.Parameters.AddWithValue("@contentName", contentName)
+        cmd.Parameters.AddWithValue("@contentType", contentType)
+        cmd.Parameters.AddWithValue("@videoLink", videoLink)
+        cmd.Parameters.AddWithValue("@content", content)
+        cmd.ExecuteNonQuery()
+        Con.Close()
+    End Function
+
+    Public Function GetCourseContent(ByVal courseId As Integer, ByVal seqNo As Integer) As CourseContent
+        Dim content As New CourseContent()
+
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "SELECT Content_Name, Content_Type, Video_Link, Content FROM ec_coursecontent WHERE Course_ID = @courseId AND Seq_no = @seqNo"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@courseId", courseId)
+        cmd.Parameters.AddWithValue("@seqNo", seqNo)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        If reader.Read() Then
+            content.CourseID = courseId
+            content.ContentName = If(reader("Content_Name") IsNot DBNull.Value, reader("Content_Name").ToString(), "")
+            content.ContentType = If(reader("Content_Type") IsNot DBNull.Value, reader("Content_Type").ToString(), "")
+            content.VideoLink = If(reader("Video_Link") IsNot DBNull.Value, reader("Video_Link").ToString(), "")
+            content.Content = If(reader("Content") IsNot DBNull.Value, reader("Content").ToString(), "")
+            content.SeqNo = seqNo
+        End If
+
+        Con.Close()
+        Return content
+    End Function
+
+    Public Function DeleteCourseContent(ByVal courseId As Integer, ByVal seqNo As Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "DELETE FROM ec_coursecontent WHERE Course_ID = @courseId AND Seq_no = @seqNo"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@courseId", courseId)
+        cmd.Parameters.AddWithValue("@seqNo", seqNo)
+        cmd.ExecuteNonQuery()
+        Con.Close()
     End Function
 
     Public Function GetInProgressCourses(ByVal studentId As Integer) As Course()
