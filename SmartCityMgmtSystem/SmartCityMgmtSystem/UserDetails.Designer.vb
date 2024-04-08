@@ -23,9 +23,8 @@ Partial Class UserDetails
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.childformPanel = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -37,7 +36,6 @@ Partial Class UserDetails
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -54,9 +52,8 @@ Partial Class UserDetails
         'childformPanel
         '
         Me.childformPanel.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.childformPanel.Controls.Add(Me.ComboBox1)
         Me.childformPanel.Controls.Add(Me.Button9)
-        Me.childformPanel.Controls.Add(Me.TextBox8)
-        Me.childformPanel.Controls.Add(Me.Label11)
         Me.childformPanel.Controls.Add(Me.Button3)
         Me.childformPanel.Controls.Add(Me.PictureBox2)
         Me.childformPanel.Controls.Add(Me.Label10)
@@ -68,7 +65,6 @@ Partial Class UserDetails
         Me.childformPanel.Controls.Add(Me.Label6)
         Me.childformPanel.Controls.Add(Me.TextBox4)
         Me.childformPanel.Controls.Add(Me.Label5)
-        Me.childformPanel.Controls.Add(Me.TextBox3)
         Me.childformPanel.Controls.Add(Me.Label4)
         Me.childformPanel.Controls.Add(Me.TextBox2)
         Me.childformPanel.Controls.Add(Me.Label2)
@@ -80,6 +76,16 @@ Partial Class UserDetails
         Me.childformPanel.Name = "childformPanel"
         Me.childformPanel.Size = New System.Drawing.Size(1555, 651)
         Me.childformPanel.TabIndex = 1
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.Color.SeaShell
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Male", "Female", "Other"})
+        Me.ComboBox1.Location = New System.Drawing.Point(366, 216)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(352, 30)
+        Me.ComboBox1.TabIndex = 25
         '
         'Button9
         '
@@ -93,25 +99,6 @@ Partial Class UserDetails
         Me.Button9.TabIndex = 24
         Me.Button9.Text = "Save"
         Me.Button9.UseVisualStyleBackColor = False
-        '
-        'TextBox8
-        '
-        Me.TextBox8.BackColor = System.Drawing.Color.SeaShell
-        Me.TextBox8.Location = New System.Drawing.Point(1026, 450)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(352, 34)
-        Me.TextBox8.TabIndex = 22
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Trebuchet MS", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(823, 456)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(153, 28)
-        Me.Label11.TabIndex = 21
-        Me.Label11.Text = "Guardian UID"
         '
         'Button3
         '
@@ -154,7 +141,7 @@ Partial Class UserDetails
         Me.DateTimePicker1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(366, 94)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(352, 31)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(352, 30)
         Me.DateTimePicker1.TabIndex = 15
         '
         'Label9
@@ -224,15 +211,6 @@ Partial Class UserDetails
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Phone Number *"
         '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.SeaShell
-        Me.TextBox3.Location = New System.Drawing.Point(366, 210)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(352, 34)
-        Me.TextBox3.TabIndex = 5
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -249,6 +227,7 @@ Partial Class UserDetails
         Me.TextBox2.Location = New System.Drawing.Point(366, 150)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(352, 34)
         Me.TextBox2.TabIndex = 3
         '
@@ -258,9 +237,9 @@ Partial Class UserDetails
         Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(163, 156)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 28)
+        Me.Label2.Size = New System.Drawing.Size(52, 28)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Age *"
+        Me.Label2.Text = "Age"
         '
         'TextBox1
         '
@@ -322,6 +301,7 @@ Partial Class UserDetails
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.Name = "UserDetails"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Transportation"
         Me.childformPanel.ResumeLayout(False)
         Me.childformPanel.PerformLayout()
@@ -344,15 +324,13 @@ Partial Class UserDetails
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Label11 As Label
     Friend WithEvents Button9 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
 End Class

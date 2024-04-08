@@ -92,7 +92,7 @@ Partial Class HomePageDashboard
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button3.Size = New System.Drawing.Size(303, 61)
+        Me.Button3.Size = New System.Drawing.Size(323, 61)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "    Important Notices"
         Me.Button3.UseVisualStyleBackColor = False
@@ -184,6 +184,7 @@ Partial Class HomePageDashboard
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.Name = "HomePageDashboard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Transportation"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
