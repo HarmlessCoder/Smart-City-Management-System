@@ -6,7 +6,8 @@ Public Class Ed_EntranceInnerScreen
     Private currentIndex As Integer = 0
     Public labelText As String = ""
     Public examID As Integer
-    Private marqueeText As String = "Applications for the upcoming exam are now open! Apply now to secure your spot!                                                                            "
+    Private ImpNotice As String = "Applications for the upcoming exam are now open! Apply now to secure your spot!"
+    Private marqueeText As String = ImpNotice + "                                                                          "
     Private Sub Ed_EntranceInnerScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim Con = Globals.GetDBConnection()
         Try
@@ -88,14 +89,6 @@ Public Class Ed_EntranceInnerScreen
     Private Sub Ed_EntranceInnerScreen_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         ' Ensure the Timer is stopped when the form is closing to prevent memory leaks
         StopMarquee()
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
     End Sub
 
 End Class
