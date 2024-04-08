@@ -284,11 +284,24 @@ Public Class lib_ebooks
             genreLabel.AutoSize = True
 
 
+            Dim ratingPanel As New Panel()
+            ratingPanel.AutoSize = True
+            ratingPanel.Anchor = AnchorStyles.None ' Ensure the panel is not anchored to any side
+            ratingPanel.Location = New Point((eBooksTablePanel.Width - ratingPanel.Width) / 2, (eBooksTablePanel.Height - ratingPanel.Height) / 2)
+            eBooksTablePanel.Controls.Add(ratingPanel, 4, rowIndex)
+
+            Dim ratingPictureBox As New PictureBox()
+            ratingPictureBox.Image = SmartCityMgmtSystem.My.Resources.Resources.icons8_star_48
+            ratingPictureBox.SizeMode = PictureBoxSizeMode.Zoom
+            ratingPictureBox.Size = New Size(30, 30)  ' Set the size of the PictureBox
+            ratingPictureBox.Margin = New Padding(0, 0, 0, 0) ' Set margin to 0 to ensure the image is not pushed away
+            ratingPanel.Controls.Add(ratingPictureBox)
+
             Dim ratingLabel As New Label()
-            ratingLabel.Text = entry.Rating
-            eBooksTablePanel.Controls.Add(ratingLabel, 4, rowIndex)
-            ratingLabel.TextAlign = ContentAlignment.MiddleCenter ' Center the label
-            ratingLabel.Anchor = AnchorStyles.None ' Set Anchor to None
+            ratingLabel.Text = entry.Rating & "/5"
+            ratingLabel.AutoSize = True
+            ratingLabel.Padding = New Padding(30, (ratingPanel.Height - ratingLabel.Height) / 2, 0, 0) ' Vertically center the text
+            ratingPanel.Controls.Add(ratingLabel)
 
             'Dim ratingLabel As New Label()
             'eBooksTablePanel.Controls.Add(ratingLabel, 4, rowIndex)
@@ -419,5 +432,9 @@ Public Class lib_ebooks
         }
         HomePageDashboard.Show()
         Me.Close()
+    End Sub
+
+    Private Sub childformPanel_Paint(sender As Object, e As PaintEventArgs) Handles childformPanel.Paint
+
     End Sub
 End Class

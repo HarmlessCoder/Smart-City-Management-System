@@ -338,7 +338,7 @@ Partial Class lib_ebooks
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1226, 68)
         Me.overdueBooksTitleTable.TabIndex = 48
         '
@@ -346,7 +346,7 @@ Partial Class lib_ebooks
         '
         Me.Panel8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(1149, 2)
+        Me.Panel8.Location = New System.Drawing.Point(1149, 3)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(76, 78)
