@@ -1,4 +1,7 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Web.UI.WebControls
+Imports MySql.Data.MySqlClient
+Imports System.IO
+Imports System.Web
 
 Public Class Ed_Coursera_Handler
     Public Class Course
@@ -189,6 +192,7 @@ Public Class Ed_Coursera_Handler
         While reader.Read()
             Dim content As New CourseContent()
 
+            content.CourseID = courseId
             content.ContentName = If(reader("Content_Name") IsNot DBNull.Value, reader("Content_Name").ToString(), "")
             content.ContentType = If(reader("Content_Type") IsNot DBNull.Value, reader("Content_Type").ToString(), "")
             content.VideoLink = If(reader("Video_Link") IsNot DBNull.Value, reader("Video_Link").ToString(), "")
@@ -277,8 +281,189 @@ Public Class Ed_Coursera_Handler
         Return courses.ToArray()
     End Function
 
+    Public Function GetStudentCourseCompletionRecords(ByVal studentID As Integer, ByVal courseID As Integer) As Integer()
+        Dim seqs As New List(Of Integer)()
+
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "SELECT Seq_No FROM ec_studcoursecompletion WHERE Student_ID = @studentID AND Course_ID = @courseID"
+
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@studentId", studentID)
+        cmd.Parameters.AddWithValue("@courseID", courseID)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
 
+        While reader.Read()
+            seqs.Add(Convert.ToInt32(reader("Seq_No")))
+        End While
 
+
+        Return seqs.ToArray()
+    End Function
+
+
+    Public Function CompleteResource(ByVal studentID As Integer, ByVal courseID As Integer, ByVal SeqNo As Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "INSERT INTO ec_studcoursecompletion VALUES (@CourseID, @StudentID, @SeqID)"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@StudentID", studentID)
+        cmd.Parameters.AddWithValue("@CourseID", courseID)
+        cmd.Parameters.AddWithValue("@SeqID", SeqNo)
+        cmd.ExecuteNonQuery()
+        Con.Close()
+    End Function
+
+    Public Function GetStudentCourseCompletionCounts(ByVal studentID As Integer) As Dictionary(Of Integer, Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+
+        ' Dictionary to store course IDs and their respective completion counts
+        Dim completionCounts As New Dictionary(Of Integer, Integer)()
+
+        ' SQL query to get course IDs and their completion counts for a particular student
+        Dim query As String = "SELECT ec_studentcourse.Course_ID, COUNT(ec_studcoursecompletion.Student_ID) AS TotalEntries " &
+                          "FROM ec_studentcourse " &
+                          "LEFT JOIN ec_studcoursecompletion ON ec_studcoursecompletion.Course_ID = ec_studentcourse.Course_ID " &
+                          "AND ec_studcoursecompletion.Student_ID = ec_studentcourse.Student_ID " &
+                          "WHERE ec_studentcourse.Student_ID = @studentID " &
+                          "GROUP BY ec_studentcourse.Course_ID " &
+                          "ORDER BY ec_studentcourse.Course_ID"
+
+        Using cmd As New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@studentID", studentID)
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                While reader.Read()
+                    Dim courseID As Integer = Convert.ToInt32(reader("Course_ID"))
+                    Dim completionCount As Integer = Convert.ToInt32(reader("TotalEntries"))
+                    completionCounts.Add(courseID, completionCount)
+                End While
+            End Using
+        End Using
+
+        Con.Close()
+
+        Return completionCounts
+    End Function
+
+
+    Public Function GetStudentCourseContentCounts(ByVal studentID As Integer) As Dictionary(Of Integer, Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+
+        ' Dictionary to store course IDs and their respective completion counts
+        Dim completionCounts As New Dictionary(Of Integer, Integer)()
+
+        ' SQL query to get course IDs and their completion counts for a particular student
+        Dim query As String = "SELECT ec_studentcourse.Course_ID, COUNT(ec_coursecontent.Seq_no) AS TotalEntries " &
+                          "FROM ec_studentcourse " &
+                          "LEFT JOIN ec_coursecontent ON ec_coursecontent.Course_ID = ec_studentcourse.Course_ID " &
+                          "GROUP BY ec_studentcourse.Course_ID " &
+                          "ORDER BY ec_studentcourse.Course_ID"
+
+        Using cmd As New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@studentID", studentID)
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                While reader.Read()
+                    Dim courseID As Integer = Convert.ToInt32(reader("Course_ID"))
+                    Dim completionCount As Integer = Convert.ToInt32(reader("TotalEntries"))
+                    completionCounts.Add(courseID, completionCount)
+                End While
+            End Using
+        End Using
+
+        Con.Close()
+
+        Return completionCounts
+    End Function
+
+    Public Function CompleteCourse(ByVal studentID As Integer, ByVal courseID As Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "UPDATE ec_studentcourse SET Completion_Status = 'Completed' WHERE Student_ID = @studentID AND Course_ID = @courseID"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@StudentID", studentID)
+        cmd.Parameters.AddWithValue("@CourseID", courseID)
+        cmd.ExecuteNonQuery()
+        Con.Close()
+    End Function
+
+    Public Function RateCourse(ByVal studentID As Integer, ByVal courseID As Integer, ByVal rating As Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "UPDATE ec_studentcourse SET Rating = @Rate WHERE Student_ID = @studentID AND Course_ID = @courseID"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@StudentID", studentID)
+        cmd.Parameters.AddWithValue("@CourseID", courseID)
+        cmd.Parameters.AddWithValue("@Rate", rating)
+        cmd.ExecuteNonQuery()
+        Con.Close()
+        GenerateCertificateAndSave(studentID, "E-Course", DateTime.Now.Year, courseID)
+    End Function
+
+    Public Sub GenerateCertificateAndSave(studentID As Integer, CertType As String, year As Integer, courseID As Integer)
+        ' Generate the content for the PDF
+        Dim content As String = $"Student ID: {studentID}{Environment.NewLine}" &
+                                $"Certificate Type: {CertType}{Environment.NewLine}" &
+                                $"Year: {year}{Environment.NewLine}" &
+                                $"CourseID: {courseID}{Environment.NewLine}"
+
+        Dim filePath As String = "file.pdf"
+
+        ' Write the text to the PDF file
+        File.WriteAllText(filePath, content)
+
+        Dim pdfBytes As Byte() = File.ReadAllBytes(filePath)
+
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "INSERT INTO ed_certificates (Certificate, Student_ID, Type, Year, Course_ID) VALUES (@pdf, @studentID, @Type, @year, @courseID)"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@studentID", studentID)
+        cmd.Parameters.AddWithValue("@courseID", courseID)
+        cmd.Parameters.AddWithValue("@pdf", pdfBytes)
+        cmd.Parameters.AddWithValue("@year", year)
+        cmd.Parameters.AddWithValue("@Type", "E-Course")
+        cmd.ExecuteNonQuery()
+        Con.Close()
+
+
+    End Sub
+
+    Public Function GetCertificates(ByVal studentID As Integer) As List(Of Byte())
+        Dim certificates As New List(Of Byte())()
+
+        ' Get the database connection
+        Dim Con = Globals.GetDBConnection()
+
+        ' Open the database connection
+        Con.Open()
+
+        ' SQL query to select certificates from the database
+        Dim query As String = "SELECT Certificate FROM ed_certificates where Student_ID = @studentID"
+
+        ' Create a MySqlCommand object
+        Using cmd As New MySqlCommand(query, Con)
+            cmd.Parameters.AddWithValue("@studentID", studentID)
+            ' Execute the SQL command
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                ' Iterate through the results
+                While reader.Read()
+                    ' Extract the certificate bytes from the reader
+                    Dim certificateBytes As Byte() = DirectCast(reader("Certificate"), Byte())
+
+                    ' Add the certificate bytes to the list
+                    certificates.Add(certificateBytes)
+                End While
+            End Using
+        End Using
+
+        ' Close the database connection
+        Con.Close()
+
+        ' Return the list of certificate bytes
+        Return certificates
+    End Function
 
 End Class
