@@ -29,8 +29,17 @@ Public Class Ed_AddECourse
         Dim summary As String = Me.summary
 
 
-        handler.AddCourse()
+        handler.AddCourse(affiliation, courseName, category, teacherName, teacherID, summary, introVidLink, "Pending", fees)
 
+
+        'Empty all textboxes'
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox5.Text = ""
+        TextBox7.Text = ""
+        Me.summary = ""
+
+        MessageBox.Show("Successfully Added a Course!")
 
 
 

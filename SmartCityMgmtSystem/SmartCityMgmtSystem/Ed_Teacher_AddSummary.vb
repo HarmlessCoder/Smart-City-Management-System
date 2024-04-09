@@ -44,4 +44,8 @@ Public Class Ed_Teacher_AddSummary
         summary = RichTextBox1.Rtf
         Me.Close()
     End Sub
+
+    Private Sub Ed_Teacher_AddSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RichTextBox1.Rtf = summary
+    End Sub
 End Class

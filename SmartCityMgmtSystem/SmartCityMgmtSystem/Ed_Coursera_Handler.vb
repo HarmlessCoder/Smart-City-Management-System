@@ -100,7 +100,7 @@ Public Class Ed_Coursera_Handler
 
     End Function
 
-    Public Function AddCourse(ByVal affiliation As Integer, ByVal name As String, ByVal category As String, ByVal teacherName As String, ByVal teacherID As Integer, ByVal syllabus As String, ByVal introVideoLink As String, ByVal apprStatus As String, ByVal fees As Integer, ByVal rating As Double, ByVal ratingCount As Integer)
+    Public Function AddCourse(ByVal affiliation As Integer, ByVal name As String, ByVal category As String, ByVal teacherName As String, ByVal teacherID As Integer, ByVal syllabus As String, ByVal introVideoLink As String, ByVal apprStatus As String, ByVal fees As Integer)
         Dim Con = Globals.GetDBConnection()
         Con.Open()
         Dim query As String = "INSERT INTO ec_course (Course_ID,Affiliation, Name, Category, Teacher_Name, Teacher_ID, SYLLABUS, Intro_Video_link, Appr_Status, Fees, Rating, Rating_Count) VALUES (@courseid, @affiliation, @name, @category, @teacherName, @teacherID, @syllabus, @introVideoLink, @apprStatus, @fees, @rating, @ratingCount)"
@@ -114,8 +114,11 @@ Public Class Ed_Coursera_Handler
         cmd.Parameters.AddWithValue("@introVideoLink", introVideoLink)
         cmd.Parameters.AddWithValue("@apprStatus", apprStatus)
         cmd.Parameters.AddWithValue("@fees", fees)
-        cmd.Parameters.AddWithValue("@rating", rating)
-        cmd.Parameters.AddWithValue("@ratingCount", ratingCount)
+        'set null value for rating and ratingcount'
+
+        cmd.Parameters.AddWithValue("@rating", 0)
+
+        cmd.Parameters.AddWithValue("@ratingCount", 0)
 
         'Set CourseID to the last inserted ID +1'
         Dim query2 As String = "SELECT MAX(Course_ID) FROM ec_course"
@@ -129,6 +132,25 @@ Public Class Ed_Coursera_Handler
 
         cmd.Parameters.AddWithValue("@courseid", courseID)
 
+
+        cmd.ExecuteNonQuery()
+        Con.Close()
+    End Function
+
+    Public Function UpdateCourse(ByVal courseID As Integer, ByVal name As String, ByVal category As String, ByVal syllabus As String, ByVal introVideoLink As String, ByVal fees As Integer)
+        Dim Con = Globals.GetDBConnection()
+        Con.Open()
+        Dim query As String = "UPDATE ec_course SET  Name = @name, Category = @category,  SYLLABUS = @syllabus, Intro_Video_link = @introVideoLink,  Fees = @fees WHERE Course_ID = @courseID"
+        Dim cmd As New MySqlCommand(query, Con)
+        cmd.Parameters.AddWithValue("@courseID", courseID)
+
+        cmd.Parameters.AddWithValue("@name", name)
+        cmd.Parameters.AddWithValue("@category", category)
+
+        cmd.Parameters.AddWithValue("@syllabus", syllabus)
+        cmd.Parameters.AddWithValue("@introVideoLink", introVideoLink)
+
+        cmd.Parameters.AddWithValue("@fees", fees)
 
         cmd.ExecuteNonQuery()
         Con.Close()
