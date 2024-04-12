@@ -28,4 +28,8 @@
         lib_adminReq.Show()
         Me.Close()
     End Sub
+
+    Private Sub childformPanel_Paint(sender As Object, e As PaintEventArgs) Handles childformPanel.Paint
+
+    End Sub
 End Class
