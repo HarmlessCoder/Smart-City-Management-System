@@ -389,17 +389,18 @@ Public Class lib_adminMT
 
 
                                     fineUpdateQuery = "UPDATE lib_fine SET Fine = '" & fine & "' WHERE ID = '" & StudentID_tb.Text & "'"
-                                    Using newNewConnection As New MySqlConnection(Con)
-                                        Using newNewCommand As New MySqlCommand(fineUpdateQuery, newNewConnection)
-                                            Try
-                                                newNewConnection.Open()
-                                                newNewCommand.ExecuteNonQuery()
-                                                'MessageBox.Show("Fine updated to " + fine.ToString)
-                                            Catch ex As Exception
-                                                MessageBox.Show("Error: " & ex.Message)
-                                            End Try
-                                        End Using
+                                    'Using newNewConnection As New MySqlConnection(Con)
+                                    Using newNewCommand As New MySqlCommand(fineUpdateQuery, Con)
+                                        Try
+                                            Con.Open()
+                                            newNewCommand.ExecuteNonQuery()
+                                            'MessageBox.Show("Fine updated to " + fine.ToString)
+                                            Con.Close()
+                                        Catch ex As Exception
+                                            MessageBox.Show("Error: " & ex.Message)
+                                        End Try
                                     End Using
+                                    'End Using
                                     'Dim addTransactionToAdmin = "INSERT INTO transactions (transaction) VALUES (' " & StudentID_tb.Text & " returned the book with book ID " & addBalance_tb.Text & ", and incurred a fine of " & fine.ToString & "')"
                                     'Using newNewConnection As New MySqlConnection(connectionString)
                                     '    Using newNewCommand As New MySqlCommand(addTransactionToAdmin, newNewConnection)
