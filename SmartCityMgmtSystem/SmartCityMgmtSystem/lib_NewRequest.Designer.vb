@@ -236,10 +236,11 @@ Partial Class lib_NewRequest
         '
         'TextBox3
         '
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox3.Font = New System.Drawing.Font("Agency FB", 16.0!)
         Me.TextBox3.Location = New System.Drawing.Point(4, 10)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(389, 39)
+        Me.TextBox3.Size = New System.Drawing.Size(386, 32)
         Me.TextBox3.TabIndex = 62
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -254,10 +255,11 @@ Partial Class lib_NewRequest
         '
         'TextBox2
         '
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Font = New System.Drawing.Font("Agency FB", 16.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(-1, 10)
+        Me.TextBox2.Location = New System.Drawing.Point(3, 10)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(394, 39)
+        Me.TextBox2.Size = New System.Drawing.Size(386, 32)
         Me.TextBox2.TabIndex = 61
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -272,10 +274,11 @@ Partial Class lib_NewRequest
         '
         'TextBox1
         '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Agency FB", 16.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(0, 10)
+        Me.TextBox1.Location = New System.Drawing.Point(1, 10)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(394, 39)
+        Me.TextBox1.Size = New System.Drawing.Size(389, 32)
         Me.TextBox1.TabIndex = 60
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
