@@ -721,6 +721,12 @@
     <Compile Include="Healthcare_Pharmacy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="lib_adminEBM.Designer.vb">
+      <DependentUpon>lib_adminEBM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lib_adminEBM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lib_NewRequest.Designer.vb">
       <DependentUpon>lib_NewRequest.vb</DependentUpon>
     </Compile>
@@ -1584,6 +1590,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Healthcare_Pharmacy.resx">
       <DependentUpon>Healthcare_Pharmacy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib_adminEBM.resx">
+      <DependentUpon>lib_adminEBM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lib_borrowed.resx">
       <DependentUpon>lib_borrowed.vb</DependentUpon>

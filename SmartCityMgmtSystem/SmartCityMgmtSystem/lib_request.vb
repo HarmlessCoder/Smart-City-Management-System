@@ -131,12 +131,6 @@ Public Class lib_request
                         statusLabel.ForeColor = Color.Black
                 End Select
 
-                If entry.Status = "Available" Then
-
-                Else
-                    statusLabel.ForeColor = Color.Red
-                End If
-
                 Dim authorLabel As New Label()
                 authorLabel.Text = entry.Author
                 authorLabel.Width = 200 ' Adjust width as needed
