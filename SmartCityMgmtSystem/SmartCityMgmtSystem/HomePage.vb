@@ -54,6 +54,9 @@ Public Class HomePage
             .uid = uid,
             .u_name = u_name
             }
+            library.Show()
+            Me.ParentForm.Close()
+            Me.Close()
         End If
 
 
