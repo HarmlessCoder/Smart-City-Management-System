@@ -84,10 +84,11 @@ Public Class lib_adminMT
                         'MessageBox.Show("student with given id does not exist.")
                         'Return
                     End If
+                    Con.CLose()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'End Using
 
@@ -112,10 +113,11 @@ Public Class lib_adminMT
                         MessageBox.Show("Book with given ID does not exist.")
                         Return
                     End If
+                    Con.CLose()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'End Using
             'If isStudent = True Then
@@ -157,10 +159,11 @@ Public Class lib_adminMT
                         MessageBox.Show("Book with given ID is already issued.")
                         Return
                     End If
+                    Con.CLose()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'End Using
 
@@ -181,10 +184,11 @@ Public Class lib_adminMT
                     If count >= 7 Then
                         quotaExceed = 1
                     End If
+                    Con.CLose()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'End Using
             If quotaExceed = 1 Then
@@ -202,10 +206,11 @@ Public Class lib_adminMT
                         Con.Open()
                         newCommand.ExecuteNonQuery()
                         MessageBox.Show("Your book with BookID: " + BookID_tb2.Text.ToString + " has been issued to " + StudentID_tb.Text + "till: " + futureDate.Date.ToString)
+                        Con.Close()
                     Catch ex As Exception
                         MessageBox.Show("Error: " & ex.Message)
                     End Try
-                    Con.Close()
+                    'Con.Close()
                 End Using
                 'End Using
                 'Using newConnection As New MySqlConnection(connectionString)
@@ -213,10 +218,11 @@ Public Class lib_adminMT
                     Try
                         Con.Open()
                         newCommand.ExecuteNonQuery()
+                        Con.Close()
                     Catch ex As Exception
                         MessageBox.Show("Error: " & ex.Message)
                     End Try
-                    Con.Close()
+                    'Con.Close()
                 End Using
                 'End Using
                 'Dim addTransactionToAdmin = "INSERT INTO transactions (transaction) VALUES (' " & StudentID_tb.Text & " has issued the book with book ID " & BookID_tb2.Text & ", till " & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "')"
@@ -279,10 +285,11 @@ Public Class lib_adminMT
                         'MessageBox.Show("student with given id does not exist.")
                         'Return
                     End If
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'userQuery = "SELECT * FROM faculty where BINARY ID='" & StudentID_tb.Text & "'"
             'Using connection As New MySqlConnection(connectionString)
@@ -326,10 +333,11 @@ Public Class lib_adminMT
                         MessageBox.Show("This book is not issued to the user.")
                         Return
                     End If
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'End Using
 
@@ -360,7 +368,7 @@ Public Class lib_adminMT
                                     'Using newNewConnection As New MySqlConnection(connectionString)
                                     Using newNewCommand As New MySqlCommand(fineUpdateQuery, Con)
                                         Try
-                                            Con.Open()
+                                            'Con.Open()
                                             Dim newNewReader As MySqlDataReader = newNewCommand.ExecuteReader
                                             While newNewReader.Read()
                                                 Dim value As Integer
@@ -370,7 +378,7 @@ Public Class lib_adminMT
                                         Catch ex As Exception
                                             MessageBox.Show("Error: " & ex.Message)
                                         End Try
-                                        Con.CLose()
+                                        'Con.CLose()
                                     End Using
                                     'End Using
                                     'If isStudent Then
@@ -392,10 +400,10 @@ Public Class lib_adminMT
                                     'Using newNewConnection As New MySqlConnection(Con)
                                     Using newNewCommand As New MySqlCommand(fineUpdateQuery, Con)
                                         Try
-                                            Con.Open()
+                                            'Con.Open()
                                             newNewCommand.ExecuteNonQuery()
                                             'MessageBox.Show("Fine updated to " + fine.ToString)
-                                            Con.Close()
+                                            'Con.Close()
                                         Catch ex As Exception
                                             MessageBox.Show("Error: " & ex.Message)
                                         End Try
@@ -426,11 +434,12 @@ Public Class lib_adminMT
                                     '    End Using
                                     'End Using
                                 End If
+                                Con.Close()
                                 MessageBox.Show("Your book with BookID: " + BookID_tb2.Text.ToString + " has been returned to the library.")
                             Catch ex As Exception
                                 MessageBox.Show("Error: " & ex.Message)
                             End Try
-                            Con.Close()
+                            'Con.Close()
                         End Using
                         'End Using
                         'Using newConnection As New MySqlConnection(connectionString)
@@ -438,10 +447,11 @@ Public Class lib_adminMT
                             Try
                                 Con.Open()
                                 newCommand.ExecuteNonQuery()
+                                Con.CLose()
                             Catch ex As Exception
                                 MessageBox.Show("Error: " & ex.Message)
                             End Try
-                            Con.Close()
+                            'Con.Close()
                         End Using
                         'End Using
                     End While
@@ -491,10 +501,11 @@ Public Class lib_adminMT
                         MessageBox.Show("This book is not issued to the user.")
                         Return
                     End If
+                    Con.CLose()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'End Using
 
@@ -517,23 +528,23 @@ Public Class lib_adminMT
                             'Using newConnection As New MySqlConnection(connectionString)
                             Using newCommand As New MySqlCommand(updateQueryInBooks, Con)
                                 Try
-                                    Con.Open()
+                                    'Con.Open()
                                     newCommand.ExecuteNonQuery()
                                 Catch ex As Exception
                                     MessageBox.Show("Error: " & ex.Message)
                                 End Try
-                                Con.Close()
+                                'Con.Close()
                             End Using
                             'End Using
                             'Using newConnection As New MySqlConnection(connectionString)
                             Using newCommand As New MySqlCommand(updateQueryInBorrowed_Books, Con)
                                 Try
-                                    Con.Open()
+                                    'Con.Open()
                                     newCommand.ExecuteNonQuery()
                                 Catch ex As Exception
                                     MessageBox.Show("Error: " & ex.Message)
                                 End Try
-                                Con.Close()
+                                'Con.Close()
                             End Using
                             'End Using
                             'Dim addTransactionToAdmin = "INSERT INTO transactions (transaction) VALUES (' " & StudentID_tb.Text & " renewed the book with book ID " & BookID_tb2.Text & " till " & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "')"
@@ -551,10 +562,11 @@ Public Class lib_adminMT
 
                         End If
                     End While
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+                'Con.Close()
             End Using
             'End Using
             ' Populate the table with the borrowedBooks
