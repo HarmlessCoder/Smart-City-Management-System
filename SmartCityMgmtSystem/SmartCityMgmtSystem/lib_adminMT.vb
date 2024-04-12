@@ -370,6 +370,7 @@ Public Class lib_adminMT
                                         Catch ex As Exception
                                             MessageBox.Show("Error: " & ex.Message)
                                         End Try
+                                        Con.CLose()
                                     End Using
                                     'End Using
                                     'If isStudent Then
@@ -492,6 +493,7 @@ Public Class lib_adminMT
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
+                Con.Close()
             End Using
             'End Using
 
@@ -519,6 +521,7 @@ Public Class lib_adminMT
                                 Catch ex As Exception
                                     MessageBox.Show("Error: " & ex.Message)
                                 End Try
+                                Con.Close()
                             End Using
                             'End Using
                             'Using newConnection As New MySqlConnection(connectionString)
@@ -529,6 +532,7 @@ Public Class lib_adminMT
                                 Catch ex As Exception
                                     MessageBox.Show("Error: " & ex.Message)
                                 End Try
+                                Con.Close()
                             End Using
                             'End Using
                             'Dim addTransactionToAdmin = "INSERT INTO transactions (transaction) VALUES (' " & StudentID_tb.Text & " renewed the book with book ID " & BookID_tb2.Text & " till " & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "')"
@@ -549,6 +553,7 @@ Public Class lib_adminMT
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
+                Con.Close()
             End Using
             'End Using
             ' Populate the table with the borrowedBooks
