@@ -47,10 +47,7 @@ Public Class HomePage
         '    .uid = uid,
         '    .u_name = u_name
         '}
-        Dim library = New lib_adminDash() With {
-            .uid = uid,
-            .u_name = u_name
-        }
+        Dim library = New lib_adminDash()
         library.Show()
         Me.ParentForm.Close()
         Me.Close()
