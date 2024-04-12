@@ -416,4 +416,8 @@ Public Class lib_search
     Private Sub searchBooksTablePanel_Paint(sender As Object, e As PaintEventArgs) Handles searchBooksTablePanel.Paint
 
     End Sub
+
+    Private Sub childformPanel_Paint(sender As Object, e As PaintEventArgs) Handles childformPanel.Paint
+
+    End Sub
 End Class
