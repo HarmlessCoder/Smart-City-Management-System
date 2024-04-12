@@ -462,4 +462,106 @@ Public Class lib_adminMT
             Fine_tb.Text = ""
         End If
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        If StudentID_tb.Text = "" Or BookID_tb2.Text = "" Then
+            MsgBox("Missing Information", 0 + 0, "Error")
+        Else
+            '
+            '
+            ' Implement the renew function.....
+            'Fine_tb.Text = "20" ' just for checking the working of pay button.....
+            '
+
+            'Check whether the book is issued to the user
+            Dim userQuery = "SELECT * FROM lib_borrowed_books WHERE (book_ID = '" & BookID_tb2.Text & "' AND issuedTo = '" & StudentID_tb.Text & "')"
+            'Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(userQuery, Con)
+                Try
+                    Con.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader()
+                    Dim count As Integer
+                    count = 0
+                    While reader.Read
+                        count = count + 1
+                    End While
+                    If count = 0 Then
+                        MessageBox.Show("This book is not issued to the user.")
+                        Return
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+            End Using
+            'End Using
+
+            Dim query = "SELECT * FROM lib_borrowed_books WHERE (book_ID = '" & BookID_tb2.Text & "')"
+            'Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(query, Con)
+                Try
+                    Con.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader()
+                    Dim currentDate As DateTime = DateTimePicker5.Value
+                    Dim futureDate As DateTime = DateAdd("d", 14, currentDate)
+                    While reader.Read()
+                        If reader("dueDate") < currentDate Then
+                            MessageBox.Show("Book can't be renewed as it is past it's due date. Please pay fine and re-issue.")
+                            Return
+                        Else
+                            Dim updateQueryInBooks = "UPDATE lib_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_ID = '" & BookID_tb2.Text & "'"
+                            Dim updateQueryInBorrowed_Books = "UPDATE lib_borrowed_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_ID = '" & BookID_tb2.Text & "'"
+
+                            'Using newConnection As New MySqlConnection(connectionString)
+                            Using newCommand As New MySqlCommand(updateQueryInBooks, Con)
+                                Try
+                                    Con.Open()
+                                    newCommand.ExecuteNonQuery()
+                                Catch ex As Exception
+                                    MessageBox.Show("Error: " & ex.Message)
+                                End Try
+                            End Using
+                            'End Using
+                            'Using newConnection As New MySqlConnection(connectionString)
+                            Using newCommand As New MySqlCommand(updateQueryInBorrowed_Books, Con)
+                                Try
+                                    Con.Open()
+                                    newCommand.ExecuteNonQuery()
+                                Catch ex As Exception
+                                    MessageBox.Show("Error: " & ex.Message)
+                                End Try
+                            End Using
+                            'End Using
+                            'Dim addTransactionToAdmin = "INSERT INTO transactions (transaction) VALUES (' " & StudentID_tb.Text & " renewed the book with book ID " & BookID_tb2.Text & " till " & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "')"
+                            'Using newConnection As New MySqlConnection(connectionString)
+                            '    Using newCommand As New MySqlCommand(addTransactionToAdmin, newConnection)
+                            '        Try
+                            '            newConnection.Open()
+                            '            newCommand.ExecuteNonQuery()
+                            '        Catch ex As Exception
+                            '            MessageBox.Show("Error: " & ex.Message)
+                            '        End Try
+                            '    End Using
+                            'End Using
+                            MessageBox.Show("You have successfully renewed the book with book ID " + BookID_tb2.Text.ToString + " till " & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss"))
+
+                        End If
+                    End While
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+            End Using
+            'End Using
+            ' Populate the table with the borrowedBooks
+            'PopulateTable()
+
+
+            ' After renewing the book, clear the inputs and show the msg box that it is Renewed....
+            MsgBox("Book Renewed Successfully")
+            BookID_tb2.Text = ""
+            addBalance_tb.Text = ""
+            StudentID_tb.Text = ""
+            Fine_tb.Text = ""
+
+        End If
+    End Sub
 End Class
