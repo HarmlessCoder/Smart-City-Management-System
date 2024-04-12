@@ -38,7 +38,7 @@ Partial Class lib_admin_eBooks
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.overdueBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.requestBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -70,7 +70,7 @@ Partial Class lib_admin_eBooks
         Me.childformPanel.Controls.Add(Me.Label11)
         Me.childformPanel.Controls.Add(Me.searchBar)
         Me.childformPanel.Controls.Add(Me.overdueBooksTitleTable)
-        Me.childformPanel.Controls.Add(Me.overdueBooksTablePanel)
+        Me.childformPanel.Controls.Add(Me.requestBooksTablePanel)
         Me.childformPanel.Font = New System.Drawing.Font("Trebuchet MS", 9.762712!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.childformPanel.Location = New System.Drawing.Point(279, 46)
         Me.childformPanel.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -183,7 +183,7 @@ Partial Class lib_admin_eBooks
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1124, 68)
         Me.overdueBooksTitleTable.TabIndex = 53
         '
@@ -192,7 +192,7 @@ Partial Class lib_admin_eBooks
         Me.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Location = New System.Drawing.Point(897, 7)
+        Me.Panel3.Location = New System.Drawing.Point(897, 8)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(226, 73)
@@ -215,7 +215,7 @@ Partial Class lib_admin_eBooks
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Location = New System.Drawing.Point(561, 7)
+        Me.Panel4.Location = New System.Drawing.Point(561, 8)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(335, 73)
@@ -238,7 +238,7 @@ Partial Class lib_admin_eBooks
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Location = New System.Drawing.Point(225, 7)
+        Me.Panel5.Location = New System.Drawing.Point(225, 8)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(335, 73)
@@ -261,7 +261,7 @@ Partial Class lib_admin_eBooks
         Me.Panel10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel10.Controls.Add(Me.Label6)
-        Me.Panel10.Location = New System.Drawing.Point(1, 7)
+        Me.Panel10.Location = New System.Drawing.Point(1, 8)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(223, 73)
@@ -279,25 +279,25 @@ Partial Class lib_admin_eBooks
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Book ID"
         '
-        'overdueBooksTablePanel
+        'requestBooksTablePanel
         '
-        Me.overdueBooksTablePanel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.overdueBooksTablePanel.AutoScroll = True
-        Me.overdueBooksTablePanel.BackColor = System.Drawing.Color.Transparent
-        Me.overdueBooksTablePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.overdueBooksTablePanel.ColumnCount = 4
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.overdueBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.overdueBooksTablePanel.Location = New System.Drawing.Point(76, 240)
-        Me.overdueBooksTablePanel.Margin = New System.Windows.Forms.Padding(0)
-        Me.overdueBooksTablePanel.Name = "overdueBooksTablePanel"
-        Me.overdueBooksTablePanel.RowCount = 1
-        Me.overdueBooksTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.overdueBooksTablePanel.Size = New System.Drawing.Size(1124, 479)
-        Me.overdueBooksTablePanel.TabIndex = 52
+        Me.requestBooksTablePanel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.requestBooksTablePanel.AutoScroll = True
+        Me.requestBooksTablePanel.BackColor = System.Drawing.Color.Transparent
+        Me.requestBooksTablePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.requestBooksTablePanel.ColumnCount = 4
+        Me.requestBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.requestBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.requestBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.requestBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.requestBooksTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.requestBooksTablePanel.Location = New System.Drawing.Point(76, 240)
+        Me.requestBooksTablePanel.Margin = New System.Windows.Forms.Padding(0)
+        Me.requestBooksTablePanel.Name = "requestBooksTablePanel"
+        Me.requestBooksTablePanel.RowCount = 1
+        Me.requestBooksTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.requestBooksTablePanel.Size = New System.Drawing.Size(1124, 479)
+        Me.requestBooksTablePanel.TabIndex = 52
         '
         'Label2
         '
@@ -541,7 +541,7 @@ Partial Class lib_admin_eBooks
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents overdueBooksTablePanel As TableLayoutPanel
+    Friend WithEvents requestBooksTablePanel As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
