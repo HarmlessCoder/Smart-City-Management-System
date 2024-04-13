@@ -254,7 +254,7 @@ Public Class lib_adminMT
     End Sub
 
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button888.Click
         If StudentID_tb.Text = "" Or BookID_tb2.Text = "" Then
             MsgBox("Missing Information", 0 + 0, "Error")
         Else

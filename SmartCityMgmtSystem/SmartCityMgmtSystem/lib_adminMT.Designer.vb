@@ -54,7 +54,7 @@ Partial Class lib_adminMT
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button888 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -518,7 +518,7 @@ Partial Class lib_adminMT
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.DateTimePicker4)
-        Me.Panel2.Controls.Add(Me.Button8)
+        Me.Panel2.Controls.Add(Me.Button888)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Location = New System.Drawing.Point(832, 311)
@@ -537,20 +537,20 @@ Partial Class lib_adminMT
         Me.DateTimePicker4.Size = New System.Drawing.Size(175, 39)
         Me.DateTimePicker4.TabIndex = 44
         '
-        'Button8
+        'Button888
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Agency FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(77, 170)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(155, 60)
-        Me.Button8.TabIndex = 42
-        Me.Button8.Text = "Apply"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.Button888.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button888.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button888.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button888.Font = New System.Drawing.Font("Agency FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button888.ForeColor = System.Drawing.Color.White
+        Me.Button888.Location = New System.Drawing.Point(77, 170)
+        Me.Button888.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button888.Name = "Button888"
+        Me.Button888.Size = New System.Drawing.Size(155, 60)
+        Me.Button888.TabIndex = 42
+        Me.Button888.Text = "Apply"
+        Me.Button888.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -898,7 +898,7 @@ Partial Class lib_adminMT
     Friend WithEvents addBalance_tb As TextBox
     Friend WithEvents StudentID_tb As TextBox
     Friend WithEvents DateTimePicker4 As DateTimePicker
-    Friend WithEvents Button8 As Button
+    Friend WithEvents Button888 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel3 As Panel
