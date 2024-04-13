@@ -43,9 +43,15 @@ Partial Class lib_adminMT
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.StudentID_tb = New System.Windows.Forms.TextBox()
-        Me.BookID_tb2 = New System.Windows.Forms.TextBox()
         Me.addBalance_tb = New System.Windows.Forms.TextBox()
+        Me.BookID_tb2 = New System.Windows.Forms.TextBox()
         Me.Fine_tb = New System.Windows.Forms.TextBox()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -79,6 +85,8 @@ Partial Class lib_adminMT
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel15.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        Me.Panel11.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -249,6 +257,7 @@ Partial Class lib_adminMT
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ManualTransactions_panel.BackColor = System.Drawing.Color.Transparent
         Me.ManualTransactions_panel.Controls.Add(Me.borrowedTableLayout)
+        Me.ManualTransactions_panel.Controls.Add(Me.Panel9)
         Me.ManualTransactions_panel.Controls.Add(Me.Panel2)
         Me.ManualTransactions_panel.Controls.Add(Me.Panel3)
         Me.ManualTransactions_panel.Controls.Add(Me.Panel7)
@@ -274,15 +283,16 @@ Partial Class lib_adminMT
         Me.borrowedTableLayout.Controls.Add(Me.Panel4, 1, 0)
         Me.borrowedTableLayout.Controls.Add(Me.Panel15, 0, 0)
         Me.borrowedTableLayout.Controls.Add(Me.StudentID_tb, 0, 1)
-        Me.borrowedTableLayout.Controls.Add(Me.BookID_tb2, 1, 1)
         Me.borrowedTableLayout.Controls.Add(Me.addBalance_tb, 2, 1)
+        Me.borrowedTableLayout.Controls.Add(Me.BookID_tb2, 1, 1)
         Me.borrowedTableLayout.Controls.Add(Me.Fine_tb, 3, 1)
         Me.borrowedTableLayout.Location = New System.Drawing.Point(36, 27)
         Me.borrowedTableLayout.Margin = New System.Windows.Forms.Padding(0)
         Me.borrowedTableLayout.Name = "borrowedTableLayout"
         Me.borrowedTableLayout.RowCount = 2
         Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
-        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36.0!))
+        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19.0!))
+        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.borrowedTableLayout.Size = New System.Drawing.Size(1112, 190)
         Me.borrowedTableLayout.TabIndex = 53
         '
@@ -394,17 +404,6 @@ Partial Class lib_adminMT
         Me.StudentID_tb.TabIndex = 31
         Me.StudentID_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BookID_tb2
-        '
-        Me.BookID_tb2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BookID_tb2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BookID_tb2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
-        Me.BookID_tb2.Location = New System.Drawing.Point(349, 102)
-        Me.BookID_tb2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BookID_tb2.Name = "BookID_tb2"
-        Me.BookID_tb2.Size = New System.Drawing.Size(133, 41)
-        Me.BookID_tb2.TabIndex = 37
-        '
         'addBalance_tb
         '
         Me.addBalance_tb.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -416,6 +415,17 @@ Partial Class lib_adminMT
         Me.addBalance_tb.Size = New System.Drawing.Size(180, 41)
         Me.addBalance_tb.TabIndex = 39
         '
+        'BookID_tb2
+        '
+        Me.BookID_tb2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BookID_tb2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BookID_tb2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.BookID_tb2.Location = New System.Drawing.Point(349, 102)
+        Me.BookID_tb2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BookID_tb2.Name = "BookID_tb2"
+        Me.BookID_tb2.Size = New System.Drawing.Size(133, 41)
+        Me.BookID_tb2.TabIndex = 37
+        '
         'Fine_tb
         '
         Me.Fine_tb.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -426,6 +436,83 @@ Partial Class lib_adminMT
         Me.Fine_tb.Name = "Fine_tb"
         Me.Fine_tb.Size = New System.Drawing.Size(180, 41)
         Me.Fine_tb.TabIndex = 41
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.Button12)
+        Me.Panel9.Controls.Add(Me.Button11)
+        Me.Panel9.Controls.Add(Me.Panel11)
+        Me.Panel9.Controls.Add(Me.TextBox2)
+        Me.Panel9.Location = New System.Drawing.Point(409, 292)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(365, 302)
+        Me.Panel9.TabIndex = 54
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Location = New System.Drawing.Point(203, 234)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(143, 53)
+        Me.Button12.TabIndex = 26
+        Me.Button12.Text = "Cancel"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.ForeColor = System.Drawing.Color.White
+        Me.Button11.Location = New System.Drawing.Point(22, 234)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(143, 53)
+        Me.Button11.TabIndex = 25
+        Me.Button11.Text = "Confirm"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Panel11.Controls.Add(Me.Label13)
+        Me.Panel11.Location = New System.Drawing.Point(0, 0)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(364, 75)
+        Me.Panel11.TabIndex = 11
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Agency FB", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
+        Me.Label13.Location = New System.Drawing.Point(132, 13)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(129, 51)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Pay Fine"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.Black
+        Me.TextBox2.Location = New System.Drawing.Point(62, 130)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(264, 38)
+        Me.TextBox2.TabIndex = 9
+        Me.TextBox2.Text = "Enter amount"
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel2
         '
@@ -772,6 +859,10 @@ Partial Class lib_adminMT
         Me.Panel4.PerformLayout()
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
@@ -805,7 +896,6 @@ Partial Class lib_adminMT
     Friend WithEvents Pay_button As Button
     Friend WithEvents Fine_tb As TextBox
     Friend WithEvents addBalance_tb As TextBox
-    Friend WithEvents BookID_tb2 As TextBox
     Friend WithEvents StudentID_tb As TextBox
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Button8 As Button
@@ -823,10 +913,17 @@ Partial Class lib_adminMT
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Button10 As Button
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents BookID_tb2 As TextBox
 End Class

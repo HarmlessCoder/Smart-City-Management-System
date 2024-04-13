@@ -42,6 +42,7 @@ Public Class lib_adminMT
 
     Private Sub lib_adminMT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
+        Panel9.Visible = False
         'Panel6.Visible = False
         'LoadBorrowedBooks()
         'PopulateTable()
@@ -783,5 +784,192 @@ Public Class lib_adminMT
             End If
         End If
         addBalance_tb.Text = ""
+    End Sub
+
+    Private Sub Pay_button_Click(sender As Object, e As EventArgs) Handles Pay_button.Click
+
+
+        If StudentID_tb.Text = "" Then
+            MsgBox("Missing Information", 0 + 0, "Error")
+        Else
+            Dim isStudent As Boolean = False
+            'Dim isFaculty As Boolean = False
+
+            ' Check whether user ID is valid
+            Dim userQuery = "SELECT * FROM lib_fine where uid='" & StudentID_tb.Text & "'"
+            'Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(userQuery, Con)
+                Try
+                    Con.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader()
+                    Dim count As Integer
+                    count = 0
+                    While reader.Read
+                        count = count + 1
+                    End While
+                    If count > 0 Then
+                        isStudent = True
+                        'MessageBox.Show("student with given id does not exist.")
+                        'Return
+                    End If
+                    Con.Close()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+            End Using
+
+            If isStudent = False Then
+                MessageBox.Show("User with given id does not exist.")
+                Return
+            End If
+
+            Panel2.Visible = False
+            Panel3.Visible = False
+            Panel7.Visible = False
+            Panel9.Visible = True
+
+        End If
+
+
+
+
+
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Dim userFine As String = TextBox2.Text
+        Dim integerValue As Integer
+
+        Dim successful As Boolean
+        successful = False
+
+        If Integer.TryParse(userFine, integerValue) AndAlso integerValue > 0 Then
+            ' Text entered is a valid positive integer
+            ' Store it in a variable or perform any other action
+            MessageBox.Show("The entered value is: " & integerValue.ToString())
+        Else
+            ' Text entered is not a valid positive integer
+            MessageBox.Show("Please enter a valid positive integer.")
+        End If
+
+        '' Create and show the input prompt form
+        'Dim inputPromptForm As New lib_fineForm()
+        'If inputPromptForm.ShowDialog() = DialogResult.OK Then
+        '    ' Retrieve the input value
+        '    If Integer.TryParse(inputPromptForm.InputValue, userFine) Then
+        '        ' Input value is valid
+        '    Else
+        '        ' Input value is not a valid integer
+        '        MessageBox.Show("Invalid input. Please enter a valid integer.")
+        '    End If
+        'End If
+
+        Dim searchQuery As String
+        'If isStudent = True Then
+        '    searchQuery = "SELECT * FROM students WHERE ID = '" & StudentID_tb.Text & "'"
+        'Else
+        '    searchQuery = "SELECT * FROM faculty WHERE ID = '" & StudentID_tb.Text & "'"
+        'End If
+        searchQuery = "SELECT * FROM lib_fine WHERE uid = '" & StudentID_tb.Text & "'"
+        'Using newConnection As New MySqlConnection(connectionString)
+        Using newCommand As New MySqlCommand(searchQuery, Con)
+            Try
+                Con.Open()
+                Dim newReader As MySqlDataReader = newCommand.ExecuteReader
+                Dim fine As Integer
+                Dim balance As Integer
+                While newReader.Read()
+                    fine = newReader("fine")
+                    balance = newReader("balance")
+                End While
+
+                ' Close the DataReader before executing UPDATE queries
+                newReader.Close()
+                If userFine <= 0 Then
+                    MessageBox.Show("Enter a positive integer!")
+                ElseIf userFine > fine Then
+                    MessageBox.Show("Don't pay more than the fine!.")
+                ElseIf userFine > balance Then
+                    MessageBox.Show("Insufficient Balance!.")
+                Else
+                    fine = fine - userFine
+                    balance = balance - userFine
+                    'fineCollected = fineCollected + iFine
+                    successful = True
+                End If
+
+                Dim fineUpdateQuery As String
+                Dim balanceUpdateQuery As String
+                'If isStudent = True Then
+                '    fineUpdateQuery = "UPDATE students SET Fine = '" & fine & "' WHERE ID = '" & StudentID_tb.Text & "'"
+                '    balanceUpdateQuery = "UPDATE students SET Balance = '" & balance & "' WHERE ID = '" & StudentID_tb.Text & "'"
+                'Else
+                '    fineUpdateQuery = "UPDATE faculty SET Fine = '" & fine & "' WHERE ID = '" & StudentID_tb.Text & "'"
+                '    balanceUpdateQuery = "UPDATE faculty SET Balance = '" & balance & "' WHERE ID = '" & StudentID_tb.Text & "'"
+                'End If
+
+                fineUpdateQuery = "UPDATE lib_fine SET fine = '" & fine & "' WHERE uid = '" & StudentID_tb.Text & "'"
+                balanceUpdateQuery = "UPDATE lib_fine SET balance = '" & balance & "' WHERE uid = '" & StudentID_tb.Text & "'"
+
+                'Dim addTransactionToAdmin = "INSERT INTO transactions (transaction) VALUES (' " & StudentID_tb.Text & " has paid a fine of Rs. " & iFine.ToString & "')"
+                'Dim updateFineCollected = "UPDATE admin SET fineCollected = '" & fineCollected & "' WHERE username = 'admin'"
+
+                ' Execute the UPDATE queries
+                Using fineUpdateCommand As New MySqlCommand(fineUpdateQuery, Con)
+                    fineUpdateCommand.ExecuteNonQuery()
+                End Using
+
+                Using balanceUpdateCommand As New MySqlCommand(balanceUpdateQuery, Con)
+                    balanceUpdateCommand.ExecuteNonQuery()
+                End Using
+
+                'Using addTransactionToAdminCommand As New MySqlCommand(addTransactionToAdmin, newConnection)
+                '    addTransactionToAdminCommand.ExecuteNonQuery()
+                'End Using
+
+                'Using updateFineCollectedCommand As New MySqlCommand(updateFineCollected, newConnection)
+                '    updateFineCollectedCommand.ExecuteNonQuery()
+                'End Using
+
+                Con.Close()
+
+
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using
+        'End Using
+        If successful Then
+            MessageBox.Show("Fine payment of Rs." + userFine.ToString + " successful!")
+        End If
+
+        ' After paying the fine, clear the inputs and show the msg box that it is Returned....
+        BookID_tb2.Text = ""
+        addBalance_tb.Text = ""
+        StudentID_tb.Text = ""
+        Fine_tb.Text = ""
+        Panel9.Visible = False
+        Panel2.Visible = True
+        Panel3.Visible = True
+        Panel7.Visible = True
+
+        Con.Close()
+
+
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Panel9.Visible = False
+        Panel2.Visible = True
+        Panel3.Visible = True
+        Panel7.Visible = True
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub TextBox2_Click(sender As Object, e As EventArgs) Handles TextBox2.Click
+        TextBox2.Text = ""
     End Sub
 End Class
