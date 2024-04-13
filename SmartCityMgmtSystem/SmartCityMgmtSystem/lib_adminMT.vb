@@ -582,4 +582,127 @@ Public Class lib_adminMT
 
         End If
     End Sub
+
+    Private Sub loadFineButton_Click(sender As Object, e As EventArgs) Handles loadFineButton.Click
+
+    End Sub
+
+    Private Sub addBalanceButton_Click(sender As Object, e As EventArgs) Handles addBalanceButton.Click
+        If StudentID_tb.Text = "" Or addBalance_tb.Text = "" Then
+            MsgBox("Missing Information", 0 + 0, "Error")
+        Else
+            Dim isStudent As Boolean = False
+            'Dim isFaculty As Boolean = False
+
+            ' Check whether user ID is valid
+            Dim userQuery = "SELECT * FROM lib_fine where uid='" & StudentID_tb.Text & "'"
+            'Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(userQuery, Con)
+                Try
+                    Con.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader()
+                    Dim count As Integer
+                    count = 0
+                    While reader.Read
+                        count = count + 1
+                    End While
+                    If count > 0 Then
+                        isStudent = True
+                        'MessageBox.Show("student with given id does not exist.")
+                        'Return
+                    End If
+                    Con.Close()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+            End Using
+            'End Using
+            'userQuery = "SELECT * FROM faculty where BINARY ID='" & StudentID_tb.Text & "'"
+            'Using connection As New MySqlConnection(connectionString)
+            '    Using command As New MySqlCommand(userQuery, connection)
+            '        Try
+            '            connection.Open()
+            '            Dim reader As MySqlDataReader = command.ExecuteReader()
+            '            Dim count As Integer
+            '            count = 0
+            '            While reader.Read
+            '                count = count + 1
+            '            End While
+            '            If count > 0 Then
+            '                isFaculty = True
+            '                'MessageBox.Show("student with given id does not exist.")
+            '                'Return
+            '            End If
+            '        Catch ex As Exception
+            '            MessageBox.Show("Error: " & ex.Message)
+            '        End Try
+            '    End Using
+            'End Using
+            If isStudent = False Then
+                MessageBox.Show("User with given id does not exist.")
+                Return
+            End If
+
+            Dim searchQuery As String
+            Dim successful As Boolean
+            successful = False
+            'If isStudent = True Then
+            '    searchQuery = "SELECT * FROM students WHERE ID = '" & StudentID_tb.Text & "'"
+            'Else
+            '    searchQuery = "SELECT * FROM faculty WHERE ID = '" & StudentID_tb.Text & "'"
+            'End If
+            searchQuery = "SELECT * FROM lib_fine WHERE uid = '" & StudentID_tb.Text & "'"
+            'Using newConnection As New MySqlConnection(connectionString)
+            Using newCommand As New MySqlCommand(searchQuery, Con)
+                Try
+                    Con.Open()
+                    Dim newReader As MySqlDataReader = newCommand.ExecuteReader
+                    Dim balance As Integer
+                    While newReader.Read()
+                        balance = newReader("balance")
+                    End While
+
+                    newReader.Close()
+
+                    If Convert.ToInt32(addBalance_tb.Text) <= 0 Then
+                        MessageBox.Show("Add positive amount.")
+                        Return
+                    ElseIf balance + Convert.ToInt32(addBalance_tb.Text) > 1000 Then
+                        MessageBox.Show("You can't have more than Rs. 1000 in your account.")
+                        Return
+                    Else
+                        balance = balance + Convert.ToInt32(addBalance_tb.Text)
+                        successful = True
+                    End If
+
+                    Dim balanceUpdateQuery As String
+                    'If isStudent = True Then
+                    '    balanceUpdateQuery = "UPDATE students SET Balance = '" & balance & "' WHERE ID = '" & StudentID_tb.Text & "'"
+                    'Else
+                    '    balanceUpdateQuery = "UPDATE faculty SET Balance = '" & balance & "' WHERE ID = '" & StudentID_tb.Text & "'"
+                    'End If
+
+                    balanceUpdateQuery = "UPDATE lib_fine SET balance = '" & balance & "' WHERE uid = '" & StudentID_tb.Text & "'"
+
+                    'Dim addTransactionToAdmin = "INSERT INTO transactions (transaction) VALUES (' " & StudentID_tb.Text & " has updated is balance to Rs. " & balance.ToString & "')"
+
+                    Using balanceUpdateCommand As New MySqlCommand(balanceUpdateQuery, Con)
+                        balanceUpdateCommand.ExecuteNonQuery()
+                    End Using
+
+                    'Using addTransactionToAdminCommand As New MySqlCommand(addTransactionToAdmin, newConnection)
+                    '    addTransactionToAdminCommand.ExecuteNonQuery()
+                    'End Using
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+                Con.Close()
+            End Using
+            'End Using
+            If successful Then
+                MessageBox.Show(addBalance_tb.Text + " successfully added to balance!")
+            End If
+        End If
+        addBalance_tb.Text = ""
+    End Sub
 End Class
