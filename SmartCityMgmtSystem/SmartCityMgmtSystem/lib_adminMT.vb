@@ -584,7 +584,86 @@ Public Class lib_adminMT
     End Sub
 
     Private Sub loadFineButton_Click(sender As Object, e As EventArgs) Handles loadFineButton.Click
+        If StudentID_tb.Text = "" Then
+            MsgBox("Missing Information", 0 + 0, "Error")
+        Else
+            Dim isStudent As Boolean = False
+            'Dim isFaculty As Boolean = False
 
+            ' Check whether user ID is valid
+            Dim userQuery = "SELECT * FROM lib_fine where uid='" & StudentID_tb.Text & "'"
+            'Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(userQuery, Con)
+                Try
+                    Con.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader()
+                    Dim count As Integer
+                    count = 0
+                    While reader.Read
+                        count = count + 1
+                    End While
+                    If count > 0 Then
+                        isStudent = True
+                        'MessageBox.Show("student with given id does not exist.")
+                        'Return
+                    End If
+                    Con.Close()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+            End Using
+            'End Using
+            'userQuery = "SELECT * FROM faculty where BINARY ID='" & StudentID_tb.Text & "'"
+            'Using connection As New MySqlConnection(connectionString)
+            '    Using command As New MySqlCommand(userQuery, connection)
+            '        Try
+            '            connection.Open()
+            '            Dim reader As MySqlDataReader = command.ExecuteReader()
+            '            Dim count As Integer
+            '            count = 0
+            '            While reader.Read
+            '                count = count + 1
+            '            End While
+            '            If count > 0 Then
+            '                isFaculty = True
+            '                'MessageBox.Show("student with given id does not exist.")
+            '                'Return
+            '            End If
+            '        Catch ex As Exception
+            '            MessageBox.Show("Error: " & ex.Message)
+            '        End Try
+            '    End Using
+            'End Using
+            If isStudent = False Then
+                MessageBox.Show("User with given id does not exist.")
+                Return
+            End If
+
+            Dim searchQuery As String
+            'If isStudent = True Then
+            '    searchQuery = "SELECT * FROM students WHERE ID = '" & StudentID_tb.Text & "'"
+            'Else
+            '    searchQuery = "SELECT * FROM faculty WHERE ID = '" & StudentID_tb.Text & "'"
+            'End If
+            searchQuery = "SELECT * FROM lib_fine WHERE uid = '" & StudentID_tb.Text & "'"
+            'Using newConnection As New MySqlConnection(connectionString)
+            Using newCommand As New MySqlCommand(searchQuery, Con)
+                Try
+                    Con.Open()
+                    Dim newReader As MySqlDataReader = newCommand.ExecuteReader
+                    Dim fine As Integer
+                    While newReader.Read()
+                        fine = newReader("fine")
+                    End While
+
+                    Fine_tb.Text = fine
+                    Con.Close()
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+            End Using
+            'End Using
+        End If
     End Sub
 
     Private Sub addBalanceButton_Click(sender As Object, e As EventArgs) Handles addBalanceButton.Click
