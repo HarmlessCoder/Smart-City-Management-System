@@ -38,8 +38,8 @@ Partial Class lib_adminMT
         Me.BookID_tb2 = New System.Windows.Forms.TextBox()
         Me.Fine_tb = New System.Windows.Forms.TextBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -65,6 +65,7 @@ Partial Class lib_adminMT
         Me.addBalanceButton = New System.Windows.Forms.Button()
         Me.loadFineButton = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button11 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -300,6 +301,7 @@ Partial Class lib_adminMT
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.Button8)
         Me.Panel9.Controls.Add(Me.Button12)
         Me.Panel9.Controls.Add(Me.Panel11)
         Me.Panel9.Controls.Add(Me.TextBox2)
@@ -307,6 +309,21 @@ Partial Class lib_adminMT
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(365, 302)
         Me.Panel9.TabIndex = 54
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Location = New System.Drawing.Point(30, 234)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(143, 53)
+        Me.Button8.TabIndex = 27
+        Me.Button8.Text = "Confirm"
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Button12
         '
@@ -322,23 +339,6 @@ Partial Class lib_adminMT
         Me.Button12.TabIndex = 26
         Me.Button12.Text = "Cancel"
         Me.Button12.UseVisualStyleBackColor = False
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button11.Location = New System.Drawing.Point(0, 260)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(282, 61)
-        Me.Button11.TabIndex = 18
-        Me.Button11.Text = "Dashboard"
-        Me.Button11.UseVisualStyleBackColor = False
         '
         'Panel11
         '
@@ -661,6 +661,23 @@ Partial Class lib_adminMT
         Me.Label11.TabIndex = 30
         Me.Label11.Text = "Manual Transactions"
         '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button11.FlatAppearance.BorderSize = 0
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.ForeColor = System.Drawing.Color.White
+        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button11.Location = New System.Drawing.Point(0, 260)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(282, 61)
+        Me.Button11.TabIndex = 18
+        Me.Button11.Text = "Dashboard"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -938,4 +955,5 @@ Partial Class lib_adminMT
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents BookID_tb2 As TextBox
+    Friend WithEvents Button8 As Button
 End Class

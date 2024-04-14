@@ -7,8 +7,8 @@ Public Class lib_adminMT
 
     Dim Con = Globals.GetDBConnection()
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim lib_adminDash = New lib_adminDash()
-        lib_adminDash.Show()
+        Dim lib_adminSearch = New lib_adminSearch()
+        lib_adminSearch.Show()
         Me.Close()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -36,7 +36,7 @@ Public Class lib_adminMT
     'End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim lib_adminSearch = New lib_adminSearch()
+        Dim lib_adminEBM = New lib_adminEBM()
         lib_adminSearch.Show()
         Me.Close()
     End Sub
@@ -96,7 +96,7 @@ Public Class lib_adminMT
                         'MessageBox.Show("student with given id does not exist.")
                         'Return
                     End If
-                    Con.CLose()
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -125,7 +125,7 @@ Public Class lib_adminMT
                         MessageBox.Show("Book with given ID does not exist.")
                         Return
                     End If
-                    Con.CLose()
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -171,7 +171,7 @@ Public Class lib_adminMT
                         MessageBox.Show("Book with given ID is already issued.")
                         Return
                     End If
-                    Con.CLose()
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -196,7 +196,7 @@ Public Class lib_adminMT
                     If count >= 7 Then
                         quotaExceed = 1
                     End If
-                    Con.CLose()
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -459,7 +459,7 @@ Public Class lib_adminMT
                             Try
                                 Con.Open()
                                 newCommand.ExecuteNonQuery()
-                                Con.CLose()
+                                Con.Close()
                             Catch ex As Exception
                                 MessageBox.Show("Error: " & ex.Message)
                             End Try
@@ -513,7 +513,7 @@ Public Class lib_adminMT
                         MessageBox.Show("This book is not issued to the user.")
                         Return
                     End If
-                    Con.CLose()
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -784,10 +784,11 @@ Public Class lib_adminMT
                     'Using addTransactionToAdminCommand As New MySqlCommand(addTransactionToAdmin, newConnection)
                     '    addTransactionToAdminCommand.ExecuteNonQuery()
                     'End Using
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
-                Con.Close()
+
             End Using
             'End Using
             If successful Then
@@ -847,7 +848,7 @@ Public Class lib_adminMT
 
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Dim userFine As String = TextBox2.Text
         Dim integerValue As Integer
 
@@ -982,5 +983,11 @@ Public Class lib_adminMT
 
     Private Sub TextBox2_Click(sender As Object, e As EventArgs) Handles TextBox2.Click
         TextBox2.Text = ""
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Dim lib_adminDash = New lib_adminDash()
+        lib_adminDash.Show()
+        Me.Close()
     End Sub
 End Class
