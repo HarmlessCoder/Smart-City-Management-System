@@ -2,8 +2,8 @@
 Imports MySql.Data.MySqlClient
 Public Class lib_adminMT
 
-    Public Property uid As Integer = -1
-    Public Property u_name As String = "Hello"
+    'Public Property uid As Integer = -1
+    'Public Property u_name As String = "User/Admin"
 
     Dim Con = Globals.GetDBConnection()
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -52,7 +52,7 @@ Public Class lib_adminMT
     End Sub
 
     Private Sub lib_adminMT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label2.Text = u_name
+        'Label2.Text = u_name
         Panel9.Visible = False
         'Panel6.Visible = False
         'LoadBorrowedBooks()
