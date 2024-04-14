@@ -617,7 +617,7 @@ Partial Class lib_admin_eBooks
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents overdueBooksTablePanel As TableLayoutPanel
+    Friend WithEvents requestBooksTablePanel As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
