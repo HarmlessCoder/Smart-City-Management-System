@@ -469,7 +469,7 @@ Partial Class lib_adminBM
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(317, 65)
         Me.Label17.TabIndex = 26
-        Me.Label17.Text = "Update Book"
+        Me.Label17.Text = "Book Details"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel8

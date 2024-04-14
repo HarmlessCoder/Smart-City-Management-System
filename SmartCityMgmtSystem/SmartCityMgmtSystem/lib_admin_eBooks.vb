@@ -33,11 +33,11 @@ Public Class lib_admin_eBooks
         Me.Close()
     End Sub
 
-    'Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-    '    Dim lib_adminEBM = New lib_adminEBM()
-    '    lib_adminEBM.Show()
-    '    Me.Close()
-    'End Sub
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim lib_adminEBM = New lib_adminEBM()
+        lib_adminEBM.Show()
+        Me.Close()
+    End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         Dim lib_adminBM = New lib_adminBM()

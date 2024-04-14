@@ -46,11 +46,11 @@ Public Class lib_adminSearch
         Me.Close()
     End Sub
 
-    'Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-    '    Dim lib_adminEBM = New lib_adminEBM()
-    '    lib_adminEBM.Show()
-    '    Me.Close()
-    'End Sub
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim lib_adminEBM = New lib_adminEBM()
+        lib_adminEBM.Show()
+        Me.Close()
+    End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim HomePageDashboard = New HomePageDashboard()
         HomePageDashboard.Show()
