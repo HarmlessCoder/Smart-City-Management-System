@@ -74,7 +74,6 @@ Partial Class lib_adminMT
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel.SuspendLayout()
@@ -272,6 +271,7 @@ Partial Class lib_adminMT
         Me.addBalance_tb.Name = "addBalance_tb"
         Me.addBalance_tb.Size = New System.Drawing.Size(180, 41)
         Me.addBalance_tb.TabIndex = 39
+        Me.addBalance_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BookID_tb2
         '
@@ -283,6 +283,7 @@ Partial Class lib_adminMT
         Me.BookID_tb2.Name = "BookID_tb2"
         Me.BookID_tb2.Size = New System.Drawing.Size(133, 41)
         Me.BookID_tb2.TabIndex = 37
+        Me.BookID_tb2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Fine_tb
         '
@@ -294,12 +295,12 @@ Partial Class lib_adminMT
         Me.Fine_tb.Name = "Fine_tb"
         Me.Fine_tb.Size = New System.Drawing.Size(180, 41)
         Me.Fine_tb.TabIndex = 41
+        Me.Fine_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Panel9.Controls.Add(Me.Button12)
-        Me.Panel9.Controls.Add(Me.Button11)
         Me.Panel9.Controls.Add(Me.Panel11)
         Me.Panel9.Controls.Add(Me.TextBox2)
         Me.Panel9.Location = New System.Drawing.Point(409, 292)
@@ -324,17 +325,19 @@ Partial Class lib_adminMT
         '
         'Button11
         '
-        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button11.FlatAppearance.BorderSize = 0
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(22, 234)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button11.Location = New System.Drawing.Point(0, 260)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(143, 53)
-        Me.Button11.TabIndex = 25
-        Me.Button11.Text = "Confirm"
+        Me.Button11.Size = New System.Drawing.Size(282, 61)
+        Me.Button11.TabIndex = 18
+        Me.Button11.Text = "Dashboard"
         Me.Button11.UseVisualStyleBackColor = False
         '
         'Panel11
@@ -804,22 +807,6 @@ Partial Class lib_adminMT
         Me.Button5.TabIndex = 19
         Me.Button5.Text = "Search"
         Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button11.Location = New System.Drawing.Point(0, 260)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(282, 61)
-        Me.Button11.TabIndex = 18
-        Me.Button11.Text = "Dashboard"
-        Me.Button11.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '

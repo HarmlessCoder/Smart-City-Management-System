@@ -29,11 +29,11 @@ Public Class lib_adminMT
         Me.Close()
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Dim lib_adminEBM = New lib_adminEBM()
-        lib_adminEBM.Show()
-        Me.Close()
-    End Sub
+    'Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    '    Dim lib_adminEBM = New lib_adminEBM()
+    '    lib_adminEBM.Show()
+    '    Me.Close()
+    'End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim lib_adminSearch = New lib_adminSearch()
@@ -265,7 +265,7 @@ Public Class lib_adminMT
     End Sub
 
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button888.Click
+    Private Sub Button888_Click(sender As Object, e As EventArgs) Handles Button888.Click
         If StudentID_tb.Text = "" Or BookID_tb2.Text = "" Then
             MsgBox("Missing Information", 0 + 0, "Error")
         Else
