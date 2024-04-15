@@ -56,6 +56,7 @@ Public Class lib_ebooks
 
     Private Sub lib_ebooks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
+        Label12.Text = uid
         Panel9.Visible = False
         LoadAlleBooks()
         PopulateTable()

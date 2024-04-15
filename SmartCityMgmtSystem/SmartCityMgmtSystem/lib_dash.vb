@@ -50,6 +50,7 @@ Public Class lib_dash
 
     Private Sub lib_dash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
+        Label8.Text = uid
         LoadOverdueBooks()
         PopulateTable()
     End Sub

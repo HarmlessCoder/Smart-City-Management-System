@@ -57,6 +57,7 @@ Public Class lib_search
 
     Private Sub lib_search_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
+        Label9.Text = uid
         LoadAllBooks()
         PopulateTable()
 
