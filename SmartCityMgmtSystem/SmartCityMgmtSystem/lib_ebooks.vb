@@ -495,8 +495,8 @@ Public Class lib_ebooks
             Return ' Exit the method if input is invalid
         End If
 
-        'LoadAlleBooks()
-        'PopulateTable()
+        LoadAlleBooks()
+        PopulateTable()
 
 
     End Sub
