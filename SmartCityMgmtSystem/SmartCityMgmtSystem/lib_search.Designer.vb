@@ -319,7 +319,7 @@ Partial Class lib_search
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1228, 68)
         Me.overdueBooksTitleTable.TabIndex = 48
         '
@@ -479,7 +479,7 @@ Partial Class lib_search
         Me.searchBooksTablePanel.Name = "searchBooksTablePanel"
         Me.searchBooksTablePanel.RowCount = 1
         Me.searchBooksTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.searchBooksTablePanel.Size = New System.Drawing.Size(1228, 479)
+        Me.searchBooksTablePanel.Size = New System.Drawing.Size(1249, 479)
         Me.searchBooksTablePanel.TabIndex = 47
         '
         'Label2
