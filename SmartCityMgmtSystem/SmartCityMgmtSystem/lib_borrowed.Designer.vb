@@ -54,6 +54,7 @@ Partial Class lib_borrowed
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.childformPanel.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -205,7 +206,7 @@ Partial Class lib_borrowed
         Me.borrowedTableLayout.Margin = New System.Windows.Forms.Padding(0)
         Me.borrowedTableLayout.Name = "borrowedTableLayout"
         Me.borrowedTableLayout.RowCount = 1
-        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74.0!))
+        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
         Me.borrowedTableLayout.Size = New System.Drawing.Size(1080, 68)
         Me.borrowedTableLayout.TabIndex = 23
         '
@@ -515,12 +516,26 @@ Partial Class lib_borrowed
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "{Name}"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.CausesValidation = False
+        Me.Label9.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Ivory
+        Me.Label9.Location = New System.Drawing.Point(840, 9)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(54, 28)
+        Me.Label9.TabIndex = 53
+        Me.Label9.Text = "{UID}"
+        '
         'lib_borrowed
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1556, 783)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.childformPanel)
         Me.Controls.Add(Me.Button6)
@@ -583,4 +598,5 @@ Partial Class lib_borrowed
     Friend WithEvents Label3 As Label
     Friend WithEvents Button8 As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label9 As Label
 End Class

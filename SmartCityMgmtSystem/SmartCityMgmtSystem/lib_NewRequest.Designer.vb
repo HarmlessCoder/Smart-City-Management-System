@@ -44,6 +44,7 @@ Partial Class lib_NewRequest
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
@@ -310,7 +311,7 @@ Partial Class lib_NewRequest
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(297, 53)
         Me.Button9.TabIndex = 54
-        Me.Button9.Text = "Genere"
+        Me.Button9.Text = "Genre"
         Me.Button9.UseVisualStyleBackColor = False
         '
         'Button8
@@ -361,12 +362,26 @@ Partial Class lib_NewRequest
         Me.Button6.Text = "     Back"
         Me.Button6.UseVisualStyleBackColor = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.CausesValidation = False
+        Me.Label9.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Ivory
+        Me.Label9.Location = New System.Drawing.Point(840, 9)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(54, 28)
+        Me.Label9.TabIndex = 53
+        Me.Label9.Text = "{UID}"
+        '
         'lib_NewRequest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1556, 783)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
@@ -410,4 +425,5 @@ Partial Class lib_NewRequest
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label9 As Label
 End Class
