@@ -198,7 +198,7 @@ Partial Class lib_NewRequest
         Me.btnAddBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddBalance.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.btnAddBalance.ForeColor = System.Drawing.Color.White
-        Me.btnAddBalance.Location = New System.Drawing.Point(462, 560)
+        Me.btnAddBalance.Location = New System.Drawing.Point(477, 561)
         Me.btnAddBalance.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAddBalance.Name = "btnAddBalance"
         Me.btnAddBalance.Size = New System.Drawing.Size(297, 53)
@@ -229,9 +229,9 @@ Partial Class lib_NewRequest
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.Controls.Add(Me.TextBox3)
-        Me.Panel4.Location = New System.Drawing.Point(678, 420)
+        Me.Panel4.Location = New System.Drawing.Point(569, 409)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(393, 56)
+        Me.Panel4.Size = New System.Drawing.Size(393, 53)
         Me.Panel4.TabIndex = 65
         '
         'TextBox3
@@ -248,9 +248,9 @@ Partial Class lib_NewRequest
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Location = New System.Drawing.Point(678, 305)
+        Me.Panel3.Location = New System.Drawing.Point(569, 294)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(393, 56)
+        Me.Panel3.Size = New System.Drawing.Size(393, 53)
         Me.Panel3.TabIndex = 64
         '
         'TextBox2
@@ -267,9 +267,9 @@ Partial Class lib_NewRequest
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Location = New System.Drawing.Point(677, 182)
+        Me.Panel2.Location = New System.Drawing.Point(568, 185)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(393, 56)
+        Me.Panel2.Size = New System.Drawing.Size(393, 53)
         Me.Panel2.TabIndex = 63
         '
         'TextBox1
@@ -290,7 +290,7 @@ Partial Class lib_NewRequest
         Me.Button10.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.White
         Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.Location = New System.Drawing.Point(389, 57)
+        Me.Button10.Location = New System.Drawing.Point(403, 57)
         Me.Button10.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(420, 61)
@@ -305,7 +305,7 @@ Partial Class lib_NewRequest
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.Location = New System.Drawing.Point(224, 423)
+        Me.Button9.Location = New System.Drawing.Point(274, 409)
         Me.Button9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(297, 53)
@@ -320,7 +320,7 @@ Partial Class lib_NewRequest
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(224, 186)
+        Me.Button8.Location = New System.Drawing.Point(274, 185)
         Me.Button8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(297, 53)
@@ -335,7 +335,7 @@ Partial Class lib_NewRequest
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(224, 305)
+        Me.Button7.Location = New System.Drawing.Point(274, 294)
         Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(297, 53)
