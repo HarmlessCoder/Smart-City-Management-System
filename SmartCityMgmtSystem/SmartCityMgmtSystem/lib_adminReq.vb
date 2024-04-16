@@ -68,13 +68,16 @@ Public Class lib_adminReq
                 Dim statusString As String = ""
                 Select Case status
                     Case -1
+                        Continue While
                         statusString = "Rejected"
                     Case 0
                         statusString = "Pending"
                     Case 1
                         statusString = "Approved"
+                        Continue While
                     Case Else
                         statusString = "Unknown"
+                        Continue While
                 End Select
 
                 requestBooks.Add(New Entry With {
@@ -203,5 +206,43 @@ Public Class lib_adminReq
         Dim HomePageDashboard = New HomePageDashboard()
         HomePageDashboard.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim success As Boolean
+        For Each entry As Entry In requestBooks
+            If entry.RadioButton.Checked Then
+                If entry.Status = "Rejected" Then
+                    MessageBox.Show("Book already rejected .")
+                    Return
+                End If
+                Dim query As String = "UPDATE lib_book_request SET status = '-1' WHERE title='" & entry.Title & "' AND uid=' " & entry.UID & "'"
+                Dim Con = Globals.GetDBConnection()
+
+                Try
+                    Con.Open()
+                    Dim cmd As New MySqlCommand(query, Con)
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("Book rejected successfully.")
+                        ' Additional actions if needed after update
+                        success = True
+                    Else
+                        MessageBox.Show("No book found ")
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                Finally
+                    Con.Close() ' Close the connection in the end
+                End Try
+            End If
+        Next
+
+        If success Then
+            Dim lib_adminReq = New lib_adminReq()
+            lib_adminReq.Show()
+            Me.Close()
+        End If
     End Sub
 End Class
