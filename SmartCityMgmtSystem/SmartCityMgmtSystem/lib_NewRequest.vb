@@ -43,6 +43,7 @@ Public Class lib_NewRequest
 
     Private Sub lib_NewRequest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
+        Label9.Text = uid
     End Sub
 
 

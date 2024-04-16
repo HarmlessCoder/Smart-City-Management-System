@@ -52,6 +52,7 @@ Public Class lib_borrowed
 
     Private Sub lib_borrowed_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
+        Label9.Text = uid
         Panel6.Visible = False
         LoadBorrowedBooks()
         PopulateTable()

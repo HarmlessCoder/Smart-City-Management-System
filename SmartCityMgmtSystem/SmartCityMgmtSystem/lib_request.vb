@@ -52,6 +52,7 @@ Public Class lib_request
 
     Private Sub lib_request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = u_name
+        Label9.Text = uid
         LoadrequestBooks()
         PopulateTable()
     End Sub
