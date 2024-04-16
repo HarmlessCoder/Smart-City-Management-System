@@ -33,14 +33,6 @@ Partial Class lib_adminSearch
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.childformPanel = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.searchBar = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.queryBook = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.srchSelect = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.overdueBooksTitleTable = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -55,11 +47,17 @@ Partial Class lib_adminSearch
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.searchBooksTablePanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.searchBar = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.queryBook = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.srchSelect = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.childformPanel.SuspendLayout()
-        Me.searchBar.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.overdueBooksTitleTable.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -67,6 +65,8 @@ Partial Class lib_adminSearch
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.searchBar.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -244,124 +244,6 @@ Partial Class lib_adminSearch
         Me.childformPanel.Size = New System.Drawing.Size(1276, 737)
         Me.childformPanel.TabIndex = 9
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Agency FB", 40.0!, System.Drawing.FontStyle.Bold)
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(466, 9)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(352, 80)
-        Me.Label11.TabIndex = 54
-        Me.Label11.Text = "Search Books"
-        '
-        'searchBar
-        '
-        Me.searchBar.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar
-        Me.searchBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.searchBar.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.searchBar.ColumnCount = 3
-        Me.searchBar.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.searchBar.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
-        Me.searchBar.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.searchBar.Controls.Add(Me.btnSearch, 2, 0)
-        Me.searchBar.Controls.Add(Me.queryBook, 1, 0)
-        Me.searchBar.Controls.Add(Me.Panel2, 0, 0)
-        Me.searchBar.Location = New System.Drawing.Point(24, 103)
-        Me.searchBar.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.searchBar.Name = "searchBar"
-        Me.searchBar.RowCount = 1
-        Me.searchBar.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.searchBar.Size = New System.Drawing.Size(1226, 43)
-        Me.searchBar.TabIndex = 53
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Font = New System.Drawing.Font("Agency FB", 16.0!)
-        Me.btnSearch.ForeColor = System.Drawing.Color.White
-        Me.btnSearch.Location = New System.Drawing.Point(980, 1)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(245, 41)
-        Me.btnSearch.TabIndex = 8
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = False
-        '
-        'queryBook
-        '
-        Me.queryBook.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.queryBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.queryBook.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.queryBook.Font = New System.Drawing.Font("Agency FB", 16.0!)
-        Me.queryBook.ForeColor = System.Drawing.Color.White
-        Me.queryBook.Location = New System.Drawing.Point(262, 5)
-        Me.queryBook.Margin = New System.Windows.Forms.Padding(0)
-        Me.queryBook.Name = "queryBook"
-        Me.queryBook.Size = New System.Drawing.Size(700, 32)
-        Me.queryBook.TabIndex = 8
-        Me.queryBook.Text = "Enter Title/Author/Book ID"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.srchSelect)
-        Me.Panel2.Location = New System.Drawing.Point(1, 1)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(244, 40)
-        Me.Panel2.TabIndex = 9
-        '
-        'srchSelect
-        '
-        Me.srchSelect.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.srchSelect.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.srchSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.srchSelect.Font = New System.Drawing.Font("Agency FB", 16.0!)
-        Me.srchSelect.ForeColor = System.Drawing.Color.White
-        Me.srchSelect.FormattingEnabled = True
-        Me.srchSelect.Items.AddRange(New Object() {"Book ID", "Author", "Title", "Category"})
-        Me.srchSelect.Location = New System.Drawing.Point(0, 1)
-        Me.srchSelect.Margin = New System.Windows.Forms.Padding(0)
-        Me.srchSelect.Name = "srchSelect"
-        Me.srchSelect.Size = New System.Drawing.Size(243, 40)
-        Me.srchSelect.TabIndex = 9
-        Me.srchSelect.Text = "Select"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Ivory
-        Me.Label2.Location = New System.Drawing.Point(294, 10)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 28)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Admin"
-        '
-        'Button6
-        '
-        Me.Button6.CausesValidation = False
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.Ivory
-        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(1389, 1)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(163, 39)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "     Back"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
         'overdueBooksTitleTable
         '
         Me.overdueBooksTitleTable.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -384,7 +266,7 @@ Partial Class lib_adminSearch
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1228, 68)
         Me.overdueBooksTitleTable.TabIndex = 56
         '
@@ -544,8 +426,126 @@ Partial Class lib_adminSearch
         Me.searchBooksTablePanel.Name = "searchBooksTablePanel"
         Me.searchBooksTablePanel.RowCount = 1
         Me.searchBooksTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.searchBooksTablePanel.Size = New System.Drawing.Size(1228, 479)
+        Me.searchBooksTablePanel.Size = New System.Drawing.Size(1246, 479)
         Me.searchBooksTablePanel.TabIndex = 55
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Agency FB", 40.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(466, 9)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(352, 80)
+        Me.Label11.TabIndex = 54
+        Me.Label11.Text = "Search Books"
+        '
+        'searchBar
+        '
+        Me.searchBar.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar
+        Me.searchBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.searchBar.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.searchBar.ColumnCount = 3
+        Me.searchBar.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.searchBar.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
+        Me.searchBar.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.searchBar.Controls.Add(Me.btnSearch, 2, 0)
+        Me.searchBar.Controls.Add(Me.queryBook, 1, 0)
+        Me.searchBar.Controls.Add(Me.Panel2, 0, 0)
+        Me.searchBar.Location = New System.Drawing.Point(24, 103)
+        Me.searchBar.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.searchBar.Name = "searchBar"
+        Me.searchBar.RowCount = 1
+        Me.searchBar.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.searchBar.Size = New System.Drawing.Size(1226, 43)
+        Me.searchBar.TabIndex = 53
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.Font = New System.Drawing.Font("Agency FB", 16.0!)
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.Location = New System.Drawing.Point(980, 1)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(245, 41)
+        Me.btnSearch.TabIndex = 8
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = False
+        '
+        'queryBook
+        '
+        Me.queryBook.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.queryBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.queryBook.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.queryBook.Font = New System.Drawing.Font("Agency FB", 16.0!)
+        Me.queryBook.ForeColor = System.Drawing.Color.White
+        Me.queryBook.Location = New System.Drawing.Point(262, 5)
+        Me.queryBook.Margin = New System.Windows.Forms.Padding(0)
+        Me.queryBook.Name = "queryBook"
+        Me.queryBook.Size = New System.Drawing.Size(700, 32)
+        Me.queryBook.TabIndex = 8
+        Me.queryBook.Text = "Enter Title/Author/Book ID"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(88, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.srchSelect)
+        Me.Panel2.Location = New System.Drawing.Point(1, 1)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(244, 40)
+        Me.Panel2.TabIndex = 9
+        '
+        'srchSelect
+        '
+        Me.srchSelect.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.srchSelect.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.srchSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.srchSelect.Font = New System.Drawing.Font("Agency FB", 16.0!)
+        Me.srchSelect.ForeColor = System.Drawing.Color.White
+        Me.srchSelect.FormattingEnabled = True
+        Me.srchSelect.Items.AddRange(New Object() {"Book ID", "Author", "Title", "Category"})
+        Me.srchSelect.Location = New System.Drawing.Point(0, 1)
+        Me.srchSelect.Margin = New System.Windows.Forms.Padding(0)
+        Me.srchSelect.Name = "srchSelect"
+        Me.srchSelect.Size = New System.Drawing.Size(243, 40)
+        Me.srchSelect.TabIndex = 9
+        Me.srchSelect.Text = "Select"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Ivory
+        Me.Label2.Location = New System.Drawing.Point(294, 10)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 28)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Admin"
+        '
+        'Button6
+        '
+        Me.Button6.CausesValidation = False
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Agency FB", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Ivory
+        Me.Button6.Image = Global.SmartCityMgmtSystem.My.Resources.Resources.icons8_back_arrow_25
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(1389, 1)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.Button6.Size = New System.Drawing.Size(163, 39)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "     Back"
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'lib_adminSearch
         '
@@ -564,9 +564,6 @@ Partial Class lib_adminSearch
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.childformPanel.ResumeLayout(False)
         Me.childformPanel.PerformLayout()
-        Me.searchBar.ResumeLayout(False)
-        Me.searchBar.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
         Me.overdueBooksTitleTable.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
@@ -580,6 +577,9 @@ Partial Class lib_adminSearch
         Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        Me.searchBar.ResumeLayout(False)
+        Me.searchBar.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
