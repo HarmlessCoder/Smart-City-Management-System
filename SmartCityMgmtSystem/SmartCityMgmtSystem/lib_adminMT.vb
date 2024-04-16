@@ -363,17 +363,20 @@ Public Class lib_adminMT
             'Using connection As New MySqlConnection(connectionString)
             Using command As New MySqlCommand(query, Con)
                 Try
-                    'Con.Open()
+                    Con.Open()
                     Dim reader As MySqlDataReader = command.ExecuteReader()
                     Dim currentDate As DateTime = DateTimePicker4.Value
+                    Dim NewCon = Globals.GetDBConnection()
                     While reader.Read()
-                        Dim updateQueryInBooks = "UPDATE lib_books SET issued = 0, issuedTo = '', dueDate = '0000-00-00 00:00:00' WHERE book_ID = '" & BookID_tb2.Text & "'"
+                        Dim updateQueryInBooks = "UPDATE lib_books SET issued = 0, issuedTo = NULL, dueDate = '0000-00-00 00:00:00' WHERE book_ID = '" & BookID_tb2.Text & "'"
                         Dim updateQueryInBorrowed_Books = "DELETE FROM lib_borrowed_books WHERE book_ID = '" & BookID_tb2.Text & "'"
                         'Using newConnection As New MySqlConnection(connectionString)
-                        Using newCommand As New MySqlCommand(updateQueryInBooks, Con)
+
+                        Using newCommand As New MySqlCommand(updateQueryInBooks, NewCon)
                             Try
-                                Con.Open()
+                                NewCon.Open()
                                 newCommand.ExecuteNonQuery()
+                                NewCon.Close()
                                 If reader("dueDate") < currentDate Then
                                     Dim fine As Integer = DateDiff(DateInterval.Day, reader("dueDate"), currentDate)
                                     Dim fineUpdateQuery As String
@@ -382,17 +385,20 @@ Public Class lib_adminMT
                                     'Else
                                     '    fineUpdateQuery = "SELECT * FROM faculty WHERE ID = '" & StudentID_tb.Text & "'"
                                     'End If
-                                    fineUpdateQuery = "SELECT * FROM users WHERE ID = '" & StudentID_tb.Text & "'"
+                                    fineUpdateQuery = "SELECT * FROM lib_fine WHERE uid = '" & StudentID_tb.Text & "'"
                                     'Using newNewConnection As New MySqlConnection(connectionString)
-                                    Using newNewCommand As New MySqlCommand(fineUpdateQuery, Con)
+                                    'NewCon.Open()
+                                    Using newNewCommand As New MySqlCommand(fineUpdateQuery, NewCon)
                                         Try
                                             'Con.Open()
+                                            NewCon.Open()
                                             Dim newNewReader As MySqlDataReader = newNewCommand.ExecuteReader
                                             While newNewReader.Read()
                                                 Dim value As Integer
-                                                Integer.TryParse(newNewReader("Fine").ToString, value)
+                                                Integer.TryParse(newNewReader("fine").ToString, value)
                                                 fine = fine + value
                                             End While
+                                            NewCon.Close()
                                         Catch ex As Exception
                                             MessageBox.Show("Error: " & ex.Message)
                                         End Try
@@ -406,22 +412,19 @@ Public Class lib_adminMT
                                     'End If
 
 
-
-
-
-
-
                                     ' CHECK   ERROR     ERROR       ERROR
 
 
-                                    fineUpdateQuery = "UPDATE lib_fine SET Fine = '" & fine & "' WHERE ID = '" & StudentID_tb.Text & "'"
+                                    fineUpdateQuery = "UPDATE lib_fine SET fine = '" & fine & "' WHERE uid = '" & StudentID_tb.Text & "'"
                                     'Using newNewConnection As New MySqlConnection(Con)
-                                    Using newNewCommand As New MySqlCommand(fineUpdateQuery, Con)
+                                    Using newNewCommand As New MySqlCommand(fineUpdateQuery, NewCon)
                                         Try
                                             'Con.Open()
+                                            NewCon.Open()
                                             newNewCommand.ExecuteNonQuery()
                                             'MessageBox.Show("Fine updated to " + fine.ToString)
                                             'Con.Close()
+                                            NewCon.Close()
                                         Catch ex As Exception
                                             MessageBox.Show("Error: " & ex.Message)
                                         End Try
@@ -452,7 +455,7 @@ Public Class lib_adminMT
                                     '    End Using
                                     'End Using
                                 End If
-                                Con.Close()
+                                'Con.Close()
                                 MessageBox.Show("Your book with BookID: " + BookID_tb2.Text.ToString + " has been returned to the library.")
                             Catch ex As Exception
                                 MessageBox.Show("Error: " & ex.Message)
@@ -461,11 +464,11 @@ Public Class lib_adminMT
                         End Using
                         'End Using
                         'Using newConnection As New MySqlConnection(connectionString)
-                        Using newCommand As New MySqlCommand(updateQueryInBorrowed_Books, Con)
+                        Using newCommand As New MySqlCommand(updateQueryInBorrowed_Books, NewCon)
                             Try
-                                Con.Open()
+                                NewCon.Open()
                                 newCommand.ExecuteNonQuery()
-                                Con.Close()
+                                NewCon.Close()
                             Catch ex As Exception
                                 MessageBox.Show("Error: " & ex.Message)
                             End Try
@@ -473,6 +476,7 @@ Public Class lib_adminMT
                         End Using
                         'End Using
                     End While
+                    Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
