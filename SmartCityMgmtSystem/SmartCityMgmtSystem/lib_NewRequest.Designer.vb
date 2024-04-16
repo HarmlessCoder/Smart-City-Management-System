@@ -310,7 +310,7 @@ Partial Class lib_NewRequest
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(297, 53)
         Me.Button9.TabIndex = 54
-        Me.Button9.Text = "Genere"
+        Me.Button9.Text = "Genre"
         Me.Button9.UseVisualStyleBackColor = False
         '
         'Button8
