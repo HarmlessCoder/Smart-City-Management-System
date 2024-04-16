@@ -304,7 +304,7 @@ Partial Class lib_adminReq
         Me.overdueBooksTitleTable.Margin = New System.Windows.Forms.Padding(0)
         Me.overdueBooksTitleTable.Name = "overdueBooksTitleTable"
         Me.overdueBooksTitleTable.RowCount = 1
-        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83.0!))
+        Me.overdueBooksTitleTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84.0!))
         Me.overdueBooksTitleTable.Size = New System.Drawing.Size(1115, 68)
         Me.overdueBooksTitleTable.TabIndex = 54
         '
@@ -313,10 +313,10 @@ Partial Class lib_adminReq
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Location = New System.Drawing.Point(989, 2)
+        Me.Panel2.Location = New System.Drawing.Point(989, 1)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(125, 80)
+        Me.Panel2.Size = New System.Drawing.Size(125, 84)
         Me.Panel2.TabIndex = 16
         '
         'Label7
@@ -325,7 +325,7 @@ Partial Class lib_adminReq
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(21, 16)
+        Me.Label7.Location = New System.Drawing.Point(21, 18)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(82, 42)
         Me.Label7.TabIndex = 17
@@ -339,7 +339,7 @@ Partial Class lib_adminReq
         Me.Panel5.Location = New System.Drawing.Point(248, 1)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(308, 82)
+        Me.Panel5.Size = New System.Drawing.Size(308, 84)
         Me.Panel5.TabIndex = 13
         '
         'Label5
@@ -348,7 +348,7 @@ Partial Class lib_adminReq
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(121, 16)
+        Me.Label5.Location = New System.Drawing.Point(121, 17)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(85, 42)
         Me.Label5.TabIndex = 1
@@ -359,10 +359,10 @@ Partial Class lib_adminReq
         Me.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Location = New System.Drawing.Point(804, 2)
+        Me.Panel3.Location = New System.Drawing.Point(804, 1)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(184, 80)
+        Me.Panel3.Size = New System.Drawing.Size(184, 84)
         Me.Panel3.TabIndex = 15
         '
         'Label3
@@ -371,7 +371,7 @@ Partial Class lib_adminReq
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(49, 15)
+        Me.Label3.Location = New System.Drawing.Point(49, 17)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 42)
         Me.Label3.TabIndex = 17
@@ -385,7 +385,7 @@ Partial Class lib_adminReq
         Me.Panel10.Location = New System.Drawing.Point(1, 1)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(246, 82)
+        Me.Panel10.Size = New System.Drawing.Size(246, 84)
         Me.Panel10.TabIndex = 0
         '
         'Label6
@@ -394,7 +394,7 @@ Partial Class lib_adminReq
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(92, 16)
+        Me.Label6.Location = New System.Drawing.Point(92, 17)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 42)
         Me.Label6.TabIndex = 0
@@ -408,7 +408,7 @@ Partial Class lib_adminReq
         Me.Panel4.Location = New System.Drawing.Point(557, 1)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(246, 82)
+        Me.Panel4.Size = New System.Drawing.Size(246, 84)
         Me.Panel4.TabIndex = 14
         '
         'Label4
@@ -417,7 +417,7 @@ Partial Class lib_adminReq
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Agency FB", 20.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(92, 16)
+        Me.Label4.Location = New System.Drawing.Point(92, 17)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(65, 42)
         Me.Label4.TabIndex = 1

@@ -122,7 +122,7 @@ Public Class lib_adminReq
                     Case "Rejected"
                         statusLabel.ForeColor = Color.Red
                     Case "Pending"
-                        statusLabel.ForeColor = Color.Yellow
+                        statusLabel.ForeColor = Color.Navy
                     Case "Approved"
                         statusLabel.ForeColor = Color.Green
                     Case Else

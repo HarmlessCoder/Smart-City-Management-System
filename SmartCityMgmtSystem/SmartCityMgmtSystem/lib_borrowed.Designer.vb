@@ -206,7 +206,7 @@ Partial Class lib_borrowed
         Me.borrowedTableLayout.Margin = New System.Windows.Forms.Padding(0)
         Me.borrowedTableLayout.Name = "borrowedTableLayout"
         Me.borrowedTableLayout.RowCount = 1
-        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
+        Me.borrowedTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76.0!))
         Me.borrowedTableLayout.Size = New System.Drawing.Size(1080, 68)
         Me.borrowedTableLayout.TabIndex = 23
         '
@@ -215,10 +215,10 @@ Partial Class lib_borrowed
         Me.Panel20.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel20.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel20.Controls.Add(Me.Label23)
-        Me.Panel20.Location = New System.Drawing.Point(808, 4)
+        Me.Panel20.Location = New System.Drawing.Point(808, 1)
         Me.Panel20.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel20.Name = "Panel20"
-        Me.Panel20.Size = New System.Drawing.Size(161, 68)
+        Me.Panel20.Size = New System.Drawing.Size(161, 76)
         Me.Panel20.TabIndex = 24
         '
         'Label23
@@ -226,7 +226,7 @@ Partial Class lib_borrowed
         Me.Label23.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Agency FB", 19.8!)
-        Me.Label23.Location = New System.Drawing.Point(28, 16)
+        Me.Label23.Location = New System.Drawing.Point(28, 20)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(108, 40)
         Me.Label23.TabIndex = 17
@@ -239,10 +239,10 @@ Partial Class lib_borrowed
         Me.Panel13.AutoScroll = True
         Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel13.Controls.Add(Me.Label8)
-        Me.Panel13.Location = New System.Drawing.Point(970, 4)
+        Me.Panel13.Location = New System.Drawing.Point(970, 1)
         Me.Panel13.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(109, 68)
+        Me.Panel13.Size = New System.Drawing.Size(109, 76)
         Me.Panel13.TabIndex = 25
         '
         'Label8
@@ -250,7 +250,7 @@ Partial Class lib_borrowed
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Agency FB", 19.8!)
-        Me.Label8.Location = New System.Drawing.Point(15, 16)
+        Me.Label8.Location = New System.Drawing.Point(15, 20)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 40)
         Me.Label8.TabIndex = 18
@@ -262,10 +262,10 @@ Partial Class lib_borrowed
         Me.Panel12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel12.Controls.Add(Me.Label6)
-        Me.Panel12.Location = New System.Drawing.Point(378, 4)
+        Me.Panel12.Location = New System.Drawing.Point(378, 1)
         Me.Panel12.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(429, 68)
+        Me.Panel12.Size = New System.Drawing.Size(429, 76)
         Me.Panel12.TabIndex = 23
         '
         'Label6
@@ -273,7 +273,7 @@ Partial Class lib_borrowed
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Agency FB", 19.8!)
-        Me.Label6.Location = New System.Drawing.Point(185, 16)
+        Me.Label6.Location = New System.Drawing.Point(185, 20)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 40)
         Me.Label6.TabIndex = 1
@@ -285,10 +285,10 @@ Partial Class lib_borrowed
         Me.Panel14.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel14.Controls.Add(Me.Label17)
-        Me.Panel14.Location = New System.Drawing.Point(130, 4)
+        Me.Panel14.Location = New System.Drawing.Point(130, 1)
         Me.Panel14.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(247, 68)
+        Me.Panel14.Size = New System.Drawing.Size(247, 76)
         Me.Panel14.TabIndex = 22
         '
         'Label17
@@ -296,7 +296,7 @@ Partial Class lib_borrowed
         Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Agency FB", 19.8!)
-        Me.Label17.Location = New System.Drawing.Point(72, 16)
+        Me.Label17.Location = New System.Drawing.Point(72, 20)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(84, 40)
         Me.Label17.TabIndex = 1
@@ -308,10 +308,10 @@ Partial Class lib_borrowed
         Me.Panel15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.Panel15.Controls.Add(Me.Label18)
-        Me.Panel15.Location = New System.Drawing.Point(1, 4)
+        Me.Panel15.Location = New System.Drawing.Point(1, 1)
         Me.Panel15.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(128, 68)
+        Me.Panel15.Size = New System.Drawing.Size(128, 76)
         Me.Panel15.TabIndex = 21
         '
         'Label18
@@ -319,7 +319,7 @@ Partial Class lib_borrowed
         Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Agency FB", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(15, 16)
+        Me.Label18.Location = New System.Drawing.Point(15, 20)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(92, 40)
         Me.Label18.TabIndex = 0

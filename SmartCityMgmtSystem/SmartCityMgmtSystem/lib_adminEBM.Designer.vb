@@ -547,7 +547,7 @@ Partial Class lib_adminEBM
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Agency FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(742, 183)
+        Me.Button12.Location = New System.Drawing.Point(843, 183)
         Me.Button12.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(155, 64)
@@ -562,7 +562,7 @@ Partial Class lib_adminEBM
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Agency FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(476, 183)
+        Me.Button11.Location = New System.Drawing.Point(539, 183)
         Me.Button11.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(155, 64)
@@ -577,7 +577,7 @@ Partial Class lib_adminEBM
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button10.Font = New System.Drawing.Font("Agency FB", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(194, 183)
+        Me.Button10.Location = New System.Drawing.Point(246, 183)
         Me.Button10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(155, 64)

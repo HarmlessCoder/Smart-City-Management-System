@@ -123,9 +123,11 @@ Public Class lib_adminMT
                     End While
                     If count = 0 Then
                         MessageBox.Show("Book with given ID does not exist.")
+                        Con.Close()
                         Return
                     End If
                     Con.Close()
+
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -169,9 +171,11 @@ Public Class lib_adminMT
                     End While
                     If count = 0 Then
                         MessageBox.Show("Book with given ID is already issued.")
+                        Con.Close()
                         Return
                     End If
                     Con.Close()
+
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -343,9 +347,11 @@ Public Class lib_adminMT
                     End While
                     If count = 0 Then
                         MessageBox.Show("This book is not issued to the user.")
+                        Con.Close()
                         Return
                     End If
                     Con.Close()
+
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -511,9 +517,11 @@ Public Class lib_adminMT
                     End While
                     If count = 0 Then
                         MessageBox.Show("This book is not issued to the user.")
+                        Con.Close()
                         Return
                     End If
                     Con.Close()
+
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
                 End Try
@@ -531,17 +539,23 @@ Public Class lib_adminMT
                     Dim futureDate As DateTime = DateAdd("d", 14, currentDate)
                     While reader.Read()
                         If reader("dueDate") < currentDate Then
+
                             MessageBox.Show("Book can't be renewed as it is past it's due date. Please pay fine and re-issue.")
+                            reader.Close()
+                            Con.Close()
                             Return
                         Else
+                            Dim NewCon = Globals.GetDBConnection()
                             Dim updateQueryInBooks = "UPDATE lib_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_ID = '" & BookID_tb2.Text & "'"
                             Dim updateQueryInBorrowed_Books = "UPDATE lib_borrowed_books SET dueDate = '" & futureDate.Date.ToString("yyyy-MM-dd HH:mm:ss") & "' WHERE book_ID = '" & BookID_tb2.Text & "'"
 
                             'Using newConnection As New MySqlConnection(connectionString)
-                            Using newCommand As New MySqlCommand(updateQueryInBooks, Con)
+                            Using newCommand As New MySqlCommand(updateQueryInBooks, NewCon)
                                 Try
                                     'Con.Open()
+                                    NewCon.Open()
                                     newCommand.ExecuteNonQuery()
+                                    NewCon.Close()
                                 Catch ex As Exception
                                     MessageBox.Show("Error: " & ex.Message)
                                 End Try
@@ -549,10 +563,12 @@ Public Class lib_adminMT
                             End Using
                             'End Using
                             'Using newConnection As New MySqlConnection(connectionString)
-                            Using newCommand As New MySqlCommand(updateQueryInBorrowed_Books, Con)
+                            Using newCommand As New MySqlCommand(updateQueryInBorrowed_Books, NewCon)
                                 Try
                                     'Con.Open()
+                                    NewCon.Open()
                                     newCommand.ExecuteNonQuery()
+                                    NewCon.Close()
                                 Catch ex As Exception
                                     MessageBox.Show("Error: " & ex.Message)
                                 End Try
@@ -574,6 +590,7 @@ Public Class lib_adminMT
 
                         End If
                     End While
+                    reader.Close()
                     Con.Close()
                 Catch ex As Exception
                     MessageBox.Show("Error: " & ex.Message)
@@ -757,9 +774,11 @@ Public Class lib_adminMT
 
                     If Convert.ToInt32(addBalance_tb.Text) <= 0 Then
                         MessageBox.Show("Add positive amount.")
+                        Con.Close()
                         Return
                     ElseIf balance + Convert.ToInt32(addBalance_tb.Text) > 1000 Then
                         MessageBox.Show("You can't have more than Rs. 1000 in your account.")
+                        Con.Close()
                         Return
                     Else
                         balance = balance + Convert.ToInt32(addBalance_tb.Text)
