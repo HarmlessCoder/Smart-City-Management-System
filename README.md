@@ -10,10 +10,8 @@ Welcome to the Central Library Management System, part of the SmartGhy Smart Cit
    - [Admin Features](#admin-features)
    - [User Features](#user-features)
 3. [Technologies Used](#technologies-used)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Contributors](#contributors)
-7. [License](#license)
+4. [Usage](#usage)
+5. [Contributors](#contributors)
 
 ## Introduction
 The Central Library Management System aims to address the challenges faced by both library administrators and users in managing and accessing library resources. Whether it's tracking overdue books, managing requests for unavailable books, or enabling users to access a wide range of e-books, this system modernizes and streamlines the entire process. This system offers features for both administrators (admins) and users, ensuring that the library is managed efficiently while users can easily access the resources they need.
@@ -80,13 +78,8 @@ The Central Library Management System was built using the following technologies
 ## Contributors
 This project was developed by Group 2A as part of the SmartGhy Smart City Management System for Guwahati. 
 
-- [Your Name](https://github.com/your-username)
-- [Contributor 2 Name](https://github.com/contributor2-username)
-- [Contributor 3 Name](https://github.com/contributor3-username)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [Gautam Juneja (210101041)](https://github.com/HarmlessCoder)
+- [Gaurav (210101040)](https://github.com/contributor2-username)
+- [Hemant Yadav](https://github.com/contributor3-username)
 
 ---
-
-Feel free to customize the placeholders such as repository links, contributor names, and project details as necessary.
