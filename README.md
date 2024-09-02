@@ -27,6 +27,7 @@ The admin panel provides comprehensive tools for managing the library, its resou
      - Borrowed books
      - Overdue books
      - Fines due and fines collected
+   ![Admin Dashboard Screenshot](assets/admin_dashboard.png)
      
 2. **Requested Books**
    - View all books requested by users for issue.
@@ -36,6 +37,7 @@ The admin panel provides comprehensive tools for managing the library, its resou
    - **Add Book:** Add a new book to the library database using the provided book details.
    - **Update Book:** Modify the details of an existing book by specifying the book ID.
    - **Remove Book:** Remove a book from the library database by specifying the book ID.
+   ![Admin Dashboard Screenshot](assets/admin_dashboard.png)
 
 4. **Manual Transaction**
    - **Issue Book:** Issue a book to a user by specifying the book ID and user ID.
@@ -43,6 +45,7 @@ The admin panel provides comprehensive tools for managing the library, its resou
    - **Renew Book:** Renew a book for a user by specifying the book ID and user ID.
    - **Pay Fine:** Deduct a fine from a user's balance.
    - **Add Money to Balance:** Add funds to a user's balance.
+     ![Admin Dashboard Screenshot](assets/admin_dashboard.png)
 
 ### User Features
 The user portal provides an intuitive interface for library patrons to manage their interactions with the library.
@@ -50,21 +53,26 @@ The user portal provides an intuitive interface for library patrons to manage th
 1. **Overdue Books**
    - View a list of books that the user has borrowed but not returned within the specified timeframe.
    - Acts as a reminder to return borrowed items promptly to avoid late fees or penalties.
+     ![Admin Dashboard Screenshot](assets/admin_dashboard.png)
 
 2. **Search Books**
    - Users can search for specific books in the library’s collection using various search criteria, such as title, author, genre, or keywords.
+     ![Admin Dashboard Screenshot](assets/admin_dashboard.png)
 
 3. **E-Books**
    - Access a digital library of e-books, enabling users to read electronic versions of books on different devices.
    - Expands access to literature and educational resources beyond the physical library.
+   ![Admin Dashboard Screenshot](assets/admin_dashboard.png)
 
 4. **Borrowed Books**
    - Track borrowed books with details such as titles, due dates, and status.
    - Helps users manage their borrowing activities efficiently and return books on time.
+![Admin Dashboard Screenshot](assets/admin_dashboard.png)
 
 5. **Requested Books**
    - Users can request unavailable or high-demand books.
    - Submitting a request allows the library to prioritize acquisitions and fulfill user demands, enhancing the overall user experience.
+![Admin Dashboard Screenshot](assets/admin_dashboard.png)
 
 ## Technologies Used
 The Central Library Management System was built using the following technologies:
