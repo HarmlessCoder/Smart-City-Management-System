@@ -56,7 +56,8 @@ The user portal provides an intuitive interface for library patrons to manage th
 1. **Overdue Books**
    - View a list of books that the user has borrowed but not returned within the specified timeframe.
    - Acts as a reminder to return borrowed items promptly to avoid late fees or penalties.
-     ![User OverDue Books Screen](assets/user_overdue_books.png)
+     
+![User OverDue Books Screen](assets/user_overdue_books.png)
 
 2. **Search Books**
    - Users can search for specific books in the library’s collection using various search criteria, such as title, author, genre, or keywords.
